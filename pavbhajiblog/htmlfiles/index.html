@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YSBlogs </title>
+  
+     <link rel="stylesheet"        media="Screen and (min-width : 961px  )"href="/css/style.css"> 
+    <link rel="stylesheet"           media="Screen and (max-width : 960px )"   href="/css/moblie.css ">
+    
+
+    <style>
+
+        *{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+    @media only screen and (min-width: 768px) {
+html{
+    scroll-behavior: smooth;
+}
+
+header nav a::selection{
+   background-color: orange;
+
+
+}
+h2::selection{
+   background-color: orange;
+
+
+}
+img::selection{
+   background-color: rgba(202, 144, 35, 0.63)
+
+}
+p::selection{
+   background-color: orange;
+}
+li::selection{
+   background-color: orange;
+}
+ 
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    font-weight: 550;
+    color: black;
+     
+}
+
+body{
+    height: auto;
+    background-image: linear-gradient(to bottom right, rgb(250, 158, 250), rgb(255, 255, 0) );
+
+}
+#main li{
+    transition-duration:   .8s;
+    transition-property: all;
+ 
+
+}
+#main li:hover{
+ 
+    background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(110, 85, 190) );
+    /* background : linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet  ) ; */
+ 
+     display: block; 
+    border-radius: 9vh;
+    zoom: 1.4;
+   margin-left: 3vw;
+   box-shadow: -2px 2px 20px 1px #211f1f;
+    text-align: center;
+
+}
+
+#main #li-c-21:hover{
+ 
+    display: block;
+    font-size: 2.4vh;
+    text-align: center;
+    padding-left: 1vw;
+
+}
+#main #recipe li :hover {
+    text-align: center;
+}
+
+#main #li-c-18:hover{
+    text-align: center;
+ 
+
+}
+ header{
+    /* background-color: rgb(9, 9, 9); */
+    background-color: transparent;
+    border: none;
+    transition-property: all ;
+    transition-duration: 1.3s;
+    transition-delay: 120ms;
+    box-shadow: none;
+     border-radius: 2vh;
+     margin-top: 1vh;
+     width: 96vw;
+     margin-left: 2vw;
+     height: 6vh;
+     position: fixed;
+     top: 1vh;
+
+}
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+ 
+.lili{
+    font-size: 3.6vh;
+    /* background-color: rgb(11, 11, 10); */
+    background-color: transparent;
+    width: 8vw;
+    height: 5vh;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-top: .6vh;
+    
+}
+header nav .lili a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+header nav #li1 {
+    margin-left: 5vw;
+    
+}
+header nav #li3{
+    margin-right: 2.5vw;
+}
+header #serach{
+    width: 20vw;
+    outline: none;
+    border-radius: 6vh;
+    padding-left: .6vw;
+    font-size: 2.4vh;
+    margin-top: -5vh;
+    margin-left: 75vw;
+
+}
+ 
+
+
+#main {
+    width:  60vw;
+    margin: auto;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.2vh;
+    text-shadow: -4px 2px 0px rgb(182 176 138);
+
+
+}
+#main h2{
+     
+    margin-bottom: 8vh;
+    font-size: 5.4vh;
+
+}
+
+#main #img1 img{
+    width: 35vw;
+    box-shadow: -16px 7px 40px 12px #463d3d;
+    margin-bottom: 6vh;
+}
+
+#main #content-1{
+    text-shadow: -1px 1px 20px #858692;
+    margin-bottom: 5vh;
+    text-shadow: -4px 2px 0px rgb(208 230 185);
+ 
+
+}
+
+#main #img2 img{
+    float: left;
+    width: 20vw;
+    box-shadow:  -13px 10px 43px 4px #211f1f;
+    margin-bottom: 6vh;
+}
+
+#main #content-2 p{
+    float: left;
+    font-size: 2.4vh;
+
+}
+#main #detalis  {
+    margin-top: 4vh;
+    font-size: 2.5vh;
+    list-style: square;
+}
+#main #detalis li   {
+    width: auto;
+}
+#main #detalis  li {
+    padding-top: .5vh;
+    padding-bottom: .5vh;
+
+
+}
+#main #recipe    {
+    margin-right: 24.2vw;
+    font-size: 2.5vh;
+    
+}
+#main #recipe #li-c-1{
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    font-size: 2.8vh;
+    
+
+}
+
+#main #recipe li   {
+      width: auto;  
+    list-style: square;
+    padding : .2vh 0vw;
+   
+}
+ 
+#main #recipe #li-c-1   {
+   list-style: none;
+
+}
+#main #process {
+    margin-top: 6vh;
+
+}
+#main #process #para-process-01{
+    font-size: 5vh;
+
+}
+#main #process p  {
+    margin-bottom: 2vh;
+    font-size: 2.6vh;
+
+}
+#main  #note{
+    font-size: 2.8vh;
+
+}
+#main  #para-notes-a{
+    font-size: 3.4vh;
+
+}
+
+ 
+
+
+ footer{
+     margin-top: 12vh;
+    width: 96vw;
+    margin-left: 2vw;
+    border-radius: 4vh;
+    background-color: #2c2929;
+    font-size: 3vw;
+    text-shadow: -8px 1px 3px black;
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+
+}
+ 
+
+footer #para-footer{
+    font-size: 6.8vh;
+    background: -webkit-linear-gradient(rgb(238, 238, 238), rgb(115, 255, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}}
+ 
+@media only screen and (max-width: 767px) {
+    html{
+    scroll-behavior: smooth;
+}
+
+ *{
+     margin: 0;
+     padding: 0;
+      
+     color: black;
+      
+ }
+ 
+ body{
+     height: auto;
+     background-image: linear-gradient(to bottom right, rgb(250, 158, 250), yellow );
+ 
+ } 
+  
+  header{
+     background-color: transparent;
+     border: none;
+     box-shadow: none;
+      border-radius: 2vh;
+      margin-top: 1vh;
+      width: 96vw;
+      margin-left: 2vw;
+      height: 6vh;
+ 
+ 
+ }
+ header nav {
+     display: flex;
+     flex-wrap: wrap;
+ 
+ }
+  
+ .lili{
+     font-size: 3.6vh;
+     background-color: transparent;
+     width: 8vw;
+     height: 5vh;
+     list-style: none;
+     display: flex;
+     align-items: center;
+     padding-top: .6vh;
+     
+ }
+ header nav .lili a {
+     text-decoration: none;
+     color: white;
+     
+ }
+ 
+ 
+ header #serach{
+     width: 20vw;
+     outline: none;
+     border-radius: 6vh;
+     padding-left: .6vw;
+     font-size: 2.4vh;
+     margin-top: -5vh;
+     margin-left: 75vw;
+ 
+ }
+  
+ #main {
+     width:  auto;
+     margin: auto;
+     margin-top: 10vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     font-size: 2.2vh;
+     text-shadow: 1px 2px 0px rgb(208 230 185);
+    padding-left: 6vw;
+    padding-right: 6vw;
+ 
+ }
+ #main h2{
+      
+     margin-bottom: 8vh;
+     font-size: 5.4vh;
+ 
+ }
+ 
+ #main #img1 img{
+    width: 85vw;
+     box-shadow: -16px 7px 40px 12px #463d3d;
+     margin-bottom: 6vh;
+ }
+ 
+ #main #content-1{
+     margin-bottom: 5vh;
+     text-shadow: 1px 2px 0px rgb(208 230 185);
+  
+ 
+ }
+
+ #main #img2 img{
+    float: left;
+    width: 60vw;
+    box-shadow: -13px 10px 43px 4px #211f1f;
+    margin-bottom: 6vh;
+    margin-left: 11vw;
+ 
+ 
+ }
+ 
+ #main #content-2 p{
+     float: left;
+     font-size: 2.4vh;
+ 
+ }
+ #main #detalis  {
+     margin-top: 6vh;
+     font-size: 2.5vh;
+     list-style: square;
+ }
+ #main #detalis li   {
+    width: 90vw;
+    margin: 1.2vh 0vw;
+
+ }
+ #main #detalis  li {
+     padding-top: .5vh;
+     padding-bottom: .5vh;
+ 
+ 
+ }
+ #main #recipe    {
+     margin-right: 2vw;
+     font-size: 2.5vh;
+     
+ }
+ #main #recipe #li-c-1{
+     padding-bottom: 1vh;
+     padding-top: 1vh;
+     font-size: 2.8vh;
+     
+ 
+ }
+ 
+ #main #recipe li   {
+    width: 90vw;
+     list-style: square;
+     padding : .2vh 0vw;
+    
+ }
+  
+ #main #recipe #li-c-1   {
+    list-style: none;
+ 
+ }
+ #main #process {
+     margin-top: 18vh;
+     
+    }
+  
+ #main #process p  {
+     margin-bottom: 6vh;
+     font-size: 2.6vh;
+ 
+ }
+   #main #process #para-process-01{
+       font-size: 4.5vh;
+       margin: 0;
+   }
+ #main  #note{
+     margin-top: 22vh;
+     font-size: 2.8vh;
+ 
+ }
+ #main  #para-notes-a{
+     
+     font-size: 3.4vh;
+ 
+ }
+  
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+ /*///////////////////////////////// overwriting ///////////////////////////// */
+  
+header nav{
+    flex-direction: column;
+    margin-left: 8vw;
+
+}
+
+header  nav #li1{
+    margin: 0;
+
+}
+ 
+
+header nav #serach{
+    margin-top: 3vh;
+    width: 97vw;
+    height: 6vh;
+    margin-left: -9vw;
+}
+ 
+#main #h22{
+    margin-top: 20vh;
+}
+
+ 
+ 
+ 
+    
+ 
+
+ footer{
+     margin-top: 12vh;
+    width: 96vw;
+    margin-left: 2vw;
+    border-radius: 4vh;
+    background-color: #2c2929;
+    font-size: 3vw;
+    text-shadow: -3px 1px 1px black;
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+
+}
+
+
+footer #para-footer{
+    font-size: 3.6vh;
+    background: -webkit-linear-gradient(#eee, rgb(115, 255, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+ 
+
+  
+
+}
+    </style>
+
+</head>
+<body>
+    <header id="header"  >
+        <nav>
+            <li class="lili" id="li1"><a href="/">Home</a></li>
+            <li class="lili" id="li2"><a href="#img-b-1">Recipe</a></li>
+            <li class="lili" id="li3"><a href="/Contrat">Contrat</a></li>
+            <li class="lili" id="li4"><a href="# ">About</a></li>
+            <input type="text" name="search "  id="serach" placeholder="search"  > 
+  
+        </nav>
+        
+    </header>
+        <div id="main">
+            <h2 id="h22" >How To Make Street Style Pav Bhaji </h2>
+            <div id="img1"><img id="img-a-1"    src="https://zaykarecipes.com/wp-content/uploads/2017/02/Pav-Bhaji-Recipe.jpg" alt=" "></div>
+
+            <div id="content-1">
+                <p id="para-1"  >I enjoy preparing street food fare at home. It’s comforting and unpretentiously rooted in Indian culinary tradition. Today, I’m blogging Mumbai’s famous street food, my kind of comfort food – Pav Bhaji. Pav = Soft Bun and Bhaji = a mashed mixed vegetable curry prepared with Pav Bhaji Masala. The key to a good Pav Bhaji lies in the quality of bread and the masala that goes into the making of the spicy bhaji. Makes for a filling evening meal.</p>
+            </div>
+            <div id="img2"   ><img id="img-b-1"src="https://www.sailusfood.com/wp-content/uploads/2010/03/pav-bhaji-ingredients.jpg" alt="">
+            <img id="img-b-1" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fzaykarecipes.com%2Fpav-bhaji-banane-ki-vidhi.html&psig=AOvVaw3qp1HjKOzuc-H6LTDrvi5l&ust=1626674281509000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjP2Yj46_ECFQAAAAAdAAAAABAD" alt=""></div>
+            <div id="content-2"><p id="para-b-1">The bhaji makes optimum use of Mother Nature’s bountiful supply of fresh vegetables. Not less than 7-8 variety of vegetables go into its making. Now that sure makes it nutrient rich, doesn’t it? 	&#128517;</p></div>
+
+    <div class="list">
+
+    
+    <div id="detalis">
+        <li class="lili-a" id="li-a-1"  >Pav Bhaji Recipe</li>
+        <li class="lili-a" id="li-a-2"  >Prep & Cooking: 50-60 mts</li>
+        <li class="lili-a" id="li-a-3"  >Serves 7-8 persons</li>
+    </div>
+    <div id="recipe">
+        <li  class= "lili-c" id = "li-c-1"      >Ingredients:</li>
+        <li  class= "lili-c" id = "li-c-2"     >1 large carrot, cubed</li>
+        <li  class= "lili-c" id = "li-c-3"     >2 potatoes, cubed</li>
+        <li  class= "lili-c" id = "li-c-4"     >1 capsicum, chopped</li>
+        <li  class= "lili-c" id = "li-c-5"     >1 cup cauliflower florets, chop</li>
+        <li  class= "lili-c" id = "li-c-6"     >8-10 french beans, string and chop</li>
+        <li  class= "lili-c" id = "li-c-7"     >1/4 cup green peas</li>
+        <li  class= "lili-c" id = "li-c-8"     >2 onions, finely chopped</li>
+        <li  class= "lili-c" id = "li-c-9"     >2 green chillis, slit length wise</li>
+        <li  class= "lili-c" id = "li-c-10"   >1 tsp ginger-garlic paste</li>
+        <li  class= "lili-c" id = "li-c-11"    >1/4 tsp turmeric pwd</li>
+        <li  class= "lili-c" id = "li-c-12"   >1/2 tsp red chilli pwd</li>
+        <li  class= "lili-c" id = "li-c-13"   >1 1/2 tbsps Pav Bhaji Masala</li>
+        <li  class= "lili-c" id = "li-c-14"   >3/4 tsp sugar (adjust)</li>
+        <li  class= "lili-c" id = "li-c-15"   >salt to taste</li>
+        <li  class= "lili-c" id = "li-c-16"   >2 tomatoes, finely chopped</li>
+        <li  class= "lili-c" id = "li-c-17"   >1 tbsp lemon juice</li>
+        <li  class= "lili-c" id = "li-c-18"   >1 tbsp low fat butter (vegans can avoid butter)</li>
+        <li  class= "lili-c" id = "li-c-19"   >fresh coriander leaves for garnish</li>
+        <li  class= "lili-c" id = "li-c-20"   >1 1/2 tbsps oil</li>
+        <li  class= "lili-c" id = "li-c-21"   >16 lightly toasted in butter, pav bread (vegans can use vegan butter substitute)</li>
+  
+    </div>
+
+    <div id="process">
+        <p   id="para-process-01" class="para-process"   >Process</p>
+        <p id="para-process-1" class="para-process">1) Pressure cook potatoes, cauliflower, peas, beans and carrot along with 1 cup of water, till soft. Drain any left over water and keep aside. Mash all the cooked vegetables using a masher.</p>
+        <p id="para-process-2" class="para-process">2) Heat oil in a vessel, add the green chillis and onions and saute for 4 mts. Add the ginger-garlic paste and saute for another 3 mts. Add capsicum and saute for 2 mts.</p>
+        <p id="para-process-3" class="para-process">3) Add the chilli pwd, turmeric pwd, pav bhaji masala, sugar and salt. Combine well. Add the tomatoes and cook until soft, approx 5-6 mts.</p>
+        <p id="para-process-4" class="para-process">4) Add the mashed vegetables along with a cup of the drained vegetable stock and cook on high for a mt. Reduce flame and simmer for 14-15 mts.</p>
+        <p id="para-process-5" class="para-process">5) The gravy will begin to thicken. Adjust the salt, if required. Turn off heat and add butter and lemon juice and combine. Garnish with fresh coriander leaves.</p>
+        <p id="para-process-6" class="para-process">6) Serve hot with lightly toasted pav/pau and sliced onions.</p>
+    </div>
+        <div id="note">
+            <p id="para-notes-a">Note:</p>
+             <p id="para-notes-b">You can use 2-3 vegetables also while preparing the bhaji. I have not used cabbage and beetroot since I did not have them on hand at the time of preparation. Using beetroot will lend a deep reddish purple color to the bhaji. </p>
+        </div>
+        <div id="img-notes"><img id="img-notes-a"  src="https://www.indiamart.com/proddetail/pav-bhaji-masala-20386032791.html" alt=""></div>
+    </div>
+</div>
+ 
+     
+    <footer>
+        <p id="para-footer" >Made  By Yadneysh    &copy;YSBlogs  </p>
+    </footer>
+
+<script > // When the user scrolls down 50px from the top of the document, resize the header's font size
+    window.onscroll = function() {scrollFunction()};
+     
+    function scrollFunction() {
+      if (document.body.scrollTop > 50|| document.documentElement.scrollTop > 50) {
+        document.getElementById("header").style.backgroundColor = "black";     
+        document.getElementById("header").style.boxShadow = "2px 2px black";
+        document.getElementById("header").style.border = ".3px solid white";
+    
+     
+     
+      } else {
+        document.getElementById("header").style.backgroundColor = "transparent";  
+        document.getElementById("header").style.boxShadow = "none";
+        document.getElementById("header").style.border = " none";
+      }
+    }
+    
+    
+     </script>
+</body>
+</html>

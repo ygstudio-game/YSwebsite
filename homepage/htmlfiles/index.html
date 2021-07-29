@@ -1,0 +1,562 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YSBlogs - Home Page</title>
+    <style>
+        @media only screen and (min-width: 768px) {
+
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            ::selection {
+                background-color: rgb(214, 195, 27);
+
+            }
+
+            body {
+                font-family: cursive;
+
+                background-image: linear-gradient(to bottom right, rgb(250, 158, 250), rgba(255, 255, 0, 0.73));
+
+            }
+
+            header {
+                margin-left: 2vw;
+
+                border-radius: 2.2vh;
+                font-size: 3vh;
+                box-shadow: -3px 2px 64px 8px #ffffff17;
+                margin-bottom: 8vh;
+                position: fixed;
+                width: 96vw;
+                height: 8vh;
+                margin-top: -10vh;
+                z-index: 4;
+                transition-property: all;
+                transition-duration: 1.4s;
+            }
+
+            header nav {
+                display: flex;
+                align-items: center;
+                margin-top: 2vh;
+                width: 96vw;
+            }
+
+            header nav li {
+                list-style: none;
+                margin-right: 3vw;
+            }
+
+            header nav .lili_a {
+                margin-top: -2vh;
+
+
+            }
+
+            header nav a {
+                text-transform: capitalize;
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                margin-right: 2.6vw;
+                font-size: 3.8vh;
+
+            }
+
+            header nav #li_1a {
+                margin-left: 3vw;
+
+            }
+
+            header #search {
+                float: right;
+                outline: none;
+                padding-left: .8vw;
+                height: 4.89vh;
+                width: 19.8vw;
+                margin-top: -6.8vh;
+                border-radius: 1.8vh;
+                margin-right: .7vw;
+            }
+
+            #main_webpages {
+                transition-property: all;
+                transition-duration: 500ms;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row;
+                flex-wrap: wrap;
+                opacity: 85%;
+                margin: auto;
+                margin-top: 15vh;
+                width: 80vw;
+                height: 80vh;
+                border-radius: 2vh;
+                background-image: linear-gradient(to bottom right, rgba(255, 255, 0, 0.73), rgb(250, 158, 250));
+                align-items: center;
+                box-shadow: inset 2px 11px 80px 2px rgb(250 158 250), inset -20px -17px 60px 20px rgb(255 255 0 / 73%), 15px 20px 160px 4px rgb(255 255 0 / 73%);
+            }
+
+            #main_webpages .card {
+                padding-top: .6vh;
+                display: inline-block;
+                width: 25vw;
+                height: 30vh;
+                border-radius: 1.8vh;
+                font-size: 1.8vh;
+                text-align: center;
+                background-color: rgb(46, 165, 42);
+                opacity: 65%;
+                transition-property: all;
+                transition-delay: 0ms;
+                transition-duration: 500ms;
+
+            }
+
+            #main_webpages #card4 {
+                width: 32vw;
+                height: 32vh;
+
+            }
+
+            #main_webpages #card5 {
+                width: 32vw;
+                height: 32vh;
+            }
+
+            #main_webpages .card a {
+                text-decoration: none;
+                text-align: center;
+                font-size: 5.4vh;
+                color: white;
+
+            }
+
+            footer {
+                margin-top: 16vh;
+                margin-left: 2vw;
+                width: 96vw;
+                height: 12vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #151111;
+                box-shadow: -2px 1px black;
+                border-radius: 2.2vh;
+                margin-bottom: 6vh;
+
+
+            }
+
+            footer #para_footer {
+                font-size: 7.8vh;
+                letter-spacing: .3vw;
+                text-align: center;
+                background: -webkit-linear-gradient(rgb(238, 238, 238), rgb(115, 255, 0));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: -5px -1px 2px rgb(0 0 0);
+            }
+
+
+
+            #main_webpages .card:hover {
+                opacity: 100;
+                background-color: rgb(238, 238, 238);
+                box-shadow: -10px 8px 26px 1px black;
+                color: black;
+
+            }
+
+            #para_card_1 {
+                transition-property: all;
+                transition-duration: 720ms;
+
+            }
+
+            #para_card_2 {
+                transition-property: all;
+                transition-duration: 600ms;
+
+            }
+            #imglogo{
+                width: 8vh;
+                height: 8vh;
+                border-radius: 50%;
+                margin-left: 3vw;
+                margin-top: -2vh;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            ::selection {
+                background-color: rgb(214, 195, 27);
+
+            }
+
+            body {
+                font-family: cursive;
+
+                background-image: linear-gradient(to bottom right, rgb(250, 158, 250), rgba(255, 255, 0, 0.73));
+
+            }
+
+            header {
+                margin-left: 2vw;
+                border-radius: 2.2vh;
+                font-size: 3vh;
+                box-shadow: -3px 2px 64px 8px #ffffff17;
+                margin-bottom: 8vh;
+                width: 96vw;
+                height: 16vh;
+                z-index: 4;
+                transition-property: all;
+                transition-duration: 1.4s;
+
+            }
+
+            header nav {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 2vh;
+                margin-left: 2vw;
+
+            }
+
+            header nav li {
+                list-style: none;
+                margin-right: 3vw;
+            }
+
+            header nav .lili_a {
+                margin-top: 1vh;
+
+
+            }
+
+            header nav a {
+                text-transform: capitalize;
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                margin-right: 2.6vw;
+                font-size: 3.8vh;
+
+            }
+
+
+            header #search {
+                outline: none;
+                padding-left: .8vw;
+                height: 4.6vh;
+                width: 86vw;
+                margin-top: 3.5vh;
+                border-radius: 2vh;
+                margin-left: 2vw;
+            }
+
+            #main_webpages {
+                transition-property: all;
+                transition-duration: 500ms;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                opacity: 85%;
+                margin: auto;
+                margin-top: 25vh;
+                width: 95vw;
+
+                border-radius: 2vh;
+                background-image: linear-gradient(to bottom right, rgba(255, 255, 0, 0.73), rgb(250, 158, 250));
+                align-items: center;
+                box-shadow: inset 2px 11px 80px 2px rgb(250 158 250), inset -20px -17px 60px 20px rgb(255 255 0 / 73%), 15px 20px 160px 4px rgb(255 255 0 / 73%);
+            }
+
+            #main_webpages .card {
+                padding-top: .6vh;
+                display: inline-block;
+                width: 85vw;
+                height: 30vh;
+                border-radius: 1.8vh;
+                font-size: 1.8vh;
+                text-align: center;
+                background-color: rgb(46, 165, 42);
+                opacity: 65%;
+                transition-property: all;
+                transition-delay: 0ms;
+                transition-duration: 500ms;
+                margin-top: 10vh;
+
+            }
+
+            #main_webpages #card1 {
+                margin: 6vh;
+                margin-bottom: 0vh;
+            }
+
+            #main_webpages .card a {
+                text-decoration: none;
+                text-align: center;
+                font-size: 5.4vh;
+                color: white;
+
+            }
+
+            #main_webpages #card5 {
+                margin-bottom: 6vh;
+
+            }
+
+            #main_webpages .card p {
+                font-size: 15px;
+
+            }
+
+            footer {
+                margin: auto;
+                margin-top: 8vh;
+                width: 96vw;
+                height: 12vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #151111;
+                box-shadow: -2px 1px black;
+                border-radius: 2.2vh;
+                margin-bottom: 6vh;
+            }
+
+            footer #para_footer {
+                font-size: 4.6vh;
+                letter-spacing: .3vw;
+                text-align: center;
+                background: -webkit-linear-gradient(rgb(238, 238, 238), rgb(115, 255, 0));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: -3px 0px 0px rgb(0 0 0);
+            }
+
+
+
+            #main_webpages .card:hover {
+                opacity: 100;
+                background-color: rgb(238, 238, 238);
+                box-shadow: -10px 8px 26px 1px black;
+                color: black;
+
+            }
+
+            #para_card_1 {
+                transition-property: all;
+                transition-duration: 720ms;
+
+            }
+
+            #para_card_2 {
+                transition-property: all;
+                transition-duration: 600ms;
+
+            }
+            #imglogo{
+                width: 6vh;
+                height: 6vh;
+                border-radius: 50%;
+                margin-left: 3vw;
+
+
+}
+
+        }
+
+     </style>
+
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <img id="imglogo" src="/logo" alt="">
+
+            <li class="lili_a" id="li_1a"> <a id="link1" href="/">Home </a> </li>
+            <li class="lili_a" id="li_2a"> <a id="link2" href="/Contrat">Contrat us </a> </li>
+            <li class="lili_a" id="li_3a"> <a id="link3" href="#">About</a> </li>
+            <li class="lili_a" id="li_4a"> <a id="link4" href="#">Webpages</a> </li>
+        </nav>
+        <input type="text" value="serach" name="search" id="search" placeholder="search">
+    </header>
+    <div id="main_webpages" onmouseenter="mainwebin()" onmouseleave="mainwebout()" style="opacity: 0.85;">
+        <div class="card " id="card1" onmouseleave="leave1()" onmouseenter="onclicked1()"><a id="card_a_1" href="/mathapp" target="_blank" rel="noopener noreferrer" style="color: white;">Math App </a>
+
+            <p id="para_card_1" style="font-size: 16px;">Click Above to know more or download my Math app
+                <br><br>
+                In This App You can do opration and complicated opration
+            </p>
+        </div>
+
+
+
+        <div class="card" id="card2" onmouseleave="leave2()" onmouseenter="onclicked2()"><a id="card_a_2" href="/pavbhajiblog " target="_blank" rel="noopener noreferrer" style="color: white;">Blogs</a>
+
+            <p id="para_card_2" style="font-size: 15px;">
+                Click Above to know more about my pav bhaji blog
+                <br> <br>
+                In This Blog Share recipe
+                <br>
+                This is my First Blog you should check out It
+            </p>
+        </div>
+        <div class="card" id="card3" onmouseleave="leave3()" onmouseenter="onclicked3()"><a id="card_a_3" href="#" style="color: white;">Coming soon</a></div>
+        <div class="card" id="card4" onmouseleave="leave4()" onmouseenter="onclicked4()"><a id="card_a_4" href="#" style="color: white;">Coming
+                soon</a></div>
+        <div class="card" id="card5" onmouseenter="onclicked5()" onmouseleave="leave5()"><a id="card_a_5" href="#" style="color: white;">Coming soon</a>
+        </div>
+    </div>
+
+    <footer>
+        <p id="para_footer">Made by © yadneysh </p>
+    </footer>
+
+    <script>
+
+
+
+
+
+
+        const mediaQuery1 = window.matchMedia('(min-width: 790px)')
+        if (mediaQuery1.matches) {
+
+            function onclicked1() {
+                document.getElementById('card_a_1').style.color = "black"
+                document.getElementById('para_card_1').style.fontSize = "2.5vh"
+            }
+            function onclicked2() {
+                document.getElementById('card_a_2').style.color = "black"
+                document.getElementById('para_card_2').style.fontSize = "2.45vh"
+            }
+            function onclicked3() { document.getElementById('card_a_3').style.color = "black" }
+            function onclicked4() { document.getElementById('card_a_4').style.color = "black" }
+            function onclicked5() { document.getElementById('card_a_5').style.color = "black" }
+
+
+            function leave1() {
+                document.getElementById('card_a_1').style.color = "white"
+                document.getElementById('para_card_1').style.fontSize = "16px"
+            }
+            function leave2() {
+                document.getElementById('card_a_2').style.color = "white"
+                document.getElementById('para_card_2').style.fontSize = "15px "
+                document.getElementById('para_card_2').style.fonts
+            }
+            function leave3() { document.getElementById('card_a_3').style.color = "white" }
+            function leave4() { document.getElementById('card_a_4').style.color = "white" }
+            function leave5() { document.getElementById('card_a_5').style.color = "white" }
+
+
+            function mainwebin() { document.getElementById('main_webpages').style.opacity = "100%" }
+            function mainwebout() { document.getElementById('main_webpages').style.opacity = "85%" }
+
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("header").style.backgroundColor = "black";
+                    document.getElementById("header").style.boxShadow = "2px 2px black";
+                    document.getElementById("header").style.border = ".3px solid white";
+                    document.getElementById("link1").style.color = "white"
+                    document.getElementById("link2").style.color = "white"
+                    document.getElementById("link3").style.color = "white"
+                    document.getElementById("link4").style.color = "white"
+
+
+                } else {
+                    document.getElementById("header").style.backgroundColor = "transparent";
+                    document.getElementById("header").style.boxShadow = "none";
+                    document.getElementById("header").style.border = " none";
+                    document.getElementById("link1").style.color = "black"
+                    document.getElementById("link2").style.color = "black"
+                    document.getElementById("link3").style.color = "black"
+                    document.getElementById("link4").style.color = "black"
+
+                }
+
+
+
+
+            }
+
+
+
+
+        }
+
+        const mediaQuery2 = window.matchMedia('(max-width: 780px)')
+        if (mediaQuery2.matches) {
+            function onclicked1() {
+                document.getElementById('card_a_1').style.color = "black"
+                document.getElementById('para_card_1').style.fontSize = "2.5vh"
+                document.getElementsByClassName('main_webpages').style.color = 'black'
+            }
+            function onclicked2() {
+                document.getElementById('card_a_2').style.color = "black"
+                document.getElementById('para_card_2').style.fontSize = "2.45vh"
+                document.getElementsByClassName('main_webpages').style.color = 'black'
+            }
+            function onclicked3() { document.getElementById('card_a_3').style.color = "black"
+            document.getElementsByClassName('main_webpages').style.color = 'black'
+         }
+            function onclicked4() { document.getElementById('card_a_4').style.color = "black"
+            document.getElementsByClassName('main_webpages').style.color = 'black'
+         }
+            function onclicked5() { document.getElementById('card_a_5').style.color = "black"
+            document.getElementsByClassName('main_webpages').style.color = 'black'
+         }
+
+
+            function leave1() {
+                document.getElementById('card_a_1').style.color = "white"
+                document.getElementById('para_card_1').style.fontSize = "16px"
+                document.getElementsByClassName('main_webpages').style.color = 'white'
+
+            }
+            function leave2() {
+                document.getElementById('card_a_2').style.color = "white"
+                document.getElementById('para_card_2').style.fontSize = "15px "
+                document.getElementById('para_card_2').style.fonts
+                document.getElementsByClassName('main_webpages').style.color = 'white'
+
+            }
+            function leave3() { document.getElementById('card_a_3').style.color = "white" 
+            document.getElementsByClassName('main_webpages').style.color = 'white'
+        }
+            function leave4() { document.getElementById('card_a_4').style.color = "white"
+            document.getElementsByClassName('main_webpages').style.color = 'white'
+         }
+            function leave5() { document.getElementById('card_a_5').style.color = "white"
+            document.getElementsByClassName('main_webpages').style.color = 'white'
+         }
+
+
+            function mainwebin() { document.getElementById('main_webpages').style.opacity = "100%" }
+            function mainwebout() { document.getElementById('main_webpages').style.opacity = "85%" }
+
+        }
+        else
+        {
+            console.log("below 790")
+        }
+
+
+    </script>
+
+
+</body></html>
