@@ -1,12 +1,22 @@
 {
-  "name": "ap_node_js",
+  "name": "my-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "this  is node ",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node /app.js"
+    "test": "echo \"Error: no test specified\" && exit 1 "
+   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ygstudio-game/YSwebsite.git"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "yadnyesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ygstudio-game/YSwebsite/issues"
+  },
+  "homepage": "https://github.com/ygstudio-game/YSwebsite#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
