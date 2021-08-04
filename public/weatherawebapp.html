@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+    <script src="https://kit.fontawesome.com/f546ba1980.js" crossorigin="anonymous"></script>    
+    <style>
+   ::selection{  
+                background-color: orange;
+                color: rgb(0, 0, 0);
+                text-shadow: none;
+            } 
+          
+        *{
+            margin: 0;
+            padding: 0;
+            /* font-family: 'Caveat', cursive; */
+            font-family: 'Courgette', cursive;
+         color: rgba(202, 240, 255, 0.965);
+         }    
+ 
+         /*||||||||||||||||||||||||| for moblie This is css  ||||||||||||||||||||||||||*/
+         /*||||||||||||||||||||||||| for moblie This is css  ||||||||||||||||||||||||||*/
+         /*||||||||||||||||||||||||| for moblie This is css  ||||||||||||||||||||||||||*/
+         /*||||||||||||||||||||||||| for moblie This is css  ||||||||||||||||||||||||||*/
+         /*||||||||||||||||||||||||| for moblie This is css  ||||||||||||||||||||||||||*/
+ 
+        @media only  screen and ( min-width : 767px )
+         {
+            
+     
+                body {
+                    filter: contrast(4) drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.993));
+                    background-color: black;
+                    background-image: linear-gradient(to bottom right, rgb(250, 158, 250), rgba(255, 255, 0, 0.73));
+                    transition-property: color;
+                    height: 100vh;
+
+                
+                /* for temp height  */
+                height: 100vh;
+
+            }
+            header{
+                background-color: transparent;
+                width: 96vw;
+                border-radius: 1.6vh;
+                font-size: 4vh;
+                margin-left: 2vw;
+                font-weight: 580;
+                margin-top: 4vh;
+                height: 8vh;
+                /* text-shadow: -4px 3px 8px black;                 */
+                text-shadow: -6px 6px 5px #ffffff, 0 0 5px #ffffff;
+                color: rgb(255, 255, 255);
+ 
+             }
+            nav{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content:   flex-start;
+                width: 96vw;
+                
+            }
+      
+             header nav a{
+                text-decoration: none;
+                 margin-right: 7vw;
+                 
+                }
+                header nav a  li {
+                    list-style: none;
+                    color: black;
+
+            }
+            header nav  a #li1{
+                margin-left: 5vw;
+
+            }
+            header nav #search{
+                border-radius: 1.6vh;
+                padding-left: .8vw;
+                width: 18vw;
+                height: 3.4vh ;
+                align-self: center;
+                outline: none;
+                font-size: 2.6vh;
+                margin-left: auto;
+                box-shadow: -3px 4px 9px black;
+            }
+            #mainlogoname{
+                display: flex;
+                 
+            }
+           #mainlogoname #logoname{
+            transition: all 1200ms;
+            color: black;
+            }
+            .fa-snowflake  {
+                margin: 0vh .6vw;
+                color: #b9cad6;
+                animation-name: one;
+                animation-duration: 1.6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+                text-shadow: -6px 6px 5px #000000, 0 0 5px #000000;
+                transition: all ;
+                transition-duration: 1300ms;
+                /* text-shadow: -6px 6px 6px black;        */
+                
+                
+            }
+            
+            
+            @keyframes one {
+                0%{
+                    
+                }
+                
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+            
+            #main{
+                display: flex;
+                flex-direction: column;
+                background-color: #00000038;
+                border-radius: 3.6vh;
+                margin: auto;
+                width: 78vw;
+                height: 60vh;
+                align-items: center;
+                padding: 4vh;
+                margin-top: 3vh;
+                flex-wrap: wrap;
+                border: 1.5vh black;
+                border-style: groove double none;
+                box-shadow: -5px 20px 18px 10px #00000073;
+                font-size: 4.6vh;
+                color: #000000;
+                
+            }
+            #inputcitynamemaindiv{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 75.6vw;                
+                height: 6.6vh;
+                align-items: center;
+                background-color: #000000a2;
+                border-radius: 2.6vh;
+                justify-content:  space-evenly ;
+                padding: 0vw .6vw;
+                border-width: 2px;
+                border-style: inset;
+                border-color:   rgb(133, 133, 133) ;
+                border-image: initial;
+                border-top-color:   rgb(255, 255, 255) ;
+ 
+            }
+            
+            #output{
+                display: flex;
+                flex-direction: column;
+                font-size: 7vh;
+                text-shadow: 7px 0px 2.6px #000000, 13px -1px 3px #473838, 14px 1px 3px #7a6868, -8px 0px 5px #5b4f4f;
+            }
+            #incitynameandsubmit{
+                width: auto;
+            }
+            #inputcitynamemaindiv{
+                display: flex;
+                flex-wrap: wrap;
+                width: 74vw;
+                
+            }
+            #inputcityname{
+                width: 62vw;
+                height: 4.4vh;
+                border-radius: 2.2vh;
+                font-size: 3vh;
+                color: white;
+                padding-left:  1vw;
+                background-color: rgba(0, 0, 0, 0.349)  ;
+                border-width: 0.1px;
+                border-style: inset;
+                border-color:   rgb(133, 133, 133) ;
+                border-image: initial;
+                border-top: none;                
+                border-left: none;
+                outline: none;
+
+
+            }
+            #Submit{
+                background-color: rgb(67, 131, 214);
+                font-size: 3.6vh;
+                width: 10vw;
+                border-radius: 2.8vh;
+
+            }
+            #todayvar{
+                display: flex;
+                width: 75vw;
+                justify-content: space-between;
+                margin: 1vh 0vw;
+                
+
+            }
+            #temp{
+                font-size: 18vh;
+                width: 36vw;
+         
+            }
+            #cloud{
+                margin-top: -26.6vh;
+                margin-left: 11vw;
+                /* width: 30vw;
+                display: flex;
+                flex-direction: column;  */
+                justify-self: right;
+ 
+            }
+            #cloud img{
+                width: 32vw;
+                height: auto;
+                margin-top: -3vh;
+                margin-bottom: 4vh;
+                
+            }
+            #cloud p{
+                margin-top: -26vh;
+                font-size: 8.6vh;
+                    
+            }
+            #LTCTime{
+                align-self: center;
+            }
+        }
+        
+        
+        @media only  screen and ( max-width : 768px ) {
+               
+     
+            body {
+                    filter: contrast(4) drop-shadow(2px 4px 6px black);
+                    background-color: black;
+                    background-image: linear-gradient(to bottom right, rgb(250, 158, 250), rgba(255, 255, 0, 0.73));
+                    transition-property: color;
+               
+ 
+            }
+            header{
+                background-color: transparent;
+                width: 96vw;
+                height: 30vh;
+                border-radius: 1.6vh;
+                font-size: 4vh;
+                margin-left: 2vw;
+                font-weight: 580;
+                margin-top: 4vh;
+                height: 28vh;
+                text-shadow: -6px 6px 5px #ffffff, 0 0 5px #ffffff;
+                color: rgb(255, 255, 255);
+                margin-bottom: 8vh;
+            }
+
+            
+            nav{
+                display: flex;
+                flex-direction: column;
+                align-items:  flex-start;
+                justify-content:   flex-start;
+                width: 96vw;
+                
+            }
+      
+             header nav a{
+                text-decoration: none;
+                margin: .4vh;
+                margin-left: 11vw;
+                  
+                }
+                header nav a  li {
+                    list-style: none;
+                    color: black;
+
+            }
+          
+            header nav #search{
+                border-radius: 2.2vh;
+                padding-left: .8vw;
+                justify-self: center;
+                width: 92vw;
+                height: 4.6vh;
+                align-self: flex-start;
+                outline: none;
+                font-size: 3.2vh;
+                margin: auto;
+                box-shadow: -3px 4px 9px black;
+                margin: 2.2vh auto;
+            }
+            #mainlogoname{
+                display: flex;
+                justify-content: space-between;
+                width: 60vw;
+                height: 5vh;
+                 
+            }
+           #mainlogoname #logoname{
+            transition: all 1200ms;
+            color: black;
+            }
+            .fa-snowflake  {
+                margin: 0vh .6vw;
+                color: #b9cad6;
+                animation-name: one;
+                animation-duration: 1.6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+                text-shadow: -6px 6px 5px #000000, 0 0 5px #000000;
+                transition: all ;
+                transition-duration: 1300ms;
+                /* text-shadow: -6px 6px 6px black;        */
+                
+                
+            }
+            
+            
+            @keyframes one {
+                0%{
+                    
+                }
+                
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+            
+            #main{
+                display: flex;
+                flex-direction: column;
+                background-color: #00000038;
+                border-radius: 5.6vh;
+                margin: auto;
+                width: 70vw;
+                height: 120vh;
+                align-items: center;
+                padding: 4vh;
+                margin-top: 14vh;
+                flex-wrap: wrap;
+                border: 1.6vh black;
+                border-style: groove double none;
+                box-shadow: -5px 20px 18px 10px #00000073;
+                font-size: 4.6vh;
+                color: #000000;
+                align-content: center;
+                
+            }
+            #inputcitynamemaindiv{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 75.6vw;                
+                height: 6.6vh;
+                align-items: center;
+                background-color: #000000a2;
+                border-radius: 2.6vh;
+                justify-content:  space-evenly ;
+                padding: 0vw .6vw;
+                border-width: 2px;
+                border-style: inset;
+                border-color:   rgb(133, 133, 133) ;
+                border-image: initial;
+                 border-top:  none ;
+ 
+            }
+            
+            #output{
+                display: flex;
+                flex-direction: column;
+                font-size: 7vh;
+                padding-top: 1vh;
+                text-shadow: 7px 0px 2.6px #000000, 13px -1px 3px #473838, 14px 1px 3px #7a6868, -8px 0px 5px #5b4f4f;
+                
+            }
+            #incitynameandsubmit{
+                width: auto;
+            }
+            #inputcitynamemaindiv{
+                display: flex;
+                flex-wrap: wrap;
+                width: 72vw;
+                height: 14vh;
+                padding: 2vh;
+                
+            }
+            #inputcityname{
+                width: 72vw;
+                height: 5.6vh;
+                border-radius: 2.2vh;
+                font-size: 3vh;
+                color: white;
+                padding-left: 1vw;
+                background-color: rgba(0, 0, 0, 0.349);
+                border-width: 0.1px;
+                border-style: inset;
+                border-color: rgb(133, 133, 133);
+                border-image: initial;
+                border-top: none;
+                border-left: none;
+                outline: none;
+
+
+            }
+            #Submit{
+                background-color: rgb(35, 97, 179);
+                font-size: 3.6vh;
+                margin: 2vh 0vw ;
+                width: 50vw;
+                height: 7vh;
+                border-radius: 2.8vh;
+                letter-spacing: 0.2vh;
+
+            }
+            #todayvar{
+                display: flex;
+                width: 52vw;
+                justify-content: space-between;
+                margin: 1vh 0vw;
+                margin-left: 0.4vh ; 
+                flex-direction: column;
+                
+
+            }
+            #temp{
+               font-size: 10vh;
+         
+            }
+            #cloud{
+                margin-top: -10vh;
+            }
+           
+            #cloud img{
+                height: 45vh;
+                width: 80vw;
+                
+            }
+            #cloud p{
+           margin-top: -14vh;
+                    
+            }
+            #LTCTime{
+                width: auto;;
+             }
+             #outputmsg{
+                display: flex;
+                flex-direction: column;
+
+             }
+        }
+        
+       
+    </style>
+
+</head>
+<body id="body"  >
+ <header id="header "  >
+        <nav>
+            <div id="mainlogoname">
+
+                <i class="far fa-snowflake" id="fa-snowflake1" onmouseenter="hover1()" onmouseleave="leave1()"></i> <p id="logoname" onmouseenter="hover1()" onmouseleave="leave1()" >YS-Weather</p> <i class="far fa-snowflake" id="fa-snowflake2" onmouseenter="hover1()" onmouseleave="leave1()"></i>
+            </div>
+                <a href="https://ysblogs-homepage.herokuapp.com/" target="_blank" rel="noopener noreferrer">  <li class="li-nav" id="li1">Home</li></a>
+                <a href="https://ysblogs-homepage.herokuapp.com/Contrat" target="_blank" rel="noopener noreferrer">  <li class="li-nav" id="li2">Contrat</li>  </a>
+                <a href=" #"  >    <li class="li-nav" id="li3">About</li> </a>
+                <a href="https://ysblogs-homepage.herokuapp.com/pavbhajiblog" target="_blank" rel="noopener noreferrer">   <li class="li-nav" id="li4">Blogs</li>   </a>
+              
+             
+                <input type="text" name="search" id="search" placeholder="Search">
+        </nav>
+
+ </header>
+ <div id="main">
+    <div id="incitynameandsubmit">
+        <div id="inputcitynamemaindiv">
+            <input id="inputcityname" type="text" placeholder="Enter the name of city" >
+            <button type="submit" id="Submit" name="Submit" onclick="getinfo() " >Submit</button>
+            
+        </div>
+        
+        <form  >
+            <div id="output" >
+                <div id="todayvar">
+                    <p  id="datevar">  </p>
+                    <div id="LTCTime"> </div>
+                    <p id="date" >1-8-2021 </p>
+                </div>
+            <div id="citynameout">
+                <div id="nameout">
+                </div>
+                <div id="countryout">
+                </div>
+            </div>
+            <div id="outputmsg">
+                <div id="temp">  </div>
+                <div id="cloud">
+ </div>
+  </div>
+        </div>
+     </form>
+    </div>
+</div>
+
+<script>
+        const mediaQuery1 = window.matchMedia('(min-width: 790px)')
+        if (mediaQuery1.matches) {
+     function hover1( ) {
+        document.getElementById("fa-snowflake1").style.color="yellow"
+        document.getElementById("fa-snowflake2").style.color="yellow"
+        //
+        //animation speed 
+        document.getElementById("fa-snowflake1").style.animationDuration="1200ms"
+        document.getElementById("fa-snowflake2").style.animationDuration="1200ms"
+
+        //
+        //text-shadow
+         document.getElementById('logoname').style.textShadow = " -1px 2px 14px blue,  1px -2px 14px blue , -12px 2px 14px blue  ,12px -2px 14px  blue "
+        document.getElementById('logoname').style.color=" white"
+  
+    } 
+    function leave1( ) {
+        document.getElementById("fa-snowflake1").style.color="white"
+        document.getElementById("fa-snowflake2").style.color="white"
+         //
+        //animation speed 
+        document.getElementById("fa-snowflake1").style.animationDuration="1600ms"
+        document.getElementById("fa-snowflake2").style.animationDuration="1600ms"
+ 
+        //
+        //text-shadow
+        document.getElementById('logoname').style.textShadow="none"
+        document.getElementById('logoname').style.color='black'
+        
+    }  } 
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    const submit = document.getElementById('Submit')
+    const cityname  =document.getElementById('inputcityname')
+    const temperature  =document.getElementById('temp')
+    const citynameout  =document.getElementById('nameout')
+    const countryname  =document.getElementById('countryout')
+    const datevar  =document.getElementById('datevar')
+    const date  =document.getElementById('date')
+    const LTCTime  =document.getElementById('LTCTime')
+ 
+ 
+
+
+ 
+// before setting date var 
+document.getElementById('datevar').style.display="flex"
+document.getElementById('output').style.display="flex"
+document.getElementById('outputmsg').style.display=" none"
+
+ 
+
+// setting date var 
+let timemain =new Date();
+let datavarmain = timemain.getDate();
+             if (datavarmain === 1 ) {
+                datevar.innerText= "Sunday" 
+            } 
+            else   if (datavarmain ===  2) {
+                datevar.innerText= "Monday" 
+            } 
+            else if (datavarmain === 3 ) {
+                datevar.innerText= "Tuesday" 
+            } 
+            else  if (datavarmain === 4 ) {
+                datevar.innerText= "Wenesday" 
+            } 
+            else if (datavarmain === 5) {
+                datevar.innerText= "Thusday" 
+            } 
+            else   if (datavarmain === 6 ) {
+                datevar.innerText= "Friday" 
+            } 
+            else if (datavarmain === 7 ) {
+                datevar.innerText= "Saturaday" 
+            } 
+            else {
+            datevar.innerText= "e bhai kya kar diya tune" 
+            
+        } 
+        
+        //finising date var 
+
+        //staring to set date 
+        let datemainDate = new Date();
+
+        let datedaymain =datemainDate.getDate();
+        let datemonthmain =datemainDate.getMonth()+1;
+        let dateyearmain =datemainDate.getFullYear();
+        
+        date.innerHTML=datedaymain+"-"+datemonthmain+"-"+dateyearmain;
+    
+
+        //Finishing to set date 
+
+        // Setting LTCTime
+        
+        setInterval(() => {
+               
+                let clocktimemain =new Date();   
+                let Hours =clocktimemain.getHours();
+                let Second =clocktimemain.getSeconds();
+                let Mintues =clocktimemain.getMinutes()+1;
+                LTCTime.innerHTML=Hours+":"+Mintues+":"+Second
+             
+            }, 1000);
+            
+        let getinfo = async( )=>{
+    event.preventDefault();
+    let cityval = cityname.value
+    if (cityval === "") {
+        document.getElementById('output').style.display='flex'
+        document.getElementById('nameout').innerText="Please Write the name before submit"
+        document.getElementById('nameout').style.color=" yellow"
+        document.getElementById('todayvar').style.display=" none"
+        document.getElementById('outputmsg').style.display=" none"
+     }
+    else {
+        try {
+         let url = `https://api.openweathermap.org/data/2.5/find?q=${cityval}&units=metric&APPID=29682a4322b9302e3db23ddf856b6d37`;
+            const response = await fetch(url);
+            
+            document.getElementById('output').style.display='flex'
+            document.getElementById('outputmsg').style.display=" flex"
+            
+            
+            const data = await response.json(); 
+            const arrdata = [data] ;
+
+             const tempofcity = arrdata[0].list[0].main.temp ;
+              temperature.innerHTML=tempofcity +' <sup>o </sup>C';
+
+               const nameofcity = arrdata[0].list[0].name;
+               citynameout.innerText =nameofcity   ;
+               citynameout.style.color ="white"   ;
+             
+             const countryname = arrdata[0].list[0].sys.country;
+             countryout.innerText =countryname;
+
+ 
+
+            document.getElementById('nameout').style.width="auto"
+            document.getElementById('citynameout').style.width="auto"
+            document.getElementById('nameout').style.marginTop="auto"
+            document.getElementById('nameout').style.fontSize="auto"
+ 
+            console.log("check1")
+        //  setting cloud 
+        
+        const cloudmain = document.getElementById('cloud') 
+        const cloudmaindata = arrdata[0].list[0].weather[0].main;
+        const cloudmaindatadesp = arrdata[0].list[0].weather[0].description;
+        console.log(cloudmaindata)
+        let clocktimemain =new Date();   
+                let Hours =clocktimemain.getHours();
+                let Second =clocktimemain.getSeconds();
+                let Mintues =clocktimemain.getMinutes()+1;
+  
+
+                
+        if (cloudmaindata ==="Clouds") {
+            console.log("completed-a1")
+            if (Hours >=6 && Hours <=18 ) {
+             cloudmain.innerHTML=` <img src="animated/cloudy-day-1.svg" alt=""> <p>${cloudmaindatadesp}</p>`
+            console.log("completed-a-b2")
+            console.log("Hours >=6 && Hours <=18" )
+            console.log(Hours >=6 && Hours <=18 )
+                 
+                
+            } 
+            else if (Hours >=18 && Hours  >=6  ) {
+            console.log("completed-a2")
+            console.log("Hours >=18 && Hours  >=6 " )
+            console.log(Hours >=18 && Hours  >=6  )
+
+                cloudmain.innerHTML=` <img src="animated/cloudy-night-1.svg"   alt=""> <p>${cloudmaindatadesp}</p>`
+            console.log("completed-a3")
+
+            }
+
+            
+        } 
+        else if (cloudmaindata ==="Clear") {
+            if (Hours >=6 && Hours <=18 ) {
+            cloudmain.innerHTML=` <img src="animated/day.svg"   alt=""> <p>${cloudmaindatadesp}</p>`
+                
+            } 
+            else if (Hours <=6 && Hours >=18) {
+                
+            cloudmain.innerHTML=` <img src="animated/night.svg"   alt=""> <p>${cloudmaindatadesp}</p>`
+            }
+         }
+
+        else if (cloudmaindata ==="Rain ") {
+             if (Hours >=6 && Hours <=18 ) {
+            cloudmain.innerHTML=` <img src="animated/rainy-1.svg"  alt=""> <p>${cloudmaindatadesp}</p>`
+            console.log("completed1")
+
+            } 
+            else if (Hours <=6 && Hours >=18) {
+                console.log("completed2")
+
+                cloudmain.innerHTML=` <img src="animated/rainy-4.svg"  alt=""> <p>${cloudmaindatadesp}</p>`
+            }
+            console.log("completed3")
+
+        }
+            console.log("completedsdd3")
+                 
+         } 
+        catch {
+        document.getElementById('nameout').innerText="Please Write the name of city corretly  "
+        console.log("hello-a-2");
+        document.getElementById('output').style.display='flex'
+        document.getElementById('nameout').innerText="Please Write the name before submit"
+        document.getElementById('nameout').style.color=" yellow"
+         document.getElementById('outputmsg').style.display=" none"
+        }
+     } 
+}       
+ console.log("completed111113")
+  
+ </script>
+ </body>
+</html>
