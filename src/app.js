@@ -23,11 +23,51 @@ app.get('/Contrat', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/blog1.html') )
   })
   app.get('/weatherapp', function (req, res) {
-    res.sendFile(path.join(__dirname,'../public/we.html') )
+    res.sendFile(path.join(__dirname,'../public/weatherawebapp.html') )
   })
+ 
   app.get('/logo', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/bg/bg.jpg') )
   })
+
+  //setting animated weather icon
+
+      //for Clouds
+
+  app.get('/animated/cloudy-day-1.svg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/animated/cloudy-day-1.svg') )
+  })
+
+  app.get('/animated/cloudy-night-1.svg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/animated/cloudy-night-1.svg') )
+  })
+  
+        //for Clear
+
+  app.get('/animated/day.svg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/animated/day.svg') )
+  })    
+
+  app.get('/animated/night.svg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/animated/night.svg') )
+  })
+  
+       //for Rain
+
+  app.get('/animated/cloudy-night-1.svg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/animated//rainy-1.svg') )
+  })
+
+  app.get('/animated/cloudy-night-1.svg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/animated/rainy-4.svg') )
+  })
+
+
+
+
+
+
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
