@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YSBlogs - Home Page</title>
     <style>
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 768px  ) and   (prefers-color-scheme: light) {
 
 
             html {
@@ -196,7 +196,7 @@
             }
         }
 
-        @media only screen and (max-width: 767px) {
+        @media only screen and (max-width: 767px) and   (prefers-color-scheme: light) {
 
 
             html {
@@ -382,6 +382,9 @@
 
         }
 
+
+        
+ 
      </style>
 
 </head>
@@ -433,7 +436,7 @@
         </div>
         <div class="card" id="card5" onmouseleave="leave5()" onmouseenter="onclicked5()"><a id="card_a_5" href="#" style="color: white;">Coming
                 soon</a></div>
-        < 
+        
     </div>
 
     <footer>
@@ -458,21 +461,24 @@
                 document.getElementById('card_a_2').style.color = "black"
                 document.getElementById('para_card_2').style.fontSize = "2.45vh"
             }
-            function onclicked3() { document.getElementById('card_a_3').style.color = "black" }
+            function onclicked3() { document.getElementById('card_a_3').style.color = "black"
+            document.getElementById('para_card_3').style.fontSize = "2.45vh"
+        }
             function onclicked4() { document.getElementById('card_a_4').style.color = "black" }
             function onclicked5() { document.getElementById('card_a_5').style.color = "black" }
 
 
             function leave1() {
                 document.getElementById('card_a_1').style.color = "white"
-                document.getElementById('para_card_1').style.fontSize = "16px"
+                document.getElementById('para_card_1').style.fontSize = "15px"
             }
             function leave2() {
                 document.getElementById('card_a_2').style.color = "white"
                 document.getElementById('para_card_2').style.fontSize = "15px "
-                document.getElementById('para_card_2').style.fonts
-            }
-            function leave3() { document.getElementById('card_a_3').style.color = "white" }
+             }
+            function leave3() { document.getElementById('card_a_3').style.color = "white"
+            document.getElementById('para_card_3').style.fontSize = "15px "
+         }
             function leave4() { document.getElementById('card_a_4').style.color = "white" }
             function leave5() { document.getElementById('card_a_5').style.color = "white" }
 
@@ -527,6 +533,7 @@
                 document.getElementsByClassName('main_webpages').style.color = 'black'
             }
             function onclicked3() { document.getElementById('card_a_3').style.color = "black"
+            document.getElementById('para_card_3').style.fontSize = "2.45vh"
             document.getElementsByClassName('main_webpages').style.color = 'black'
          }
             function onclicked4() { document.getElementById('card_a_4').style.color = "black"
