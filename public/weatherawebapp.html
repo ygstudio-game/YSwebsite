@@ -10,12 +10,19 @@
     <title>Weather App</title>
     <script src="https://kit.fontawesome.com/f546ba1980.js" crossorigin="anonymous"></script>    
     <style>
+ 
+
    ::selection{  
                 background-color: orange;
                 color: rgb(0, 0, 0);
                 text-shadow: none;
             } 
           
+            #para_footer::selection {  
+                background-color: rgb(230, 255, 1);
+                color: rgb(0, 0, 0);
+                text-shadow: -3px 0px 0px rgb(0 0 0);
+             } 
         *{
             margin: 0;
             padding: 0;
@@ -217,37 +224,39 @@
             }
             #temp{
                 font-size: 18vh;
-                width: 36vw;
+                width: 42vw;
          
             }
             #cloud{
                 margin-top: -26.6vh;
-                margin-left: 11vw;
-                /* width: 30vw;
-                display: flex;
-                flex-direction: column;  */
-                justify-self: right;
+                
  
             }
             #cloud img{
                 width: 32vw;
-                height: auto;
-                margin-top: -3vh;
-                margin-bottom: 4vh;
+               
                 
             }
-            #cloud p{
-                margin-top: -26vh;
+            #paraforcloudinfo{
                 font-size: 8.6vh;
+                margin-left: -8vw;
+                text-align: center;
+                  
                     
             }
             #LTCTime{
                 align-self: center;
+        
+            }
+            #LTCTime{
+                align-self: center;
+                 transition-property : all background;
+                 transition-duration : 2s;
             }
             
             footer {
                 margin: auto;
-                margin-top: 8vh;
+                margin-top: 4vh;
                 width: 96vw;
                 height: 12vh;
                 display: flex;
@@ -260,15 +269,14 @@
             }
 
             footer #para_footer {
-                font-size: 4.6vh;
+                font-size: 9vh;
                 letter-spacing: .3vw;
                 text-align: center;
-                background: -webkit-linear-gradient(rgb(238, 238, 238), rgb(115, 255, 0));
+                background: -webkit-linear-gradient(#eeeeee, rgb(115, 255, 0));
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                text-shadow: -3px 0px 0px rgb(0 0 0);
-            }
-
+                text-shadow: -6px 0px 1px rgb(0 0 0);            }
+            
         }
         
         
@@ -339,7 +347,7 @@
             }
             #mainlogoname{
                 display: flex;
-                 width: 80vw;
+                 width: 100vw;
                 height: 5vh;
                  
             }
@@ -478,57 +486,60 @@
                 margin-top: -15vh;
                 display: flex;
                 width: 80vw;
-}
             }
-           
-            #cloud img{
-                width: 70vw;
-                margin-top: 14vh;
-            }
-            #paraforcloudinfo{
-                margin: auto;
-                margin-top: -12vh;
-                display: block;
-                width: 50vw;
-                            
-            }
-            #LTCTime{
-                width: auto;;
+
+                #cloud img{
+                    width: 70vw;
+                    margin-top: 14vh;
+                }
+                #paraforcloudinfo{
+                    margin: auto;
+                    margin-top: -12vh;
+                    display: block;
+                    width: 50vw;
+                    
+                }
+                #LTCTime{
+                    width: auto;;
+             }
+             #LTCTime p{
+                width: 54vw;
              }
              #outputmsg{
-                display: flex;
-                flex-direction: column;
-
-             }
-             
-            footer {
-                margin: auto;
-                margin-top: 8vh;
-                width: 96vw;
-                height: 12vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #151111;
-                box-shadow: -2px 1px black;
-                border-radius: 2.2vh;
-                margin-bottom: 6vh;
+                 display: flex;
+                 flex-direction: column;
+                 
+                }
+                
+                footer {
+                    margin: auto;
+                    margin-top: 8vh;
+                    width: 96vw;
+                    height: 12vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #151111;
+                    box-shadow: -2px 1px black;
+                    border-radius: 2.2vh;
+                    margin-bottom: 6vh;
+                }
+                
+                footer #para_footer {
+                    font-size: 4.6vh;
+                    letter-spacing: .3vw;
+                    text-align: center;
+                    background: -webkit-linear-gradient(rgb(238, 238, 238), rgb(115, 255, 0));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-shadow: -3px 0px 0px rgb(0 0 0);
+                }
             }
-
-            footer #para_footer {
-                font-size: 4.6vh;
-                letter-spacing: .3vw;
-                text-align: center;
-                background: -webkit-linear-gradient(rgb(238, 238, 238), rgb(115, 255, 0));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                text-shadow: -3px 0px 0px rgb(0 0 0);
-            }
-
-        
-       
-    </style>
-
+                
+                
+                
+                </style>
+                
 </head>
 <body id="body"  >
  <header id="header "  >
@@ -560,7 +571,7 @@
                 <div id="todayvar">
                     <p  id="datevar">  </p>
                     <div id="LTCTime"> </div>
-                    <p id="date" >1-8-2021 </p>
+                    <p id="date" > </p>
                 </div>
             <div id="citynameout">
                 <div id="nameout">
@@ -581,6 +592,12 @@
     <p id="para_footer">Made by © yadneysh </p>
 </footer>
 <script>
+
+    //setting Animations For better  effect and attrat the user part 1
+
+
+
+
         const mediaQuery1 = window.matchMedia('(min-width: 790px)')
         if (mediaQuery1.matches) {
      function hover1( ) {
@@ -607,7 +624,7 @@
  
         //
         //text-shadow
-        document.getElementById('logoname').style.textShadow="none"
+        document.getElementById('logoname').style.textShadow=" -6px 6px 5px #ffffff, 0 0 5px #ffffff "
         document.getElementById('logoname').style.color='black'
         
     }  } 
@@ -647,30 +664,33 @@ document.getElementById('outputmsg').style.display=" none"
 
 // setting date var 
 let timemain =new Date();
- let datavarmain = timemain.getDay();
-  
-             if (datavarmain ==  0 ) {
+let datavarmain = timemain.getDate();
+             if (datavarmain === 1 ) {
                 datevar.innerText= "Sunday" 
             } 
-            else   if (datavarmain ==   1) {
+            else   if (datavarmain ===  2) {
                 datevar.innerText= "Monday" 
             } 
-            else if (datavarmain ==  2 ) {
+            else if (datavarmain === 3 ) {
                 datevar.innerText= "Tuesday" 
             } 
-            else  if (datavarmain ==  3 ) {
+            else  if (datavarmain === 4 ) {
                 datevar.innerText= "Wenesday" 
             } 
-            else if (datavarmain ==  4) {
+            else if (datavarmain === 5) {
                 datevar.innerText= "Thusday" 
             } 
-            else   if (datavarmain == 5 ) {
+            else   if (datavarmain === 6 ) {
                 datevar.innerText= "Friday" 
             } 
-            else if (datavarmain ==  6 ) {
+            else if (datavarmain === 7 ) {
                 datevar.innerText= "Saturaday" 
             } 
+            else {
+            datevar.innerText= "e bhai kya kar diya tune" 
             
+        } 
+        
         //finising date var 
 
         //staring to set date 
@@ -818,9 +838,36 @@ let timemain =new Date();
          document.getElementById('outputmsg').style.display=" none"
         }
      } 
-}       
- console.log("completed111113")
+    }       
+
+ 
+
+ 
+
+ 
+    // //setting Animations For better  effect and attrat the user part 1
+
+
+    // setInterval(() => {
+    //     document.getElementById('LTCTime').style.color = " yellow "    
+    //      document.getElementById('LTCTime').style.textShadow = " #0a14a7 -1px 2px 20px, #0a14a7 1px -2px 20px, #0a14a7 -12px 2px 20px, #0a14a7 20px -18px 20px "    
+        
+    //      document.getElementById('logoname').style.color = " yellow " 
+    //      document.getElementById('logoname').style.textShadow = " #0a14a7 -1px 2px 20px, #0a14a7 1px -2px 20px, #0a14a7 -12px 2px 20px, #0a14a7 20px -18px 20px "
+    //  }, 1100);
+
+
+
+    // setInterval(() => {
+    //     document.getElementById('LTCTime').style.color = " white "    
+    //   document.getElementById('LTCTime').style.textShadow = "-1px 2px 2px black,  1px -2px  2px black , -12px 2px 2px black  ,12px -2px 2px  black "   
+
+    //   document.getElementById('logoname').style.color = " black "    
+    //   document.getElementById('logoname').style.textShadow = "rgb(255 255 255) -6px 6px 5px, rgb(255 255 255) 0px 0px 5px "   
   
- </script>
+    // },2200);
+
+
+    </script>
  </body>
 </html>
