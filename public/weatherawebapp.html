@@ -647,26 +647,27 @@ document.getElementById('outputmsg').style.display=" none"
 
 // setting date var 
 let timemain =new Date();
-let datavarmain = timemain.getDate();
-             if (datavarmain === 0 ) {
+ let datavarmain = timemain.getDay();
+  
+             if (datavarmain ==  0 ) {
                 datevar.innerText= "Sunday" 
             } 
-            else   if (datavarmain ===  1) {
+            else   if (datavarmain ==   1) {
                 datevar.innerText= "Monday" 
             } 
-            else if (datavarmain === 2 ) {
+            else if (datavarmain ==  2 ) {
                 datevar.innerText= "Tuesday" 
             } 
-            else  if (datavarmain === 3 ) {
+            else  if (datavarmain ==  3 ) {
                 datevar.innerText= "Wenesday" 
             } 
-            else if (datavarmain === 4) {
+            else if (datavarmain ==  4) {
                 datevar.innerText= "Thusday" 
             } 
-            else   if (datavarmain ===5 ) {
+            else   if (datavarmain == 5 ) {
                 datevar.innerText= "Friday" 
             } 
-            else if (datavarmain === 6 ) {
+            else if (datavarmain ==  6 ) {
                 datevar.innerText= "Saturaday" 
             } 
             
