@@ -25,9 +25,25 @@ app.get('/Contrat', function (req, res) {
   app.get('/weatherapp', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/weatherawebapp.html') )
   })
- 
+  app.get('/PeriodicTable', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/periodic.html') )
+  })
+
+
+  //sounds
+  app.get('/sounds/click_sound.mp3', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/sounds/click_sound.mp3') )
+  })
+
+  // images
   app.get('/logo', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/bg/bg.jpg') )
+  })
+  app.get('/x-mark.png', function (req, res) {  res.sendFile(path.join(__dirname,'../public/bg/x-mark.png') )
+  })
+
+  //data
+  app.get('/data.json', function (req, res) {  res.sendFile(path.join(__dirname,'../public/data/data.json') )
   })
 
   //setting animated weather icon
@@ -51,6 +67,7 @@ app.get('/Contrat', function (req, res) {
   app.get('/animated/night.svg', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/animated/night.svg') )
   })
+  
   
        //for Rain
 
