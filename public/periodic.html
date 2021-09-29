@@ -135,7 +135,6 @@
       cursor: pointer;
       text-shadow: 1px -1px 5px, -1px 1px 5px;
     }
-
     .elements {
       display: grid;
       grid-gap: 0.8vw;
@@ -145,6 +144,8 @@
       margin: auto;
       padding: 4vh;
       margin-top: 22vh;
+      grid-template-columns: auto auto auto auto auto  auto auto auto auto auto     ;
+      grid-template-rows: auto auto auto auto auto  auto auto   ;
     }
 
     .elemetsall {
@@ -182,16 +183,17 @@
     .activeted {
       filter: brightness(0.2) blur(0.18vh);
     }
-
+ 
     #otherseries {
       display: grid;
-      margin-left: 18vw;
-      grid-gap: 4.5vh 0vw;
+      margin-left: 17vw;
+      grid-gap: 12vh 0vh;
     }
 
+
     #lanthrathideseries {
-      grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-      grid-template-rows: auto auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto  auto auto auto auto auto  auto auto auto auto auto   ;
+      grid-template-rows: auto  ;
       display: grid;
 
       grid-gap: 0.85vw;
@@ -204,8 +206,8 @@
     }
 
     #anthrathideseires {
-      grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-      grid-template-rows: auto auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto  auto auto auto auto auto  auto auto auto auto auto   ;
+      grid-template-rows: auto  ;
       display: grid;
       margin-top: -8.6vh;
       margin-bottom: 28.6vh;
@@ -984,8 +986,7 @@
           rgb(31, 30, 30),
           rgb(31, 30, 30)
         );
-        transform: rotate(270deg) translate(-6vw, -36vw) scale(1.46);
-      }
+       }
     }
   </style>
 
@@ -2815,19 +2816,20 @@
           let scalechecker = document.getElementById(`elements-${ass}`);
           let scalestyleelements = getComputedStyle(scalechecker);
           let scalecheckerelements = scalestyleelements.transform;
-
+          
           if (
             scalecheckerelements == "none" &&
             cutoptionmain1_querySelector_style.display == "none"
-          ) {
+          )
+             {
             document.getElementById(`elements-${ass}`).style.zIndex = "3";
           }
         }
-      }, 200);
-
-      window.onscroll = function () {
-        scrollFunction();
-      };
+        
+      }, 400);
+      
+      
+ 
       const selectors = document.getElementById("selectormetals");
       function scrollFunction() {
         setInterval(() => {
@@ -2845,6 +2847,9 @@
           }
         }, 500);
       }
+      window.onscroll = function () {
+        scrollFunction();
+      };
       // for all left side elements
       elements1.addEventListener("click", () => {
         elementsclickchecker = true;
@@ -4884,6 +4889,11 @@
             });
         }
       }
+      const mediaQuery = window.matchMedia("min-width :560px");
+      if (mediaQuery.matches) {
+        alert(" if Your are serving this website on mobile device ,then Please Rotate Your Screen for Better Experience ")
+      }
+      
     </script>
   </body>
 </html>
