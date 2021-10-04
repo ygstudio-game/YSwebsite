@@ -200,6 +200,7 @@
 
 
     animation-name: elementsanimation;
+
   }
 
   .activeted {
@@ -2163,6 +2164,8 @@ for (let ass = 1; ass <= 118; ass++) {
                 "scale(1.7 ) matrix(1, -0.056, 0.05, 1.035 , 0, 0) ";  
               document.getElementById(`elements-${ass  }`).style.zIndex =
                 "4";
+                document.getElementById(`elements-${ass}`).style.animationName="elementsanimation"
+                 
           }
          
         })
