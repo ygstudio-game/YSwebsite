@@ -928,7 +928,7 @@
     word-wrap: break-word;
   }
 
-  /* for moblie */
+  /* for  */
 
   @media only screen and (max-width: 768px) {
     body {
@@ -4282,17 +4282,19 @@ for (let ass = 1; ass <= 118; ass++) {
           });
       }
     }
-    const mediaQuery = window.matchMedia("min-width :560px");
+    const mediaQuery = window.matchMedia("max-width :560px");
     if (mediaQuery.matches) {
-      alert(" if Your are serving this website on mobile device ,then Please Rotate Your Screen for Better Experience ")
+      
     }
+    else{
+      alert(" if Your are serving this website on mobile device ,then Please Rotate Your Screen for Better Experience ")
+     }
 
-    //for settung up moblie error
-      if(elementsclickchecker && cutoptionmain1_querySelector_style.display == "none"){
+    //for settung up  error
+      if(!elementsclickchecker && cutoptionmain1_querySelector_style.display == "none"){
        for (let intt  = 1; intt  <=118; intt++) {
          document.getElementById(`elements-${intt}`).style.transform="scale(1)";
-         console.log("done")
-       } 
+        } 
       }
         
   </script>
