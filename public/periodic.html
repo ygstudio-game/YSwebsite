@@ -124,21 +124,29 @@
     transition-duration: 600ms;
   }
 
-  #selectormetals {
-    display: flex;
+  #seleectormetaldiv {
+    display: flex; 
     justify-content: center;
     z-index: 4;
     position: sticky;
     left: 7.6vw;
-    width: fit-content;
-    top: 9vw;
+     top: 9vw; 
+    padding: 3vh;
+    border-radius: 6vh;
+    transition-duration: 600ms;
+    transition-property: auto;
+     width: fit-content;
+  }
+  #selectormetals {
     transition-duration: 600ms;
     transition-property: auto;
     background-color: #1f1e1e;
-    padding: 3vh;
+    width: fit-content;
+    display: flex;
     border-radius: 6vh;
-  }
+    padding: 3vh;
 
+  }
   #selectormetals p {
     background: #1f1e1e;
     animation-name: elementsanimation;
@@ -941,10 +949,14 @@
           /* rgb(31, 30, 30), */
           /* rgb(31, 30, 30)); */
       filter: drop-shadow(-0.78vw 1.0vw 0.8vw black) contrast(1.18);
-      transform: translate(1vw , 0vw );
+      transform: translate(2vw , 0vw );
+      overflow-x: hidden;
     }
     #selectormetals { 
-    left: 8.26vw; 
+      margin: auto;
+   }
+#backgroun-container{
+  display: none;
 }
   }
 
@@ -1163,6 +1175,7 @@
   </div>
 
   <div id="periodictable">
+    <div id="seleectormetaldiv"> 
     <div id="selectormetals">
       <p class="paraforselctormetal , alkali-metals-selector" id="alkali-metals-selector-id">
         alkali metals
@@ -1194,7 +1207,7 @@
       <p class="paraforselctormetal , unknown-selector" id="unknown-selector-id">
         unknown
       </p>
-    </div>
+    </div></div>
     <div class="elements" id="element ">
       <!-- alkali metals -->
       <div onclick="clicksoundfun()" class="elemetsall , alkali-metals" id="elements-1"></div>
