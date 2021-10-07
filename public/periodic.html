@@ -47,16 +47,18 @@
   }
 
   body {
+    overflow-x: hidden;
     font-family: "Mali", "Courgette", cursive;
-    /* background-image: linear-gradient(to bottom right, */
-        /* rgb(31, 30, 30), */
-        /* rgb(31, 30, 30)); */
+    background-image: linear-gradient(to bottom right, 
+        rgb(31, 30, 30), 
+      rgb(31, 30, 30));
     filter: drop-shadow(-0.78vw 1.0vw 0.8vw black) contrast(1.18);
     /* temps hight */
   }
 
   header {
-    margin-left: 2vw;
+    position: fixed;
+     margin-left: 2vw;
     display: flex;
     align-items: center;
     border-radius: 2.2vh;
@@ -65,7 +67,7 @@
     width: 96vw;
     height: 6vh;
     margin-top: 2vh;
-    z-index: 4;
+    z-index: 5;
     transition-property: all;
     transition-duration: 1.4s;
     margin-bottom: 10vh;
@@ -76,6 +78,7 @@
     align-items: center;
     margin-top: 2vh;
     width: 96vw;
+    height: 5.3vh;
   }
 
   header nav li {
@@ -107,6 +110,7 @@
     width: 19.8vw;
     border-radius: 1.8vh;
     margin-right: 0.7vw;
+    color: black;
   }
 
   #periodictable {
@@ -115,7 +119,7 @@
     justify-content: center;
     width: 98vw;
     height: 80vh;
-    margin-top: 30vh;
+    margin-top: 35vh;
     transition-property: all;
     transition-duration: 600ms;
   }
@@ -156,17 +160,16 @@
     grid-gap: 0.8vw;
     transition-property: all;
     transition-duration: 1s;
-    width: 95vw;
+    width: 96vw;
     margin: auto;
-    padding: 4vh;
+    padding: 2.44vw;
     margin-top: 22vh;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto auto auto;
-  }
-
+}
+ 
   .elemetsall {
     background: rgb(31, 30, 30);
-
     color: white;
     height: 5vw;
     width: 4.3vw;
@@ -209,7 +212,7 @@
 
   #otherseries {
     display: grid;
-    margin-left: 17vw;
+    margin-left: 20.6vw;
     grid-gap: 12vh 0vh;
   }
 
@@ -948,11 +951,11 @@
 
    /* extra bacground .elements */
    @keyframes roatationanima {
-         from{
-            transform: rotate(0deg);
-          }
-         to{
-              transform: rotate(360deg);
+         0%{
+            transform: rotate(0deg) translatey( -50%);
+         }
+         100%{
+              transform: rotate(360deg) translatey( -50%);
          }
      }
 @keyframes move-background {
@@ -996,8 +999,10 @@
   left:0;
   bottom: 0;
   right: 0;
-  width:100vw;
-  height: 200vw ;
+  z-index: -4;
+  height: 280vh;
+  width: 100vw;
+ 
 }
 
 .stars {
@@ -1022,11 +1027,11 @@
     bottom: 0;
     z-index: 0;
     
-    -moz-animation:move-background 45s linear infinite;
-  -ms-animation:move-background 45s linear infinite;
-  -o-animation:move-background 45s linear infinite;
-  -webkit-animation:move-background 45s linear infinite;
-  animation:move-background 45s linear infinite;
+    -moz-animation:move-background 35s linear infinite;
+  -ms-animation:move-background 35s linear infinite;
+  -o-animation:move-background 35s linear infinite;
+  -webkit-animation:move-background 35s linear infinite;
+  animation:move-background 35s linear infinite;
   
 }
 
@@ -1041,30 +1046,92 @@
     bottom: 0;
     z-index: 3;
 
-   -moz-animation:move-background 130s linear infinite;
-  -ms-animation:move-background 130s linear infinite;
-  -o-animation:move-background 130s linear infinite;
-  -webkit-animation:move-background 130s linear infinite;
-  animation:move-background 130s linear infinite;
+   -moz-animation:move-background 130s ease-in-out infinite;
+  -ms-animation:move-background 130s  ease-in-out infinite;
+  -o-animation:move-background 130s  ease-in-out infinite;
+  -webkit-animation:move-background 130s  ease-in-out infinite;
+  animation:move-background 130s  ease-in-out infinite;
 }
 .background-container img{
   height: 34.1vw;
-  width:34.1vw;
-  position: absolute;
-  padding: 2vw;
-   right: 1.04vw;
-  animation: roatationanima forwards  infinite 130s;
-  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  z-index: 1;
+    width: 34.1vw;
+    position: absolute;
+    /* padding: 3vw; */
+    right: 5.04vw;
+    top: 30vh;
+     animation: roatationanima both infinite 160s;
+    animation-timing-function : linear;
+    z-index: 1;
+    color: rgb(29, 30, 30);
+    /* box-shadow:   15vw 11vw 20vw 20vw #000000 ; */
+    border-radius: 50%;
  
 }
+ 
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: fixed;
+}
+  .main_setting{
+    display: none;
+    color: #c7d141;
+    text-shadow: var(--All-element-common-text-shadow);
+    cursor: pointer;
+    margin-top: 23vh;
+    font-size: 1.91vw;
+    z-index: 8;
+    background-color: #1f1e1eb6;      
+    border-radius: 3.6vw ;
+    border: 0.6vw;
+    box-shadow: var(--All-element-common-box_shadow) ;
+    padding: 2vw;
+   
+}
+#extras_items{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  z-index: 8;
+
+
+}
+  .Extra{
+  /* display: none; */
+  z-index: 8;
+  cursor: pointer;
+  transition: all 350ms  ease-in ;
+}
+#highmode{
+  display: inline-flex;
+
+}
+#extra_info{
+  font-size: 1.3vw;
+  text-align: center;
+}
+.modes:hover{
+  color: #c386c8;
+  font-size: 2.4vw;
+  box-shadow: var(--All-element-common-box_shadow);
+  border-radius: 1.8vw;
+ }
 </style>
 
 <body id="body">
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <!-- extra bacground elements -->
-  <div class="background-container">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
+  <div id="particles-js"   ></div>
+   <div class="background-container">
+    <img id="moon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
     <div class="stars"></div>
     <div class="twinkling"></div>
     <div class="clouds"></div> </div>
@@ -1078,8 +1145,18 @@
       </li>
       <li class="lili_a" id="li_3a"><a id="link3" href="#">About</a></li>
       <li class="lili_a" id="li_4a"><a id="link4" href="/">Webpages</a></li>
+      <div class="main_setting" id="   setting" > Setting      
+       
+        <div id="extras_items">   
+                                                <div class="modes_name , Extra" id="main_mode_name">Graphics Mode</div>
+                                                <button class="modes , Extra" id=" , lowmode">Low</button>
+                                                <button class="modes , Extra" id=" , normallmode">Normal</button>
+                                                <button class="modes , Extra" id="highmode">High 
+                                                         <li class="Extra" id="extra_info">(This will cause some lag)</li>
+                                                </button>
+        </div>         </div>      </div>
     </nav>
-    <input type="text" value=" " name="search" id="search" placeholder="search" />
+    <input type="text"   name="search" id="search" placeholder="search" />
   </header>
   <div id="cutoption">
     <img id="cutoptionimg" src="x-mark.png" alt="" /><img id="cutoptionimg2" src="x-mark.png" alt="" />
@@ -1266,7 +1343,8 @@
       </div>
     </div>
   </div>
-
+  <script src="/particles.js"></script>
+  <script src="/partricleapp.js"></script>
   <script>
     async function all() {
       //json files and data
@@ -2033,6 +2111,8 @@
       document
         .getElementById(`elements-${ass}`)
         .addEventListener("click", () => {
+ 
+ 
           elementsclickchecker = true;
           document.getElementById(`cutoptionimg`).click();
           alkalimetalsselectorid.style.zIndex = "1";
@@ -2046,13 +2126,16 @@
           noblegassesselectorid.style.zIndex = "1";
           unknownselectorid.style.zIndex = "1";
 
+
+          document.getElementById("particles-js").style.filter="blur(0.74vh)"
+      document.getElementById("moon-img").style.filter="blur(0.74vh)"
           document
             .getElementById(`elements-${ass - 1}`)
             .classList.add("activeted");
           document.getElementById(`elements-${ass - 1}`).style.animationName =
             "elementsanimation";
           document.getElementById(`elements-${ass - 1}`).style.transform =
-            "scale(.4 )";
+            "scale(.6 )";
           document.getElementById(`elements-${ass - 1}`).style.zIndex = "8";
 
           setTimeout(() => {
@@ -2092,6 +2175,8 @@
 
     cutoptionmain.addEventListener("click", () => {
       elementsclickchecker = false;
+      document.getElementById("particles-js").style.filter="none"
+      document.getElementById("moon-img").style.filter="none"
 
 for (let as = 1; as <= 118;) {
   document.getElementById(`elements-${as}`).style.animationName = "none"
@@ -2179,7 +2264,8 @@ for (let ass = 1; ass <= 118; ass++) {
 
     cutoptionmain2.addEventListener("click", () => {
       elementsclickchecker = false;
-
+      document.getElementById("particles-js").style.filter="none"
+      document.getElementById("moon-img").style.filter="none"
       for (let as = 1; as <= 118;) {
         document.getElementById(`elements-${as}`).style.animationName = "none"
         document.getElementById(`onclickdisplaycontent-${as}`).style.display =
@@ -2285,7 +2371,8 @@ for (let ass = 1; ass <= 118; ass++) {
               document.getElementById(`elements-${ass  }`).style.zIndex =
                 "4";
                 document.getElementById(`elements-${ass}`).style.animationName="elementsanimation"
-                 
+                document.getElementById("particles-js").style.filter="blur(0.03vw)"
+                document.getElementById("moon-img").style.filter="blur(0.03vw)"
           }
          
         })
@@ -2300,6 +2387,8 @@ for (let ass = 1; ass <= 118; ass++) {
               document.getElementById(`elements-${ass }`).style.zIndex =
                 "2";  
                 document.getElementById(`elements-${ass}`).style.animationName="none"
+                document.getElementById("particles-js").style.filter="none"
+      document.getElementById("moon-img").style.filter="none"
           }
          
         })
@@ -2480,7 +2569,7 @@ for (let ass = 1; ass <= 118; ass++) {
     }
     // for clearing console after some time
     setInterval(() => {
-      console.clear();
+      // console.clear();
     }, 15500);
     // setting the importent content after click on element for extra content and in it jqurry is used
 

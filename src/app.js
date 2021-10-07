@@ -81,6 +81,14 @@ app.get('/Contrat', function (req, res) {
 
 
 
+  // for perodic tables background 
+  app.get('/particles.js', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/js/particles.js') )
+  })
+
+  app.get('/partricleapp.js', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/js/partricleapp.js') )
+  })
 
 
 
