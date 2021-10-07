@@ -47,6 +47,8 @@
   }
 
   body {
+    max-width: 100vw;
+    width: 100vw;
     overflow-x: hidden;
     font-family: "Mali", "Courgette", cursive;
     background-image: linear-gradient(to bottom right, 
@@ -943,16 +945,18 @@
 
   @media only screen and (max-width: 800px) {
     body {
-      padding-left: .6vw;
+      max-width: 100vw; 
+      padding-left: .7vw;
       font-family: "Mali", "Courgette", cursive;
-      /* background-image: linear-gradient(to bottom right, */
-          /* rgb(31, 30, 30), */
-          /* rgb(31, 30, 30)); */
+      background-image: linear-gradient(to bottom right,
+          rgb(31, 30, 30),
+          rgb(31, 30, 30));
       filter: drop-shadow(-0.78vw 1.0vw 0.8vw black) contrast(1.18);
        overflow-x: hidden;
     }
     #selectormetals { 
       margin: auto;
+      justify-self: center;
    }
 #particles{
   display: none;
