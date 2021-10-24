@@ -30,7 +30,7 @@ app.get('/Contrat', function (req, res) {
   })
 
   app.get('/Periodiccheck', function (req, res) {
-    res.sendFile(path.join(__dirname,'../public/backuppero.html') )
+    res.sendFile(path.join(__dirname,'../public/pericheck.html') )
   })
 
 
