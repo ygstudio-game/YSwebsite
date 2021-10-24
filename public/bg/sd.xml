@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SMandatoryPacksData>
+	<Paths>
+  		<Item>platform:\dlcPacks\mpBeach\</Item>
+		<Item>platform:\dlcPacks\mpBusiness\</Item>
+		<Item>platform:\dlcPacks\mpChristmas\</Item>
+		<Item>platform:\dlcPacks\mpValentines\</Item>
+		<Item>platform:\dlcPacks\mpBusiness2\</Item>
+		<Item>platform:\dlcPacks\mpHipster\</Item>
+		<Item>platform:\dlcPacks\mpIndependence\</Item>
+		<Item>platform:\dlcPacks\mpPilot\</Item>
+		<Item>platform:\dlcPacks\spUpgrade\</Item>
+		<Item>platform:\dlcPacks\mpLTS\</Item>
+		<Item>dlcpacks:\mpheist\</Item>		
+		<Item>dlcpacks:\mppatchesng\</Item>
+		<Item>dlcpacks:\patchday1ng\</Item>
+		<Item>dlcpacks:\patchday2ng\</Item>
+		<Item>dlcpacks:\mpchristmas2\</Item>
+		<Item>dlcpacks:\patchday2bng\</Item>
+		<Item>dlcpacks:\patchday3ng\</Item>
+        <Item>dlcpacks:\c63coupe\</Item>
+        <Item>dlcpacks:\e300w213\</Item>
+        <Item>dlcpacks:\rmodsian\</Item>
+        <Item>dlcpacks:\bugatticentodieci\</Item>
+        <Item>dlcpacks:\ninjah2\</Item>
+        <Item>dlcpacks:\rrst\</Item>
+        <Item>dlcpacks:\urus2018\</Item>
+        <Item>dlcpacks:\mbbs20\</Item>
+        <Item>dlcpacks:\Chiron\</Item>
+        <Item>dlcpacks:\ninjah2\</Item>
+        <Item>dlcpacks:\pts21\</Item>
+        <Item>dlcpacks:\roma20\</Item> 
+	        </Paths>	
+</SMandatoryPacksData>

@@ -29,19 +29,38 @@ app.get('/Contrat', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/periodic.html') )
   })
 
+  app.get('/Periodiccheck', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/backuppero.html') )
+  })
+
+
+
+  // temps
+  app.get('/earthtirl', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/earthtirl.html') )
+  })
+
+
+
+
 
   //sounds
   app.get('/sounds/click_sound.mp3', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/sounds/click_sound.mp3') )
+  }) 
+  app.get('/btnClick.mp3', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/sounds/Btnclick.mp3') )
   })
-
   // images
   app.get('/logo', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/bg/bg.jpg') )
   })
   app.get('/x-mark.png', function (req, res) {  res.sendFile(path.join(__dirname,'../public/bg/x-mark.png') )
   })
-
+  app.get('/menu.png', function (req, res) {  res.sendFile(path.join(__dirname,'../public/bg/menu.png') )
+  })
+  app.get('/close.png', function (req, res) {  res.sendFile(path.join(__dirname,'../public/bg/close.png') )
+})
   //data
   app.get('/data.json', function (req, res) {  res.sendFile(path.join(__dirname,'../public/data/data.json') )
   })
@@ -89,9 +108,41 @@ app.get('/Contrat', function (req, res) {
   app.get('/partricleapp.js', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/js/partricleapp.js') )
   })
+  app.get('/earth.jpg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/bg/Earth.jpg') )
+  })
+  app.get('/moon.jpg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/bg/moon.jpg') )
+  })
+  app.get('/space.jpg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/bg/space.jpg') )
+  })
+  app.get('/stars.jpg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/bg/stars.jpeg') )
+  })
+  app.get('/sun.jpg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/bg/sun.jpg') )
+  }) 
+  app.get('/codebg.jpg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/bg/codebg.jpg') )
+  })
+  app.get('/sidebar-1bg.jpg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/bg/sidebar-1bg.jpg') )
+  })
+  app.get('/sidebar-2bg.jpg', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/bg/sidebar-2bg.jpg') )
+  })
+  // for perodic tables images 2 
+   
+  app.get('/bg/list.png', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/bg/list.png') )
+  })
 
 
-
+  // for vanila tilt js 
+  app.get('/vanilla-tilt.js', function (req, res) {
+    res.sendFile(path.join(__dirname,'../public/js/vanilla-tilt.js') )
+  })
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

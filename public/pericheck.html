@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +14,7 @@
 </head>
 <style>
   :root {
+ 
     --alkali-color: #ecbe59;
     --alkali-earth-color: #dee955;
     --transition-metal-color: #fd8572;
@@ -24,107 +24,118 @@
     --noble-metals-color: #759fff;
     --unknown-color: #ccc;
     --lanthrathide_and_anthrathide-color: #c686cc;
+      /* low alpha color: /; */
+    --AlphaLow_color_alkali-color: #ecbd597c;
+    --AlphaLow_color_alkali-earth-color: #dee9557c;
+    --AlphaLow_color_transition-metal-color: #fd85727c;
+    --AlphaLow_color_post-transition-metal-color: #4cddf37c;
+    --AlphaLow_color_metalloid-color: #ffffff7c;
+    --AlphaLow_color_other-nonmetal-color: #52ee617c;
+    --AlphaLow_color_noble-metals-color: #759fff7c;
+    --AlphaLow_color_unknown-color: #cccccc7c;
+    --AlphaLow_color_lanthrathide_and_anthrathide-color: #c686cc7c;
+    
     --All-element-common-box_shadow: 0.15vw -0.15vw 0.18vw 0vw currentColor,
       -0.22vw 0.25vw 0.18vw 0vw currentColor;
     --All-element-common-text-shadow: 0.08vw 0.03vw 0.2vw currentColor, 0.04vw 0.03vw 0.2vw currentColor;
     ;
 
+    --SidebarLineargradient-color:: linear-gradient(90deg, #000000cf, #fffbfb17);
+    
+
   }
 
-  html {
+  html{
     scroll-behavior: smooth;
-    transition-property: all;
-    transition-duration: 600ms;
   }
 
   ::selection {
     background-color: rgb(214, 195, 27);
     color: black;
   }
-
+  
   * {
     margin: 0;
     padding: 0;
-  }
+    transition: all 800ms linear;
+   }
 
-  body {
+  body { 
     max-width: 100vw;
     width: 100vw;
     overflow-x: hidden;
     font-family: "Mali", "Courgette", cursive;
-    background-image: linear-gradient(to bottom right, 
-        rgb(31, 30, 30), 
-      rgb(31, 30, 30));
+    background: repeat   , url("space.jpg") rgb(31, 29, 29)  ;  
     filter: drop-shadow(-0.78vw 1.0vw 0.8vw black) contrast(1.18);
     /* temps hight */
   }
+  body.activeBody_DisableSrolling{
+    overflow: hidden;
+  }
 
   header {
-    position: fixed;
-     margin-left: 2vw;
+ position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 12vh;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 2.2vh;
-    font-size: 3vh;
-    box-shadow: -3px 2px 64px 8px #ffffffb4;
-    width: 96vw;
-    height: 6vh;
-    margin-top: 2vh;
-    z-index: 5;
-    transition-property: all;
-    transition-duration: 1.4s;
-    margin-bottom: 10vh;
-  }
+    transition: all 0.6s linear;
+    padding: 1vw 1vw;
+    /* background: linear-gradient(
+293deg, #000000b5,#d80000c4 , #615b5bf2); */
+background: linear-gradient( 90deg,rgba(221, 255, 255, 0.253) ,  rgba(0, 0, 0, 0.596));
+  } 
+  header .logo {
+    position: relative;
+    font-weight: 700;
+    color: white;
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    letter-spacing: 0.104vw;
 
-  header nav {
+  } 
+ header ul {
+    position: relative;
     display: flex;
-    align-items: center;
-    margin-top: 2vh;
-    width: 96vw;
-    height: 5.3vh;
+    justify-content: center;
+    right: 12vw;
+  align-items: center;
   }
-
-  header nav li {
+  header ul li {
     list-style: none;
-    margin-right: 3vw;
-  }
+     position: relative;
+  }   
 
-  header nav .lili_a {
-    margin-top: -1vh;
-  }
-
-  header nav a {
-    text-transform: capitalize;
+ header  ul   li a  {
+    position: relative;
+    margin: 0  0.78vw;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.76);
-    margin-right: 2.6vw;
-    font-size: 3.8vh;
-  }
+    color:white;
+    letter-spacing: 0.104vw;
+    font-weight: 500;
+    transition: all linear 600ms;    
+    font-size: 1.4vw;
 
-  header nav #li_1a {
-    margin-left: 3vw;
-  }
+  }   
 
-  header #search {
-    float: right;
-    outline: none;
-    padding-left: 0.8vw;
-    height: 3.4vh;
-    width: 19.8vw;
-    border-radius: 1.8vh;
-    margin-right: 0.7vw;
-    color: black;
-  }
+
+ 
+
+ 
 
   #periodictable {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 98vw;
+    width: 100vw;
     height: 80vh;
     margin-top: 35vh;
     transition-property: all;
     transition-duration: 600ms;
+    align-items: center;
   }
 
   #seleectormetaldiv {
@@ -138,7 +149,7 @@
     border-radius: 6vh;
     transition-duration: 600ms;
     transition-property: auto;
-     width: fit-content;
+     width: 100vw;
   }
   #selectormetals {
     transition-duration: 600ms;
@@ -148,8 +159,7 @@
     display: flex;
     border-radius: 6vh;
     padding: 3vh;
-
-  }
+   }
   #selectormetals p {
     background: #1f1e1e;
     animation-name: elementsanimation;
@@ -161,7 +171,7 @@
     font-size: 0.85vw;
     padding: 0.4vh 0.8vh;
     cursor: pointer;
-    text-shadow: 1px -1px 5px, -1px 1px 5px;
+    text-shadow: 0.052vw -0.052vw 0.26vw, -0.052vw 0.052vw 0.26vw;
     transition-duration: 0.45s;
     transition-timing-function: ease;
    }
@@ -171,17 +181,19 @@
     grid-gap: 0.8vw;
     transition-property: all;
     transition-duration: 1s;
-    width: 96vw;
-    margin: auto;
-    padding: 2.44vw;
-    margin-top: 22vh;
+    width: 98vw;
+    margin-left: -.2vw;
+     margin-top: 22vh;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto auto auto;
 }
  
   .elemetsall {
-    background: rgb(31, 30, 30);
-    color: white;
+    border-top-left-radius: 0.35vw;
+    border-bottom-right-radius: .35vw;
+    position: relative;
+    background: linear-gradient(343deg, #000000a5, #384436a5);   
+ color: white;
     height: 5vw;
     width: 4.3vw;
     cursor: pointer;
@@ -199,13 +211,13 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     text-shadow: var(--All-element-common-text-shadow);
-    box-shadow: var(--All-element-common-box_shadow);
+    box-shadow: var(--All-element-common-box_shadow); 
   }
 
   .elemetsall:hover {
     /* transform: scale(1.6); */
-    background: rgb(31, 30, 30);
-    z-index: 3;
+    /* background: rgb(31, 30, 30); */
+    /* z-index:   4; */
     /* transform: scale(1.76) matrix(1, -0.1, 0.1, 1.3, 0, 0); */
 
 
@@ -213,14 +225,16 @@
 
 
 
-    animation-name: elementsanimation;
+    /* animation-name: elementsanimation; */
 
   }
 
   .activeted {
     filter: brightness(0.2) blur(0.18vh);
   }
-
+  .activeteBLured {
+    filter:   blur(0.38vw);
+  }
   #otherseries {
     display: grid;
     margin-left: 20.6vw;
@@ -237,6 +251,8 @@
 
   .lanthrathideseries_elements {
     color: var(--lanthrathide_and_anthrathide-color);
+    /* background: repeating-linear-gradient(45deg, #000000, var(--AlphaLow_color_lanthrathide_and_anthrathide-color)2.8vw); */
+
   }
 
   #anthrathideseires {
@@ -250,6 +266,8 @@
 
   .anthrathideseires_elements {
     color: var(--lanthrathide_and_anthrathide-color);
+    /* background: repeating-linear-gradient(45deg, #000000, var(--AlphaLow_color_lanthrathide_and_anthrathide-color)2.8vw); */
+
   }
 
   /* defineing css for elements type */
@@ -319,6 +337,7 @@
   /* //hover effect for selectors */
   #selectormetals p:hover {
     transform: scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);
+    z-index: 8;
   }
 
   /* // defineing css for elements name,atomic mass and stuff */
@@ -345,34 +364,45 @@
   /* for elements belogin to it's type */
   .alkali-metals {
     color: var(--alkali-color);
+    /* background: repeating-linear-gradient(45deg, #000000, var(--AlphaLow_color_alkali-color)2.8vw); */
   }
 
   .akiline-earth-metals {
     color: var(--alkali-earth-color);
+    /* background: repeating-linear-gradient(45d/eg, #000000, var(--AlphaLow_color_alkali-earth-color)2.8vw); */
+
   }
 
   .transition-metal {
     color: var(--transition-metal-color);
-  }
+    /* background: repeating-linear-gradient( */
+/* 45deg, #000000, var(--AlphaLow_color_transition-metal-color)2.8vw); */
+}
+  
 
   .post-transition-metal {
     color: var(--post-transition-metal-color);
+    /* background: repeating-linear-gradient(45deg, #000000, var(--AlphaLow_color_post-transition-metal-color)2.8vw); */
   }
 
   .metalloid {
     color: var(--metalloid-color);
+    /* background: repeating-linear-gradient(45deg, #000000, var(--AlphaLow_color_metalloid-color)2.8vw); */
   }
 
   .other-nonmetal {
     color: var(--other-nonmetal-color);
+    /* background: repeating-linear-gradient(45deg, #000000, var(--AlphaLow_color_other-nonmetal-color)2.8vw); */
   }
 
   .noble-metals {
     color: var(--noble-metals-color);
+    /* background: repeating-linear-gradient(45deg, #000000, var(--AlphaLow_color_noble-metals-color)2.8vw); */
   }
 
   .unknown {
     color: var(--unknown-color);
+    /* background: repeating-linear-gradient(45deg, #000000, var(--AlphaLow_color_unknown-color)2.8vw); */
   }
 
   /* group 1
@@ -881,29 +911,29 @@
 
   #cutoption {
     position: sticky;
-    top: 5vh;
-    z-index: 4;
+    top: 3vh;
     width: 95.5vw;
-    left: 1.8vw;
+    left: 2vw;
     justify-content: center;
     display: flex;
     transition-property: all;
     transition-duration: 1000ms;
-    z-index: 12;
+    z-index: 14;
     justify-content: space-between;
+    filter: invert(1);
   }
 
   #cutoption img {
+  
     display: none;
     width: 4vw;
     height: 4vw;
     z-index: 12;
-    border-radius: 3.6vh;
+    border-radius: 0.45vw;
     padding: 1.2vh;
     cursor: pointer;
-    background: transparent;
-    box-shadow: inset -25px 40px 50px 24px #ffffff9c;
-  }
+    background: rgba(255, 255, 255, 0.739); 
+    box-shadow: -0.156vw -0.104vw 0vw 0vw #000000, 0.052vw 0.104vw 0vw 0vw #000000, -0.156vw -0.104vw 0.208vw 0.26vw #ffffff, 0.052vw 0.104vw 0.208vw 0.26vw #ffffff, 0.052vw 0.104vw 1.04vw 1.04vw #838080;  }
 
   .allonclickdisplaycontent {
     display: none;
@@ -915,7 +945,7 @@
     flex-wrap: wrap;
     font-size: 1.2vh;
     text-shadow: none;
-  }
+    text-shadow: 0.052vw 0.052vw 0vw black, 0.052vw 0vw 0vw black, 0vw 0.052vw 0vw black, -0.052vw 0.052vw 0vw black, 0.104vw 0.104vw 0.052vw black, 0.052vw -0.052vw 0.052vw black, 0vw 0.104vw 0.052vw black, -0.104vw 0.104vw 0.052vw black;  }
 
   .summary {
     text-align: center;
@@ -944,73 +974,52 @@
   
   /* for  */
 
-  @media only screen and (max-width: 800px) {
-    body {
-      max-width: 100vw; 
-      padding-left: .7vw;
-      font-family: "Mali", "Courgette", cursive;
-      background-image: linear-gradient(to bottom right,
-          rgb(31, 30, 30),
-          rgb(31, 30, 30));
-      filter: drop-shadow(-0.78vw 1.0vw 0.8vw black) contrast(1.18);
-       overflow-x: hidden;
-    }
-    #selectormetals { 
-      margin: auto;
-      justify-self: center;
-   }
-#particles{
-  display: none;
-}
-  }
+ 
 
-
-   /* extra bacground .elements */
-   @keyframes roatationanima {
-         0%{
-            transform: rotate(0deg) translatey( -50%);
-         }
-         100%{
-              transform: rotate(360deg) translatey( -50%);
+   /* extra bacground .elements */ 
+   @keyframes roatationanima { 
+         to{
+              /* transform: rotate(360deg) translatey( -50%); */
+              background-position: 3840px;
          }
      }
 @keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0vw, 0vw, 0vw);
   }
   to { 
-    -webkit-transform: translate3d(52.1vw, 0px, 0px);
+    -webkit-transform: translate3d(52.1vw, 0vw, 0vw);
   }
 }
 @-webkit-keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0vw, 0vw, 0vw);
   }
   to { 
-    -webkit-transform: translate3d(52.1vw, 0px, 0px);
+    -webkit-transform: translate3d(52.1vw, 0vw, 0vw);
   }
 }
 
 @-moz-keyframes move-background {    
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0vw, 0vw, 0vw);
   }
   to { 
-    -webkit-transform: translate3d(52.1vw, 0px, 0px);
+    -webkit-transform: translate3d(52.1vw, 0vw, 0vw);
   }
 }
 
     @-webkit-keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
+    -webkit-transform: translate3d(0vw, 0vw, 0vw);
+  }                                                                  
   to { 
-    -webkit-transform: translate3d(52.1vw, 0px, 0px);
+    -webkit-transform: translate3d(52.1vw, 0vw, 0vw);
   }
 }
 
-.background-container{
-  position: fixed;
+#background-container{
+   position: fixed;
   top: 0;
   left:0;
   bottom: 0;
@@ -1018,11 +1027,12 @@
   z-index: -4;
   height: 280vh;
   width: 100vw;
+   overflow-x: hidden;
  
 }
 
 .stars {
- background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+ background: black url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png') repeat;
  position: absolute;
   top: 0;
   bottom: 0;
@@ -1030,6 +1040,7 @@
   right: 0;
   display: block;
     z-index: 0;
+    display: none;
 }
 
 .twinkling{
@@ -1042,6 +1053,7 @@
     top: 0;
     bottom: 0;
     z-index: 0;
+    display: none;
     
     -moz-animation:move-background 35s linear infinite;
   -ms-animation:move-background 35s linear infinite;
@@ -1052,6 +1064,7 @@
 }
 
 .clouds{
+  display: none;
   width:520.1vw;
   height: 100%;
   background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
@@ -1068,7 +1081,7 @@
   -webkit-animation:move-background 130s  ease-in-out infinite;
   animation:move-background 130s  ease-in-out infinite;
 }
-.background-container img{
+#background-container img{
   height: 34.1vw;
     width: 34.1vw;
     position: absolute;
@@ -1088,6 +1101,7 @@
 /* ---- particles.js container ---- */
 
 #particles-js{
+  /* display: none; */
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -1096,6 +1110,13 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   position: fixed;
+}
+  
+ .DISPLAYNone{  
+  display: none; 
+}
+#particles-js.toggleNone{
+  display: block;
 }
   .main_setting{
     display: none;
@@ -1140,44 +1161,1009 @@
   box-shadow: var(--All-element-common-box_shadow);
   border-radius: 1.8vw;
  }
-</style>
+
+ /* .elemetsall::before{
+  content: " ";
+    position: absolute;
+    top: -0.2vw;
+    bottom: -0.2vw;
+    left: -0.2vw;
+    right: -0.2vw;
+    z-index: -1;
+    border: 0.1vw solid currentColor;
+    background: linear-gradient( 333deg, #b607aa, #cbc426);
+    filter: blur(0.18vw);
+    transform: skew(4deg, 4deg);  
+    content: "";
+    position: absolute;
+     background: #fff;  
+    top: -0.052vw;
+    bottom: -0.052vw;
+    left: -0.052vw;
+    right: -0.052vw;
+    z-index: -1;
+    transform: skew( 
+4deg , 
+4deg);
+      background: linear-gradient( 
+315deg , #00ff37 , #5d02ff); 
+    border: 0.4vw;
+    border-style: solid;
+    border-top-color: currentColor;
+    border-left-color: currentColor;
+    border-right-color: currentColor;
+    border-bottom-color: currentColor;
+    border-top-left-radius: 0.8vw;
+    border-bottom-right-radius: .8vw;
+    filter: blur(.15vw) brightness(1.5);
+ } */
+
+  .toggle{
+    position: fixed;
+    top: 1.5vw;
+    right: 2.5vw;
+    width: 4vw;
+    height: 4vw;
+    background: rgb(255, 255, 255) url(/menu.png);
+    background-size: 3vw;
+    filter: invert(1);
+    /* box-shadow: inset black 0.1vw 0.1vw 1vw 0.104vw, #3a4437 0.1vw 0.1vw 3vw 0.052vw; */
+     border-radius: 0.3vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 6;
+    transition: all 300ms linear ;
+
+  }
+ .toggle.activatedMenuClass {
+    background: #ffffff url(/close.png);
+    background-size: 3vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 25;
+    
+ 
+  } 
+ /* forr side bar  */
+ 
+ 
+ .sidebar , .sidebar2{
+  position: absolute;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: #470101e6 url(sidebar-2bg.jpg) ; 
+  display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 900ms linear , opacity 1400ms   linear   ;
+    z-index: 24;
+    height:  0vh;
+    width:  0vw;
+     border-radius: 0.4vw;
+    right: -200vw;
+    border: 0.625vw solid white;
+    opacity: 0;
+    top: 100vh;
+  }
+ 
+  
+ .sidebar2{ 
+    right:  200vw;
+    background: #470101e6 url(sidebar-1bg.jpg);  
+top: 0vh;
+
+ }
+ 
+ .sidebar ul {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+text-decoration: wavy;
+
+ }
+ .sidebar ul li {
+   list-style: none;
+   text-align: center;
+ }
+ .sidebar ul li a{
+   color: white;
+   text-decoration: none;
+   font-size: 1.4vw;
+   margin: 0.2vw 0vw ;
+   font-weight: bold;
+   letter-spacing: 0.08vw;
+   text-transform: uppercase;
+
+ }.sidebar ul li a:hover{
+   color: #759fff;
+ }
+ 
+ .sidebar.activatedMenuClass{
+top: 0vh;
+   right:  0vw;
+   width: 50vw;
+   height: 100vh;
+   border: none;
+   opacity: 1;
+    }
+ .sidebar2.activatedMenuClass{
+   right:  50vw;
+   width: 50vw;
+   height: 100vh;
+   border: none;
+   opacity: 1;
+  }
+ .A_for_Button{
+  display: flex;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 10.4vw;
+    height: 3.125vw;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.3vw 0vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ 
+
+.A_for_Button span{
+  position:relative;
+  z-index:1;
+  color:#fff;
+  font-size:1.04vw;
+  letter-spacing:0.156vw;
+  
+}
+
+.A_for_Button .liquid{
+  position:absolute;
+  top:-3.75vw;
+  left:0;
+  width:10.4vw;
+  height:10.4vw;
+  background: linear-gradient(334deg, #871ac0, #ffffff);  box-shadow:inset 0 0 2.6vw rgba(0,0,0,0.5);
+  transition:0.5s;
+}
+
+.A_for_Button .liquid::before,a .liquid::after{
+  content:"";
+  position:absolute;
+  width:200%;
+  height:200%;
+  top:0;
+  left:50%;
+  transform:translate(-50%,-75%);
+}
+
+
+.A_for_Button .liquid::before{
+  border-radius:45%;
+  background-color:rgba(20,20,20,1);
+  animation: wave 8s linear infinite;
+}
+
+
+
+.A_for_Button .liquid::after{
+  border-radius:40%;
+  background-color:rgba(20,20,20,.5);
+  animation: wave 8s linear infinite;
+}
+.A_for_Button:hover .liquid{
+  top: -6.25vw;
+
+ }
+
+@keyframes wave{
+  0%{
+    transform:translate(-50%,-75%) rotate(0deg); 
+  }
+  
+  100%{
+    transform:translate(-50%,-75%) rotate(360deg); 
+  }
+}
+#earth-img{
+  /* position: absolute;
+    width: 34vw;
+    height: 34vw;
+    background: url(earth.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 1.04vw #0319f4, 0 0 6.25vw #03a9f4;
+    animation: roatationanima linear infinite 126s;
+    transform: rotate( 334deg);
+    top: 8vh;
+    z-index: 1;
+    right: 6vw; */
+
+
+  position: absolute;
+    top: 8vh;
+    right: 6vw;
+    transform: translate(-50% , -50%);
+    width: 34vw;
+    height: 34vw;
+    border-radius: 50%;
+    background: url(earth.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0 1.04vw #0319f4, 0 0 6.25vw #03a9f4;
+    transform: rotate( 334deg);
+    animation: roatationanima linear infinite  154s; 
+    z-index: 3;
+    display: none;
+ 
+} 
+ @keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+   }
+}
+
+  
+.planetaMian
+{    position: absolute;
+  display: none;
+    transform: rotate( 338deg);
+    top: -2vh;
+    right: 10vw; 
+  
+}
+.planetaMian.toggleNone{
+  display: block;
+}
+.planet{
+    width:26vw;
+    height:26vw;
+    position:absolute;
+    border-radius:50%;
+    overflow:hidden;
+    top: 3.9vw;
+    right: 12vw;
+    margin:-7.8vw;
+    animation: rotatebac 600s infinite linear;  
+    box-shadow: inset 0 0 1.04vw #0319f4, 0 0 6.25vw #03a9f4;
+    transform: rotate( 334deg);
+  }
+  .planet .mask{
+    width:100%;
+    height:100%;
+    position: absolute;
+    box-shadow:inset -0.52vw -0.52vw 2.08vw #0319f4, inset 0.52vw 0.52vw 1.56vw -0.52vw #03a9f4;
+    border-radius:50%;
+  } 
+  .planet .background{
+    animation: translateBackground 160s infinite linear;  
+    background:url(earth.jpg) repeat-x  ;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    position:absolute;
+    border-radius:50%;
+  }
+  .planet .clouds{
+    background:url(http://artem.anmedio.ru/dev/planet/clouds.png) repeat-x;
+    width:100%;
+    height:100%;
+    position:absolute;
+    border-radius:50%;
+    animation: translateBackground 120s infinite linear;
+    opacity: 0.4;
+  }
+  .planet .wrap{
+    width:100%;
+    height:100%;
+    position:absolute;
+    border-radius:50%;
+    animation: rotatePlanet 600s infinite linear;  
+  }
+@keyframes translateBackground{
+  0%{
+    background-position-x:0;
+  }
+  100%{
+    background-position-x:-600px;
+  }
+}
+@keyframes rotatePlanet{
+  0%{
+    transform:rotateZ(0deg);
+  }
+  100%{
+    transform:rotateZ(-360deg);
+  }}
+  @keyframes rotatebac{
+  0%{
+    transform:rotateZ(0deg);
+  }
+  100%{
+    transform:rotateZ(360deg);
+  }
+}
+ 
+  .sunmain{
+  display: none;
+    width:45vw;
+    height:45vw;
+    position:absolute;
+    border-radius:50%;
+    overflow:hidden;
+    top: 0vw;
+    left: -17vw;
+    margin:-7.8vw;
+    animation: rotatebac 50s infinite linear;  
+    box-shadow: inset 0 0 1.04vw #dcf403, 0 0 6.25vw #f4c803;
+    transform: rotate( 334deg);
+  }
+  .sunmain.toggleNone{
+  display: block;
+}
+  .sunmain .Sunmask{
+    width:100%;
+    height:100%;
+    position: absolute;
+    box-shadow:inset -0.52vw -0.52vw 2.08vw #dcf403, inset 0.52vw 0.52vw 1.56vw -0.52vw #f4c803;
+    border-radius:50%;
+  } 
+  .sunmain .sunbackground{
+    animation: translateBackground 26.66s infinite linear;  
+    background:url(sun.jpg) repeat-x  ;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    position:absolute;
+    border-radius:50%;
+  }
+ 
+  .sunmain .sunwrap{
+    width:100%;
+    height:100%;
+    position:absolute;
+    border-radius:50%;
+    animation: rotatePlanet 50s infinite linear;  
+  }
+  
+
+  .onclickbackgorund{ 
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* width: 100vw; */
+      /* padding: 2vw; */
+    z-index: 6;
+    right: -100vw;
+    transition: all linear 1s;
+    transition-delay: 50ms;
+    transform-style: preserve-3d;
+    overflow: hidden;
+ 
+}
+.onclickbackgorund span{
+  /* background: linear-gradient( 
+  #64591987 , #000000ab ); */
+  background: linear-gradient(90deg , rgba(144, 78, 230, 0.404), rgba(235, 8, 8, 0.657));
+ height: 0vw;
+width: 0vw;
+position: relative;
+right: -100vw;
+transition: all linear 800ms;  
+border  : 0.06vw solid rgb(255, 255, 255);
+}
+.onclickbackgorund span:nth-child(2){
+  transition-delay : 400ms ;
+}  
+.onclickbackgorund span:nth-child(3){
+  transition-delay: 800ms ;
+}  
+.onclickbackgorund span:nth-child(4){
+   transition-delay:1200ms ;
+}  
+.onclickbackgorund span:nth-child(5){
+  transition-delay:1600ms ;
+}  
+.onclickbackgorund span:nth-child(6){
+  transition-delay:2000ms ;
+}  
+.onclickbackgorund span:nth-child(7){
+  transition-delay:2400ms ;
+}  
+.onclickbackgorund span:nth-child(8){
+  transition-delay:2800ms ;
+}  
+.onclickbackgorund span:nth-child(9){
+  transition-delay:3200ms ;
+}  
+.onclickbackgorund span:nth-child(10){
+  transition-delay:3600ms ;
+}  
+.onclickbackgorund span:nth-child(11){
+  transition-delay: 4000ms ;
+}  
+.onclickbackgorund span:nth-child(12){
+  transition-delay:4400ms ;
+}  
+ 
+ .onclickbackgorund.activated_span{
+right: 0vw; 
+width: 100vw;
+   
+}     
+.onclickbackgorund.activated_span span{
+ width: 100vw;
+ height: 22vw;
+right: 0vw;
+border  : 0.0vw solid rgb(255, 255, 255);
+    
+ 
+}   
+.btncontaniner{
+  display: flex;
+  justify-self: unset;color: #000;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  top: -1.5vh;
+  
+}
+.btncontaniner.sidebarcontanier{
+  flex-direction: column;
+  display: flex;
+     align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: -1.5vh;
+    width: 50vw;
+    height: 104vh;
+    justify-content: center;
+    align-content: flex-start;
+    left: 12vw;
+  }
+  .btncontaniner.sidebarcontanier.Customization-modes{
+    height: 90vh;
+    width: 22vw;
+    justify-content: flex-start;
+    top: 4vh;
+    background: #0f0f0f96;
+    border-radius: 1.06vw;
+    padding: 1vw;
+     box-shadow: 0vw 0vw 1.5vw 0vw rgb(0, 0, 0);
+    left: -150vw;
+  }
+  .btncontaniner.sidebarcontanier.Customization-modes.activatedMenuClass{
+    left: 16vw;
+    opacity: 0.95;
+  }
+
+  .btncontaniner.sidebarcontanier.Customization-modes a{
+    margin: 2vw 0;
+  }
+.BlankForSidebar1, .BlankForSidebar2{ 
+  position: relative;
+     top: -1.5vh;
+    width: 50vw;
+    height: 104vh;
+    background: linear-gradient( 270deg, #000000be, #fffbfb1a);
+z-index: -1;
+transition: all 700ms linear;
+}
+.BlankForSidebar1{
+  background: linear-gradient( 90deg, #000000be, #fffbfb1a);
+  box-shadow: inset 0.104vw 0vw 1.56vw 0vw #1c1f22, inset -1.04vw 0vw 1.56vw 0.46vw #1c1f22;
+ 
+}
+.BlankForSidebar.activatedBlankForSidebarClass{
+  position: absolute;
+
+}
+.AllMainCustomize{
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+ 
+.MainCustomizeFlex{
+  display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 19.5vw;
+    height: 4.5vw;
+    box-shadow: 0vw 0vw 1vw 0.2vw #4ccf47;
+    margin: 1.2vw 0;
+    padding: 0.6vw 1vw;
+    border-radius: 0.8vw;
+}
+.MainCustomizeFlex p{
+  font-weight: 780;
+    color: #ffffff;
+    font-size:2vw;
+    text-transform: uppercase;
+    letter-spacing: 0.104vw;
+    text-shadow: 0vw 0vw 0.52vw #00b3ff, 
+                          0vw 0vw 1.04vw #00b3ff,
+                          0vw 0vw 2.08vw #00b3ff, 
+                          0vw 0vw 3.125vw #00b3ff, 
+                          0vw 0vw 4.16vw #00b3ff, 
+                          0vw 0vw 6.25vw #00b3ff   ;
+
+}
+.btncontaniner.sidebarcontanier .sidebarbtns , .btncontaniner.sidebarcontanier .directbtnFALSE{
+    margin: 0.52vw 2.08vw;
+  }
+.btncontaniner .sidebarbtns ,.btncontaniner .directbtnFALSE {
+  font-size: 1.15vw;
+  position: relative;
+  display: inline-block;
+  padding: 0.78vw 1.56vw ;
+  border: 0.104vw solid #0f0;
+  margin:  0 2.08vw;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.104vw ;
+  color: white;
+  transition: 0.5s;
+  /* font-size: 1.2vw; */    
+  -webkit-box-reflect: below 0vw linear-gradient( #00000000 , #00000036);}
+.btncontaniner .sidebarbtns:hover{
+  color: black;
+  box-shadow: 0vw 0vw 0.52vw #0f0,
+                      0vw  0vw 1.04vw #0f0,
+                      0vw  0vw 2.08vw #0f0,
+                      0vw  0vw 4.16vw #0f0,
+                      0vw  0vw 8.3vw #0f0  ;
+
+}
+ .btncontaniner .sidebarbtns span , .btncontaniner .directbtnFALSE span {
+  position:relative ;
+  z-index: 12;
+}
+  .btncontaniner .sidebarbtns:nth-child(2) ,  .btncontaniner .directbtnFALSE:nth-child(2){
+  filter: hue-rotate(80deg);
+}  
+.btncontaniner .sidebarbtns:nth-child(3) ,  .btncontaniner .directbtnFALSE:nth-child(3){
+  filter: hue-rotate(180deg);
+}  
+.btncontaniner .sidebarbtns:nth-child(4) ,  .btncontaniner .directbtnFALSE:nth-child(4){
+  filter: hue-rotate(35deg);
+}  
+.btncontaniner .sidebarbtns:nth-child(5) ,  .btncontaniner .directbtnFALSE:nth-child(5){
+  filter: hue-rotate(80deg);
+}  
+.btncontaniner .sidebarbtns:nth-child(6) ,  .btncontaniner .directbtnFALSE:nth-child(6){
+  filter: hue-rotate(180deg);
+}  
+.btncontaniner .sidebarbtns:nth-child(7) ,  .btncontaniner .directbtnFALSE:nth-child(7){
+  filter: hue-rotate(35deg);
+}  
+.btncontaniner .sidebarbtns:nth-child(8) ,  .btncontaniner .directbtnFALSE:nth-child(8){
+  filter: hue-rotate(60deg);
+}  
+.btncontaniner .sidebarbtns:nth-child(9) ,  .btncontaniner .directbtnFALSE:nth-child(9){
+  filter: hue-rotate(180deg);
+}  
+
+.btncontaniner .sidebarbtns::before ,.btncontaniner .directbtnFALSE::before{
+  content: "";
+  position: absolute;
+left: -1.04vw ;
+top: 1.406vw;
+ transform: translateY(-50%);
+width: 1.04vw;
+height: 0.104vw;
+background-color: #0f0;
+box-shadow: 0.26vw -0.416vw 0 #0f0,
+                    0.26vw  0.416vw 0 #0f0  ;
+  /* transition:  width 0.5s , left 0.5s ,height 0.5s  box-shadow 0.5s ; */
+  transition: width 0.5s, left 0.5s , height 0.5s , box-shadow 0.5s;
+  transition-delay:  1s , 0.5s , 0s , 0s ;
+}
+.btncontaniner .sidebarbtns:hover::before{
+  width: 62%;
+  height: 110%;
+  left: -0.104vw;
+  box-shadow: 0.26vw  0vw 0 #0f0,
+                    0.26vw  0vw 0 #0f0  ;
+ transition-delay:  0s , 0s , 0.5s , 1s ;
+}
+ 
+.btncontaniner .sidebarbtns::after ,.btncontaniner .directbtnFALSE::after{ 
+  content: "";
+  position: absolute;
+right: -1.04vw ;
+top: 1.406vw;
+ transform: translateY(-50%);
+width: 1.04vw;
+height: 0.104vw;
+background-color: #0f0;
+box-shadow: -0.26vw -0.416vw 0 #0f0,
+                    -0.26vw  0.416vw 0 #0f0  ;
+  /* transition:  width 0.5s , left 0.5s ,height 0.5s  box-shadow 0.5s ; */
+  transition: width 0.5s, right 0.5s , height 0.5s , box-shadow 0.5s;
+  transition-delay:  1s , 0.5s , 0s , 0s ;
+}
+.btncontaniner .sidebarbtns:hover::after{
+  width: 62%;
+  height: 110%;
+  right: -0.104vw;
+  box-shadow: -0.26vw  0vw 0 #0f0,
+                    -0.26vw  0vw 0 #0f0  ;
+ transition-delay:  0s , 0s , 0.5s , 1s ;
+}
+   .boxheading {
+    width: 17vw;
+    height: 6vw;
+    overflow: hidden;
+    display: flex;
+    padding: 2vw;
+    filter: hue-rotate(
+46deg);
+}
+ #Customization{
+  position: relative;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 2vw;
+    text-transform: uppercase;
+    letter-spacing: 0.104vw;
+    text-shadow: 0vw 0vw 0.52vw #00b3ff, 
+                          0vw 0vw 1.04vw #00b3ff,
+                          0vw 0vw 2.08vw #00b3ff, 
+                          0vw 0vw 3.125vw #00b3ff, 
+                          0vw 0vw 4.16vw #00b3ff, 
+                          0vw 0vw 6.25vw #00b3ff   ;
+ }
+ .lightbar{
+  position: absolute;
+  top: 1.5vw;
+  left: 0;
+  width: 0.52vw ;
+  height: 6vw;
+  border-radius: 0.52vw;
+  color: #b5ff00;    
+  z-index: 2;
+  box-shadow: 0vw 0vw 0.52vw currentColor, 
+                          0vw 0vw 1.04vw currentColor,
+                          0vw 0vw 2.08vw currentColor, 
+                          0vw 0vw 3.125vw currentColor, 
+                          0vw 0vw 4.16vw currentColor, 
+                          0vw 0vw 5.2vw currentColor, 
+                          0vw 0vw 6.25vw currentColor, 
+                          0vw 0vw 7.29vw currentColor, 
+                          0vw 0vw 8.3vw currentColor,
+                          0vw 0vw 9.375vw currentColor, 
+                          0vw 0vw 10.4vw currentColor, 
+                          0vw 0vw 11.45vw currentColor, 
+                          0vw 0vw 12.5vw currentColor, 
+                          0vw 0vw 13.54vw currentColor, 
+                          0vw 0vw 14.58vw currentColor, 
+                          0vw 0vw 15.625vw currentColor   ;
+background-color: white;
+animation: aniamatetext 5s linear infinite;
+ }
+ .toplayer{
+   display: none;
+   position: absolute;
+   top: 2vw;
+  left: 0;
+  width: 18vw ;
+  height: 6vw;
+  border-radius: 0.52vw;
+background-color: #0f0f0f;
+  color: white;
+  z-index: 2;
+animation: aniamatetoplayer 10s linear infinite;
+
+ }
+
+ @keyframes aniamatetext {
+   0%,5%{
+     transform: scaleY(0)  translateX(3vw);
+   }
+   10% {
+     transform: scaleY(1)  translateX(3vw);
+   } 
+   90%{
+     transform: scaleY(1)  translateX(20vw);
+   }
+   95% , 100%{
+     transform: scaleY(0)  translateX(20vw);
+   }
+ }
+ @keyframes aniamatetoplayer {
+  2.5%{
+     transform: translateX(0);
+   }
+   5% {
+     transform: translateX(0);
+   } 
+   45%{
+     transform: translateX(18vw);
+   }
+   47.5% , 50%{
+     transform: translateX(18vw);
+   }
+  50.001% , 52.5%{
+     transform: translateX(-18vw);
+   }
+   55% {
+     transform: translateX(-18vw);
+   } 
+   95%{
+     transform: translateX(0vw);
+   }
+   97.5% , 100%{
+     transform: translateX(0vw);
+   }
+ }
+.submainbtncontanier{
+  flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: -2vw;
+    justify-content: center;
+    padding: 2vw;
+}
+#Customization_selector.activatedMenuClass::after , .ModesOPtim.activatedMenuClass::after{
+  width: 62%;
+  height: 110%;
+  right: -0.104vw;
+  box-shadow: -0.26vw  0vw 0 #0f0,
+                    -0.26vw  0vw 0 #0f0  ;
+ transition-delay:  0s , 0s , 0.5s , 1s ;
+}
+ #Customization_selector.activatedMenuClass::before ,  .ModesOPtim.activatedMenuClass::before{
+  width: 62%;
+  height: 110%;
+  left: -0.104vw;
+  box-shadow: 0.26vw  0vw 0 #0f0,
+                    0.26vw  0vw 0 #0f0  ;
+ transition-delay:  0s , 0s , 0.5s , 1s ;
+}
+#Customization_selector.activatedMenuClass , .ModesOPtim.activatedMenuClass {
+  color: black;
+  box-shadow: 0vw 0vw 0.52vw #0f0,
+                      0vw  0vw 1.04vw #0f0,
+                      0vw  0vw 2.08vw #0f0,
+                      0vw  0vw 4.16vw #0f0,
+                      0vw  0vw 8.3vw #0f0  ;
+}
+ 
+.switch{
+  position: relative;
+    width: 4.427vw;
+    height: 4.58vw;
+    border: 0.156vw solid #0000;
+    background: linear-gradient(#eee ,#ccc , #eee);
+    border-radius: 0.52vw;
+    display: flex;
+    justify-content:  center ;
+    align-items: center;
+    box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
+    flex-direction: column;
+}
+ 
+   
+        .switch .ON_OFF_METER::after{ 
+          content: "OFF";
+     color: #fff;
+    letter-spacing: 0.104vw;
+    position: absolute;
+    font-size: 1.45vw;
+    top: 72%;
+    left: -82%;
+    z-index: 5;
+    text-shadow: 0vw 0vw 0.52vw #ff0000, 0vw 0vw 1.04vw #ff0000, 0vw 0vw 2.08vw #ff0000, 0vw 0vw 3.125vw #ff0000, 0vw 0vw 4.16vw #ff0000, 0vw 0vw 6.25vw #ff0000;
+   }
+  .switch .circleONOFF{
+    position: absolute;
+    width: 0.4vw;
+    height: 0.4vw;
+    background: currentColor;
+    border-radius: 50%;
+    border: 0.2vw solid black;
+    left: -60%;
+    top: 40%;
+    color: red;
+    box-shadow: 0vw 0vw 1.2vw 0.4vw currentColor; 
+  }
+           .switch .btn{
+            position: relative;
+            width: 1.3vw;
+            height: 2.08vw;
+            background: linear-gradient(#777 ,#fff ,#777);
+            border-radius: 0.3125vw ;
+            border: 0.104vw solid #0000;
+            cursor: pointer;
+            box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
+
+        }
+        .switch .btn::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 85%;
+            background: linear-gradient(#fff , #fff);
+            border-radius: 0.208vw;
+            box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
+
+        }
+          #switch1.on ,   #switch2.on , #switch3.on{
+            box-shadow:  -0.104vw   0.104vw 0.104vw 0.104vw black;  
+        }
+         #switch1.on  .btn::before ,  #switch2.on  .btn::before ,  #switch3.on  .btn::before{
+        top: 15%;
+        box-shadow: -0.052vw 0.052vw 0.104vw 0.104vw black;
+        }
+          #switch1.on   .btn ,  #switch2.on  .btn ,  #switch3.on  .btn  {
+            box-shadow: -0.052vw 0.052vw 0.104vw 0.104vw black;
+        }
+        #switch1.on .ON_OFF_METER::after , #switch2.on .ON_OFF_METER::after , #switch3.on .ON_OFF_METER::after{ 
+          content: "ON";
+          text-shadow: 0vw 0vw 0.52vw #ffff00, 0vw 0vw 1.04vw #ffff00, 0vw 0vw 2.08vw #ffff00, 0vw 0vw 3.125vw #ffff00, 0vw 0vw 4.16vw #ffff00, 0vw 0vw 6.25vw #ffff00;
+        }
+ 
+        #switch1.on .circleONOFF ,#switch2.on .circleONOFF ,#switch3.on .circleONOFF { 
+          color: yellow;
+          }
+   
+ </style>
 
 <body id="body">
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <noscript>You need to enable JavaScript to run this app.</noscript> 
+    <audio id="click_sound" src="sounds/click_sound.mp3"></audio>
+    <audio id="btnClick" src="/btnClick.mp3"></audio>
+  <div class="onclickbackgorund" id="onclickbackgroundID"> 
+     <span></span>   
+     <span></span>    
+     <span></span>
+     <span></span>   
+     <span></span>    
+     <span></span>
+     <span></span>   
+     <span></span>    
+     
+ 
+    </div>
+
+
   <!-- extra bacground elements -->
-  <div id="particles"> 
-  <div id="particles-js"   ></div></div>
-   <div class="background-container">
-    <img id="moon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
+   <div id="particles-js"     ></div> 
+   <div id="background-container">
+     <!-- <div class="sunMain" > -->
+      <div class="sunmain"> 
+        <div class="sunwrap">
+          <div class="sunbackground"></div>
+          <div class="sunclouds"></div>   
+         </div>
+         <div class="Sunmask"></div>
+       <!-- </div> -->
+
+      
+     
+    
+    
+    </div>
+     <div class="planetaMian">
+
+       <div class="planet"> 
+         <div class="wrap">
+           <div class="background"></div>
+           <div class="clouds"></div>   
+          </div>
+          <div class="mask"></div>
+        </div>
+      </div>
+
+    <!-- <img id="moon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt=""> -->
+    <div id="earth-img"></div>
     <div class="stars"></div>
     <div class="twinkling"></div>
-    <div class="clouds"></div> </div>
-  <header id="header">
-    <nav>
-      <!-- <img id="imglogo" src="/logo" alt="" /> -->
+    <div class="clouds"></div> </div >
+   
+    <div class="toggle" onclick="togglemenu();"></div>
+    
+    <header  id="header">
+      <div class="logo">logo</div>
+      <ul> 
+     <!-- <img id="imglogo" src="/logo" alt="" /> -->
+     <!-- <li ><a href="/">Home </a></li> -->
+     <div class="btncontaniner">
+       <a class="sidebarbtns"href="#"><span>Home</span></a>
+       <a class="sidebarbtns"href="/Contrat"><span>Contrat us</span></a>
+       <a class="sidebarbtns"href="#"><span>About us</span></a>
+       <a class="sidebarbtns"href="/"><span>Webpages</span></a>
+      
+      </div>
+     <!-- <a class = "A_for_Button" id='A_for_Button-1'href="#"><span>Home</span><div class="liquid"></div></a> -->
 
-      <li class="lili_a" id="li_1a"><a id="link1" href="/">Home </a></li>
-      <li class="lili_a" id="li_2a">
-        <a id="link2" href="/Contrat">Contrat us </a>
-      </li>
-      <li class="lili_a" id="li_3a"><a id="link3" href="#">About</a></li>
-      <li class="lili_a" id="li_4a"><a id="link4" href="/">Webpages</a></li>
-      <div class="main_setting" id="   setting" > Setting      
-       
-        <div id="extras_items">   
-                                                <div class="modes_name , Extra" id="main_mode_name">Graphics Mode</div>
-                                                <button class="modes , Extra" id=" , lowmode">Low</button>
-                                                <button class="modes , Extra" id=" , normallmode">Normal</button>
-                                                <button class="modes , Extra" id="highmode">High 
-                                                         <li class="Extra" id="extra_info">(This will cause some lag)</li>
-                                                </button>
-        </div>         </div>      </div>
-    </nav>
-    <input type="text"   name="search" id="search" placeholder="search" />
-  </header>
+     <!-- <li ><a href="/Contrat">Contrat us </a> </li> -->
+<!-- 
+     <li ><a href="#">About</a></li>
+     <li ><a href="/">Webpages</a></li>  -->
+      </ul> 
+   </header>
+ 
   <div id="cutoption">
-    <img id="cutoptionimg" src="x-mark.png" alt="" /><img id="cutoptionimg2" src="x-mark.png" alt="" />
+    <img id="cutoptionimg" src="/close.png" alt="" /><img id="cutoptionimg2" src="/close.png" alt="" />
   </div>
+
+
+
+ 
+  
+  <div class="sidebar ">
+    <div class="BlankForSidebar1 BlankForSidebar  "></div>
+
+     <div class="btncontaniner sidebarcontanier">
+
+    <a  class="sidebarbtns  " id="directBTN_1"href="/"><span>Home</span></a>
+    <a  class="sidebarbtns  " id="directBTN_2"href="/Contrat"><span>Contrat us</span></a>
+    <a  class="sidebarbtns  " id="directBTN_3"href="#"><span>About us</span></a>
+    <a  class="sidebarbtns  " id="directBTN_4"href="/"><span>Webpages</span></a>    
+     <a class="sidebarbtns  " id="directBTN_5"href="mathapp"><span>Android work</span></a>
+     <a class="sidebarbtns  " id="directBTN_6"href="/weatherapp"><span> WebApp  </span></a> 
+     <a class="sidebarbtns "href="#" id="Customization_selector"><span> customization Setting</span></a>
+    <a class="sidebarbtns  "  id="directBTN_7"href="pavbhajiblog"><span>Blog</span></a>
+    </div>
+  </div>
+   <div class="sidebar2">
+      <div class="BlankForSidebar2 BlankForSidebar"></div>
+    <!-- <ul class="menu">  <a class = "A_for_Button" id='A_for_Button-1'href="#"><span>Hone</  span><div class="liquid"></div></a>  </ul> -->  
+ 
+
+    <div class="btncontaniner sidebarcontanier Customization-modes">
+      <div class="boxheading">
+        <div class="lightbar"></div>
+        <div class="toplayer"></div>
+        <p id="Customization">Customization modes</p>
+      </div>
+        <div class="submainbtncontanier">
+          <div class="  AllMainCustomize">
+            <div class="sunMainCustomizeFlex MainCustomizeFlex">
+              <p id="sunCustomize" class="submainheading">Sun</p>   
+               <div class="switch"id="switch1" >
+                 <div class="btn btn1" onclick="onClickonSwitch('btn1');">
+                </div>
+                <span class="circleONOFF"></span>
+                <p class="ON_OFF_METER"  id="ON_OFF_METER_1"></p>
+                     </div></div>
+            <div class="earthMainCustomizeFlex MainCustomizeFlex">
+              <p id="earthCustomize" class="submainheading">Earth</p>    
+              <div class="switch" id="switch2">
+                  <div class="btn btn2" onclick="onClickonSwitch('btn2');">
+                  </div>
+                  <span class="circleONOFF"></span>
+                  <p class="ON_OFF_METER" id="ON_OFF_METER_2"></p>
+          </div></div>
+
+          <div class="ParticleJSMainCustomizeFlex MainCustomizeFlex">
+            <p id="ParticleJSCustomize" class="submainheading"> Particle</p>    
+            <div class="switch" id="switch3">
+                <div class="btn btn2" onclick="onClickonSwitch('btn3');">
+                </div>
+                <span class="circleONOFF"></span>
+                <p class="ON_OFF_METER" id="ON_OFF_METER_3"></p>
+        </div></div>
+          </div> 
+ 
+        </div>
+   </div>
+  </div>
+
 
   <div id="periodictable">
     <div id="seleectormetaldiv"> 
@@ -1213,8 +2199,10 @@
         unknown
       </p>
     </div></div>
-    <div class="elements" id="element ">
-      <!-- alkali metals -->
+    <div class="elements   "id="element ">
+        <!-- <div class="content" id="elements-1" > </div> -->
+       <!-- alkali metals -->
+       <div class="your-element" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500"></div>
       <div onclick="clicksoundfun()" class="elemetsall , alkali-metals" id="elements-1"></div>
       <div onclick="clicksoundfun()" class="elemetsall , alkali-metals" id="elements-3"></div>
       <div onclick="clicksoundfun()" class="elemetsall , alkali-metals" id="elements-11"></div>
@@ -1361,10 +2349,17 @@
       </div>
     </div>
   </div>
+  <script  src="/vanilla-tilt.js"></script>
   <script src="/particles.js"></script>
   <script src="/partricleapp.js"></script>
   <script>
-    async function all() {
+      window.scrollTo(0, 0);
+      setTimeout(() => {
+      window.scrollTo(0, 0);
+        console.log("ok")
+      }, 900);
+     
+     async function all() {
       //json files and data
       const name = [],
         atomic_mass = [],
@@ -1461,7 +2456,7 @@
       }
 
       // all id for dom malipulation
-      const elemetsall = document.getElementsByClassName("elemetsall");
+      const elemetsall = document.getElementById("elemetsall");
 
       //creating hover effect for getter effect
 
@@ -1484,7 +2479,7 @@
           }</div> 
          <div class ="boil" id="boil-${x}" >boiling point = ${boil[x - 1]
           }   <sup>o</sup> C</div> 
-          <div class ="category"id="category-${x}">${category[x - 1]}</div> 
+          <div class ="category"id="category-${x}"> category = ${category[x - 1]}</div> 
           <div class="color" id="color-${x}">color = ${color[x - 1]}</div>
         
        <div class ="density"id="density-${x}" >density = ${density[x - 1]}</div>
@@ -1547,7 +2542,8 @@
       this["elements" + i] = document.getElementById(`elements-${i}`);
     }
 
-    var clicksound = new Audio("sounds/click_sound.mp3");
+    let clicksound =document.querySelector("#click_sound")
+    let Btnclick =  document.querySelector("#btnClick")
     function clicksoundfun() {
       clicksound.play();
       setTimeout(() => {
@@ -1630,13 +2626,19 @@
       " #unknown-selector-id "
     );
 
+    let selrectormetalsbool = undefined ;
+
     alkalimetalsselectorid.addEventListener("click", () => {
+      selrectormetalsbool= true
       window.scrollTo(6, 275);
       document.getElementById(`cutoptionimg`).click();
 
       document.getElementById("cutoptionimg").style.display = "flex";
       document.getElementById("cutoptionimg2").style.display = "flex";
 
+      alkalimetalsselectorid.style.transform=" scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);"
+
+      alkalimetalsselectorid.style.zIndex="4"
       for (let as = 1; as <= 118;) {
         document
           .getElementById(`elements-${as}`)
@@ -1671,13 +2673,16 @@
 
         clicksound.play();
       }
-    
+      
      
     });
 
     akilineearthmetalselectorid.addEventListener("click", () => {
       window.scrollTo(6, 300);
+      selrectormetalsbool = true
       document.getElementById(`cutoptionimg`).click();
+      akilineearthmetalselectorid.style.zIndex="4"
+      akilineearthmetalselectorid.style.transform=" scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);"
 
       document.getElementById("cutoptionimg").style.display = "flex";
       document.getElementById("cutoptionimg2").style.display = "flex";
@@ -1717,8 +2722,11 @@
     });
 
     transitionmetalselectorid.addEventListener("click", () => {
+      selrectormetalsbool = true
       window.scrollTo(6, 320);
       document.getElementById(`cutoptionimg`).click();
+      transitionmetalselectorid.style.zIndex="4"
+      transitionmetalselectorid.style.transform=" scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);"
 
       document.getElementById("cutoptionimg").style.display = "flex";
       document.getElementById("cutoptionimg2").style.display = "flex";
@@ -1792,7 +2800,10 @@
     });
 
     lanthrathideseriesselectorid.addEventListener("click", () => {
+      selrectormetalsbool = true
       document.getElementById(`cutoptionimg`).click();
+      lanthrathideseriesselectorid.style.zIndex="4"
+      lanthrathideseriesselectorid.style.transform=" scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);"
 
       document.getElementById("cutoptionimg").style.display = "flex";
       document.getElementById("cutoptionimg2").style.display = "flex";
@@ -1848,8 +2859,10 @@
     });
 
     anthrathideseiresselectorid.addEventListener("click", () => {
+      selrectormetalsbool = true
       document.getElementById(`cutoptionimg`).click();
-
+      anthrathideseiresselectorid.style.zIndex="4"
+      anthrathideseiresselectorid.style.transform=" scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);"
       document.getElementById("cutoptionimg").style.display = "flex";
       document.getElementById("cutoptionimg2").style.display = "flex";
       for (let as = 1; as <= 118;) {
@@ -1905,9 +2918,11 @@
     });
 
     posttransitionmetalselectorid.addEventListener("click", () => {
+      selrectormetalsbool = true
       window.scrollTo(0, 300);
       document.getElementById(`cutoptionimg`).click();
-
+      posttransitionmetalselectorid.style.zIndex="4"
+      posttransitionmetalselectorid.style.transform=" scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);"
       document.getElementById("cutoptionimg").style.display = "flex";
       document.getElementById("cutoptionimg2").style.display = "flex";
 
@@ -1949,9 +2964,11 @@
     });
 
     metalloidselectorid.addEventListener("click", () => {
+      selrectormetalsbool = true
       window.scrollTo(6, 170);
       document.getElementById(`cutoptionimg`).click();
-
+      metalloidselectorid.style.zIndex="4"
+      metalloidselectorid.style.transform=" scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);"
       document.getElementById("cutoptionimg").style.display = "flex";
       document.getElementById("cutoptionimg2").style.display = "flex";
 
@@ -1991,9 +3008,11 @@
     });
 
     othernonmetalselectorid.addEventListener("click", () => {
+      selrectormetalsbool = true
       window.scrollTo(0, 120);
       document.getElementById(`cutoptionimg`).click();
-
+      othernonmetalselectorid.style.zIndex="4"
+      othernonmetalselectorid.style.transform=" scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);"
       document.getElementById("cutoptionimg").style.display = "flex";
       document.getElementById("cutoptionimg2").style.display = "flex";
 
@@ -2038,9 +3057,11 @@
     });
 
     noblegassesselectorid.addEventListener("click", () => {
+      selrectormetalsbool = true
       window.scrollTo(0, 200);
       document.getElementById(`cutoptionimg`).click();
-
+      noblegassesselectorid.style.zIndex="4"
+      noblegassesselectorid.style.transform=" scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);"
       document.getElementById("cutoptionimg").style.display = "flex";
       document.getElementById("cutoptionimg2").style.display = "flex";
 
@@ -2081,9 +3102,11 @@
     });
 
     unknownselectorid.addEventListener("click", () => {
+      selrectormetalsbool = true
       window.scrollTo(0, 400);
       document.getElementById(`cutoptionimg`).click();
-
+      unknownselectorid.style.zIndex="4"
+      unknownselectorid.style.transform=" scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);"
       document.getElementById("cutoptionimg").style.display = "flex";
       document.getElementById("cutoptionimg2").style.display = "flex";
 
@@ -2122,18 +3145,20 @@
         clicksound.play();
       }
     });
+      elementsclickchecker = false
+     onclickbackgorund = document.querySelector(".onclickbackgorund")
 
-    elementsclickchecker = false;
 
-    for (let ass = 1; ass <= 118;) {
+
+    for (let ass = 1; ass <= 118; ass++) {
       document
         .getElementById(`elements-${ass}`)
         .addEventListener("click", () => {
  
- 
-          elementsclickchecker = true;
-          document.getElementById(`cutoptionimg`).click();
-          alkalimetalsselectorid.style.zIndex = "1";
+            if (elementsclickchecker == false) { 
+              document.getElementById(`cutoptionimg`).click();
+               elementsclickchecker = true;
+           alkalimetalsselectorid.style.zIndex = "1";
           akilineearthmetalselectorid.style.zIndex = "1";
           transitionmetalselectorid.style.zIndex = "1";
           lanthrathideseriesselectorid.style.zIndex = "1";
@@ -2146,28 +3171,36 @@
 
 
           document.getElementById("particles-js").style.filter="blur(0.74vh)"
-      document.getElementById("moon-img").style.filter="blur(0.74vh)"
-          document
-            .getElementById(`elements-${ass - 1}`)
+      // document.getElementById("moon-img").style.filter="blur(0.74vh)"
+      // document.getElementById("earth-img").style.filter="blur(0.74vh)"
+          document  
+            .getElementById(`elements-${ass}`)
             .classList.add("activeted");
-          document.getElementById(`elements-${ass - 1}`).style.animationName =
-            "elementsanimation";
-          document.getElementById(`elements-${ass - 1}`).style.transform =
+ 
+          document.getElementById(`elements-${ass}`).style.transform =
             "scale(.6 )";
-          document.getElementById(`elements-${ass - 1}`).style.zIndex = "8";
+          document.getElementById(`elements-${ass}`).style.zIndex = "8";
+          document.getElementById("background-container").style.filter="blur(0.6vw)"
+          document.getElementById("header").style.filter="blur(0.6vw)"
+          onclickbackgorund.classList.add("activated_span")
 
-          setTimeout(() => {
+ 
+
+           setTimeout(() => {
             document
-              .getElementById(`elements-${ass - 1}`)
+              .getElementById(`elements-${ass}`)
               .classList.remove("activeted");
-            document.getElementById(`elements-${ass - 1}`).style.transform =
+            document.getElementById(`elements-${ass}`).style.transform =
               "scale(3.0 )";
-            document.getElementById(`elements-${ass - 1}`).style.zIndex = "8";
+            document.getElementById(`elements-${ass}`).style.zIndex = "8";
+            document.getElementById(`elements-${ass}`).style.animationName =
+            "elementsanimation";
           }, 300);
           clicksound.play();
-        });
-      ass++;
-    }
+        }
+        });        
+       
+     }
     setInterval(() => {
       if (posttransitionmetalselectorid.classList.contains("activeted")) {
         document.getElementById("cutoptionimg").style.display = "flex";
@@ -2194,8 +3227,10 @@
     cutoptionmain.addEventListener("click", () => {
       elementsclickchecker = false;
       document.getElementById("particles-js").style.filter="none"
-      document.getElementById("moon-img").style.filter="none"
-
+      // document.getElementById("moon-img").style.filter="none"
+      document.getElementById("earth-img").style.filter="none"
+      onclickbackgorund.classList.remove("activated_span")
+       
 for (let as = 1; as <= 118;) {
   document.getElementById(`elements-${as}`).style.animationName = "none"
   document.getElementById(`onclickdisplaycontent-${as}`).style.display =
@@ -2221,7 +3256,11 @@ unknownselectorid.classList.remove("activeted");
 
 cutoptionmain.style.display = "none";
 cutoptionmain2.style.display = "none";
-
+document.getElementById("background-container").style.filter="none"
+ document.getElementById("header").style.filter="none"
+   
+ 
+ 
 // for  all left and right side elements
 for (let ass = 1; ass <= 118; ass++) {
   if (ass == 1 || 3 || 11 || 19 || 37 || 55 || 87) {
@@ -2271,7 +3310,7 @@ for (let ass = 1; ass <= 118; ass++) {
 
     //lantrathide series
     document.getElementById("elements-71").style.marginLeft = "0vw";
-    document.getElementById("elements-71").style.position = "static";
+    document.getElementById("elements-71").style.position = "relative";
 
     //antrathide  series
     document.getElementById("elements-103").style.marginLeft = "0vw";
@@ -2281,9 +3320,15 @@ for (let ass = 1; ass <= 118; ass++) {
     });
 
     cutoptionmain2.addEventListener("click", () => {
+      document.getElementById("background-container").style.filter="none"
+ document.getElementById("header").style.filter="none"
+  onclickbackgorund.classList.remove("activated_span")
+
+  
       elementsclickchecker = false;
       document.getElementById("particles-js").style.filter="none"
-      document.getElementById("moon-img").style.filter="none"
+      // document.getElementById("moon-img").style.filter="none"
+      document.getElementById("earth-img").style.filter="none"
       for (let as = 1; as <= 118;) {
         document.getElementById(`elements-${as}`).style.animationName = "none"
         document.getElementById(`onclickdisplaycontent-${as}`).style.display =
@@ -2318,7 +3363,7 @@ for (let ass = 1; ass <= 118; ass++) {
 
           document.getElementById("elements-3").style.marginLeft = "0vw";
           document.getElementById("elements-3").style.position = "static";
-
+           
           document.getElementById("elements-11").style.marginLeft = "0vw";
           document.getElementById("elements-11").style.position = "static";
 
@@ -2382,15 +3427,21 @@ for (let ass = 1; ass <= 118; ass++) {
     }
 
     for (let ass = 1; ass <=118; ass++) {
+      // console.log(  Math.random() * 8  )
+      // console.log(Math.random() * 10 )
+      // console.log(  -8 + ass/2 + "  \n" )
         document.getElementById(`elements-${ass}`).addEventListener("mouseenter" ,()=>{
-           if (elementsclickchecker == false &&  cutoptionmain1_querySelector_style.display == "none") {
-            document.getElementById(`elements-${ass  }`).style.transform =
-                "scale(1.7 ) matrix(1, -0.056, 0.05, 1.035 , 0, 0) ";  
+           if (elementsclickchecker == false &&  cutoptionmain1_querySelector_style.display == "none" ) {
+             document.getElementById(`elements-${ass  }`).style.transform =
+                `scale(1.7 )  skew( ${Math.random() * 12 }deg , ${Math.random() * -12 }deg )`;  // for more effect skew(8deg , -8deg)
               document.getElementById(`elements-${ass  }`).style.zIndex =
-                "4";
+                "3";
                 document.getElementById(`elements-${ass}`).style.animationName="elementsanimation"
-                document.getElementById("particles-js").style.filter="blur(0.03vw)"
-                document.getElementById("moon-img").style.filter="blur(0.03vw)"
+                // document.getElementById("particles-js").style.filter="blur(0.05vw)"
+                // document.getElementById("background-container").style.filter="blur(0.08vw)"
+                // document.getElementById("earth-img").style.filter="blur(0.05vw)"
+             
+                 
           }
          
         })
@@ -2399,14 +3450,16 @@ for (let ass = 1; ass <= 118; ass++) {
 
     for (let ass = 1; ass <=118; ass++) {
         document.getElementById(`elements-${ass}`).addEventListener("mouseleave" ,()=>{
-           if (elementsclickchecker == false &&  cutoptionmain1_querySelector_style.display == "none") {
+           if (elementsclickchecker == false &&  cutoptionmain1_querySelector_style.display == "none"   ) {
             document.getElementById(`elements-${ass  }`).style.transform =
-                "scale(1.0 )  ";  
+                "none";  
               document.getElementById(`elements-${ass }`).style.zIndex =
-                "2";  
+                "unset";  
                 document.getElementById(`elements-${ass}`).style.animationName="none"
-                document.getElementById("particles-js").style.filter="none"
-      document.getElementById("moon-img").style.filter="none"
+                // document.getElementById("particles-js").style.filter="none"
+                // document.getElementById("background-container").style.filter="none"
+      // document.getElementById("earth-img").style.filter="none"
+          
           }
          
         })
@@ -2423,7 +3476,7 @@ for (let ass = 1; ass <= 118; ass++) {
           scalecheckerelements == "none" &&
           cutoptionmain1_querySelector_style.display == "none"
         ) {
-          document.getElementById(`elements-${ass}`).style.zIndex = "3";
+          document.getElementById(`elements-${ass}`).style.zIndex = "0";
         }
       }
 
@@ -2439,7 +3492,7 @@ for (let ass = 1; ass <= 118; ass++) {
           (document.documentElement.scrollTop > 50 &&
             cutoptionmain1_querySelector_style.display == "none")
         ) {
-          selectors.style.boxShadow = "rgb(215 215 40) 3px 2px 4px 0px";
+          selectors.style.boxShadow = "rgb(215 215 40) 0.156vw 0.104vw 0.208vw 0vw";
           selectors.style.borderRight = ".18vw solid  rgba(215 215 40)";
           selectors.style.borderBottom = ".18vw solid  rgba(215 215 40)";
         } else {
@@ -2466,9 +3519,14 @@ for (let ass = 1; ass <= 118; ass++) {
       noblegassesselectorid.style.zIndex = "1";
       unknownselectorid.style.zIndex = "1";
 
+
+      document.getElementById("particles-js").style.filter="blur(0.74vh)"
       document.getElementById("elements-1").style.position = "absolute";
       document.getElementById("elements-1").style.left = "14vw";
       document.getElementById("elements-1").style.top = "25vh";
+      document.getElementById("background-container").style.filter="blur(0.6vw)"
+          document.getElementById("header").style.filter="blur(0.6vw)"
+          onclickbackgorund.classList.add("activated_span")
       scrollTo(0, 60);
     });
 
@@ -4520,11 +5578,105 @@ for (let ass = 1; ass <= 118; ass++) {
     //for settung up  error
       if(!elementsclickchecker && cutoptionmain1_querySelector_style.display == "none"){
        for (let intt  = 1; intt  <=118; intt++) {
-         document.getElementById(`elements-${intt}`).style.transform="scale(1)";
+         document.getElementById(`elements-${intt}`).style.transform="none";
         } 
       }
-        
+      
+          // inveting color funtion 
+          function invertHex(hex) {
+  return (Number(`0x1${hex}`) ^ 0xFFFFFF).toString(16).substr(1).toUpperCase()
+}
+   let  alkalicolorstyle =    getComputedStyle(elements1);
+ let alkalicolor = alkalicolorstyle.color;
+    invertHex('alkalicolor')
+    console.log(invertHex('alkalicolor'))
+
+
+
+    const MenuToggle = document.querySelector(".toggle")
+      const sidebar = document.querySelector(".sidebar")
+      const sidebar2 = document.querySelector(".sidebar2")
+      const bodyTag = document.querySelector("body")
+      const BlankForSidebar1 = document.querySelector(".BlankForSidebar")
+      const header = document.querySelector("header")
+      const backgroundcontainer = document.querySelector("#background-container")
+      const periodictable = document.querySelector("#periodictable")
+      const particlesJS = document.querySelector("#particles-js")
+
+    function togglemenu(){
+      let ToggleMenuBOOL = true
+        MenuToggle.classList.toggle("activatedMenuClass")
+      sidebar.classList.toggle("activatedMenuClass")
+       sidebar2.classList.toggle("activatedMenuClass")
+        BlankForSidebar1.classList.toggle("activatedBlankForSidebarClass")
+       bodyTag.classList.toggle("activeBody_DisableSrolling")
+       window.scrollTo(0,0);  
+  
+       header.classList.toggle("activeteBLured")
+       backgroundcontainer.classList.toggle("activeteBLured")
+       periodictable.classList.toggle("activeteBLured")
+       
+      }
+      const btncontaninerSidebarcontanierOptimaizations_modes = document.querySelector(".btncontaniner.sidebarcontanier.Customization-modes ")
+      const Customization_selector = document.querySelector("#Customization_selector");
+      
+      Customization_selector.addEventListener("click", () => { 
+        btncontaninerSidebarcontanierOptimaizations_modes.classList.toggle("activatedMenuClass")
+         Customization_selector.classList.toggle("activatedMenuClass")
+         for (let a =1; a <=7 ; a++) {
+           document.querySelector(`#directBTN_${a}`).classList.toggle("sidebarbtns")
+           document.querySelector(`#directBTN_${a}`).classList.toggle("directbtnFALSE")
+         }
+        });
+
+ 
+
+    
+   for (let asdsdsd  = 0; asdsdsd  <=7; asdsdsd ++) {
+      
+   
+   VanillaTilt.init(document.querySelector(`#A_for_Button-${asdsdsd} `), {
+ 		max: 25,
+    scale : 1.5 ,
+		speed: 300,
+    transition : true,
+    glare : true,
+    "max-glare":  1,
+    dealy:1 ,
+	}); }
+
+    setTimeout(() => {
+      if (window.scrollX >0) {
+          window.scrollTo(0,0)
+      }
+     }, 1200);
+
+      setTimeout(() => {
+        particlesJS.classList.add("DISPLAYNone")
+      }, 550);
+
+
+         const switch1 =  document.querySelector("#switch1")
+         const switch2 =  document.querySelector("#switch2")
+         const sunmain =  document.querySelector(".sunmain")
+         const planetaMian =  document.querySelector(".planetaMian")
+         function  onClickonSwitch(params ) { 
+           Btnclick.play(); 
+           if (params =='btn1') {
+             switch1.classList.toggle("on")
+            sunmain.classList.toggle("toggleNone")
+           }
+          else if (params == 'btn2') {
+             switch2.classList.toggle("on")
+            planetaMian.classList.toggle("toggleNone")
+           }
+           else if (params == 'btn3') {
+             switch3.classList.toggle("on")
+            particlesJS.classList.toggle("DISPLAYNone")
+            particlesJS.classList.toggle("toggleNone")
+           }
+        }
   </script>
-</body>
+ </body>
 
 </html>
