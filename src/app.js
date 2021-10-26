@@ -132,7 +132,7 @@ app.get('/Contrat', function (req, res) {
   app.get('/sidebar-2bg.jpg', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/bg/sidebar-2bg.jpg') )
   })
-  // for perodic tables images 2 
+  // for perodic tables images  2 
    
   app.get('/bg/list.png', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/bg/list.png') )
