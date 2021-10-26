@@ -127,10 +127,10 @@ app.get('/Contrat', function (req, res) {
     res.sendFile(path.join(__dirname,'../public/bg/codebg.jpg') )
   })
   app.get('/sidebar-1bg.jpg', function (req, res) {
-    res.sendFile(path.join(__dirname,'../public/bg/sidebar-1bg.jpg') )
+    res.sendFile(path.join(__dirname,'../public/bg/sidebar-1-bg.jpg') )
   })
   app.get('/sidebar-2bg.jpg', function (req, res) {
-    res.sendFile(path.join(__dirname,'../public/bg/sidebar-2bg.jpg') )
+    res.sendFile(path.join(__dirname,'../public/bg/sidebar-2-bg.jpg') )
   })
   // for perodic tables images  2 
    
