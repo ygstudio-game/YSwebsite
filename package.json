@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1 ",
     "start": "node  src/app.js"
-   },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ygstudio-game/YSwebsite.git"
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/ygstudio-game/YSwebsite#readme",
   "dependencies": {
+    "datatables.net": "^1.11.3",
+    "datatables.net-dt": "^1.11.3",
     "express": "^4.17.1"
   }
 }
