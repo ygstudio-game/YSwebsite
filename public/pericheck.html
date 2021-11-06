@@ -12,11 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet" />
   <meta name="keywords" content="Yadnyesh sunil borole">
   <meta name="keywords" content="https://ysblogs-homepage.herokuapp.com/PeriodicTable">
- <meta name="keywords" content="Yadnyesh  borole">
+  <meta name="keywords" content="Yadnyesh  borole">
   <meta name="keywords" content="Yadnyesh ">
   <meta name="keywords" content="periodictable ">
   <meta name="keywords" content="check">
- 
+  <title>YSBlogs-Periodic table</title>
+  
 
   <script src="js/jquery.js"></script> 
   <script src="media/js/jquery.dataTables.min.js"></script> 
@@ -94,410 +95,407 @@ $(document).ready(function (){
  
  
   </script>
+     <style>
+          
+:root {
+   --OP_buttonWidth: 10vw;
+  --OP_buttonHeight: 40px;
+  --button-transition-speed: 0.25s;
+    --alkali-color: #ecbe59;
+  --alkali-earth-color: #dee955;
+  --transition-metal-color: #fd8572;
+  --post-transition-metal-color: #4cddf3;
+  --metalloid-color: #fff;
+  --other-nonmetal-color: #52ee61;
+  --noble-metals-color: #759fff;
+  --unknown-color: #ccc;
+  --lanthrathide_and_anthrathide-color: #c686cc; 
+  --All-element-common-box_shadow: 0.15vw -0.15vw 0.18vw 0vw currentColor,
+    -0.22vw 0.25vw 0.18vw 0vw currentColor;
+--No_Blurs-All-element-common-box_shadow: 0.15vw -0.15vw 0vw 0vw currentColor,
+    -0.22vw 0.25vw 0vw 0vw currentColor;
+  --All-element-common-text-shadow: 0.08vw 0.03vw 0.2vw currentColor, 0.04vw 0.03vw 0.2vw currentColor;
+  --SidebarLineargradient-color: linear-gradient(90deg, #000000cf, #fffbfb17 );
+}
 
-  <title>YSBlogs-Periodic table</title>
-</head>
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+} 
+::selection {
+  background-color: rgb(214, 195, 27);
+  color: black;
+  text-shadow: none;
+} 
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 600ms linear;
+ }
 
-<style>   
- 
-  :root {
-     --OP_buttonWidth: 10vw;
-    --OP_buttonHeight: 40px;
-    --button-transition-speed: 0.25s;
-      --alkali-color: #ecbe59;
-    --alkali-earth-color: #dee955;
-    --transition-metal-color: #fd8572;
-    --post-transition-metal-color: #4cddf3;
-    --metalloid-color: #fff;
-    --other-nonmetal-color: #52ee61;
-    --noble-metals-color: #759fff;
-    --unknown-color: #ccc;
-    --lanthrathide_and_anthrathide-color: #c686cc; 
-    --All-element-common-box_shadow: 0.15vw -0.15vw 0.18vw 0vw currentColor,
-      -0.22vw 0.25vw 0.18vw 0vw currentColor;
-  --No_Blurs-All-element-common-box_shadow: 0.15vw -0.15vw 0vw 0vw currentColor,
-      -0.22vw 0.25vw 0vw 0vw currentColor;
-    --All-element-common-text-shadow: 0.08vw 0.03vw 0.2vw currentColor, 0.04vw 0.03vw 0.2vw currentColor;
-    --SidebarLineargradient-color:: linear-gradient(90deg, #000000cf, #fffbfb17);
-  }
+body { 
+  max-width: 100vw;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Mali", "Courgette", cursive;
+  background: repeat   , url("space.jpg") rgb(31, 29, 29)  ;  
+  filter: drop-shadow(-0.78vw 1.0vw 0.8vw black) contrast(1.28);
+ }
+body.activeBody_DisableSrolling{
+  overflow: hidden;
+} 
+header {
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 95vw;
+  height: 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  transition: all 0.6s linear;
+  padding: 1vw 2vw ; 
+background: linear-gradient( 90deg,rgba(221, 255, 255, 0.253) ,  rgba(0, 0, 0, 0.596));
+border-radius:  0  0 6.8vw 6.8vw ;
+border: 0;
+border-bottom: 0.16vw #c4d134;
+border-style: dashed;
 
-  html{
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  } 
-  ::selection {
-    background-color: rgb(214, 195, 27);
-    color: black;
-    text-shadow: none;
-  } 
-  * {
-    margin: 0;
-    padding: 0;
-    transition: all 600ms linear;
-   }
-
-  body { 
-    max-width: 100vw;
-    width: 100vw;
-    overflow-x: hidden;
-    font-family: "Mali", "Courgette", cursive;
-    background: repeat   , url("space.jpg") rgb(31, 29, 29)  ;  
-    filter: drop-shadow(-0.78vw 1.0vw 0.8vw black) contrast(1.28);
-   }
-  body.activeBody_DisableSrolling{
-    overflow: hidden;
-  } 
-  header {
- position: fixed;
-    top: 0;
-    left: 0;
-    width: 95vw;
-    height: 8vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    transition: all 0.6s linear;
-    padding: 1vw 2vw ; 
- background: linear-gradient( 90deg,rgba(221, 255, 255, 0.253) ,  rgba(0, 0, 0, 0.596));
- border-radius:  0  0 6.8vw 6.8vw ;
- border: 0;
- border-bottom: 0.16vw #c4d134;
- border-style: dashed;
-
-  } 
-  header.activeteSearch{
-    justify-content: flex-start;
-    height: 4.5vw;
-    border-radius:  0  0 5.2vw 5.2vw ;
-    border-color: #dd7777f8;
-    z-index: 18;
-      }
-   header.activeteSearch ul     {
-     right: -200vw;
-     position: absolute;
-     opacity: 0;
-   }
-  header .logo {
-     font-weight: 700;
-    color: white;
-    font-size: 1.6vw;
-    text-transform: uppercase;
-    letter-spacing: 0.104vw; 
-  } 
-  header #search{
-    width: 24vw;    
-    height: 3vw;
-    padding: 1vw;
-    border-radius: 0.6vw;
-    font-size: 0.9vw;
-    margin: 0 1vw;
-    /* transition-delay: 200ms; */
-    background: transparent;
+} 
+header.activeteSearch{
+  justify-content: flex-start;
+  height: 4.5vw;
+  border-radius:  0  0 5.2vw 5.2vw ;
+  border-color: #dd7777f8;
+  z-index: 18;
+    }
+ header.activeteSearch ul     {
+   right: -200vw;
+   position: absolute;
+   opacity: 0;
+ }
+header .logo {
+   font-weight: 700;
+  color: white;
+  font-size: 1.6vw;
+  text-transform: uppercase;
+  letter-spacing: 0.104vw; 
+} 
+header #search{
+  width: 22vw;    
+  height: 1vw;
+  padding: 1vw;
+  border-radius: 0.6vw;
+  font-size: 0.9vw;
+  margin: 0 1vw;
+  /* transition-delay: 200ms; */
+  background: transparent;
 } 
 header .suggestionsMainCLASS {
-  width: 88vw;
-  position: absolute;
-  height : 86vh;
-  background: #000;
-  /* top: 6.5vw; */
-  left: 8vw;
-  appearance: auto;
- box-sizing: border-box;
- background: radial-gradient(#00000033, black);
- opacity: 0;
+width: 88vw;
+position: absolute;
+height : 86vh;
+background: #000;
+/* top: 6.5vw; */
+left: 8vw;
+appearance: auto;
+box-sizing: border-box;
+background: radial-gradient(#00000033, black);
+opacity: 0;
 border: 0.06vw solid white;
 border-radius: 3vw 0 3vw 0;
-  overflow-y: scroll;
-  top: -100vw;
-  transition: all 1200ms linear , top 0ms linear;
- }
-header.activeteSearch .suggestionsMainCLASS{
-  display: block;
-  opacity: 1; 
-  top: 7vw;
+overflow-y: scroll;
+top: -100vw;
+transition: all 1200ms linear , top 0ms linear;
 }
- 
+header.activeteSearch .suggestionsMainCLASS{
+display: block;
+opacity: 1; 
+top: 7vw;
+}
+
 .table{
-  width: 100%;
-   font-size: 1.2vw;
-   border-collapse: collapse;
-   background: radial-gradient(rgba(0, 0, 0, 0.596) , transparent);
-  }
+width: 100%;
+ font-size: 1.2vw;
+ border-collapse: collapse;
+ background: radial-gradient(rgba(0, 0, 0, 0.596) , transparent);
+}
 .table thead{ 
-   padding: 0.2vw;
-   filter: drop-shadow(-0.78vw 1vw 0.8vw black) contrast(1.18);
-   
+ padding: 0.2vw;
+ filter: drop-shadow(-0.78vw 1vw 0.8vw black) contrast(1.18);
+ 
 }
 .table thead tr th {
-  font-weight: 780;
-  font-size: 1.25vw;
-  color: rgb(255, 255, 255);
-  letter-spacing: 0.1vw;
-  opacity: 1;
-  border: 0.06vw solid white;
-   vertical-align: top;
-  padding: 0.4vw;
-  width: 15vw;
-  position: -webkit-sticky;
-			position: sticky;
-			top: 0;
-      z-index: 12;
-      box-shadow: inset 0 0   #ff08e8;
-      transition: 300ms linear all;
-      cursor: pointer;
-  background: transparent;   
-  text-shadow:  -0.012vw -0.06vw 0.2vw black, -0.08vw -0.06vw 0.2vw black, 0.016vw 0.09vw 0.2vw black ;
+font-weight: 780;
+font-size: 1.25vw;
+color: rgb(255, 255, 255);
+letter-spacing: 0.1vw;
+opacity: 1;
+border: 0.06vw solid white;
+ vertical-align: top;
+padding: 0.4vw;
+width: 15vw;
+position: -webkit-sticky;
+          position: sticky;
+          top: 0;
+    z-index: 12;
+    box-shadow: inset 0 0   #ff08e8;
+    transition: 300ms linear all;
+    cursor: pointer;
+background: transparent;   
+text-shadow:  -0.012vw -0.06vw 0.2vw black, -0.08vw -0.06vw 0.2vw black, 0.016vw 0.09vw 0.2vw black ;
 }
 .table thead tr th:hover  {
-  color: #3a3a30;
-  filter: sepia(1);
-  text-shadow:  -0.012vw -0.06vw 0.2vw #fff, -0.08vw -0.06vw 0.2vw #fff, 0.016vw 0.09vw 0.2vw #fff ;
- }
+color: #3a3a30;
+filter: sepia(1);
+text-shadow:  -0.012vw -0.06vw 0.2vw #fff, -0.08vw -0.06vw 0.2vw #fff, 0.016vw 0.09vw 0.2vw #fff ;
+}
 .table thead tr th:nth-child(1)  {
 border-radius: 3vw 0 0 0;
 border-top: none;
 border-left: none;
- } 
- .table thead tr th:nth-child(1),  .table thead tr th:nth-child(1) input  ,.table thead tr th:nth-child(3) ,  .table thead tr th:nth-child(3) input  {
+} 
+.table thead tr th:nth-child(1),  .table thead tr th:nth-child(1) input  ,.table thead tr th:nth-child(3) ,  .table thead tr th:nth-child(3) input  {
 width: 6vw !important;
- } 
- .table thead tr th:nth-child(4) , .table thead tr th:nth-child(4)  input  {
+} 
+.table thead tr th:nth-child(4) , .table thead tr th:nth-child(4)  input  {
 width: 11vw !important;
- 
- }
- .table thead tr th:nth-child(2) ,  .table thead tr th:nth-child(2) input ,.table thead tr th:nth-child(6) ,  .table thead tr th:nth-child(6) input,.table thead tr th:nth-child(7)   ,  .table thead tr th:nth-child(7) input {
-width: 8vw !important;
- } 
- 
- table thead tr th:nth-child(5)   {
-width: 25vw !important;
- }  
-  table thead tr th:nth-child(5) input {
-width: 16vw !important;
- }  
- table thead tr th:nth-child(8) input {
- /* display: none; */
- width: 8vw !important;
 
- }  
- .table tbody {
-   top: 2vw;
+}
+.table thead tr th:nth-child(2) ,  .table thead tr th:nth-child(2) input ,.table thead tr th:nth-child(6) ,  .table thead tr th:nth-child(6) input,.table thead tr th:nth-child(7)   ,  .table thead tr th:nth-child(7) input {
+width: 8vw !important;
+} 
+
+table thead tr th:nth-child(5)   {
+width: 25vw !important;
+}  
+table thead tr th:nth-child(5) input {
+width: 16vw !important;
+}  
+table thead tr th:nth-child(8) input {
+/* display: none; */
+width: 8vw !important;
+
+}  
+.table tbody {
+ top: 2vw;
 }
 .table tbody tr {
-  transition: all 250ms linear  ;
-  background: transparent;
- 
+transition: all 250ms linear  ;
+background: transparent;
+
 }
 .table tbody tr td {
-  font-weight: normal;
-  color: #fff;
-   opacity: 1;
-   /* filter: drop-shadow(-0.78vw 1vw 0.8vw black) contrast(1.18); */
-  border: 0.06vw solid white;
-   padding: 0.4vw;
-  text-align: center;
-  font-size: 1.2vw;
-  box-shadow:    
-                     inset 0 0 0.8vw #ff08e8; 
-                     background: transparent;
+font-weight: normal;
+color: #fff;
+ opacity: 1;
+ /* filter: drop-shadow(-0.78vw 1vw 0.8vw black) contrast(1.18); */
+border: 0.06vw solid white;
+ padding: 0.4vw;
+text-align: center;
+font-size: 1.2vw;
+box-shadow:    
+                   inset 0 0 0.8vw #ff08e8; 
+                   background: transparent;
 
- }
- .table tbody tr td:nth-child(8){
-   display: flex;
-   justify-content: space-around;
-   transition: all 200ms linear;
-   height: 2.3vw;
-  }
- .table tbody tr:hover{
-  background: #ffffffb5;
-  box-shadow: var(--All-element-common-box-shadow);
-  text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000, 2px 0px 2px #000000, 0px 2px 0 #000000, -2px 0px 2px #000000, 0px -2px 2px #000000, 0.016vw 0.06vw 0.2vw black, 0.08vw 0.06vw 0.2vw black, -0.024vw -0.012vw 0.2vw black, -0.016vw -0.012vw 0.2vw black, 0.032vw 0.018vw 0.2vw black, 0.024vw 0.018vw 0.2vw black, -0.032vw -0.018vw 0.2vw black, -0.024vw -0.018vw 0.2vw black;
-   filter: drop-shadow(-0.78vw 1vw 0.8vw black) contrast(1.18);
-
-  }
- .table tbody tr:hover td:nth-child(8) .DetaliTableElements-close ,.table tbody tr:hover td:nth-child(8) .DetaliTableElements-open  {
-   filter: invert(0);
- }
- .table tbody tr:hover td{
-  box-shadow:   inset 0 0 1vw  0.2vw #ff08e8; 
-  }
-  .table tbody tr td .DetaliTableElements-close{
-    content: '';
-    display: inline-block;
-    background: url("/uparrow") left center no-repeat transparent;
-    background-size: 2vw;
-    width:  2vw;
-    height: 2vw;
-    filter: invert(1);
-  }
-  .table tbody tr td .DetaliTableElements-open {
-     content: '';
-    display: inline-block;
-    background:  url("/downarrow") left center no-repeat transparent;
-    background-size: 2vw;
-    width:  2vw;
-    height: 2vw;
-    filter: invert(1);
-  }
-  .table thead th input {
-    color: white;
-  background-color: rgba(0, 0, 0, 0.534);
-     border-radius: 0.6vw;
-    font-size: 0.9vw;
-     margin: auto;
-     text-align: center;
-     width: 1.8vw;
-     height: 1.8vw;
- 
-    }
-    .table thead th .inputOnscroll{
-      font-weight: 780;
-  font-size: 1.25vw;
-  color: rgb(255, 255, 255);
-  letter-spacing: 0.1vw;
-  position: relative;
-  top: -0.16vw;
-
-    }
-  /* .ExtraDetailsFullclass{
-    width: inherit;
-  }
-  .ExtraDetailsEmptyclass{
-    width: 0;
-  } */
-
- .dataTables_length ,.dataTables_paginate ,#myTable_filter ,#myTable_info{
-  display: none;
-} 
-.dataTables_filter{
-  display: hidden;
 }
+.table tbody tr td:nth-child(8){
+ display: flex;
+ justify-content: space-around;
+ transition: all 200ms linear;
+ height: 2.3vw;
+}
+.table tbody tr:hover{
+background: #ffffffb5;
+box-shadow: var(--All-element-common-box-shadow);
+text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000, 2px 0px 2px #000000, 0px 2px 0 #000000, -2px 0px 2px #000000, 0px -2px 2px #000000, 0.016vw 0.06vw 0.2vw black, 0.08vw 0.06vw 0.2vw black, -0.024vw -0.012vw 0.2vw black, -0.016vw -0.012vw 0.2vw black, 0.032vw 0.018vw 0.2vw black, 0.024vw 0.018vw 0.2vw black, -0.032vw -0.018vw 0.2vw black, -0.024vw -0.018vw 0.2vw black;
+ filter: drop-shadow(-0.78vw 1vw 0.8vw black) contrast(1.18);
+
+}
+.table tbody tr:hover td:nth-child(8) .DetaliTableElements-close ,.table tbody tr:hover td:nth-child(8) .DetaliTableElements-open  {
+ filter: invert(0);
+}
+.table tbody tr:hover td{
+box-shadow:   inset 0 0 1vw  0.2vw #ff08e8; 
+}
+.table tbody tr td .DetaliTableElements-close{
+  content: '';
+  display: inline-block;
+  background: url("/uparrow") left center no-repeat transparent;
+  background-size: 2vw;
+  width:  2vw;
+  height: 2vw;
+  filter: invert(1);
+}
+.table tbody tr td .DetaliTableElements-open {
+   content: '';
+  display: inline-block;
+  background:  url("/downarrow") left center no-repeat transparent;
+  background-size: 2vw;
+  width:  2vw;
+  height: 2vw;
+  filter: invert(1);
+}
+.table thead th input {
+  color: white;
+background-color: rgba(0, 0, 0, 0.534);
+   border-radius: 0.6vw;
+  font-size: 0.9vw;
+   margin: auto;
+   text-align: center;
+   width: 1.8vw;
+   height: 1.8vw;
+
+  }
+  .table thead th .inputOnscroll{
+    font-weight: 780;
+font-size: 1.25vw;
+color: rgb(255, 255, 255);
+letter-spacing: 0.1vw;
+position: relative;
+top: -0.16vw;
+
+  }
+/* .ExtraDetailsFullclass{
+  width: inherit;
+}
+.ExtraDetailsEmptyclass{
+  width: 0;
+} */
+
+.dataTables_length ,.dataTables_paginate ,#myTable_filter ,#myTable_info ,.dataTables_filter{
+display: none;
+} 
+ 
 
 .btnTable {
-  border: 2px solid rgb(255, 255, 255);
-    font-weight: 500;
-  background: black;
-  outline: none !important;
-  cursor: pointer;
-  transition: all 0.3s ease;
-   font-size: 1.2vw;
-    color: white;
-    width: 10vw;
-    
-   }
+border: 2px solid rgb(255, 255, 255);
+  font-weight: 500;
+background: black;
+outline: none !important;
+cursor: pointer;
+transition: all 0.3s ease;
+ font-size: 1.2vw;
+  color: white;
+  width: 10vw;
+  
+ }
 .btnTable:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 100%;
-  top: 0px;
-  right: 0;
-  direction: ltr;
-   background: rgb(255, 255, 255);
-  transition: all 0.3s ease;
-  opacity: 0.2;
- 
+position: absolute;
+content: "";
+width: 0;
+height: 100%;
+top: 0px;
+right: 0;
+direction: ltr;
+ background: rgb(255, 255, 255);
+transition: all 0.3s ease;
+opacity: 0.2;
+
 }
 .btnTable:hover {
-  color: rgb(0, 0, 0);
-  position: relative;
-  z-index: 2;
- }
- .btnTable:hover:after {
-  left: auto;
-  right: 0;
-  width: 100%;
-  opacity:1;
+color: rgb(0, 0, 0);
+position: relative;
+z-index: 2;
+}
+.btnTable:hover:after {
+left: auto;
+right: 0;
+width: 100%;
+opacity:1;
 z-index: -1; 
 }  
 .btnTable:active {
-  top: 2px;
+top: 2px;
 }
 
 
 /* .button {
-  width: 205px;
-  height: 80px;
-  margin-top: 100px;
-  perspective: 1800px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+width: 205px;
+height: 80px;
+margin-top: 100px;
+perspective: 1800px;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .button .qube {
-  position: relative;
-  height: 60px;
-  width: 185px;
-  perspective: 1800px;
+position: relative;
+height: 60px;
+width: 185px;
+perspective: 1800px;
 }
 .button .qube .front, .button .qube .back {
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  transform: rotateX(-90deg);
-  transition: transform 0.3s ease;
-  position: absolute;
-  color: #FFF;
-  line-height: 60px;
-  text-align: center;
+backface-visibility: hidden;
+transform-style: preserve-3d;
+transform: rotateX(-90deg);
+transition: transform 0.3s ease;
+position: absolute;
+color: #FFF;
+line-height: 60px;
+text-align: center;
 }
 .button .qube .front {
-  background-color: #191919;
+background-color: #191919;
 }
 .button .qube .front::before {
-  content: "";
-  display: block;
-  z-index: -1;
+content: "";
+display: block;
+z-index: -1;
 }
 .button .qube .front::after {
-  background: #FFF;
-  content: "";
-  height: 155px;
-  left: -75px;
-  opacity: 0.4;
-  position: absolute;
-  top: -50px;
-  transform: rotate(35deg);
-  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-  width: 50px;
-  z-index: 1;
+background: #FFF;
+content: "";
+height: 155px;
+left: -75px;
+opacity: 0.4;
+position: absolute;
+top: -50px;
+transform: rotate(35deg);
+transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+width: 50px;
+z-index: 1;
 }
 .button .qube .back {
-  background-color: #D6D35D;
-  color: #191919;
-  transform: rotateX(0deg) translateZ(60px);
+background-color: #D6D35D;
+color: #191919;
+transform: rotateX(0deg) translateZ(60px);
 }
 .button .qube:hover .front {
-  transform: rotateX(0deg) translateZ(30px);
+transform: rotateX(0deg) translateZ(30px);
 }
 .button .qube:hover .back {
-  transform: rotateX(90deg) translateZ(30px);
+transform: rotateX(90deg) translateZ(30px);
 }
 .button:active .front {
-  border-radius: 0;
-  background-color: transparent;
-  color: #191919;
+border-radius: 0;
+background-color: transparent;
+color: #191919;
 }
 .button:active .front::before {
-  background-color: #D6D35D;
-  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-}
+background-color: #D6D35D;
+transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}   .back {
+       background-color: var(--OP_pear);
+       color: var(--OP_black);
+       transform: rotateX(0deg) translateZ(var(--OP_buttonHeight));
+    }
 .button:active .front::after {
-  left: 120%;
-  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+left: 120%;
+transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 } */
-
 
 .button-row {
    display: inline-flex;
 }
 .button-row > div {
   position: relative;
-  width: 10vw;
-  height: 42px;
+   width: 10vw;
+  height: 2.18vw;
  cursor: pointer;
-}
+ }
 .button-row > div > a {
   margin: 0;
   padding: 0;
@@ -506,6 +504,7 @@ z-index: -1;
    left: 0;
       transform-style: preserve-3d;
      transition: transform 0.25s;
+  
 }
 .button-row > div > a::before, .button-row > div > a::after {
   justify-content: center;
@@ -531,6 +530,7 @@ z-index: -1;
   -o-transform: rotateY(0deg) translateZ(25px);
   transform: rotateY(0deg) translateZ(25px);
   letter-spacing: 0.02vw;
+ 
   border: 0.05vw outset #eee3e1;
 }
 .button-row > div > a::after {
@@ -544,304 +544,341 @@ z-index: -1;
 .button-row > div > a:hover    {
   transform: translateZ(-25px) rotateX(-89deg);
  }
-.button-row > div > a:hover  {
+.button-row > div > a:hover     {
   position: absolute;
 }
  
 
-      .back {
-         background-color: var(--OP_pear);
-         color: var(--OP_black);
-         transform: rotateX(0deg) translateZ(var(--OP_buttonHeight));
-      }
+.buttonTable {
+  cursor: pointer;
+  height: 2.18vw;
+  margin: auto;
+  transition: all ease 0.3s;
+  transform-style: preserve-3d;
+  text-align: center;
+  width: 10vw;
+   font-size: inherit;
+}
+.buttonTable .defaultTable, .buttonTable .hoverTable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0 );
+  color: rgb(255, 255, 255);
+  height: 2.18vw;
+   transition: background 0.5s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.02vw;
+  /* padding:  0.1vw 0.2vw; */
+
+}
+.buttonTable .defaultTable {
+  transform: translateZ(1vw);
+  border: 0.05vw outset #eee3e1;
+
+}
+.buttonTable .hoverTable {
+  background: #ffffff;
+  transform: rotateX(-90deg) translateZ(-1vw);
+  border: 5px solid black;
+  text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000, 2px 0px 2px #000000, 0px 2px 0 #000000, -2px 0px 2px #000000, 0px -2px 2px #000000, 0.016vw 0.06vw 0.2vw black, 0.08vw 0.06vw 0.2vw black, -0.024vw -0.012vw 0.2vw black, -0.016vw -0.012vw 0.2vw black, 0.032vw 0.018vw 0.2vw black, 0.024vw 0.018vw 0.2vw black, -0.032vw -0.018vw 0.2vw black, -0.024vw -0.018vw 0.2vw black;
+
+}
+.buttonTable:hover {
+  transform: rotateX(90deg);
+}
+.buttonTable:hover .defaultTable {
+ }
 
 header #search.activeteSearch{
-  width: 100%;
-  height: 106%;
-  color: white;
-  background-color: #0000;
-  z-index: 12;
+width: 100%;
+height:60%;
+color: white;
+background-color: #0000;
+z-index: 12;
 }
-  header ul {
-     display: flex;
-    justify-content: center;
-    right: 12vw;
-  align-items: center;
-    } 
-  header ul .header_A{
-     font-weight: 700;
-    color: white;
-    font-size: 1.6vw;
-    text-transform: uppercase;
-    letter-spacing: 0.104vw;
-    text-decoration: none;
-    margin: 0vw 0.8vw;
-    padding: 1vw;
-    -webkit-box-reflect: below 0vw linear-gradient( #00000000 , #00000036);
-  }
-  
-  header ul .header_A:hover{
-    color: black;
-    border-radius: 0.2vw;
-    background-color: #fbff00;
-    box-shadow: 0vw 0vw 0.52vw #fbff00, 
-                        0vw 0vw 1.04vw #fbff00 , 
-                        0vw 0vw 1.04vw #fbff00 , 
-                        0vw 0vw 2.08vw #fbff00, 
-                        0vw 0vw 2.08vw #fbff00, 
-                        0vw 0vw 4.16vw #fbff00,
-                        0vw 0vw 4.16vw #fbff00,
-                         0vw 0vw 8.3vw #fbff00;
-  }
-
-  #periodictable {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-    height: 80vh;
-    margin-top: 35vh;
-    transition-property: all;
-    transition-duration: 600ms;
-    align-items: center;
+header ul {
+   display: flex;
+  justify-content: center;
+  right: 12vw;
+align-items: center;
   } 
-  #seleectormetaldiv {
-    display: flex; 
-    justify-content: center;
-    z-index: 4;
-    position: sticky;
-    left: 7.6vw;
-     top: 9vw; 
-    padding: 3vh;
-    border-radius: 6vh;
-    transition-duration: 600ms;
-    transition-property: auto;
-     width: auto;
-  }
-  #selectormetals {
-    transition-duration: 600ms;
-    transition-property: auto;
-    background-color: #1f1e1e;
-    width: fit-content;
-    display: flex;
-    border-radius: 6vh;
-    padding: 3vh;
-   }
-  #selectormetals p {
-    background: #1f1e1e;
-    animation-name: elementsanimation;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    margin: 0vh 0.6vw;
-    text-transform: capitalize;
-    font-size: 0.85vw;
-    padding: 0.4vh 0.8vh;
-    cursor: pointer;
-    text-shadow: var(--All-element-common-text-shadow);
-    transition-duration: 0.45s;
-    transition-timing-function: ease;
-   }
-   #selectormetals p.selector_active{
-    transform: scale(1.55) matrix(1,  0.1, -0.1, 1.3, 0, 0);
-    z-index: 18;
-   }
-  .elements {
-    display: grid;
-    grid-gap: 0.8vw;
-    transition: all 1s ,  margin-top 0s;
-     width: 94vw;
-    margin: auto;
-    padding: 2.44vw;
-    margin-top: 22vh;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto auto;
+header .btncontaniner_header_A .header_A{
+   font-weight: 700;
+  color: white;
+  font-size: 1.6vw;
+  text-transform: uppercase;
+  letter-spacing: 0.104vw;
+  text-decoration: none;
+  margin: 0vw 0.8vw;
+  padding: 1vw;
+  -webkit-box-reflect: below 0vw linear-gradient( #00000000 , #00000036);
+}
+
+header .btncontaniner_header_A .header_A:hover{
+  color: black;
+  border-radius: 0.2vw;
+  background-color: #fbff00;
+  box-shadow: 0vw 0vw 0.52vw #fbff00, 
+                      0vw 0vw 1.04vw #fbff00 , 
+                      0vw 0vw 1.04vw #fbff00 , 
+                      0vw 0vw 2.08vw #fbff00, 
+                      0vw 0vw 2.08vw #fbff00, 
+                      0vw 0vw 4.16vw #fbff00,
+                      0vw 0vw 4.16vw #fbff00,
+                       0vw 0vw 8.3vw #fbff00;
+}
+header .btncontaniner_header_A.activeteSearch{
+  position: absolute;
+  right: -100vw;
+}
+
+#periodictable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 80vh;
+  margin-top: 35vh;
+  transition-property: all;
+  transition-duration: 600ms;
+  align-items: center;
+} 
+#seleectormetaldiv {
+  display: flex; 
+  justify-content: center;
+  z-index: 4;
+  position: sticky;
+  left: 7.6vw;
+   top: 9vw; 
+  padding: 3vh;
+  border-radius: 6vh;
+  transition-duration: 600ms;
+  transition-property: auto;
+   width: auto;
+}
+#selectormetals {
+  transition-duration: 600ms;
+  transition-property: auto;
+  background-color: #1f1e1e;
+  width: fit-content;
+  display: flex;
+  border-radius: 6vh;
+  padding: 3vh;
+ }
+#selectormetals p {
+  background: #1f1e1e;
+  animation-name: elementsanimation;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  margin: 0vh 0.6vw;
+  text-transform: capitalize;
+  font-size: 0.85vw;
+  padding: 0.4vh 0.8vh;
+  cursor: pointer;
+  text-shadow: var(--All-element-common-text-shadow);
+  transition-duration: 0.45s;
+  transition-timing-function: ease;
+ }
+ #selectormetals p.selector_active{
+  transform: scale(1.55) matrix(1,  0.1, -0.1, 1.3, 0, 0);
+  z-index: 18;
+ }
+.elements {
+  display: grid;
+  grid-gap: 0.8vw;
+  transition: all 1s ,  margin-top 0s;
+   width: 94vw;
+  margin: auto;
+  padding: 2.44vw;
+  margin-top: 22vh;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto;
 }
 .ACTIVATE_elementsGRID_ID{
-  margin-top :0.3vw ;
+margin-top :0.3vw ;
 
 }
-  .elementsAll  {
-    border-top-left-radius: 0.35vw;
-    border-bottom-right-radius: .35vw;
-    background: linear-gradient(343deg, #000000a5, #384436a5);   
-   color: white;
-    height: 5vw;
-    width: 4.3vw;
-    cursor: pointer;
-    border: currentColor 0.04vw solid;
-    transition: all 220ms ease-out; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.7vw;
-    word-wrap: break-word;
-     animation: 6s linear infinite;
-    text-shadow: var(--All-element-common-text-shadow);
-    box-shadow: var(--All-element-common-box_shadow); 
-    /* box-shadow: var(--No_Blurs-All-element-common-box_shadow */
-    }  
-  .elementsAllExtra{
-    border-top-left-radius: 0.35vw;
-    border-bottom-right-radius: .35vw;
-    background: linear-gradient(343deg, #000000a5, #384436a5);   
-    color: white;
-    box-shadow: darkred var(--All-element-common-box_shadow) !important ; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: not-allowed;
-    height: 5vw;
-    width: 4.3vw;
-     border:  darkred 0.04vw solid;
-    font-size: 2.5vw;
+.elementsAll  {
+  border-top-left-radius: 0.35vw;
+  border-bottom-right-radius: .35vw;
+  background: linear-gradient(343deg, #000000a5, #384436a5);   
+ color: white;
+  height: 5vw;
+  width: 4.3vw;
+  cursor: pointer;
+  border: currentColor 0.04vw solid;
+  transition: all 220ms ease-out; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7vw;
+  word-wrap: break-word;
+   animation: 6s linear infinite;
+  text-shadow: var(--All-element-common-text-shadow);
+  box-shadow: var(--All-element-common-box_shadow); 
+  /* box-shadow: var(--No_Blurs-All-element-common-box_shadow */
+  }  
+.elementsAllExtra{
+  border-top-left-radius: 0.35vw;
+  border-bottom-right-radius: .35vw;
+  background: linear-gradient(343deg, #000000a5, #384436a5);   
+  color: white;
+  box-shadow: darkred var(--All-element-common-box_shadow) !important ; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+  height: 5vw;
+  width: 4.3vw;
+   border:  darkred 0.04vw solid;
+  font-size: 2.5vw;
 
-  }
- .activated_elements_onclick{
-    transform: scale(3.0);
-    z-index: 8;
-    animation-name: elementsanimation;
-  } 
-  .activeted {
-    filter: brightness(0.2) blur(0.18vh);
-  }
-  .activeteBLured {
-    filter:   blur(0.38vw);
-  }
-  #otherseries {
-    display: grid;
-    margin: 2vw 0 0 9.6vw ;
-    grid-gap: 5.8vw 0vh;
+}
+.activated_elements_onclick{
+  transform: scale(3.0);
+  z-index: 8;
+  animation-name: elementsanimation;
+} 
+.activeted {
+  filter: brightness(0.2) blur(0.18vh);
+}
+.activeteBLured {
+  filter:   blur(0.38vw);
+}
+#otherseries {
+  display: grid;
+  margin: 2vw 0 0 9.6vw ;
+  grid-gap: 5.8vw 0vh;
 }  
-  #lanthrathideseries {
-    grid-template-columns: auto auto auto  auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    grid-template-rows: auto;
-    display: grid;
-    grid-gap: 0.85vw;
-  }
- 
-  .lanthrathideseries_elements ,  .anthrathideseires_elements {
-    color: var(--lanthrathide_and_anthrathide-color);
-  }
-
-  #anthrathideseires {
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    grid-template-rows: auto;
-    display: grid;
-    margin: -8.6vh 0 28.6vh 0;
-    grid-gap: 0.85vw;
-  } 
-  .alkali-metals-selector {
-    color: var(--alkali-color);
- box-shadow: var(--All-element-common-box_shadow); 
-  }
-
-  .akiline-earth-metals-selector {
-    color: #dee955;
- box-shadow: var(--All-element-common-box_shadow); 
-  }
-
-  .transition-metal-selector {
-    color: #fd8572;
- box-shadow: var(--All-element-common-box_shadow); 
-  }
-
-  .post-transition-metal-selector {
-    color: #4cddf3;
- box-shadow: var(--All-element-common-box_shadow); 
-  }
-
-  .metalloid-selector {
-    color: #fff;
- box-shadow: var(--All-element-common-box_shadow); 
-  }
-
-  .other-nonmetal-selector {
-    color: #52ee61;
- box-shadow: var(--All-element-common-box_shadow); 
-  }
-
-  .noble-gasses-selector {
-    color: #759fff;
- box-shadow: var(--All-element-common-box_shadow); 
-  }
-
-  .unknown-selector {
-    color: #ccc;
- box-shadow: var(--All-element-common-box_shadow); 
-  }
-
-  .lanthrathideseries-selector {
-    color: #c686cc;
- box-shadow: var(--All-element-common-box_shadow); 
-  }
-
-  .anthrathideseires-selector {
-    color: #c686cc;
- box-shadow: var(--All-element-common-box_shadow); 
-  }
-  #selectormetals p:hover {
-    transform: scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);
-    z-index: 18;
-  }
-  .Elements_short_name {
-    font-size: 1.4vw;
-  }
-
- .Elements_full_name  {
-    word-break: break-all;
-    text-align: center;
-    justify-content: baseline;
-    margin-top: 0.1vw;
-    font-size: 0.6vw;
-  }
-  .elementsAllExtraName {
-    word-break: break-all;
-    text-align: center;
-    justify-content: baseline;
-    margin-top: 0.1vw;
-    font-size:0.72vw;
-    font-weight: 660;
-  }
-  /* extra elements for  lanthrathide series and  anthrathide seiresname css */
-   .elementsAllExtrasymbol{
-    font-size: 2.5vw; 
-    align-self: center;
-    justify-self: center;
-    text-align: center; 
-   }
-  .Atomic_number {
-    align-self: flex-start;
-  }
- 
-  /* for elements belogin to it's type */
-  .alkali-metals {
-    color: var(--alkali-color);
-  }
-  .akiline-earth-metals {
-    color: var(--alkali-earth-color);
-  }
-  .transition-metal {
-    color: var(--transition-metal-color);
+#lanthrathideseries {
+  grid-template-columns: auto auto auto  auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: auto;
+  display: grid;
+  grid-gap: 0.85vw;
 }
-  .post-transition-metal {
-    color: var(--post-transition-metal-color);
-  }
-  .metalloid {
-    color: var(--metalloid-color);
-  }
-  .other-nonmetal {
-    color: var(--other-nonmetal-color);
-  }
-  .noble-metals {
-    color: var(--noble-metals-color);
-  }
-  .unknown {
-    color: var(--unknown-color);
-  }
 
-  /* group 1*/
+.lanthrathideseries_elements ,  .anthrathideseires_elements {
+  color: var(--lanthrathide_and_anthrathide-color);
+}
+
+#anthrathideseires {
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: auto;
+  display: grid;
+  margin: -8.6vh 0 28.6vh 0;
+  grid-gap: 0.85vw;
+} 
+.alkali-metals-selector {
+  color: var(--alkali-color);
+box-shadow: var(--All-element-common-box_shadow); 
+}
+
+.akiline-earth-metals-selector {
+  color: #dee955;
+box-shadow: var(--All-element-common-box_shadow); 
+}
+
+.transition-metal-selector {
+  color: #fd8572;
+box-shadow: var(--All-element-common-box_shadow); 
+}
+
+.post-transition-metal-selector {
+  color: #4cddf3;
+box-shadow: var(--All-element-common-box_shadow); 
+}
+
+.metalloid-selector {
+  color: #fff;
+box-shadow: var(--All-element-common-box_shadow); 
+}
+
+.other-nonmetal-selector {
+  color: #52ee61;
+box-shadow: var(--All-element-common-box_shadow); 
+}
+
+.noble-gasses-selector {
+  color: #759fff;
+box-shadow: var(--All-element-common-box_shadow); 
+}
+
+.unknown-selector {
+  color: #ccc;
+box-shadow: var(--All-element-common-box_shadow); 
+}
+
+.lanthrathideseries-selector {
+  color: #c686cc;
+box-shadow: var(--All-element-common-box_shadow); 
+}
+
+.anthrathideseires-selector {
+  color: #c686cc;
+box-shadow: var(--All-element-common-box_shadow); 
+}
+#selectormetals p:hover {
+  transform: scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);
+  z-index: 18;
+}
+.Elements_short_name {
+  font-size: 1.4vw;
+}
+
+.Elements_full_name  {
+  word-break: break-all;
+  text-align: center;
+   margin-top: 0.1vw;
+  font-size: 0.6vw;
+}
+.elementsAllExtraName {
+  word-break: break-all;
+  text-align: center;
+   margin-top: 0.1vw;
+  font-size:0.72vw;
+  font-weight: 660;
+}
+/* extra elements for  lanthrathide series and  anthrathide seiresname css */
+ .elementsAllExtrasymbol{
+  font-size: 2.5vw; 
+  align-self: center;
+  justify-self: center;
+  text-align: center; 
+ }
+.Atomic_number {
+  align-self: flex-start;
+}
+
+/* for elements belogin to it's type */
+.alkali-metals {
+  color: var(--alkali-color);
+}
+.akiline-earth-metals {
+  color: var(--alkali-earth-color);
+}
+.transition-metal {
+  color: var(--transition-metal-color);
+}
+.post-transition-metal {
+  color: var(--post-transition-metal-color);
+}
+.metalloid {
+  color: var(--metalloid-color);
+}
+.other-nonmetal {
+  color: var(--other-nonmetal-color);
+}
+.noble-metals {
+  color: var(--noble-metals-color);
+}
+.unknown {
+  color: var(--unknown-color);
+}
+
+/* group 1*/
 #elements-1 {grid-column: 1;grid-row: 1; }
 #elements-3 {grid-column: 1;grid-row: 2;}
 #elements-11 {grid-column: 1;grid-row: 3;}
@@ -863,8 +900,8 @@ header #search.activeteSearch{
 #elements-39 {grid-column: 3;grid-row: 5;}
 
 /* extra elements for lanthrathideseries and anthrathideseires */
- #below_elements_39__1 {grid-column: 3;grid-row: 6;}
- #below_elements_39__2 {grid-column: 3;grid-row: 7;}
+#below_elements_39__1 {grid-column: 3;grid-row: 6;}
+#below_elements_39__2 {grid-column: 3;grid-row: 7;}
 
 /* group 4 */
 #elements-22 {grid-column: 4;grid-row: 4}
@@ -937,379 +974,379 @@ header #search.activeteSearch{
 #elements-82 {grid-column: 14;grid-row: 6; }
 #elements-114 {grid-column: 14; grid-row: 7;}
 
-  /* group 15 */
-  #elements-7 {grid-column: 15;grid-row: 2;}
-  #elements-15 {grid-column: 15;grid-row: 3;}
-  #elements-33 {grid-column: 15;grid-row: 4;}
-  #elements-51 {grid-column: 15;grid-row: 5;}
-  #elements-83 {grid-column: 15;grid-row: 6;}
-  #elements-115 {grid-column: 15;grid-row: 7;}
+/* group 15 */
+#elements-7 {grid-column: 15;grid-row: 2;}
+#elements-15 {grid-column: 15;grid-row: 3;}
+#elements-33 {grid-column: 15;grid-row: 4;}
+#elements-51 {grid-column: 15;grid-row: 5;}
+#elements-83 {grid-column: 15;grid-row: 6;}
+#elements-115 {grid-column: 15;grid-row: 7;}
 
-  /* group 16 */
-  #elements-8 {grid-column: 16;grid-row: 2;}
-  #elements-16 {grid-column: 16;grid-row: 3;}
-  #elements-34 {grid-column: 16;grid-row: 4;}
-  #elements-52 {grid-column: 16;grid-row: 5;}
-  #elements-84 {grid-column: 16;grid-row: 6;}
-  #elements-116 {grid-column: 16;grid-row: 7;}
+/* group 16 */
+#elements-8 {grid-column: 16;grid-row: 2;}
+#elements-16 {grid-column: 16;grid-row: 3;}
+#elements-34 {grid-column: 16;grid-row: 4;}
+#elements-52 {grid-column: 16;grid-row: 5;}
+#elements-84 {grid-column: 16;grid-row: 6;}
+#elements-116 {grid-column: 16;grid-row: 7;}
 
-  /* group 17 */
-  #elements-9 {grid-column: 17;grid-row: 2;}
-  #elements-17 {grid-column: 17;grid-row: 3;}
-  #elements-35 {grid-column: 17;grid-row: 4; }
-  #elements-53 {grid-column: 17;grid-row: 5;}
-  #elements-85 {grid-column: 17;grid-row: 6;}
-  #elements-117 {grid-column: 17;grid-row: 7;}
+/* group 17 */
+#elements-9 {grid-column: 17;grid-row: 2;}
+#elements-17 {grid-column: 17;grid-row: 3;}
+#elements-35 {grid-column: 17;grid-row: 4; }
+#elements-53 {grid-column: 17;grid-row: 5;}
+#elements-85 {grid-column: 17;grid-row: 6;}
+#elements-117 {grid-column: 17;grid-row: 7;}
 
-  /* group 18 */
-  #elements-2 {grid-column: 18;grid-row: 1;}
-  #elements-10 {grid-column: 18;grid-row: 2;}
-  #elements-18 {grid-column: 18;grid-row: 3;}
-  #elements-36 {grid-column: 18;grid-row: 4;}
-  #elements-54 {grid-column: 18;grid-row: 5;}
-  #elements-86 {grid-column: 18;grid-row: 6;}
-  #elements-118 {grid-column: 18;grid-row: 7;} 
+/* group 18 */
+#elements-2 {grid-column: 18;grid-row: 1;}
+#elements-10 {grid-column: 18;grid-row: 2;}
+#elements-18 {grid-column: 18;grid-row: 3;}
+#elements-36 {grid-column: 18;grid-row: 4;}
+#elements-54 {grid-column: 18;grid-row: 5;}
+#elements-86 {grid-column: 18;grid-row: 6;}
+#elements-118 {grid-column: 18;grid-row: 7;} 
 
-  @keyframes elementsanimation {
-    0% {
-      box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
-        -0.22vw 0.25vw 0.2vw 0vw currentcolor;
-      text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
-    }
-
-    16.6666666666667% {
-      box-shadow: 0vw -0vw 0.2vw 0vw currentcolor,
-        -0vw 0vw 0.2vw 0vw currentcolor;
-      text-shadow: none;
-    }
-
-    33.3333333333334% {
-      box-shadow: 0vw -0vw 0.2vw 0vw currentcolor,
-        -0vw 0vw 0.2vw 0vw currentcolor;
-      text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
-    }
-
-    50.0000000000001% {
-      box-shadow: 0vw -0vw 0.2vw 0vw currentcolor,
-        -0vw 0vw 0.2vw 0vw currentcolor;
-      text-shadow: none;
-    }
-
-    66.6666666666668% {
-      box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
-        -0.22vw 0.25vw 0.2vw 0vw currentcolor;
-      text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
-    }
-
-    83.3333333333335% {
-      box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
-        -0.22vw 0.25vw 0.2vw 0vw currentcolor;
-      text-shadow: none;
-    }
-
-    100% {
-      box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
-        -0.22vw 0.25vw 0.2vw 0vw currentcolor;
-      text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
-    }
-  }
- 
-  #cutoption {
-    position: sticky;
-    top: 3vh;
-    width: 95.5vw;
-    left: 2vw;
-    justify-content: center;
-    display: flex;
-    transition-property: all;
-    transition-duration: 1000ms;
-    z-index: 14;
-    justify-content: space-between;
-    filter: invert(1);
+@keyframes elementsanimation {
+  0% {
+    box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
+      -0.22vw 0.25vw 0.2vw 0vw currentcolor;
+    text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
   }
 
-  #cutoption img {
-    display: none;
-    position: sticky;
-    width: 4vw;
-    height: 4vw;
-    z-index: 12;
-    border-radius: 0.45vw;
-    padding: 1.2vh;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.739); 
-    box-shadow: -0.156vw -0.104vw 0vw 0vw #000000, 0.052vw 0.104vw 0vw 0vw #000000, -0.156vw -0.104vw 0.208vw 0.26vw #ffffff, 0.052vw 0.104vw 0.208vw 0.26vw #ffffff, 0.052vw 0.104vw 1.04vw 1.04vw #838080;  }
-
-  .allonclickdisplaycontent {
-     transform: translate(13.8vw, -8vh);
-    grid-gap: 0.6vh 0vw;
-    word-wrap: break-word;
-    text-overflow: ellipsis;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: 1.2vh;
+  16.6666666666667% {
+    box-shadow: 0vw -0vw 0.2vw 0vw currentcolor,
+      -0vw 0vw 0.2vw 0vw currentcolor;
     text-shadow: none;
-    text-shadow: 0.052vw 0.052vw 0vw black, 0.052vw 0vw 0vw black, 0vw 0.052vw 0vw black, -0.052vw 0.052vw 0vw black, 0.104vw 0.104vw 0.052vw black, 0.052vw -0.052vw 0.052vw black, 0vw 0.104vw 0.052vw black, -0.104vw 0.104vw 0.052vw black;  }
-
-  .summary {
-    width: 100%;
-    text-align: center;
-    border-bottom: 0.2vh solid rgb(255, 255, 255);
-    border-radius: 2.4vh;
-    padding-bottom: 0.5vw;
-    margin-top: -1vw;
   }
 
-  .appearance {
-    max-width: 13.6vw;
+  33.3333333333334% {
+    box-shadow: 0vw -0vw 0.2vw 0vw currentcolor,
+      -0vw 0vw 0.2vw 0vw currentcolor;
+    text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
   }
 
-  .discovered_by {
-    max-width: 13.6vw;
-  } 
-
-  .ionization_energies {
-    margin-bottom: 5vh;
-    max-width: 18vw;
-    word-wrap: break-word;
+  50.0000000000001% {
+    box-shadow: 0vw -0vw 0.2vw 0vw currentcolor,
+      -0vw 0vw 0.2vw 0vw currentcolor;
+    text-shadow: none;
   }
-  
-   /* extra bacground .elements */ 
-   @keyframes roatationanima { 
-         to{
-              background-position: 3840px;
-         }
-     }
- 
+
+  66.6666666666668% {
+    box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
+      -0.22vw 0.25vw 0.2vw 0vw currentcolor;
+    text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
+  }
+
+  83.3333333333335% {
+    box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
+      -0.22vw 0.25vw 0.2vw 0vw currentcolor;
+    text-shadow: none;
+  }
+
+  100% {
+    box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
+      -0.22vw 0.25vw 0.2vw 0vw currentcolor;
+    text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
+  }
+}
+
+#cutoption {
+  position: sticky;
+  top: 3vh;
+  width: 95.5vw;
+  left: 2vw;
+  justify-content: center;
+  display: flex;
+  transition-property: all;
+  transition-duration: 1000ms;
+  z-index: 14;
+  justify-content: space-between;
+  filter: invert(1);
+}
+
+#cutoption img {
+  display: none;
+  position: sticky;
+  width: 4vw;
+  height: 4vw;
+  z-index: 12;
+  border-radius: 0.45vw;
+  padding: 1.2vh;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.739); 
+  box-shadow: -0.156vw -0.104vw 0vw 0vw #000000, 0.052vw 0.104vw 0vw 0vw #000000, -0.156vw -0.104vw 0.208vw 0.26vw #ffffff, 0.052vw 0.104vw 0.208vw 0.26vw #ffffff, 0.052vw 0.104vw 1.04vw 1.04vw #838080;  }
+
+.allonclickdisplaycontent {
+   transform: translate(13.8vw, -8vh);
+  grid-gap: 0.6vh 0vw;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 1.2vh;
+  text-shadow: none;
+  text-shadow: 0.052vw 0.052vw 0vw black, 0.052vw 0vw 0vw black, 0vw 0.052vw 0vw black, -0.052vw 0.052vw 0vw black, 0.104vw 0.104vw 0.052vw black, 0.052vw -0.052vw 0.052vw black, 0vw 0.104vw 0.052vw black, -0.104vw 0.104vw 0.052vw black;  }
+
+.summary {
+  width: 100%;
+  text-align: center;
+  border-bottom: 0.2vh solid rgb(255, 255, 255);
+  border-radius: 2.4vh;
+  padding-bottom: 0.5vw;
+  margin-top: -1vw;
+}
+
+.appearance {
+  max-width: 13.6vw;
+}
+
+.discovered_by {
+  max-width: 13.6vw;
+} 
+
+.ionization_energies {
+  margin-bottom: 5vh;
+  max-width: 18vw;
+  word-wrap: break-word;
+}
+
+ /* extra bacground .elements */ 
+ @keyframes roatationanima { 
+       to{
+            background-position: 3840px;
+       }
+   }
+
 #background-container{
-   position: fixed;
-  right: 0;
-  z-index: -4;
-  height: 280vh;
-  width: 100vw;
+ position: fixed;
+right: 0;
+z-index: -4;
+height: 280vh;
+width: 100vw;
 } 
 
 /* ---- particles.js container ---- */
 #particles-js{
-   width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -2;
+ width: 100%;
+height: 100%;
+position: fixed;
+z-index: -2;
 }
-  
- .DISPLAYNone{  
-  display: none; 
+
+.DISPLAYNone{  
+display: none; 
 }
 #particles-js.toggleNone{
-  display: block;
+display: block;
 } 
 
- .toggle{
-    position: fixed;
-    top: 1.5vw;
-    right: 3.5vw;
-    width: 4vw;
-    height: 4vw;
-    background: rgb(255, 255, 255) url(/menu.png) center no-repeat;
-    background-size: 3vw;
-    filter: invert(1);
-     border-radius: 0.3vw;
-    cursor: pointer;
-    z-index: 6;
-    transition: all 300ms linear ;
+.toggle{
+  position: fixed;
+  top: 1.5vw;
+  right: 3.5vw;
+  width: 4vw;
+  height: 4vw;
+  background: rgb(255, 255, 255) url(/menu.png) center no-repeat;
+  background-size: 3vw;
+  filter: invert(1);
+   border-radius: 0.3vw;
+  cursor: pointer;
+  z-index: 6;
+  transition: all 300ms linear ;
 
-  }
- .toggle.activatedMenuClass ,.toggle.activeteSearch { 
-     background: rgb(255, 255, 255) url(/close.png) center no-repeat;
-    background-size: 3vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 25;  
-  }  
- .sidebar , .sidebar2{
-  position: absolute;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background: #470101e6 url(sidebar-2bg.jpg) ; 
-  display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    transition: all 900ms linear , opacity 1400ms   linear   ;
-    z-index: 24;
-    height:  0vh;
-    width:  0vw;
-     border-radius: 0.4vw;
-    right: -200vw;
-    border: 0.625vw solid white;
-    opacity: 0;
-    top: 100vh;
-    background-size: cover;
-  }
- 
- .sidebar2{ 
-    right:  200vw;
-    background: #470101e6 url(sidebar-1bg.jpg);  
+}
+.toggle.activatedMenuClass ,.toggle.activeteSearch { 
+   background: rgb(255, 255, 255) url(/close.png) center no-repeat;
+  background-size: 3vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 25;  
+}  
+.sidebar , .sidebar2{
+position: absolute;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+background: #470101e6 url(sidebar-2bg.jpg) ; 
+display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 900ms linear , opacity 1400ms   linear   ;
+  z-index: 24;
+  height:  0vh;
+  width:  0vw;
+   border-radius: 0.4vw;
+  right: -200vw;
+  border: 0.625vw solid white;
+  opacity: 0;
+  top: 100vh;
+  background-size: cover;
+}
+
+.sidebar2{ 
+  right:  200vw;
+  background: #470101e6 url(sidebar-1bg.jpg);  
 top: 0vh;
 background-size: cover;
- }
- .sidebar.activatedMenuClass{
+}
+.sidebar.activatedMenuClass{
 top: 0vh;
-   right:  0vw;
-   width: 50vw;
-   height: 100vh;
-   border: none;
-   opacity: 1;
-    }
- .sidebar2.activatedMenuClass{
-   right:  50vw;
-   width: 50vw;
-   height: 100vh;
-   border: none;
-   opacity: 1;
+ right:  0vw;
+ width: 50vw;
+ height: 100vh;
+ border: none;
+ opacity: 1;
   }
+.sidebar2.activatedMenuClass{
+ right:  50vw;
+ width: 50vw;
+ height: 100vh;
+ border: none;
+ opacity: 1;
+}
 #earth-img{ 
-  position: absolute;
-    top: 8vh;
-    right: 6vw;
-    transform: translate(-50% , -50%);
-    width: 34vw;
-    height: 34vw;
-    border-radius: 50%;
-    background: url(earth.jpg);
-    background-size: cover;
-    background-repeat: repeat-x;
-    box-shadow: inset 0 0 1.04vw #0319f4, 0 0 6.25vw #03a9f4;
-    transform: rotate( 334deg);
-    animation: roatationanima linear infinite  154s; 
-    z-index: 3;
-    display: none;
- 
+position: absolute;
+  top: 8vh;
+  right: 6vw;
+  transform: translate(-50% , -50%);
+  width: 34vw;
+  height: 34vw;
+  border-radius: 50%;
+  background: url(earth.jpg);
+  background-size: cover;
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 1.04vw #0319f4, 0 0 6.25vw #03a9f4;
+  transform: rotate( 334deg);
+  animation: roatationanima linear infinite  154s; 
+  z-index: 3;
+  display: none;
+
 } 
- @keyframes rotate {
-  from {
-      transform: rotate(0deg);
-  }
-  to {
-      transform: rotate(360deg);
-   }
+@keyframes rotate {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+ }
 }
 
 .planetaMian
 {    position: absolute;
-  display: none;
-    transform: rotate( 338deg);
-    top: -2vh;
-    right: 10vw; 
-  
+display: none;
+  transform: rotate( 338deg);
+  top: -2vh;
+  right: 10vw; 
+
 }
 .planetaMian.toggleNone{
-  display: block;
+display: block;
 }
 .planet ,  .sunmain{
-    width:26vw;
-    height:26vw;
-    position:absolute;
-    border-radius:50%;
-    overflow:hidden;
-    top: 3.9vw;
-    right: 12vw;
-    margin:-7.8vw;
-    animation: rotatebac 600s infinite linear;  
-    box-shadow: inset 0 0 1.04vw #0319f4, 0 0 6.25vw #03a9f4;
-    transform: rotate( 334deg);
-  }
-  .planet .mask ,  .sunmain .Sunmask{
-    width:100%;
-    height:100%;
-    position: absolute;
-    box-shadow:inset -0.52vw -0.52vw 2.08vw #0319f4, inset 0.52vw 0.52vw 1.56vw -0.52vw #03a9f4;
-    border-radius:50%;
-  } 
-  .planet .background ,  .sunmain .sunbackground{
-    animation: translateBackground 160s infinite linear;  
-    background:url(earth.jpg) repeat-x  ;
-    background-size: cover;
-    width:100%;
-    height:100%;
-    position:absolute;
-    border-radius:50%;
-  }
-  .planet .clouds{
-    background:url(http://artem.anmedio.ru/dev/planet/clouds.png) repeat-x;
-    width:100%;
-    height:100%;
-    position:absolute;
-    border-radius:50%;
-    animation: translateBackground 120s infinite linear;
-    opacity: 0.4;
-  }
-  .planet .wrap,  .sunmain .sunwrap{
-    width:100%;
-    height:100%;
-    position:absolute;
-    border-radius:50%;
-    animation: rotatePlanet 600s infinite linear;  
-  }
+  width:26vw;
+  height:26vw;
+  position:absolute;
+  border-radius:50%;
+  overflow:hidden;
+  top: 3.9vw;
+  right: 12vw;
+  margin:-7.8vw;
+  animation: rotatebac 600s infinite linear;  
+  box-shadow: inset 0 0 1.04vw #0319f4, 0 0 6.25vw #03a9f4;
+  transform: rotate( 334deg);
+}
+.planet .mask ,  .sunmain .Sunmask{
+  width:100%;
+  height:100%;
+  position: absolute;
+  box-shadow:inset -0.52vw -0.52vw 2.08vw #0319f4, inset 0.52vw 0.52vw 1.56vw -0.52vw #03a9f4;
+  border-radius:50%;
+} 
+.planet .background ,  .sunmain .sunbackground{
+  animation: translateBackground 160s infinite linear;  
+  background:url(earth.jpg) repeat-x  ;
+  background-size: cover;
+  width:100%;
+  height:100%;
+  position:absolute;
+  border-radius:50%;
+}
+.planet .clouds{
+  background:url(http://artem.anmedio.ru/dev/planet/clouds.png) repeat-x;
+  width:100%;
+  height:100%;
+  position:absolute;
+  border-radius:50%;
+  animation: translateBackground 120s infinite linear;
+  opacity: 0.4;
+}
+.planet .wrap,  .sunmain .sunwrap{
+  width:100%;
+  height:100%;
+  position:absolute;
+  border-radius:50%;
+  animation: rotatePlanet 600s infinite linear;  
+}
 @keyframes translateBackground{
-  0%{
-    background-position-x:0;
-  }
-  100%{
-    background-position-x:-600px;
-  }
+0%{
+  background-position-x:0;
+}
+100%{
+  background-position-x:-600px;
+}
 }
 @keyframes rotatePlanet{
-  0%{
-    transform:rotateZ(0deg);
-  }
-  100%{
-    transform:rotateZ(-360deg);
-  }}
-  @keyframes rotatebac{
-  0%{
-    transform:rotateZ(0deg);
-  }
-  100%{
-    transform:rotateZ(360deg);
-  }
+0%{
+  transform:rotateZ(0deg);
 }
-  .sunmain{
-    display: none;
-    width:45vw;
-    height:45vw;
-    top: 0vw;
-    left: -17vw;
-    margin:-7.8vw;
-    animation: rotatebac 50s infinite linear;  
-    box-shadow: inset 0 0 1.04vw #dcf403, 0 0 6.25vw #f4c803;
-  }
-  .sunmain.toggleNone{
-  display: block;
+100%{
+  transform:rotateZ(-360deg);
+}}
+@keyframes rotatebac{
+0%{
+  transform:rotateZ(0deg);
 }
-  .sunmain .Sunmask{ 
-    box-shadow:inset -0.52vw -0.52vw 2.08vw #dcf403, inset 0.52vw 0.52vw 1.56vw -0.52vw #f4c803;
-  } 
-  .sunmain .sunbackground{
-    animation: translateBackground 26.66s infinite linear;  
-    background:url(sun.jpg) repeat-x  ;
-  }
- 
-  .sunmain .sunwrap{
-    animation: rotatePlanet 50s infinite linear;  
-  }
+100%{
+  transform:rotateZ(360deg);
+}
+}
+.sunmain{
+  display: none;
+  width:45vw;
+  height:45vw;
+  top: 0vw;
+  left: -17vw;
+  margin:-7.8vw;
+  animation: rotatebac 50s infinite linear;  
+  box-shadow: inset 0 0 1.04vw #dcf403, 0 0 6.25vw #f4c803;
+}
+.sunmain.toggleNone{
+display: block;
+}
+.sunmain .Sunmask{ 
+  box-shadow:inset -0.52vw -0.52vw 2.08vw #dcf403, inset 0.52vw 0.52vw 1.56vw -0.52vw #f4c803;
+} 
+.sunmain .sunbackground{
+  animation: translateBackground 26.66s infinite linear;  
+  background:url(sun.jpg) repeat-x  ;
+}
 
-  .onclickbackgorund{ 
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    z-index: 6;
-    right: -100vw;
-    transition: all linear 1s;
-    transition-delay: 50ms;
-    transform-style: preserve-3d;
-    overflow: hidden;
+.sunmain .sunwrap{
+  animation: rotatePlanet 50s infinite linear;  
+}
+
+.onclickbackgorund{ 
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 6;
+  right: -100vw;
+  transition: all linear 1s;
+  transition-delay: 50ms;
+  transform-style: preserve-3d;
+  overflow: hidden;
 }
 .onclickbackgorund span{
-  background: linear-gradient(90deg , rgba(144, 78, 230, 0.404), rgba(235, 8, 8, 0.657));
+background: linear-gradient(90deg , rgba(144, 78, 230, 0.404), rgba(235, 8, 8, 0.657));
 position: relative;
 right: -100vw;
 transition: all linear 800ms;  
@@ -1328,128 +1365,128 @@ width: 0vw;
 .onclickbackgorund span:nth-child(10){transition-delay:3600ms ;}  
 .onclickbackgorund span:nth-child(11){transition-delay: 4000ms ;}  
 .onclickbackgorund span:nth-child(12){transition-delay:4400ms ;}  
- 
- .onclickbackgorund.activated_span{
+
+.onclickbackgorund.activated_span{
 right: 0vw; 
 width: 100vw;
 }     
 .onclickbackgorund.activated_span span{
- width: 100vw;
- height: 22vw;
+width: 100vw;
+height: 22vw;
 right: 0vw;
 border  : 0.0vw solid rgb(255, 255, 255);
 }   
 .btncontaniner{
-  display: flex;
-  justify-self: unset;
-  color: #000;
-  align-items: center;
-  flex-wrap: wrap;
-  position: relative;
-  right: 6vw;
-  }
+display: flex;
+justify-self: unset;
+color: #000;
+align-items: center;
+flex-wrap: wrap;
+position: relative;
+right: 6vw;
+}
 .btncontaniner.sidebarcontanier{
-  flex-direction: column;
-    display: flex;
-    position: absolute;
-    height: 104vh;
-    justify-content: center;
-    left: 12vw;
-  }
-  .btncontaniner.sidebarcontanier.Customization-modes{
-    height: 90vh;
-    width: 22vw;
-    justify-content: flex-start;
-    top: 4vh;
-    background: #0f0f0f96;
-    border-radius: 1.06vw;
-    padding: 1vw;
-     box-shadow: 0vw 0vw 1.5vw 0vw rgb(0, 0, 0);
-    left: -150vw;
-  }
-  .btncontaniner.sidebarcontanier.Customization-modes.activatedMenuClass{
-    left: 16vw;
-    opacity: 0.95;
-  }
+flex-direction: column;
+  display: flex;
+  position: absolute;
+  height: 104vh;
+  justify-content: center;
+  left: 12vw;
+}
+.btncontaniner.sidebarcontanier.Customization-modes{
+  height: 90vh;
+  width: 22vw;
+  justify-content: flex-start;
+  top: 4vh;
+  background: #0f0f0f96;
+  border-radius: 1.06vw;
+  padding: 1vw;
+   box-shadow: 0vw 0vw 1.5vw 0vw rgb(0, 0, 0);
+  left: -150vw;
+}
+.btncontaniner.sidebarcontanier.Customization-modes.activatedMenuClass{
+  left: 16vw;
+  opacity: 0.95;
+}
 
-  .btncontaniner.sidebarcontanier.Customization-modes a{
-    margin: 2vw 0;
-  }
+.btncontaniner.sidebarcontanier.Customization-modes a{
+  margin: 2vw 0;
+}
 .BlankForSidebar1, .BlankForSidebar2{ 
-  position: relative;
-     top: -1.5vh;
-    width: 50vw;
-    height: 104vh;
-    background: linear-gradient( 270deg, #000000be, #fffbfb1a);
+position: relative;
+   top: -1.5vh;
+  width: 50vw;
+  height: 104vh;
+  background: linear-gradient( 270deg, #000000be, #fffbfb1a);
 z-index: -1;
 transition: all 700ms linear;
 }
 .BlankForSidebar1{
-  background: linear-gradient( 90deg, #000000be, #fffbfb1a);
-  box-shadow: inset 0.104vw 0vw 1.56vw 0vw #1c1f22, inset -1.04vw 0vw 1.56vw 0.46vw #1c1f22;
- 
+background: linear-gradient( 90deg, #000000be, #fffbfb1a);
+box-shadow: inset 0.104vw 0vw 1.56vw 0vw #1c1f22, inset -1.04vw 0vw 1.56vw 0.46vw #1c1f22;
+
 }
 .BlankForSidebar.activatedBlankForSidebarClass{position: absolute;}
 
 .AllMainCustomize{
-  display: flex;
-  flex-direction: column;
-  color: #ffffff;
+display: flex;
+flex-direction: column;
+color: #ffffff;
 }
- 
+
 .MainCustomizeFlex{
-  display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    width: 19.5vw;
-    height: 4.5vw;
-    box-shadow: 0vw 0vw 1vw 0.2vw #4ccf47;
-    margin: 1.2vw 0;
-    padding: 0.6vw 1vw;
-    border-radius: 0.8vw;
+display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 19.5vw;
+  height: 4.5vw;
+  box-shadow: 0vw 0vw 1vw 0.2vw #4ccf47;
+  margin: 1.2vw 0;
+  padding: 0.6vw 1vw;
+  border-radius: 0.8vw;
 }
 .MainCustomizeFlex p{
-  font-weight: 780;
-    color: #ffffff;
-    font-size:2vw;
-    text-transform: uppercase;
-    letter-spacing: 0.104vw;
-    text-shadow: 0vw 0vw 0.52vw #00b3ff, 0vw 0vw 1.04vw #00b3ff,0vw 0vw 2.08vw #00b3ff, 0vw 0vw 3.125vw #00b3ff, 0vw 0vw 4.16vw #00b3ff, 0vw 0vw 6.25vw #00b3ff   ;
+font-weight: 780;
+  color: #ffffff;
+  font-size:2vw;
+  text-transform: uppercase;
+  letter-spacing: 0.104vw;
+  text-shadow: 0vw 0vw 0.52vw #00b3ff, 0vw 0vw 1.04vw #00b3ff,0vw 0vw 2.08vw #00b3ff, 0vw 0vw 3.125vw #00b3ff, 0vw 0vw 4.16vw #00b3ff, 0vw 0vw 6.25vw #00b3ff   ;
 
 }
 .btncontaniner.sidebarcontanier .sidebarbtns , .btncontaniner.sidebarcontanier .directbtnFALSE{
-    margin: 0.52vw 2.08vw;
-  }
+  margin: 0.52vw 2.08vw;
+}
 .btncontaniner .sidebarbtns ,.btncontaniner .directbtnFALSE {
-  font-size: 1.18vw;
-  position: relative;
-  display: inline-block;
-  padding: 0.78vw 1.56vw ;
-  border: 0.104vw solid #0f0;
-  margin:  0 2.08vw;
-  text-transform: uppercase;
-  font-weight: 600;
-  text-decoration: none;
-  letter-spacing: 0.104vw ;
-  color: white;
-  transition: 0.5s;
-  -webkit-box-reflect: below 0vw linear-gradient( #00000000 , #00000036);
+font-size: 1.18vw;
+position: relative;
+display: inline-block;
+padding: 0.78vw 1.56vw ;
+border: 0.104vw solid #0f0;
+margin:  0 2.08vw;
+text-transform: uppercase;
+font-weight: 600;
+text-decoration: none;
+letter-spacing: 0.104vw ;
+color: white;
+transition: 0.5s;
+-webkit-box-reflect: below 0vw linear-gradient( #00000000 , #00000036);
 }
 .btncontaniner .sidebarbtns:hover{
-  color: black;
-  box-shadow: 0vw 0vw 0.52vw #0f0,0vw  0vw 1.04vw #0f0,0vw  0vw 2.08vw #0f0,0vw  0vw 4.16vw #0f0,0vw  0vw 8.3vw #0f0  ;
+color: black;
+box-shadow: 0vw 0vw 0.52vw #0f0,0vw  0vw 1.04vw #0f0,0vw  0vw 2.08vw #0f0,0vw  0vw 4.16vw #0f0,0vw  0vw 8.3vw #0f0  ;
 
 }
- .btncontaniner .sidebarbtns span , .btncontaniner .directbtnFALSE span {
-  position:relative ;
-  z-index: 12;
+.btncontaniner .sidebarbtns span , .btncontaniner .directbtnFALSE span {
+position:relative ;
+z-index: 12;
 }
-.btncontaniner .sidebarbtns:nth-child(2) ,  .btncontaniner .directbtnFALSE:nth-child(2) ,  header ul .header_A:nth-child(2){filter: hue-rotate(80deg);}
-.btncontaniner .sidebarbtns:nth-child(3) ,  .btncontaniner .directbtnFALSE:nth-child(3) ,  header ul .header_A:nth-child(3){filter: hue-rotate(180deg);}  
-.btncontaniner .sidebarbtns:nth-child(4) ,  .btncontaniner .directbtnFALSE:nth-child(4),   header ul .header_A:nth-child(4){filter: hue-rotate(35deg);}  
+.btncontaniner .sidebarbtns:nth-child(2) ,  .btncontaniner .directbtnFALSE:nth-child(2) ,  header .btncontaniner_header_A .header_A:nth-child(2){filter: hue-rotate(80deg);}
+.btncontaniner .sidebarbtns:nth-child(3) ,  .btncontaniner .directbtnFALSE:nth-child(3) ,  header .btncontaniner_header_A .header_A:nth-child(3){filter: hue-rotate(180deg);}  
+.btncontaniner .sidebarbtns:nth-child(4) ,  .btncontaniner .directbtnFALSE:nth-child(4),   header .btncontaniner_header_A .header_A:nth-child(4){filter: hue-rotate(35deg);}  
 .btncontaniner .sidebarbtns:nth-child(5) ,  .btncontaniner .directbtnFALSE:nth-child(5){filter: hue-rotate(80deg);}  
 .btncontaniner .sidebarbtns:nth-child(6) ,  .btncontaniner .directbtnFALSE:nth-child(6){filter: hue-rotate(180deg);}  
 .btncontaniner .sidebarbtns:nth-child(7) ,  .btncontaniner .directbtnFALSE:nth-child(7){filter: hue-rotate(35deg);}  
@@ -1457,209 +1494,212 @@ transition: all 700ms linear;
 .btncontaniner .sidebarbtns:nth-child(9) ,  .btncontaniner .directbtnFALSE:nth-child(9){filter: hue-rotate(180deg);}  
 
 .btncontaniner .sidebarbtns::before ,.btncontaniner .directbtnFALSE::before{
-  content: "";
-  position: absolute;
+content: "";
+position: absolute;
 left: -1.04vw ;
 top: 1.406vw;
- transform: translateY(-50%);
+transform: translateY(-50%);
 width: 1.04vw;
 height: 0.104vw;
 background-color: #0f0;
 box-shadow: 0.26vw -0.416vw 0 #0f0,0.26vw  0.416vw 0 #0f0  ;
-  transition: width 0.5s, left 0.5s , height 0.5s , box-shadow 0.5s;
-  transition-delay:  1s , 0.5s , 0s , 0s ;
+transition: width 0.5s, left 0.5s , height 0.5s , box-shadow 0.5s;
+transition-delay:  1s , 0.5s , 0s , 0s ;
 }
 .btncontaniner .sidebarbtns:hover::before{
-  width: 62%;
-  height: 110%;
-  left: -0.104vw;
-  box-shadow: 0.26vw  0vw 0 #0f0,0.26vw  0vw 0 #0f0  ;
- transition-delay:  0s , 0s , 0.5s , 1s ;
+width: 62%;
+height: 110%;
+left: -0.104vw;
+box-shadow: 0.26vw  0vw 0 #0f0,0.26vw  0vw 0 #0f0  ;
+transition-delay:  0s , 0s , 0.5s , 1s ;
 }
- 
+
 .btncontaniner .sidebarbtns::after ,.btncontaniner .directbtnFALSE::after{ 
-  content: "";
-  position: absolute;
+content: "";
+position: absolute;
 right: -1.04vw ;
 top: 1.406vw;
- transform: translateY(-50%);
+transform: translateY(-50%);
 width: 1.04vw;
 height: 0.104vw;
 background-color: #0f0;
 box-shadow: -0.26vw -0.416vw 0 #0f0, -0.26vw  0.416vw 0 #0f0  ;
-  transition: width 0.5s, right 0.5s , height 0.5s , box-shadow 0.5s;
-  transition-delay:  1s , 0.5s , 0s , 0s ;
+transition: width 0.5s, right 0.5s , height 0.5s , box-shadow 0.5s;
+transition-delay:  1s , 0.5s , 0s , 0s ;
 }
 .btncontaniner .sidebarbtns:hover::after{
-  width: 62%;
-  height: 110%;
-  right: -0.104vw;
-  box-shadow: -0.26vw  0vw 0 #0f0,-0.26vw  0vw 0 #0f0  ;
- transition-delay:  0s , 0s , 0.5s , 1s ;
+width: 62%;
+height: 110%;
+right: -0.104vw;
+box-shadow: -0.26vw  0vw 0 #0f0,-0.26vw  0vw 0 #0f0  ;
+transition-delay:  0s , 0s , 0.5s , 1s ;
 }
-   .boxheading {
-    width: 17vw;
-    height: 6vw;
-    overflow: hidden;
-    display: flex;
-    padding: 2vw;
-    filter: hue-rotate(46deg);
-}
- #Customization{
-  position: relative;
-    font-weight: 900;
-    color: #ffffff;
-    font-size: 2vw;
-    text-transform: uppercase;
-    letter-spacing: 0.104vw;
-    text-shadow: 0vw 0vw 0.52vw #00b3ff, 0vw 0vw 1.04vw #00b3ff,0vw 0vw 2.08vw #00b3ff, 0vw 0vw 3.125vw #00b3ff, 0vw 0vw 4.16vw #00b3ff, 0vw 0vw 6.25vw #00b3ff   ;
- }
- .lightbar{
-  position: absolute;
-  top: 1.5vw;
-  left: 0;
-  width: 0.52vw ;
+ .boxheading {
+  width: 17vw;
   height: 6vw;
-  border-radius: 0.52vw;
-  color: #b5ff00;    
-  z-index: 2;
-  box-shadow: 0vw 0vw 0.52vw currentColor, 0vw 0vw 1.04vw currentColor,0vw 0vw 2.08vw currentColor, 0vw 0vw 3.125vw currentColor, 0vw 0vw 4.16vw currentColor, 0vw 0vw 5.2vw currentColor, 0vw 0vw 6.25vw currentColor, 0vw 0vw 7.29vw currentColor, 0vw 0vw 8.3vw currentColor,0vw 0vw 9.375vw currentColor, 0vw 0vw 10.4vw currentColor, 0vw 0vw 11.45vw currentColor, 0vw 0vw 12.5vw currentColor, 0vw 0vw 13.54vw currentColor, 0vw 0vw 14.58vw currentColor, 0vw 0vw 15.625vw currentColor   ;
+  overflow: hidden;
+  display: flex;
+  padding: 2vw;
+  filter: hue-rotate(46deg);
+}
+#Customization{
+position: relative;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 2vw;
+  text-transform: uppercase;
+  letter-spacing: 0.104vw;
+  text-shadow: 0vw 0vw 0.52vw #00b3ff, 0vw 0vw 1.04vw #00b3ff,0vw 0vw 2.08vw #00b3ff, 0vw 0vw 3.125vw #00b3ff, 0vw 0vw 4.16vw #00b3ff, 0vw 0vw 6.25vw #00b3ff   ;
+}
+.lightbar{
+position: absolute;
+top: 1.5vw;
+left: 0;
+width: 0.52vw ;
+height: 6vw;
+border-radius: 0.52vw;
+color: #b5ff00;    
+z-index: 2;
+box-shadow: 0vw 0vw 0.52vw currentColor, 0vw 0vw 1.04vw currentColor,0vw 0vw 2.08vw currentColor, 0vw 0vw 3.125vw currentColor, 0vw 0vw 4.16vw currentColor, 0vw 0vw 5.2vw currentColor, 0vw 0vw 6.25vw currentColor, 0vw 0vw 7.29vw currentColor, 0vw 0vw 8.3vw currentColor,0vw 0vw 9.375vw currentColor, 0vw 0vw 10.4vw currentColor, 0vw 0vw 11.45vw currentColor, 0vw 0vw 12.5vw currentColor, 0vw 0vw 13.54vw currentColor, 0vw 0vw 14.58vw currentColor, 0vw 0vw 15.625vw currentColor   ;
 background-color: white;
 animation: aniamatetext 5s linear infinite;
- }
- .toplayer{
-   display: none;
-   position: absolute;
-   top: 2vw;
-  left: 0;
-  width: 18vw ;
-  height: 6vw;
-  border-radius: 0.52vw;
+}
+.toplayer{
+ display: none;
+ position: absolute;
+ top: 2vw;
+left: 0;
+width: 18vw ;
+height: 6vw;
+border-radius: 0.52vw;
 background-color: #0f0f0f;
-  color: white;
-  z-index: 2;
+color: white;
+z-index: 2;
 animation: aniamatetoplayer 10s linear infinite;
 
- }
+}
 
- @keyframes aniamatetext {
-   0%,5%  {transform: scaleY(0)  translateX(3vw);}
-   10%     {transform: scaleY(1)  translateX(3vw);} 
-   90%    {transform: scaleY(1)  translateX(20vw);}
-   95% , 100%   {transform: scaleY(0)  translateX(20vw);}
- }
- @keyframes aniamatetoplayer {
-  2.5%     {transform: translateX(0);}
-   5%       {transform: translateX(0);} 
-   45%     {transform: translateX(18vw);}
-   47.5% , 50%        {transform: translateX(18vw);}
-  50.001% , 52.5%   {transform: translateX(-18vw);}
-   55%     {transform: translateX(-18vw);} 
-   95%     {transform: translateX(0vw);}
-   97.5% , 100%       {transform: translateX(0vw);}
- }
+@keyframes aniamatetext {
+ 0%,5%  {transform: scaleY(0)  translateX(3vw);}
+ 10%     {transform: scaleY(1)  translateX(3vw);} 
+ 90%    {transform: scaleY(1)  translateX(20vw);}
+ 95% , 100%   {transform: scaleY(0)  translateX(20vw);}
+}
+@keyframes aniamatetoplayer {
+2.5%     {transform: translateX(0);}
+ 5%       {transform: translateX(0);} 
+ 45%     {transform: translateX(18vw);}
+ 47.5% , 50%        {transform: translateX(18vw);}
+50.001% , 52.5%   {transform: translateX(-18vw);}
+ 55%     {transform: translateX(-18vw);} 
+ 95%     {transform: translateX(0vw);}
+ 97.5% , 100%       {transform: translateX(0vw);}
+}
 .submainbtncontanier{
-  flex-direction: column;
-    display: flex;
-    align-items: center;
-    margin-top: -2vw;
-    justify-content: center;
-    padding: 2vw;
+flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-top: -2vw;
+  justify-content: center;
+  padding: 2vw;
 }
 #Customization_selector.activatedMenuClass::after , .ModesOPtim.activatedMenuClass::after{
-  width: 62%;
-  height: 110%;
-  right: -0.104vw;
-  box-shadow: -0.26vw  0vw 0 #0f0, -0.26vw  0vw 0 #0f0  ;
- transition-delay:  0s , 0s , 0.5s , 1s ;
+width: 62%;
+height: 110%;
+right: -0.104vw;
+box-shadow: -0.26vw  0vw 0 #0f0, -0.26vw  0vw 0 #0f0  ;
+transition-delay:  0s , 0s , 0.5s , 1s ;
 }
- #Customization_selector.activatedMenuClass::before ,  .ModesOPtim.activatedMenuClass::before{
-  width: 62%;
-  height: 110%;
-  left: -0.104vw;
-  box-shadow: 0.26vw  0vw 0 #0f0,0.26vw  0vw 0 #0f0  ;
- transition-delay:  0s , 0s , 0.5s , 1s ;
+#Customization_selector.activatedMenuClass::before ,  .ModesOPtim.activatedMenuClass::before{
+width: 62%;
+height: 110%;
+left: -0.104vw;
+box-shadow: 0.26vw  0vw 0 #0f0,0.26vw  0vw 0 #0f0  ;
+transition-delay:  0s , 0s , 0.5s , 1s ;
 }
 #Customization_selector.activatedMenuClass , .ModesOPtim.activatedMenuClass {
-  color: black;
-  box-shadow: 0vw 0vw 0.52vw #0f0,0vw  0vw 1.04vw #0f0,0vw  0vw 2.08vw #0f0,0vw  0vw 4.16vw #0f0,0vw  0vw 8.3vw #0f0  ;
+color: black;
+box-shadow: 0vw 0vw 0.52vw #0f0,0vw  0vw 1.04vw #0f0,0vw  0vw 2.08vw #0f0,0vw  0vw 4.16vw #0f0,0vw  0vw 8.3vw #0f0  ;
 }
- 
+
 .switch{
-  position: relative;
-    width: 4.427vw;
-    height: 4.58vw;
-    border: 0.156vw solid #0000;
-    background: linear-gradient(#eee ,#ccc , #eee);
-    border-radius: 0.52vw;
-    display: flex;
-    justify-content:  center ;
-    align-items: center;
-    box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
-    flex-direction: column;
+position: relative;
+  width: 4.427vw;
+  height: 4.58vw;
+  border: 0.156vw solid #0000;
+  background: linear-gradient(#eee ,#ccc , #eee);
+  border-radius: 0.52vw;
+  display: flex;
+  justify-content:  center ;
+  align-items: center;
+  box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
+  flex-direction: column;
 }
+
  
-   
-  .switch .ON_OFF_METER::after{ 
-    content: "OFF";
-    color: #fff;
-    letter-spacing: 0.104vw;
-    position: absolute;
-    font-size: 1.45vw;
-    top: 72%;
-    left: -82%;
-    z-index: 5;
-    text-shadow: 0vw 0vw 0.52vw #ff0000, 0vw 0vw 1.04vw #ff0000, 0vw 0vw 2.08vw #ff0000, 0vw 0vw 3.125vw #ff0000, 0vw 0vw 4.16vw #ff0000, 0vw 0vw 6.25vw #ff0000;
-   }
-  .switch .circleONOFF{
-    position: absolute;
-    width: 0.4vw;
-    height: 0.4vw;
-    background: currentColor;
-    border-radius: 50%;
-    border: 0.2vw solid black;
-    left: -60%;
-    top: 40%;
-    color: red;
-    box-shadow: 0vw 0vw 1.2vw 0.4vw currentColor; 
-  }
-   .switch .btn{
-    position: relative;
-    width: 1.3vw;
-    height: 2.08vw;
-    background: linear-gradient(#777 ,#fff ,#777);
-    border-radius: 0.3125vw ;
-    border: 0.104vw solid #0000;
-    cursor: pointer;
-    box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
+.switch .ON_OFF_METER::after{ 
+  content: "OFF";
+  color: #fff;
+  letter-spacing: 0.104vw;
+  position: absolute;
+  font-size: 1.45vw;
+  top: 72%;
+  left: -82%;
+  z-index: 5;
+  text-shadow: 0vw 0vw 0.52vw #ff0000, 0vw 0vw 1.04vw #ff0000, 0vw 0vw 2.08vw #ff0000, 0vw 0vw 3.125vw #ff0000, 0vw 0vw 4.16vw #ff0000, 0vw 0vw 6.25vw #ff0000;
+ }
+.switch .circleONOFF{
+  position: absolute;
+  width: 0.4vw;
+  height: 0.4vw;
+  background: currentColor;
+  border-radius: 50%;
+  border: 0.2vw solid black;
+  left: -60%;
+  top: 40%;
+  color: red;
+  box-shadow: 0vw 0vw 1.2vw 0.4vw currentColor; 
+}
+ .switch .btn{
+  position: relative;
+  width: 1.3vw;
+  height: 2.08vw;
+  background: linear-gradient(#777 ,#fff ,#777);
+  border-radius: 0.3125vw ;
+  border: 0.104vw solid #0000;
+  cursor: pointer;
+  box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
 }
 .switch .btn::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 85%;
-    background: linear-gradient(#fff , #fff);
-    border-radius: 0.208vw;
-    box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background: linear-gradient(#fff , #fff);
+  border-radius: 0.208vw;
+  box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
 }
 #switch1.on ,   #switch2.on , #switch3.on{box-shadow:  -0.104vw   0.104vw 0.104vw 0.104vw black;  }
 #switch1.on  .btn::before ,  #switch2.on  .btn::before ,  #switch3.on  .btn::before{top: 15%;box-shadow: -0.052vw 0.052vw 0.104vw 0.104vw black;}
 #switch1.on   .btn ,  #switch2.on  .btn ,  #switch3.on  .btn  { box-shadow: -0.052vw 0.052vw 0.104vw 0.104vw black;}
 #switch1.on .ON_OFF_METER::after , #switch2.on .ON_OFF_METER::after , #switch3.on .ON_OFF_METER::after{ content: "ON";text-shadow: 0vw 0vw 0.52vw #ffff00, 0vw 0vw 1.04vw #ffff00, 0vw 0vw 2.08vw #ffff00, 0vw 0vw 3.125vw #ffff00, 0vw 0vw 4.16vw #ffff00, 0vw 0vw 6.25vw #ffff00;}
 #switch1.on .circleONOFF ,#switch2.on .circleONOFF ,#switch3.on .circleONOFF { color: yellow; }
- 
-   
- </style>
 
+ 
+ 
+    </style>  
+</head>
+
+ 
 <body id="body">
   <noscript>You need to enable JavaScript to run this app.</noscript> 
     <audio id="click_sound" src="sounds/click_sound.mp3"></audio>
     <audio id="btnClick" src="/btnClick.mp3"></audio>
   <div class="onclickbackgorund" id="onclickbackgroundID"> 
-     <span></span><span></span><span></span<span></span><span></span><span></span<span></span><span></span>    
-    </div>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+     </div>
 
    <!-- extra bacground elements -->
    <div id="particles-js"     ></div> 
@@ -1689,8 +1729,8 @@ animation: aniamatetoplayer 10s linear infinite;
     <!-- <div class="DetaliTableElements-open"></div>   -->
     <header  id="header">
       <div class="logo">logo</div>
-      <input type="search" name="" autocomplete="off" id="search" placeholder="search elements" onclick="addsearch();" onkeypress="keypresses();">  
-      <div class="suggestionsMainCLASS">
+      <input type="text"  autocomplete="off" id="search" placeholder="search elements" onclick="addsearch();">  
+       <div class="suggestionsMainCLASS">
           <!-- <table class="table  sortable "> -->
             <table id="myTable"  class="  table table-responsive">
               <thead>
@@ -1699,53 +1739,25 @@ animation: aniamatetoplayer 10s linear infinite;
                 <th id="table-Symbol">Symbol</th>
                 <th id="table-AtomicMass">U</th>
                 <th id="table-ElementName">Element Name</th>
-                <th id="table-ElementName">Familes</th>
+                <th id="table-Familes">Familes</th>
                 <th id="table-Gruop">Gruop</th>
                 <th id="table-Period">Period</th>
                 <th id="table-ForMore">For More</th>
                   </tr> 
               </thead> 
               <tbody class='tablebody'> 
-<!-- <tr><td>1</td><td>H</td><td>1.01</td><td>Hydrogen</td><td>Noble Gases </td><td>18</td><td>1</td><td><a href="#" class="button" onclick="onclickONBtntable(1);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>2</td><td>He</td><td>4</td><td>Helium</td><td>Alkali Metal</td><td>1</td><td>1</td><td><a href="#" class="button" onclick="onclickONBtntable(2);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>3</td><td>Li</td><td>6.94</td><td>Lithium</td><td>Alkaline Earth Metals</td><td>2</td><td>2</td><td><a href="#" class="button" onclick="onclickONBtntable(3);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>4</td><td>Be</td><td>9.01</td><td>Beryllium</td><td>Boron Group or Earth Metals</td><td>13</td><td>2</td><td><a href="#" class="button" onclick="onclickONBtntable(4);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>5</td><td>B</td><td>10.81</td><td>Boron</td><td>Carbon Group or Tetrels</td><td>14</td><td>2</td><td><a href="#" class="button" onclick="onclickONBtntable(5);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>6</td><td>C</td><td>12.01</td><td>Carbon</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>2</td><td><a href="#" class="button" onclick="onclickONBtntable(6);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>7</td><td>N</td><td>14.01</td><td>Nitrogen</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>2</td><td><a href="#" class="button" onclick="onclickONBtntable(7);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>8</td><td>O</td><td>16</td><td>Oxygen</td><td>Halogens </td><td>17</td><td>2</td><td><a href="#" class="button" onclick="onclickONBtntable(8);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>9</td><td>F</td><td>19</td><td>Fluorine</td><td>Noble Gases </td><td>18</td><td>2</td><td><a href="#" class="button" onclick="onclickONBtntable(9);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>10</td><td>Ne</td><td>20.18</td><td>Neon</td><td>Alkali Metal</td><td>1</td><td>2</td><td><a href="#" class="button" onclick="onclickONBtntable(10);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>11</td><td>Na</td><td>22.99</td><td>Sodium</td><td>Alkaline Earth Metals</td><td>2</td><td>3</td><td><a href="#" class="button" onclick="onclickONBtntable(11);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>12</td><td>Mg</td><td>24.3</td><td>Magnesium</td><td>Boron Group or Earth Metals</td><td>13</td><td>3</td><td><a href="#" class="button" onclick="onclickONBtntable(12);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>13</td><td>Al</td><td>26.98</td><td>Aluminium</td><td>Carbon Group or Tetrels</td><td>14</td><td>3</td><td><a href="#" class="button" onclick="onclickONBtntable(13);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>14</td><td>Si</td><td>28.09</td><td>Silicon</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>3</td><td><a href="#" class="button" onclick="onclickONBtntable(14);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>15</td><td>P</td><td>30.97</td><td>Phosphorus</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>3</td><td><a href="#" class="button" onclick="onclickONBtntable(15);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>16</td><td>S</td><td>32.06</td><td>Sulfur</td><td>Halogens </td><td>17</td><td>3</td><td><a href="#" class="button" onclick="onclickONBtntable(16);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>17</td><td>Cl</td><td>35.45</td><td>Chlorine</td><td>Noble Gases </td><td>18</td><td>3</td><td><a href="#" class="button" onclick="onclickONBtntable(17);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>18</td><td>Ar</td><td>39.95</td><td>Argon</td><td>Alkali Metal</td><td>1</td><td>3</td><td><a href="#" class="button" onclick="onclickONBtntable(18);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>19</td><td>K</td><td>39.1</td><td>Potassium</td><td>Alkaline Earth Metals</td><td>2</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(19);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>20</td><td>Ca</td><td>40.08</td><td>Calcium</td><td>Transition Metals: Groups</td><td>3</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(20);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>21</td><td>Sc</td><td>44.96</td><td>Scandium</td><td>Transition Metals: Groups</td><td>4</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(21);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>22</td><td>Ti</td><td>47.87</td><td>Titanium</td><td>Transition Metals: Groups</td><td>5</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(22);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>23</td><td>V</td><td>50.94</td><td>Vanadium</td><td>Transition Metals: Groups</td><td>6</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(23);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>24</td><td>Cr</td><td>52</td><td>Chromium</td><td>Transition Metals: Groups</td><td>7</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(24);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>25</td><td>Mn</td><td>54.94</td><td>Manganese</td><td>Transition Metals: Groups</td><td>8</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(25);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>26</td><td>Fe</td><td>55.85</td><td>Iron</td><td>Transition Metals: Groups</td><td>9</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(26);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>27</td><td>Co</td><td>58.93</td><td>Cobalt</td><td>Transition Metals: Groups</td><td>10</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(27);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>28</td><td>Ni</td><td>58.69</td><td>Nickel</td><td>Transition Metals: Groups</td><td>11</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(28);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>29</td><td>Cu</td><td>63.55</td><td>Copper</td><td>Transition Metals: Groups</td><td>12</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(29);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>30</td><td>Zn</td><td>65.38</td><td>Zinc</td><td>Boron Group or Earth Metals</td><td>13</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(30);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>31</td><td>Ga</td><td>69.72</td><td>Gallium</td><td>Carbon Group or Tetrels</td><td>14</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(31);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>32</td><td>Ge</td><td>72.63</td><td>Germanium</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(32);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>33</td><td>As</td><td>74.92</td><td>Arsenic</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(33);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>34</td><td>Se</td><td>78.97</td><td>Selenium</td><td>Halogens </td><td>17</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(34);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>35</td><td>Br</td><td>79.9</td><td>Bromine</td><td>Noble Gases </td><td>18</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(35);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>36</td><td>Kr</td><td>83.8</td><td>Krypton</td><td>Alkali Metal</td><td>1</td><td>4</td><td><a href="#" class="button" onclick="onclickONBtntable(36);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>37</td><td>Rb</td><td>85.47</td><td>Rubidium</td><td>Alkaline Earth Metals</td><td>2</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(37);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>38</td><td>Sr</td><td>87.62</td><td>Strontium</td><td>Transition Metals: Groups</td><td>3</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(38);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>39</td><td>Y</td><td>88.91</td><td>Yttrium</td><td>Transition Metals: Groups</td><td>4</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(39);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>40</td><td>Zr</td><td>91.22</td><td>Zirconium</td><td>Transition Metals: Groups</td><td>5</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(40);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>41</td><td>Nb</td><td>92.91</td><td>Niobium</td><td>Transition Metals: Groups</td><td>6</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(41);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>42</td><td>Mo</td><td>95.95</td><td>Molybdenum</td><td>Transition Metals: Groups</td><td>7</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(42);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>43</td><td>Tc</td><td>98</td><td>Technetium</td><td>Transition Metals: Groups</td><td>8</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(43);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>44</td><td>Ru</td><td>101.07</td><td>Ruthenium</td><td>Transition Metals: Groups</td><td>9</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(44);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>45</td><td>Rh</td><td>102.91</td><td>Rhodium</td><td>Transition Metals: Groups</td><td>10</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(45);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>46</td><td>Pd</td><td>106.42</td><td>Palladium</td><td>Transition Metals: Groups</td><td>11</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(46);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>47</td><td>Ag</td><td>107.87</td><td>Silver</td><td>Transition Metals: Groups</td><td>12</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(47);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>48</td><td>Cd</td><td>112.41</td><td>Cadmium</td><td>Boron Group or Earth Metals</td><td>13</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(48);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>49</td><td>In</td><td>114.82</td><td>Indium</td><td>Carbon Group or Tetrels</td><td>14</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(49);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>50</td><td>Sn</td><td>118.71</td><td>Tin</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(50);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>51</td><td>Sb</td><td>121.76</td><td>Antimony</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(51);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>52</td><td>Te</td><td>127.6</td><td>Tellurium</td><td>Halogens </td><td>17</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(52);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>53</td><td>I</td><td>126.9</td><td>Iodine</td><td>Noble Gases </td><td>18</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(53);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>54</td><td>Xe</td><td>131.29</td><td>Xenon</td><td>Alkali Metal</td><td>1</td><td>5</td><td><a href="#" class="button" onclick="onclickONBtntable(54);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>55</td><td>Cs</td><td>132.91</td><td>Cesium</td><td>Alkaline Earth Metals</td><td>2</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(55);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>56</td><td>Ba</td><td>137.33</td><td>Barium</td><td>Transition Metals: Groups</td><td>3</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(56);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>57</td><td>La</td><td>138.91</td><td>Lanthanum</td><td>Rare earth element </td><td>*</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(57);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>58</td><td>Ce</td><td>140.12</td><td>Cerium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(58);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>59</td><td>Pr</td><td>140.91</td><td>Praseodymium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(59);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>60</td><td>Nd</td><td>144.24</td><td>Neodymium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(60);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>61</td><td>Pm</td><td>145</td><td>Promethium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(61);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>62</td><td>Sm</td><td>150.36</td><td>Samarium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(62);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>63</td><td>Eu</td><td>151.96</td><td>Europium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(63);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>64</td><td>Gd</td><td>157.25</td><td>Gadolinium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(64);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>65</td><td>Tb</td><td>158.93</td><td>Terbium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(65);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>66</td><td>Dy</td><td>162.5</td><td>Dysprosium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(66);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>67</td><td>Ho</td><td>164.93</td><td>Holmium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(67);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>68</td><td>Er</td><td>167.26</td><td>Erbium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(68);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>69</td><td>Tm</td><td>168.93</td><td>Thulium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(69);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>70</td><td>Yb</td><td>173.05</td><td>Ytterbium</td><td>Rare earth element </td><td>101</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(70);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>71</td><td>Lu</td><td>174.97</td><td>Lutetium</td><td>Transition Metals: Groups</td><td>4</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(71);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>72</td><td>Hf</td><td>178.49</td><td>Hafnium</td><td>Transition Metals: Groups</td><td>5</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(72);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>73</td><td>Ta</td><td>180.95</td><td>Tantalum</td><td>Transition Metals: Groups</td><td>6</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(73);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>74</td><td>W</td><td>183.84</td><td>Tungsten</td><td>Transition Metals: Groups</td><td>7</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(74);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>75</td><td>Re</td><td>186.21</td><td>Rhenium</td><td>Transition Metals: Groups</td><td>8</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(75);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>76</td><td>Os</td><td>190.23</td><td>Osmium</td><td>Transition Metals: Groups</td><td>11</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(76);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>77</td><td>Ir</td><td>192.22</td><td>Iridium</td><td>Transition Metals: Groups</td><td>9</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(77);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>78</td><td>Pt</td><td>195.08</td><td>Platinum</td><td>Transition Metals: Groups</td><td>10</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(78);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>79</td><td>Au</td><td>196.97</td><td>Gold</td><td>Transition Metals: Groups</td><td>12</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(79);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>80</td><td>Hg</td><td>200.59</td><td>Mercury</td><td>Boron Group or Earth Metals</td><td>13</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(80);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>81</td><td>Tl</td><td>204.38</td><td>Thallium</td><td>Carbon Group or Tetrels</td><td>14</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(81);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>82</td><td>Pb</td><td>207.21</td><td>Lead</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(82);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>83</td><td>Bi</td><td>208.98</td><td>Bismuth</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(83);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>84</td><td>Po</td><td>209</td><td>Polonium</td><td>Halogens </td><td>17</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(84);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>85</td><td>At</td><td>210</td><td>Astatine</td><td>Noble Gases </td><td>18</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(85);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>86</td><td>Rn</td><td>222</td><td>Radon</td><td>Alkali Metal</td><td>1</td><td>6</td><td><a href="#" class="button" onclick="onclickONBtntable(86);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>87</td><td>Fr</td><td>223</td><td>Francium</td><td>Alkaline Earth Metals</td><td>2</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(87);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>88</td><td>Ra</td><td>226</td><td>Radium</td><td>Transition Metals: Groups</td><td>3</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(88);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>89</td><td>Ac</td><td>227</td><td>Actinium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(89);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>90</td><td>Th</td><td>232.04</td><td>Thorium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(90);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>91</td><td>Pa</td><td>231.04</td><td>Protactinium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(91);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>92</td><td>U</td><td>238.03</td><td>Uranium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(92);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>93</td><td>Np</td><td>237</td><td>Neptunium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(93);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>94</td><td>Pu</td><td>244</td><td>Plutonium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(94);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>95</td><td>Am</td><td>243</td><td>Americium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(95);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>96</td><td>Cm</td><td>247</td><td>Curium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(96);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>97</td><td>Bk</td><td>247</td><td>Berkelium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(97);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>98</td><td>Cf</td><td>251</td><td>Californium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(98);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>99</td><td>Es</td><td>252</td><td>Einsteinium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(99);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>100</td><td>Fm</td><td>257</td><td>Fermium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(100);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>101</td><td>Md</td><td>258</td><td>Mendelevium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(101);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>102</td><td>No</td><td>259</td><td>Nobelium</td><td>Rare earth element </td><td>#</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(102);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>103</td><td>Lr</td><td>266</td><td>Lawrencium</td><td>Transition Metals: Groups</td><td>4</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(103);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>104</td><td>Rf</td><td>267</td><td>Rutherfordium</td><td>Transition Metals: Groups</td><td>5</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(104);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>105</td><td>Db</td><td>268</td><td>Dubnium</td><td>Transition Metals: Groups</td><td>6</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(105);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>106</td><td>Sg</td><td>269</td><td>Seaborgium</td><td>Transition Metals: Groups</td><td>7</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(106);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>107</td><td>Bh</td><td>270</td><td>Bohrium</td><td>Transition Metals: Groups</td><td>8</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(107);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>108</td><td>Hs</td><td>269</td><td>Hassium</td><td>Transition Metals: Groups</td><td>9</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(108);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>109</td><td>Mt</td><td>278</td><td>Meitnerium</td><td>Transition Metals: Groups</td><td>10</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(109);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>110</td><td>Ds</td><td>281</td><td>Darmstadtium</td><td>Transition Metals: Groups</td><td>11</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(110);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>111</td><td>Rg</td><td>282</td><td>Roentgenium</td><td>Transition Metals: Groups</td><td>12</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(111);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>112</td><td>Cn</td><td>285</td><td>Copernicium</td><td>Boron Group or Earth Metals</td><td>13</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(112);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>113</td><td>Nh</td><td>286</td><td>Nihonium</td><td>Carbon Group or Tetrels</td><td>14</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(113);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>114</td><td>Fl</td><td>289</td><td>Flerovium</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(114);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>115</td><td>Mc</td><td>289</td><td>Moscovium</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(115);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>116</td><td>Lv</td><td>293</td><td>Livermorium</td><td>Halogens </td><td>17</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(116);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>117</td><td>Ts</td><td>294</td><td>Tennessine</td><td>Noble Gases </td><td>18</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(117);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>  <tr><td>118</td><td>Og</td><td>294</td><td>Oganesson</td><td>Noble Gases </td><td>18</td><td>7</td><td><a href="#" class="button" onclick="onclickONBtntable(118);";><div class="qube"><div class="front">now click!</div><div class="back">mouse over me!</div></div> </a></td></tr>                -->
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr><td>1</td><td>H</td><td>1.01</td><td>Hydrogen</td><td>Noble Gases </td><td>18</td><td>1</td><td><div class="button-row"><div onclick="onclickONBtntable(1);";><a></a></div> </div></td></tr>  <tr><td>2</td><td>He</td><td>4</td><td>Helium</td><td>Alkali Metal</td><td>1</td><td>1</td><td><div class="button-row"><div onclick="onclickONBtntable(2);";><a></a></div> </div></td></tr>  <tr><td>3</td><td>Li</td><td>6.94</td><td>Lithium</td><td>Alkaline Earth Metals</td><td>2</td><td>2</td><td><div class="button-row"><div onclick="onclickONBtntable(3);";><a></a></div> </div></td></tr>  <tr><td>4</td><td>Be</td><td>9.01</td><td>Beryllium</td><td>Boron Group or Earth Metals</td><td>13</td><td>2</td><td><div class="button-row"><div onclick="onclickONBtntable(4);";><a></a></div> </div></td></tr>  <tr><td>5</td><td>B</td><td>10.81</td><td>Boron</td><td>Carbon Group or Tetrels</td><td>14</td><td>2</td><td><div class="button-row"><div onclick="onclickONBtntable(5);";><a></a></div> </div></td></tr>  <tr><td>6</td><td>C</td><td>12.01</td><td>Carbon</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>2</td><td><div class="button-row"><div onclick="onclickONBtntable(6);";><a></a></div> </div></td></tr>  <tr><td>7</td><td>N</td><td>14.01</td><td>Nitrogen</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>2</td><td><div class="button-row"><div onclick="onclickONBtntable(7);";><a></a></div> </div></td></tr>  <tr><td>8</td><td>O</td><td>16</td><td>Oxygen</td><td>Halogens </td><td>17</td><td>2</td><td><div class="button-row"><div onclick="onclickONBtntable(8);";><a></a></div> </div></td></tr>  <tr><td>9</td><td>F</td><td>19</td><td>Fluorine</td><td>Noble Gases </td><td>18</td><td>2</td><td><div class="button-row"><div onclick="onclickONBtntable(9);";><a></a></div> </div></td></tr>  <tr><td>10</td><td>Ne</td><td>20.18</td><td>Neon</td><td>Alkali Metal</td><td>1</td><td>2</td><td><div class="button-row"><div onclick="onclickONBtntable(10);";><a></a></div> </div></td></tr>  <tr><td>11</td><td>Na</td><td>22.99</td><td>Sodium</td><td>Alkaline Earth Metals</td><td>2</td><td>3</td><td><div class="button-row"><div onclick="onclickONBtntable(11);";><a></a></div> </div></td></tr>  <tr><td>12</td><td>Mg</td><td>24.3</td><td>Magnesium</td><td>Boron Group or Earth Metals</td><td>13</td><td>3</td><td><div class="button-row"><div onclick="onclickONBtntable(12);";><a></a></div> </div></td></tr>  <tr><td>13</td><td>Al</td><td>26.98</td><td>Aluminium</td><td>Carbon Group or Tetrels</td><td>14</td><td>3</td><td><div class="button-row"><div onclick="onclickONBtntable(13);";><a></a></div> </div></td></tr>  <tr><td>14</td><td>Si</td><td>28.09</td><td>Silicon</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>3</td><td><div class="button-row"><div onclick="onclickONBtntable(14);";><a></a></div> </div></td></tr>  <tr><td>15</td><td>P</td><td>30.97</td><td>Phosphorus</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>3</td><td><div class="button-row"><div onclick="onclickONBtntable(15);";><a></a></div> </div></td></tr>  <tr><td>16</td><td>S</td><td>32.06</td><td>Sulfur</td><td>Halogens </td><td>17</td><td>3</td><td><div class="button-row"><div onclick="onclickONBtntable(16);";><a></a></div> </div></td></tr>  <tr><td>17</td><td>Cl</td><td>35.45</td><td>Chlorine</td><td>Noble Gases </td><td>18</td><td>3</td><td><div class="button-row"><div onclick="onclickONBtntable(17);";><a></a></div> </div></td></tr>  <tr><td>18</td><td>Ar</td><td>39.95</td><td>Argon</td><td>Alkali Metal</td><td>1</td><td>3</td><td><div class="button-row"><div onclick="onclickONBtntable(18);";><a></a></div> </div></td></tr>  <tr><td>19</td><td>K</td><td>39.1</td><td>Potassium</td><td>Alkaline Earth Metals</td><td>2</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(19);";><a></a></div> </div></td></tr>  <tr><td>20</td><td>Ca</td><td>40.08</td><td>Calcium</td><td>Transition Metals: Groups</td><td>3</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(20);";><a></a></div> </div></td></tr>  <tr><td>21</td><td>Sc</td><td>44.96</td><td>Scandium</td><td>Transition Metals: Groups</td><td>4</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(21);";><a></a></div> </div></td></tr>  <tr><td>22</td><td>Ti</td><td>47.87</td><td>Titanium</td><td>Transition Metals: Groups</td><td>5</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(22);";><a></a></div> </div></td></tr>  <tr><td>23</td><td>V</td><td>50.94</td><td>Vanadium</td><td>Transition Metals: Groups</td><td>6</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(23);";><a></a></div> </div></td></tr>  <tr><td>24</td><td>Cr</td><td>52</td><td>Chromium</td><td>Transition Metals: Groups</td><td>7</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(24);";><a></a></div> </div></td></tr>  <tr><td>25</td><td>Mn</td><td>54.94</td><td>Manganese</td><td>Transition Metals: Groups</td><td>8</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(25);";><a></a></div> </div></td></tr>  <tr><td>26</td><td>Fe</td><td>55.85</td><td>Iron</td><td>Transition Metals: Groups</td><td>9</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(26);";><a></a></div> </div></td></tr>  <tr><td>27</td><td>Co</td><td>58.93</td><td>Cobalt</td><td>Transition Metals: Groups</td><td>10</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(27);";><a></a></div> </div></td></tr>  <tr><td>28</td><td>Ni</td><td>58.69</td><td>Nickel</td><td>Transition Metals: Groups</td><td>11</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(28);";><a></a></div> </div></td></tr>  <tr><td>29</td><td>Cu</td><td>63.55</td><td>Copper</td><td>Transition Metals: Groups</td><td>12</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(29);";><a></a></div> </div></td></tr>  <tr><td>30</td><td>Zn</td><td>65.38</td><td>Zinc</td><td>Boron Group or Earth Metals</td><td>13</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(30);";><a></a></div> </div></td></tr>  <tr><td>31</td><td>Ga</td><td>69.72</td><td>Gallium</td><td>Carbon Group or Tetrels</td><td>14</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(31);";><a></a></div> </div></td></tr>  <tr><td>32</td><td>Ge</td><td>72.63</td><td>Germanium</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(32);";><a></a></div> </div></td></tr>  <tr><td>33</td><td>As</td><td>74.92</td><td>Arsenic</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(33);";><a></a></div> </div></td></tr>  <tr><td>34</td><td>Se</td><td>78.97</td><td>Selenium</td><td>Halogens </td><td>17</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(34);";><a></a></div> </div></td></tr>  <tr><td>35</td><td>Br</td><td>79.9</td><td>Bromine</td><td>Noble Gases </td><td>18</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(35);";><a></a></div> </div></td></tr>  <tr><td>36</td><td>Kr</td><td>83.8</td><td>Krypton</td><td>Alkali Metal</td><td>1</td><td>4</td><td><div class="button-row"><div onclick="onclickONBtntable(36);";><a></a></div> </div></td></tr>  <tr><td>37</td><td>Rb</td><td>85.47</td><td>Rubidium</td><td>Alkaline Earth Metals</td><td>2</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(37);";><a></a></div> </div></td></tr>  <tr><td>38</td><td>Sr</td><td>87.62</td><td>Strontium</td><td>Transition Metals: Groups</td><td>3</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(38);";><a></a></div> </div></td></tr>  <tr><td>39</td><td>Y</td><td>88.91</td><td>Yttrium</td><td>Transition Metals: Groups</td><td>4</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(39);";><a></a></div> </div></td></tr>  <tr><td>40</td><td>Zr</td><td>91.22</td><td>Zirconium</td><td>Transition Metals: Groups</td><td>5</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(40);";><a></a></div> </div></td></tr>  <tr><td>41</td><td>Nb</td><td>92.91</td><td>Niobium</td><td>Transition Metals: Groups</td><td>6</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(41);";><a></a></div> </div></td></tr>  <tr><td>42</td><td>Mo</td><td>95.95</td><td>Molybdenum</td><td>Transition Metals: Groups</td><td>7</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(42);";><a></a></div> </div></td></tr>  <tr><td>43</td><td>Tc</td><td>98</td><td>Technetium</td><td>Transition Metals: Groups</td><td>8</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(43);";><a></a></div> </div></td></tr>  <tr><td>44</td><td>Ru</td><td>101.07</td><td>Ruthenium</td><td>Transition Metals: Groups</td><td>9</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(44);";><a></a></div> </div></td></tr>  <tr><td>45</td><td>Rh</td><td>102.91</td><td>Rhodium</td><td>Transition Metals: Groups</td><td>10</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(45);";><a></a></div> </div></td></tr>  <tr><td>46</td><td>Pd</td><td>106.42</td><td>Palladium</td><td>Transition Metals: Groups</td><td>11</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(46);";><a></a></div> </div></td></tr>  <tr><td>47</td><td>Ag</td><td>107.87</td><td>Silver</td><td>Transition Metals: Groups</td><td>12</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(47);";><a></a></div> </div></td></tr>  <tr><td>48</td><td>Cd</td><td>112.41</td><td>Cadmium</td><td>Boron Group or Earth Metals</td><td>13</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(48);";><a></a></div> </div></td></tr>  <tr><td>49</td><td>In</td><td>114.82</td><td>Indium</td><td>Carbon Group or Tetrels</td><td>14</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(49);";><a></a></div> </div></td></tr>  <tr><td>50</td><td>Sn</td><td>118.71</td><td>Tin</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(50);";><a></a></div> </div></td></tr>  <tr><td>51</td><td>Sb</td><td>121.76</td><td>Antimony</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(51);";><a></a></div> </div></td></tr>  <tr><td>52</td><td>Te</td><td>127.6</td><td>Tellurium</td><td>Halogens </td><td>17</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(52);";><a></a></div> </div></td></tr>  <tr><td>53</td><td>I</td><td>126.9</td><td>Iodine</td><td>Noble Gases </td><td>18</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(53);";><a></a></div> </div></td></tr>  <tr><td>54</td><td>Xe</td><td>131.29</td><td>Xenon</td><td>Alkali Metal</td><td>1</td><td>5</td><td><div class="button-row"><div onclick="onclickONBtntable(54);";><a></a></div> </div></td></tr>  <tr><td>55</td><td>Cs</td><td>132.91</td><td>Cesium</td><td>Alkaline Earth Metals</td><td>2</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(55);";><a></a></div> </div></td></tr>  <tr><td>56</td><td>Ba</td><td>137.33</td><td>Barium</td><td>Transition Metals: Groups</td><td>3</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(56);";><a></a></div> </div></td></tr>  <tr><td>57</td><td>La</td><td>138.91</td><td>Lanthanum</td><td>Rare earth element </td><td>*</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(57);";><a></a></div> </div></td></tr>  <tr><td>58</td><td>Ce</td><td>140.12</td><td>Cerium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(58);";><a></a></div> </div></td></tr>  <tr><td>59</td><td>Pr</td><td>140.91</td><td>Praseodymium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(59);";><a></a></div> </div></td></tr>  <tr><td>60</td><td>Nd</td><td>144.24</td><td>Neodymium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(60);";><a></a></div> </div></td></tr>  <tr><td>61</td><td>Pm</td><td>145</td><td>Promethium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(61);";><a></a></div> </div></td></tr>  <tr><td>62</td><td>Sm</td><td>150.36</td><td>Samarium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(62);";><a></a></div> </div></td></tr>  <tr><td>63</td><td>Eu</td><td>151.96</td><td>Europium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(63);";><a></a></div> </div></td></tr>  <tr><td>64</td><td>Gd</td><td>157.25</td><td>Gadolinium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(64);";><a></a></div> </div></td></tr>  <tr><td>65</td><td>Tb</td><td>158.93</td><td>Terbium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(65);";><a></a></div> </div></td></tr>  <tr><td>66</td><td>Dy</td><td>162.5</td><td>Dysprosium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(66);";><a></a></div> </div></td></tr>  <tr><td>67</td><td>Ho</td><td>164.93</td><td>Holmium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(67);";><a></a></div> </div></td></tr>  <tr><td>68</td><td>Er</td><td>167.26</td><td>Erbium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(68);";><a></a></div> </div></td></tr>  <tr><td>69</td><td>Tm</td><td>168.93</td><td>Thulium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(69);";><a></a></div> </div></td></tr>  <tr><td>70</td><td>Yb</td><td>173.05</td><td>Ytterbium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(70);";><a></a></div> </div></td></tr>  <tr><td>71</td><td>Lu</td><td>174.97</td><td>Lutetium</td><td>Transition Metals: Groups</td><td>4</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(71);";><a></a></div> </div></td></tr>  <tr><td>72</td><td>Hf</td><td>178.49</td><td>Hafnium</td><td>Transition Metals: Groups</td><td>5</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(72);";><a></a></div> </div></td></tr>  <tr><td>73</td><td>Ta</td><td>180.95</td><td>Tantalum</td><td>Transition Metals: Groups</td><td>6</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(73);";><a></a></div> </div></td></tr>  <tr><td>74</td><td>W</td><td>183.84</td><td>Tungsten</td><td>Transition Metals: Groups</td><td>7</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(74);";><a></a></div> </div></td></tr>  <tr><td>75</td><td>Re</td><td>186.21</td><td>Rhenium</td><td>Transition Metals: Groups</td><td>8</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(75);";><a></a></div> </div></td></tr>  <tr><td>76</td><td>Os</td><td>190.23</td><td>Osmium</td><td>Transition Metals: Groups</td><td>11</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(76);";><a></a></div> </div></td></tr>  <tr><td>77</td><td>Ir</td><td>192.22</td><td>Iridium</td><td>Transition Metals: Groups</td><td>9</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(77);";><a></a></div> </div></td></tr>  <tr><td>78</td><td>Pt</td><td>195.08</td><td>Platinum</td><td>Transition Metals: Groups</td><td>10</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(78);";><a></a></div> </div></td></tr>  <tr><td>79</td><td>Au</td><td>196.97</td><td>Gold</td><td>Transition Metals: Groups</td><td>12</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(79);";><a></a></div> </div></td></tr>  <tr><td>80</td><td>Hg</td><td>200.59</td><td>Mercury</td><td>Boron Group or Earth Metals</td><td>13</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(80);";><a></a></div> </div></td></tr>  <tr><td>81</td><td>Tl</td><td>204.38</td><td>Thallium</td><td>Carbon Group or Tetrels</td><td>14</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(81);";><a></a></div> </div></td></tr>  <tr><td>82</td><td>Pb</td><td>207.21</td><td>Lead</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(82);";><a></a></div> </div></td></tr>  <tr><td>83</td><td>Bi</td><td>208.98</td><td>Bismuth</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(83);";><a></a></div> </div></td></tr>  <tr><td>84</td><td>Po</td><td>209</td><td>Polonium</td><td>Halogens </td><td>17</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(84);";><a></a></div> </div></td></tr>  <tr><td>85</td><td>At</td><td>210</td><td>Astatine</td><td>Noble Gases </td><td>18</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(85);";><a></a></div> </div></td></tr>  <tr><td>86</td><td>Rn</td><td>222</td><td>Radon</td><td>Alkali Metal</td><td>1</td><td>6</td><td><div class="button-row"><div onclick="onclickONBtntable(86);";><a></a></div> </div></td></tr>  <tr><td>87</td><td>Fr</td><td>223</td><td>Francium</td><td>Alkaline Earth Metals</td><td>2</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(87);";><a></a></div> </div></td></tr>  <tr><td>88</td><td>Ra</td><td>226</td><td>Radium</td><td>Transition Metals: Groups</td><td>3</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(88);";><a></a></div> </div></td></tr>  <tr><td>89</td><td>Ac</td><td>227</td><td>Actinium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(89);";><a></a></div> </div></td></tr>  <tr><td>90</td><td>Th</td><td>232.04</td><td>Thorium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(90);";><a></a></div> </div></td></tr>  <tr><td>91</td><td>Pa</td><td>231.04</td><td>Protactinium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(91);";><a></a></div> </div></td></tr>  <tr><td>92</td><td>U</td><td>238.03</td><td>Uranium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(92);";><a></a></div> </div></td></tr>  <tr><td>93</td><td>Np</td><td>237</td><td>Neptunium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(93);";><a></a></div> </div></td></tr>  <tr><td>94</td><td>Pu</td><td>244</td><td>Plutonium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(94);";><a></a></div> </div></td></tr>  <tr><td>95</td><td>Am</td><td>243</td><td>Americium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(95);";><a></a></div> </div></td></tr>  <tr><td>96</td><td>Cm</td><td>247</td><td>Curium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(96);";><a></a></div> </div></td></tr>  <tr><td>97</td><td>Bk</td><td>247</td><td>Berkelium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(97);";><a></a></div> </div></td></tr>  <tr><td>98</td><td>Cf</td><td>251</td><td>Californium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(98);";><a></a></div> </div></td></tr>  <tr><td>99</td><td>Es</td><td>252</td><td>Einsteinium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(99);";><a></a></div> </div></td></tr>  <tr><td>100</td><td>Fm</td><td>257</td><td>Fermium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(100);";><a></a></div> </div></td></tr>  <tr><td>101</td><td>Md</td><td>258</td><td>Mendelevium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(101);";><a></a></div> </div></td></tr>  <tr><td>102</td><td>No</td><td>259</td><td>Nobelium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(102);";><a></a></div> </div></td></tr>  <tr><td>103</td><td>Lr</td><td>266</td><td>Lawrencium</td><td>Transition Metals: Groups</td><td>4</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(103);";><a></a></div> </div></td></tr>  <tr><td>104</td><td>Rf</td><td>267</td><td>Rutherfordium</td><td>Transition Metals: Groups</td><td>5</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(104);";><a></a></div> </div></td></tr>  <tr><td>105</td><td>Db</td><td>268</td><td>Dubnium</td><td>Transition Metals: Groups</td><td>6</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(105);";><a></a></div> </div></td></tr>  <tr><td>106</td><td>Sg</td><td>269</td><td>Seaborgium</td><td>Transition Metals: Groups</td><td>7</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(106);";><a></a></div> </div></td></tr>  <tr><td>107</td><td>Bh</td><td>270</td><td>Bohrium</td><td>Transition Metals: Groups</td><td>8</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(107);";><a></a></div> </div></td></tr>  <tr><td>108</td><td>Hs</td><td>269</td><td>Hassium</td><td>Transition Metals: Groups</td><td>9</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(108);";><a></a></div> </div></td></tr>  <tr><td>109</td><td>Mt</td><td>278</td><td>Meitnerium</td><td>Transition Metals: Groups</td><td>10</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(109);";><a></a></div> </div></td></tr>  <tr><td>110</td><td>Ds</td><td>281</td><td>Darmstadtium</td><td>Transition Metals: Groups</td><td>11</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(110);";><a></a></div> </div></td></tr>  <tr><td>111</td><td>Rg</td><td>282</td><td>Roentgenium</td><td>Transition Metals: Groups</td><td>12</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(111);";><a></a></div> </div></td></tr>  <tr><td>112</td><td>Cn</td><td>285</td><td>Copernicium</td><td>Boron Group or Earth Metals</td><td>13</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(112);";><a></a></div> </div></td></tr>  <tr><td>113</td><td>Nh</td><td>286</td><td>Nihonium</td><td>Carbon Group or Tetrels</td><td>14</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(113);";><a></a></div> </div></td></tr>  <tr><td>114</td><td>Fl</td><td>289</td><td>Flerovium</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(114);";><a></a></div> </div></td></tr>  <tr><td>115</td><td>Mc</td><td>289</td><td>Moscovium</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(115);";><a></a></div> </div></td></tr>  <tr><td>116</td><td>Lv</td><td>293</td><td>Livermorium</td><td>Halogens </td><td>17</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(116);";><a></a></div> </div></td></tr>  <tr><td>117</td><td>Ts</td><td>294</td><td>Tennessine</td><td>Noble Gases </td><td>18</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(117);";><a></a></div> </div></td></tr>  <tr><td>118</td><td>Og</td><td>294</td><td>Oganesson</td><td>Noble Gases </td><td>18</td><td>7</td><td><div class="button-row"><div onclick="onclickONBtntable(118);";><a></a></div> </div></td></tr>  
-</table>
+<tr><td>1</td><td>H</td><td>1.01</td><td>Hydrogen</td><td>Noble Gases </td><td>18</td><td>1</td><td><div class="buttonTable" onclick="onclickONBtntable(1);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>2</td><td>He</td><td>4</td><td>Helium</td><td>Alkali Metal</td><td>1</td><td>1</td><td><div class="buttonTable" onclick="onclickONBtntable(2);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>3</td><td>Li</td><td>6.94</td><td>Lithium</td><td>Alkaline Earth Metals</td><td>2</td><td>2</td><td><div class="buttonTable" onclick="onclickONBtntable(3);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>4</td><td>Be</td><td>9.01</td><td>Beryllium</td><td>Boron Group or Earth Metals</td><td>13</td><td>2</td><td><div class="buttonTable" onclick="onclickONBtntable(4);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>5</td><td>B</td><td>10.81</td><td>Boron</td><td>Carbon Group or Tetrels</td><td>14</td><td>2</td><td><div class="buttonTable" onclick="onclickONBtntable(5);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>6</td><td>C</td><td>12.01</td><td>Carbon</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>2</td><td><div class="buttonTable" onclick="onclickONBtntable(6);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>7</td><td>N</td><td>14.01</td><td>Nitrogen</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>2</td><td><div class="buttonTable" onclick="onclickONBtntable(7);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>8</td><td>O</td><td>16</td><td>Oxygen</td><td>Halogens </td><td>17</td><td>2</td><td><div class="buttonTable" onclick="onclickONBtntable(8);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>9</td><td>F</td><td>19</td><td>Fluorine</td><td>Noble Gases </td><td>18</td><td>2</td><td><div class="buttonTable" onclick="onclickONBtntable(9);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>10</td><td>Ne</td><td>20.18</td><td>Neon</td><td>Alkali Metal</td><td>1</td><td>2</td><td><div class="buttonTable" onclick="onclickONBtntable(10);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>11</td><td>Na</td><td>22.99</td><td>Sodium</td><td>Alkaline Earth Metals</td><td>2</td><td>3</td><td><div class="buttonTable" onclick="onclickONBtntable(11);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>12</td><td>Mg</td><td>24.3</td><td>Magnesium</td><td>Boron Group or Earth Metals</td><td>13</td><td>3</td><td><div class="buttonTable" onclick="onclickONBtntable(12);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>13</td><td>Al</td><td>26.98</td><td>Aluminium</td><td>Carbon Group or Tetrels</td><td>14</td><td>3</td><td><div class="buttonTable" onclick="onclickONBtntable(13);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>14</td><td>Si</td><td>28.09</td><td>Silicon</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>3</td><td><div class="buttonTable" onclick="onclickONBtntable(14);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>15</td><td>P</td><td>30.97</td><td>Phosphorus</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>3</td><td><div class="buttonTable" onclick="onclickONBtntable(15);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>16</td><td>S</td><td>32.06</td><td>Sulfur</td><td>Halogens </td><td>17</td><td>3</td><td><div class="buttonTable" onclick="onclickONBtntable(16);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>17</td><td>Cl</td><td>35.45</td><td>Chlorine</td><td>Noble Gases </td><td>18</td><td>3</td><td><div class="buttonTable" onclick="onclickONBtntable(17);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>18</td><td>Ar</td><td>39.95</td><td>Argon</td><td>Alkali Metal</td><td>1</td><td>3</td><td><div class="buttonTable" onclick="onclickONBtntable(18);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>19</td><td>K</td><td>39.1</td><td>Potassium</td><td>Alkaline Earth Metals</td><td>2</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(19);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>20</td><td>Ca</td><td>40.08</td><td>Calcium</td><td>Transition Metals: Groups</td><td>3</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(20);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>21</td><td>Sc</td><td>44.96</td><td>Scandium</td><td>Transition Metals: Groups</td><td>4</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(21);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>22</td><td>Ti</td><td>47.87</td><td>Titanium</td><td>Transition Metals: Groups</td><td>5</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(22);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>23</td><td>V</td><td>50.94</td><td>Vanadium</td><td>Transition Metals: Groups</td><td>6</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(23);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>24</td><td>Cr</td><td>52</td><td>Chromium</td><td>Transition Metals: Groups</td><td>7</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(24);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>25</td><td>Mn</td><td>54.94</td><td>Manganese</td><td>Transition Metals: Groups</td><td>8</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(25);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>26</td><td>Fe</td><td>55.85</td><td>Iron</td><td>Transition Metals: Groups</td><td>9</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(26);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>27</td><td>Co</td><td>58.93</td><td>Cobalt</td><td>Transition Metals: Groups</td><td>10</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(27);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>28</td><td>Ni</td><td>58.69</td><td>Nickel</td><td>Transition Metals: Groups</td><td>11</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(28);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>29</td><td>Cu</td><td>63.55</td><td>Copper</td><td>Transition Metals: Groups</td><td>12</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(29);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>30</td><td>Zn</td><td>65.38</td><td>Zinc</td><td>Boron Group or Earth Metals</td><td>13</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(30);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>31</td><td>Ga</td><td>69.72</td><td>Gallium</td><td>Carbon Group or Tetrels</td><td>14</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(31);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>32</td><td>Ge</td><td>72.63</td><td>Germanium</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(32);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>33</td><td>As</td><td>74.92</td><td>Arsenic</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(33);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>34</td><td>Se</td><td>78.97</td><td>Selenium</td><td>Halogens </td><td>17</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(34);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>35</td><td>Br</td><td>79.9</td><td>Bromine</td><td>Noble Gases </td><td>18</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(35);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>36</td><td>Kr</td><td>83.8</td><td>Krypton</td><td>Alkali Metal</td><td>1</td><td>4</td><td><div class="buttonTable" onclick="onclickONBtntable(36);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>37</td><td>Rb</td><td>85.47</td><td>Rubidium</td><td>Alkaline Earth Metals</td><td>2</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(37);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>38</td><td>Sr</td><td>87.62</td><td>Strontium</td><td>Transition Metals: Groups</td><td>3</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(38);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>39</td><td>Y</td><td>88.91</td><td>Yttrium</td><td>Transition Metals: Groups</td><td>4</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(39);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>40</td><td>Zr</td><td>91.22</td><td>Zirconium</td><td>Transition Metals: Groups</td><td>5</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(40);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>41</td><td>Nb</td><td>92.91</td><td>Niobium</td><td>Transition Metals: Groups</td><td>6</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(41);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>42</td><td>Mo</td><td>95.95</td><td>Molybdenum</td><td>Transition Metals: Groups</td><td>7</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(42);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>43</td><td>Tc</td><td>98</td><td>Technetium</td><td>Transition Metals: Groups</td><td>8</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(43);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>44</td><td>Ru</td><td>101.07</td><td>Ruthenium</td><td>Transition Metals: Groups</td><td>9</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(44);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>45</td><td>Rh</td><td>102.91</td><td>Rhodium</td><td>Transition Metals: Groups</td><td>10</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(45);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>46</td><td>Pd</td><td>106.42</td><td>Palladium</td><td>Transition Metals: Groups</td><td>11</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(46);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>47</td><td>Ag</td><td>107.87</td><td>Silver</td><td>Transition Metals: Groups</td><td>12</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(47);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>48</td><td>Cd</td><td>112.41</td><td>Cadmium</td><td>Boron Group or Earth Metals</td><td>13</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(48);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>49</td><td>In</td><td>114.82</td><td>Indium</td><td>Carbon Group or Tetrels</td><td>14</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(49);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>50</td><td>Sn</td><td>118.71</td><td>Tin</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(50);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>51</td><td>Sb</td><td>121.76</td><td>Antimony</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(51);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>52</td><td>Te</td><td>127.6</td><td>Tellurium</td><td>Halogens </td><td>17</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(52);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>53</td><td>I</td><td>126.9</td><td>Iodine</td><td>Noble Gases </td><td>18</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(53);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>54</td><td>Xe</td><td>131.29</td><td>Xenon</td><td>Alkali Metal</td><td>1</td><td>5</td><td><div class="buttonTable" onclick="onclickONBtntable(54);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>55</td><td>Cs</td><td>132.91</td><td>Cesium</td><td>Alkaline Earth Metals</td><td>2</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(55);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>56</td><td>Ba</td><td>137.33</td><td>Barium</td><td>Transition Metals: Groups</td><td>3</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(56);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>57</td><td>La</td><td>138.91</td><td>Lanthanum</td><td>Rare earth element </td><td>*</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(57);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>58</td><td>Ce</td><td>140.12</td><td>Cerium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(58);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>59</td><td>Pr</td><td>140.91</td><td>Praseodymium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(59);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>60</td><td>Nd</td><td>144.24</td><td>Neodymium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(60);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>61</td><td>Pm</td><td>145</td><td>Promethium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(61);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>62</td><td>Sm</td><td>150.36</td><td>Samarium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(62);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>63</td><td>Eu</td><td>151.96</td><td>Europium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(63);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>64</td><td>Gd</td><td>157.25</td><td>Gadolinium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(64);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>65</td><td>Tb</td><td>158.93</td><td>Terbium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(65);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>66</td><td>Dy</td><td>162.5</td><td>Dysprosium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(66);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>67</td><td>Ho</td><td>164.93</td><td>Holmium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(67);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>68</td><td>Er</td><td>167.26</td><td>Erbium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(68);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>69</td><td>Tm</td><td>168.93</td><td>Thulium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(69);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>70</td><td>Yb</td><td>173.05</td><td>Ytterbium</td><td>Rare earth element </td><td>101</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(70);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>71</td><td>Lu</td><td>174.97</td><td>Lutetium</td><td>Transition Metals: Groups</td><td>4</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(71);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>72</td><td>Hf</td><td>178.49</td><td>Hafnium</td><td>Transition Metals: Groups</td><td>5</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(72);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>73</td><td>Ta</td><td>180.95</td><td>Tantalum</td><td>Transition Metals: Groups</td><td>6</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(73);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>74</td><td>W</td><td>183.84</td><td>Tungsten</td><td>Transition Metals: Groups</td><td>7</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(74);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>75</td><td>Re</td><td>186.21</td><td>Rhenium</td><td>Transition Metals: Groups</td><td>8</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(75);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>76</td><td>Os</td><td>190.23</td><td>Osmium</td><td>Transition Metals: Groups</td><td>11</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(76);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>77</td><td>Ir</td><td>192.22</td><td>Iridium</td><td>Transition Metals: Groups</td><td>9</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(77);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>78</td><td>Pt</td><td>195.08</td><td>Platinum</td><td>Transition Metals: Groups</td><td>10</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(78);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>79</td><td>Au</td><td>196.97</td><td>Gold</td><td>Transition Metals: Groups</td><td>12</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(79);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>80</td><td>Hg</td><td>200.59</td><td>Mercury</td><td>Boron Group or Earth Metals</td><td>13</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(80);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>81</td><td>Tl</td><td>204.38</td><td>Thallium</td><td>Carbon Group or Tetrels</td><td>14</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(81);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>82</td><td>Pb</td><td>207.21</td><td>Lead</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(82);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>83</td><td>Bi</td><td>208.98</td><td>Bismuth</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(83);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>84</td><td>Po</td><td>209</td><td>Polonium</td><td>Halogens </td><td>17</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(84);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>85</td><td>At</td><td>210</td><td>Astatine</td><td>Noble Gases </td><td>18</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(85);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>86</td><td>Rn</td><td>222</td><td>Radon</td><td>Alkali Metal</td><td>1</td><td>6</td><td><div class="buttonTable" onclick="onclickONBtntable(86);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>87</td><td>Fr</td><td>223</td><td>Francium</td><td>Alkaline Earth Metals</td><td>2</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(87);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>88</td><td>Ra</td><td>226</td><td>Radium</td><td>Transition Metals: Groups</td><td>3</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(88);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>89</td><td>Ac</td><td>227</td><td>Actinium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(89);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>90</td><td>Th</td><td>232.04</td><td>Thorium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(90);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>91</td><td>Pa</td><td>231.04</td><td>Protactinium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(91);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>92</td><td>U</td><td>238.03</td><td>Uranium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(92);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>93</td><td>Np</td><td>237</td><td>Neptunium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(93);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>94</td><td>Pu</td><td>244</td><td>Plutonium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(94);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>95</td><td>Am</td><td>243</td><td>Americium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(95);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>96</td><td>Cm</td><td>247</td><td>Curium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(96);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>97</td><td>Bk</td><td>247</td><td>Berkelium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(97);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>98</td><td>Cf</td><td>251</td><td>Californium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(98);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>99</td><td>Es</td><td>252</td><td>Einsteinium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(99);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>100</td><td>Fm</td><td>257</td><td>Fermium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(100);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>101</td><td>Md</td><td>258</td><td>Mendelevium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(101);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>102</td><td>No</td><td>259</td><td>Nobelium</td><td>Rare earth element </td><td>#</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(102);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>103</td><td>Lr</td><td>266</td><td>Lawrencium</td><td>Transition Metals: Groups</td><td>4</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(103);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>104</td><td>Rf</td><td>267</td><td>Rutherfordium</td><td>Transition Metals: Groups</td><td>5</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(104);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>105</td><td>Db</td><td>268</td><td>Dubnium</td><td>Transition Metals: Groups</td><td>6</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(105);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>106</td><td>Sg</td><td>269</td><td>Seaborgium</td><td>Transition Metals: Groups</td><td>7</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(106);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>107</td><td>Bh</td><td>270</td><td>Bohrium</td><td>Transition Metals: Groups</td><td>8</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(107);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>108</td><td>Hs</td><td>269</td><td>Hassium</td><td>Transition Metals: Groups</td><td>9</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(108);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>109</td><td>Mt</td><td>278</td><td>Meitnerium</td><td>Transition Metals: Groups</td><td>10</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(109);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>110</td><td>Ds</td><td>281</td><td>Darmstadtium</td><td>Transition Metals: Groups</td><td>11</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(110);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>111</td><td>Rg</td><td>282</td><td>Roentgenium</td><td>Transition Metals: Groups</td><td>12</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(111);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>112</td><td>Cn</td><td>285</td><td>Copernicium</td><td>Boron Group or Earth Metals</td><td>13</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(112);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>113</td><td>Nh</td><td>286</td><td>Nihonium</td><td>Carbon Group or Tetrels</td><td>14</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(113);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>114</td><td>Fl</td><td>289</td><td>Flerovium</td><td>Nitrogen Group or Pnictogens</td><td>15</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(114);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>115</td><td>Mc</td><td>289</td><td>Moscovium</td><td>Oxygen Group or Chalcogens </td><td>16</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(115);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>116</td><td>Lv</td><td>293</td><td>Livermorium</td><td>Halogens </td><td>17</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(116);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>117</td><td>Ts</td><td>294</td><td>Tennessine</td><td>Noble Gases </td><td>18</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(117);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr> <tr><td>118</td><td>Og</td><td>294</td><td>Oganesson</td><td>Noble Gases </td><td>18</td><td>7</td><td><div class="buttonTable" onclick="onclickONBtntable(118);"> <div class="defaultTable">click me</div> <div class="hoverTable">Now click me</div></div></tr>                </tbody> 
+ </table>
        </div>
-       <ul> 
-     <div class="btncontaniner">
-       <a class="header_A"href="#"><span>Home</span></a>
-       <a class="header_A"href="/Contrat"><span>Contrat us</span></a>
-       <a class="header_A"href="#"><span>About us</span></a>
-       <a class="header_A"href="/"><span>Webpages</span></a>
+      <div class="btncontaniner btncontaniner_header_A">
+       <a class="header_A" href="#"><span>Home</span></a>
+       <a class="header_A" href="/Contrat"><span>Contrat us</span></a>
+       <a class="header_A" href="#"><span>About us</span></a>
+       <a class="header_A" href="/"><span>Webpages</span></a>
       </div>
-      </ul> 
-    </header> 
+     </header> 
      <div class="toggle" onclick="togglemenu();"></div>
   <div id="cutoption">
     <img class="cutoptionimgClass" id="cutoptionimg" src="/close.png" alt="" /><img  class="cutoptionimgClass"  id="cutoptionimg2" src="/close.png" alt="" />
@@ -1754,14 +1766,14 @@ animation: aniamatetoplayer 10s linear infinite;
   <div class="sidebar ">
     <div class="BlankForSidebar1 BlankForSidebar  "></div>
      <div class="btncontaniner sidebarcontanier">
-    <a  class="sidebarbtns  " id="directBTN_1"href="/"><span>Home</span></a>
-    <a  class="sidebarbtns  " id="directBTN_2"href="/Contrat"><span>Contrat us</span></a>
-    <a  class="sidebarbtns  " id="directBTN_3"href="#"><span>About us</span></a>
-    <a  class="sidebarbtns  " id="directBTN_4"href="/"><span>Webpages</span></a>    
-     <a class="sidebarbtns  " id="directBTN_5"href="mathapp"><span>Android work</span></a>
-     <a class="sidebarbtns  " id="directBTN_6"href="/weatherapp"><span> WebApp  </span></a> 
-     <a class="sidebarbtns "href="#" id="Customization_selector"><span> customization Setting</span></a>
-    <a class="sidebarbtns  "  id="directBTN_7"href="pavbhajiblog"><span>Blog</span></a>
+    <a  class="sidebarbtns  " id="directBTN_1" href="/"><span>Home</span></a>
+    <a  class="sidebarbtns  " id="directBTN_2" href="/Contrat"><span>Contrat us</span></a>
+    <a  class="sidebarbtns  " id="directBTN_3" href="#"><span>About us</span></a>
+    <a  class="sidebarbtns  " id="directBTN_4" href="/"><span>Webpages</span></a>    
+     <a class="sidebarbtns  " id="directBTN_5" href="mathapp"><span>Android work</span></a>
+     <a class="sidebarbtns  " id="directBTN_6" href="/weatherapp"><span> WebApp  </span></a> 
+     <a class="sidebarbtns " href="#" id="Customization_selector"><span> customization Setting</span></a>
+    <a class="sidebarbtns  "  id="directBTN_7" href="pavbhajiblog"><span>Blog</span></a>
     </div>
   </div>
    <div class="sidebar2">
@@ -1776,7 +1788,7 @@ animation: aniamatetoplayer 10s linear infinite;
           <div class="  AllMainCustomize">
             <div class="sunMainCustomizeFlex MainCustomizeFlex">
               <p id="sunCustomize" class="submainheading">Sun</p>   
-               <div class="switch"id="switch1" >
+               <div class="switch" id="switch1" >
                  <div class="btn btn1" onclick="onClickonSwitch('btn1');">
                 </div>
                 <span class="circleONOFF"></span>
@@ -2036,7 +2048,8 @@ animation: aniamatetoplayer 10s linear infinite;
       const header = document.querySelector("#header")
       const search = document.querySelector("#search")
       const backgroundcontainer = document.querySelector("#background-container")
-      const periodictable = document.querySelector("#periodictable")
+      const btncontaniner_header_A = document.querySelector(".btncontaniner_header_A ")
+      const periodictable = document.querySelector("#periodictable") 
       const particlesJS = document.querySelector("#particles-js")
       const btncontaninerSidebarcontanierOptimaizations_modes = document.querySelector(".btncontaniner.sidebarcontanier.Customization-modes ")
       const Customization_selector = document.querySelector("#Customization_selector"); 
@@ -2705,6 +2718,7 @@ animation: aniamatetoplayer 10s linear infinite;
         searchBool = false
         header.classList.remove("activeteSearch")
         search.classList.remove("activeteSearch")
+         btncontaniner_header_A.classList.remove("activeteSearch")
          MenuToggle.classList.remove("activeteSearch")
         //  removeactivatedclassFOR_all_elements('activeteBLured');
          removeactivatedclassFOR_all_elements('activeted');
@@ -2720,7 +2734,7 @@ animation: aniamatetoplayer 10s linear infinite;
          header.classList.add("activeteSearch")
         search.classList.add("activeteSearch")
          MenuToggle.classList.add("activeteSearch")
-         backgroundcontainer.classList.add("activeteSearch")
+         btncontaniner_header_A.classList.add("activeteSearch")
           ADD_activatedclassFOR_selectors('activeted');
         // ADD_activatedclassFOR_ALL_elements('activeteBLured');
         ADD_activatedclassFOR_ALL_elements('activeted');
@@ -2987,7 +3001,10 @@ animation: aniamatetoplayer 10s linear infinite;
               togglemenu();
                  this["elements" + params].click(); 
             }
-  
+            $(".defaultTable, .hoverTable").click(function () {
+            $(this).parent(".buttonTable").toggleClass("active");
+          });
+
           </script>
 
  </body>
