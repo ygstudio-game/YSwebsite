@@ -563,7 +563,7 @@ transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   justify-content: center;
   background-color: rgb(0, 0, 0 );
   color: rgb(255, 255, 255);
-  height: 2.18vw;
+  height: inherit;
    transition: background 0.5s ease;
   text-transform: uppercase;
   letter-spacing: 0.02vw;
@@ -578,7 +578,7 @@ transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 .buttonTable .hoverTable {
   background: #ffffff;
   transform: rotateX(-90deg) translateZ(-1vw);
-  border: 5px solid black;
+  border: 0.04vw solid black;
   text-shadow: 2px 2px 2px #000000, 2px -2px 2px #000000, -2px 2px 2px #000000, -2px -2px 2px #000000, 2px 0px 2px #000000, 0px 2px 0 #000000, -2px 0px 2px #000000, 0px -2px 2px #000000, 0.016vw 0.06vw 0.2vw black, 0.08vw 0.06vw 0.2vw black, -0.024vw -0.012vw 0.2vw black, -0.016vw -0.012vw 0.2vw black, 0.032vw 0.018vw 0.2vw black, 0.024vw 0.018vw 0.2vw black, -0.032vw -0.018vw 0.2vw black, -0.024vw -0.018vw 0.2vw black;
 
 }
@@ -1162,10 +1162,8 @@ display: block;
 }
 .toggle.activatedMenuClass ,.toggle.activeteSearch { 
    background: rgb(255, 255, 255) url(/close.png) center no-repeat;
-  background-size: 3vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 25;  
+   background-size: 3vw;
+   z-index: 25;  
 }  
 .sidebar , .sidebar2{
 position: absolute;
@@ -1690,18 +1688,24 @@ position: relative;
 #switch1.on   .btn ,  #switch2.on  .btn ,  #switch3.on  .btn  { box-shadow: -0.052vw 0.052vw 0.104vw 0.104vw black;}
 #switch1.on .ON_OFF_METER::after , #switch2.on .ON_OFF_METER::after , #switch3.on .ON_OFF_METER::after{ content: "ON";text-shadow: 0vw 0vw 0.52vw #ffff00, 0vw 0vw 1.04vw #ffff00, 0vw 0vw 2.08vw #ffff00, 0vw 0vw 3.125vw #ffff00, 0vw 0vw 4.16vw #ffff00, 0vw 0vw 6.25vw #ffff00;}
 #switch1.on .circleONOFF ,#switch2.on .circleONOFF ,#switch3.on .circleONOFF { color: yellow; }
+.moblieISNotRoated{display: none;}
 
-/* @media only  screen and ( max-width : 550px )   {
+  @media only  screen and ( max-width : 550px )   {
    header {
      flex-direction: column;
      border: none;
      border-radius: 0 ;
      justify-content: flex-start;
      align-items: flex-start;
-     height: 25vh;
+     height: 80vh;
      margin-left: 4vh;
      background:  transparent;
      font-size: 3vh;
+     position: static;
+
+   }
+   header.activeteSearch{
+    height: 88vh;
 
    }
    header .logo{
@@ -1725,19 +1729,97 @@ position: relative;
      border-radius: 0.5vh;
      position: absolute;
     top: 32vh;
-    left: -2vh;
+    left: 2vh;
+    margin: 0;
     font-size: 3vh ;
     border: white outset 0.2vh;
      }
      .toggle{
-    top: 2vh;
-    right: 4vh;
+     top: 9vh;
+    right: 1.9vh;
     width: 6.5vh;
     height: 6.5vh;
     border-radius: 0.5vh;
     background-size: 4.5vh;
     border: 0.02vh white outset; 
   }
+  .toggle.activatedMenuClass ,.toggle.activeteSearch { 
+    background-size: 10vw;
+
+  }
+  #periodictable{
+    display: none;
+  }
+  body.activeteSearch .moblieISNotRoated{
+    top: 100vh;
+    left: -100vh;
+  }
+  header #search.activeteSearch    {
+    top: 8vh;
+    width: 90%;
+    height: 8%;
+    color: white;
+    background-color: #00000080;
+     }
+  header.activeteSearch .suggestionsMainCLASS   {
+    width: 92vw;
+     top: 20vh;
+     left: 2.2vh;
+  }
+
+  .moblieISNotRoated{
+    display: block;
+    position: absolute;
+    top: 50vh;
+    left: 10vw;
+    width: 40vh;
+     color: white;
+    font-size: 4.2vh;
+    text-shadow: var(--All-element-common-text-shadow);
+    transition: all 450ms linear , left 450ms 350ms linear;
+  }
+  .table {
+    width:92vw !important ;
+  }
+  .table tbody tr td{
+    font-size: 0.8vh;
+  }
+  .table thead tr th:nth-child(1),  .table thead tr th:nth-child(1) input  ,.table thead tr th:nth-child(3) ,  .table thead tr th:nth-child(3) input  {
+width: 1.2vh !important;
+} 
+.table thead tr th:nth-child(4) , .table thead tr th:nth-child(4)  input  {
+width: 3.6vh !important;
+
+}
+.table thead tr th:nth-child(2) ,  .table thead tr th:nth-child(2) input ,.table thead tr th:nth-child(6) ,  .table thead tr th:nth-child(6) input,.table thead tr th:nth-child(7)   ,  .table thead tr th:nth-child(7) input {
+width: 1.5vh !important;
+} 
+
+table thead tr th:nth-child(5)   {
+width: 12vh !important;
+}  
+table thead tr th:nth-child(5) input {
+width: 8vh !important;
+}  
+table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
+ width: 2.6vh !important;
+
+}  
+.buttonTable .defaultTable, .buttonTable .hoverTable { 
+  height: 1vh; 
+  letter-spacing: 0vw;
+
+}
+.buttonTable .hoverTable {
+  display: none; 
+}
+.buttonTable:hover {
+  transform: rotateX(90deg);
+}
+.table thead th input{
+  font-size: 1vh;
+}
+  /* 
   .elements {
   display: grid;
   grid-gap:  1.2vh;
@@ -1810,8 +1892,8 @@ position: relative;
   overflow-x: scroll;
   overflow-y: hidden;
   height: 140vh;
-}
- }  */
+}  */
+ }   
  
     </style>  
 </head>
@@ -1824,8 +1906,7 @@ position: relative;
   <div class="onclickbackgorund" id="onclickbackgroundID"> 
       <span></span><span></span><span></span><span></span><span></span><span></span>
      </div>
-
-   <!-- extra bacground elements -->
+   <!-- extra bacgr ound elements -->
    <div id="particles-js"     ></div> 
    <div id="background-container">
      <!-- <div class="sunMain" > -->
@@ -1937,6 +2018,9 @@ position: relative;
         </div>
    </div>
   </div>
+
+    <!-- IF Moblie is not Roated -->
+        <div class="moblieISNotRoated">Please Rotate Your Moblie For Seeing PeriodicTable</div>
    <div id="periodictable">
     <div id="seleectormetaldiv"> 
     <div id="selectormetals">
@@ -2808,8 +2892,7 @@ position: relative;
        });  }); 
     // setting the importent content after click on element for extra content and in it jqurry is used
   
-       alert(" if Your are serving this website on mobile device ,then Please Rotate Your Screen for Better Experience ")
- 
+  
     //for settung up  error
       if(!elementsclickchecker && cutoptionmain1_querySelector_style.display == "none"){
        for (let intt  = 1; intt  <=118; intt++) {
@@ -2834,6 +2917,7 @@ position: relative;
       }
       else{
         searchBool = false
+        bodyTag.classList.remove("activeteSearch")
         header.classList.remove("activeteSearch")
         search.classList.remove("activeteSearch")
          btncontaniner_header_A.classList.remove("activeteSearch")
@@ -2849,6 +2933,7 @@ position: relative;
       let searchBool = false ;
       function addsearch(){
         searchBool = true
+         bodyTag.classList.add("activeteSearch")
          header.classList.add("activeteSearch")
         search.classList.add("activeteSearch")
          MenuToggle.classList.add("activeteSearch")
@@ -3122,12 +3207,6 @@ position: relative;
             $(".defaultTable, .hoverTable").click(function () {
             $(this).parent(".buttonTable").toggleClass("active");
           });
-          setTimeout(() => {
-           let x = window.screen.width
-            if (x < 500 ) {
-              alert(" Please Rotate Your Screen for Better Experience ")
-           }
-          }, 12000);
  
           </script>
 
