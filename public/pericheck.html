@@ -1551,7 +1551,7 @@ position: relative;
      }
      .toggle{
      top: 9vh;
-    right: 1.9vh;
+    right: 2vh;
     width: 6.5vh;
     height: 6.5vh;
     border-radius: 0.5vh;
@@ -1572,7 +1572,7 @@ position: relative;
   header #search.activeteSearch    {
     top: 8vh;
     width: 90%;
-    height: 8%;
+    height: 1.22%;
     color: white;
     background-color: #00000080;
      }
@@ -1597,8 +1597,8 @@ position: relative;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100vw;
      font-size: 1.2vh;
     color: white;
@@ -1606,13 +1606,15 @@ position: relative;
     box-shadow: var(--All-element-common-box_shadow);
    }
    .Moblie_divTableTheadTR{
-     background: rgb(49, 43, 39);
+     background: rgb(49, 43, 39)  ;
    }
    .Moblie_elementsAll , .Moblie_divTableTheadTR{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: auto auto; 
-    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
     
   }
  
@@ -1631,45 +1633,44 @@ position: relative;
       height: auto !important;
       width:  auto !important;
       border: 0.04vh white solid !important;
-     padding: 0.5vh .825vh !important;
+     padding: 0.5vh  !important;
      }
     .inner div {
     margin: 0.6vh 0 ;
+    max-width: 98vw;
     } 
    
 
   .Moblie_elementsAll .MoblieDivTableParts  ,.Moblie_divTableTheadTR div{
     display: inline-flex;
-    font-size: 2.2vh; 
+    font-size: 1.8vh; 
     border: 0.04vh white solid;
      padding: 0.5vh .825vh;
+     justify-content: center;
   }
-  .MoblieTableTBody .Moblie_elementsAll .MoblieDivTableParts{
-      justify-content: center;
-}
+ 
 .Moblie_divTableTheadTR div:nth-child(1), .Moblie_elementsAll .MoblieDivTableParts:nth-child(1){
- width: 2.5vh;
+ width: 3.5vh;
 }
 .Moblie_divTableTheadTR div:nth-child(2) ,.Moblie_elementsAll .MoblieDivTableParts:nth-child(2){
- width: 6.8vh;
+ width: 6.2vh;
 }
  
 .Moblie_divTableTheadTR div:nth-child(3) ,.Moblie_elementsAll .MoblieDivTableParts:nth-child(3){
- width: 5vh;
- justify-content: center;
-}
+ width: 6vh;
+ }
  
 .Moblie_divTableTheadTR div:nth-child(4) , 
 .Moblie_elementsAll .MoblieDivTableParts:nth-child(4){
- width: 16vh;
+ width: 15vh;
 }
  
 .Moblie_divTableTheadTR div:nth-child(5),.Moblie_elementsAll .MoblieDivTableParts:nth-child(5){
- width: 7vh;
+ width: 5.8vh;
 }
  
 .Moblie_divTableTheadTR div:nth-child(6),.Moblie_elementsAll .MoblieDivTableParts:nth-child(6){
- width: 7vh;
+ width: 5.8vh;
 }
 
  
@@ -1755,6 +1756,17 @@ width: 8vh;
 .Moblie_Atomic_number {
   align-self: flex-start;
 } 
+.Moblie_appearance {
+  max-width: max-content;
+ }
+
+.Moblie_discovered_by {
+  max-width: max-content;
+} 
+
+.Moblie_ionization_energies {
+   max-width: max-content;
+ }
  
  }   
  
@@ -1887,9 +1899,9 @@ width: 8vh;
         <div class="ForMoblieElements">  
           <div class="Moblie_divTableHead">
           <div class="Moblie_divTableTheadTR">
-            <div class="MoblieAtomicNumberTheads">U</div>
+            <div class="MoblieAtomicNumberTheads">Z</div>
             <div class="MoblieSymbolTheads">Symbol</div>
-            <div class="MoblieAtomicmassTheads">Z</div>
+            <div class="MoblieAtomicmassTheads">U</div>
             <div class="MoblieElementNameTheads">Element Name</div> 
             <div class="MoblieGruopTheads">Gruop</div>
             <div class="MoblieperiodTheads">Period</div> 
@@ -2172,6 +2184,7 @@ width: 8vh;
      let Moblie_elementsAll   ;
       let  MoblieinnerTD  ;
         let IsRotate = (window.screen.orientation.angle  === 90) ?  true  : false;
+        let IsWidth_550px = (window.screen.width  <= 550  ) ?  true  : false;
          
         
      async function get_dataTables_filter () {   let dataTables_filter =  await document.querySelector(".dataTables_filter");
@@ -2204,15 +2217,20 @@ width: 8vh;
         function  ONClickListenerON_Moblie_elements( ) { 
             Moblie_elementsAll.forEach(element =>{
               element.addEventListener('click' , ()=>{
-                remove_activated_Inner_Moblie_elements_();
-              let number  = Array.prototype.indexOf.call(MoblieTableTBody.children , element)   
+                let number  = Array.prototype.indexOf.call(MoblieTableTBody.children , element)   
+                remove_activated_Inner_Moblie_elements_(number);
                MoblieinnerTD[number].classList.toggle("activatedToggleForDivTable")
               })
             }) 
           }
-          function remove_activated_Inner_Moblie_elements_(){
+           function remove_activated_Inner_Moblie_elements_(numberOfElements){
+            console.log('click elements Number' + numberOfElements)
             MoblieinnerTD.forEach(element => {
-              if (element.classList.contains("activatedToggleForDivTable")) {
+              let number = Array.prototype.indexOf.call(MoblieTableTBody.children , element.parentElement)   
+              console.log('remove elements Number 1 __' + number)
+
+              if (number !== numberOfElements ) {
+                console.log('remove elements Number 2 __' + number)
                 element.classList.remove("activatedToggleForDivTable")
               }
             });
@@ -2377,7 +2395,7 @@ width: 8vh;
       }
       // function for onclick on common content 118 elements
         function Common_FOR_all_118Elements(params) {
-          if (!elementsclickchecker &&  searchBool == false ) { 
+          if (!elementsclickchecker &&  searchBool == false  ) { 
               cutoptionimg1.click();
                elementsclickchecker = true;
                selector_zIndex_1();
@@ -2396,7 +2414,8 @@ width: 8vh;
             cutoptionimg2.style.display="flex"
                }, 300);
           clicksound.play();
-        }}
+        } 
+      }
        let  endselector ;
       // function for cutoption 
       function cutoptionfunction(silent  ) {
@@ -2462,7 +2481,7 @@ width: 8vh;
          <p class="Elements_full_name">${name[x]}</p> 
          <p class="atomic_mass">${atomic_mass[x]}</p> <div class="allonclickdisplaycontent"id="onclickdisplaycontent-${x+1}"> <div class ="summary"id="summary-${x}">summary = ${summary[x]} </div>  <div class ="appearance"id="appearance{x}" >appearance = ${appearance[x]}</div> <div class ="boil" id="boil-${x}" >boiling point = ${boil[x] }   <sup>o</sup> C</div> <div class ="category"id="category-${x}"> category = ${category[x]}</div> <div class="color" id="color-${x}">color = ${color[x]}</div><div class ="density"id="density-${x}" >density = ${density[x]}</div> <div class = "discovered_by"id="discovered_by-${x}" >Discovered by = ${discovered_by[x]}</div>  <div class ="melt"id="melt-${x}">melting point = ${melt[x]}</div><div class ="molar_heat" id="molar_heat-${x}">molar heat = ${molar_heat[x]}</div> <div class = "named_by"id="named_by-${x}" >named by =  ${named_by[x]}</div> <div class  ="period"id="period-${x}">period = ${period[x]}</div> <div class  ="phase" id="phase-${x}">phase= ${phase[x]}</div><div class ="source" id="source-${x}}" >For more information = <a href="${source[x] }" target="_blank" rel="noopener noreferrer">${source[x] }</a></div> <div class ="spectral_img"id="spectral_img-${x}" >spectral img =  <a href=" ${spectral_img[x]}" target="_blank" rel="noopener noreferrer"> ${spectral_img[x] }</a> </div><div class ="phase"id="phase-${x}">phase = ${phase[x]}</div><div class="xpos"id="xpos-${x}" >xpos = ${xpos[x]}</div><div class ="ypos"id="ypos-${x}" >ypos = ${ypos[x]}</div> <div class="electron_configuration"id="electron_configuration-${x}" >electron configuration = ${electron_configuration[x]}</div> <div class ="electron_configuration_semantic"id="electron_configuration_semantic-${x}" >electron configuration semantic = ${electron_configuration_semantic[x]}</div><div class="electron_affinity"id="electron_affinity-${x}">electron affinity = ${electron_affinity[x]}</div><div class="electronegativity_pauling"id="electronegativity_pauling-${x}" >electronegativity pauling = ${electronegativity_pauling[x]}</div>      <div class="ionization_energies"id="ionization_energies-${x}" >ionizationenergies  = ${ionization_energies[x] }</div>   </div> `;
 
-         MoblieTableTBody.innerHTML  += ` <div class="MoblieDivTableParts Moblie_elementsAll  " id="Moblie_elements-${x+1}">
+         MoblieTableTBody.innerHTML  += ` <div class="MoblieDivTableParts Moblie_elementsAll  " id="Moblie_elements-${x+1}"  >
         <div class="MoblieDivTableParts MoblieAtomicNumber">${x+1}</div>
         <div class="MoblieDivTableParts MoblieSymbol">${symbol[x]}</div>
         <div class="MoblieDivTableParts MoblieAtomicmass">${atomic_mass[x]}</div>
@@ -2474,7 +2493,35 @@ width: 8vh;
           <p class="Moblie_Atomic_number" >${[x+1]}</p>  
          <p class="Moblie_Elements_short_name" >${symbol[x]}</p> 
          <p class="Moblie_Elements_full_name">${name[x]}</p> 
-         <p class="Moblie_atomic_mass">${atomic_mass[x]}</p> </div><div class="Moblie_allonclickdisplaycontent"id="Moblie_onclickdisplaycontent-${x+1}"> <div class ="Moblie_summary"id="Moblie_summary-${x}">summary = ${summary[x]}</div>  <div class ="appearance"id="Moblie_appearance{x}" >appearance = ${appearance[x]}</div> <div class ="boil" id="Moblie_boil-${x}" >boiling point = ${boil[x] }   <sup>o</sup> C</div> <div class ="category"id="Moblie_category-${x}"> category = ${category[x]}</div> <div class="Moblie_color" id="Moblie_color-${x}">color = ${color[x]}</div><div class ="density"id="Moblie_density-${x}" >density = ${density[x]}</div> <div class = "discovered_by"id="Moblie_discovered_by-${x}" >Discovered by = ${discovered_by[x]}</div>  <div class ="melt"id="Moblie_melt-${x}">melting point = ${melt[x]}</div><div class ="molar_heat" id="Moblie_molar_heat-${x}">molar heat = ${molar_heat[x]}</div> <div class = "named_by"id="Moblie_named_by-${x}" >named by =  ${named_by[x]}</div> <div class  ="period"id="Moblie_period-${x}">period = ${period[x]}</div> <div class  ="phase" id="Moblie_phase-${x}">phase= ${phase[x]}</div><div class ="source" id="Moblie_source-${x}}" >For more information = <a href="${source[x] }" target="_blank" rel="noopener noreferrer">${source[x] }</a></div> <div class ="spectral_img"id="Moblie_spectral_img-${x}" >spectral img =  <a href=" ${spectral_img[x]}" target="_blank" rel="noopener noreferrer"> ${spectral_img[x] }</a> </div><div class ="phase"id="Moblie_phase-${x}">phase = ${phase[x]}</div><div class="Moblie_xpos"id="Moblie_xpos-${x}" >xpos = ${xpos[x]}</div><div class ="ypos"id="Moblie_ypos-${x}" >ypos = ${ypos[x]}</div> <div class="Moblie_electron_configuration"id="Moblie_electron_configuration-${x}" >electron configuration = ${electron_configuration[x]}</div> <div class ="electron_configuration_semantic"id="Moblie_electron_configuration_semantic-${x}" >electron configuration semantic = ${electron_configuration_semantic[x]}</div><div class="Moblie_electron_affinity"id="Moblie_electron_affinity-${x}">electron affinity = ${electron_affinity[x]}</div><div class="Moblie_electronegativity_pauling"id="Moblie_electronegativity_pauling-${x}" >electronegativity pauling = ${electronegativity_pauling[x]}</div>      <div class="Moblie_ionization_energies"id="Moblie_ionization_energies-${x}" >ionizationenergies  = ${ionization_energies[x] }</div>   </div>`
+         <p class="Moblie_atomic_mass">${atomic_mass[x]}</p> </div><div class="Moblie_allonclickdisplaycontent" id="Moblie_onclickdisplaycontent-${x+1}">
+    <div class="Moblie_summary" id="Moblie_summary-${x}">summary = ${summary[x]} </div>
+    <div class="Moblie_appearance" id="Moblie_appearance{x}">appearance = ${appearance[x]}</div>
+    <div class="Moblie_boil" id="Moblie_boil-${x}">boiling point = ${boil[x] } <sup>o</sup> C</div>
+    <div class="Moblie_category" id="Moblie_category-${x}"> category = ${category[x]}</div>
+    <div class="Moblie_color" id="Moblie_color-${x}">color = ${color[x]}</div>
+    <div class="Moblie_density" id="Moblie_density-${x}">density = ${density[x]}</div>
+    <div class="Moblie_discovered_by" id="Moblie_discovered_by-${x}">Discovered by = ${discovered_by[x]}</div>
+    <div class="Moblie_melt" id="Moblie_melt-${x}">melting point = ${melt[x]}</div>
+    <div class="Moblie_molar_heat" id="Moblie_molar_heat-${x}">molar heat = ${molar_heat[x]}</div>
+    <div class="Moblie_named_by" id="Moblie_named_by-${x}">named by = ${named_by[x]}</div>
+    <div class="Moblie_period" id="Moblie_period-${x}">period = ${period[x]}</div>
+    <div class="Moblie_phase" id="Moblie_phase-${x}">phase= ${phase[x]}</div>
+    <div class="Moblie_source" id="Moblie_source-${x}}">For more information = <a href="${source[x] }" target="_blank"
+            rel="noopener noreferrer">${source[x] }</a></div>
+    <div class="Moblie_spectral_img" id="Moblie_spectral_img-${x}">spectral img = <a href=" ${spectral_img[x]}" target="_blank"
+            rel="noopener noreferrer"> ${spectral_img[x] }</a> </div>
+    <div class="Moblie_phase" id="Moblie_phase-${x}">phase = ${phase[x]}</div>
+    <div class="Moblie_xpos" id="Moblie_xpos-${x}">xpos = ${xpos[x]}</div>
+    <div class="Moblie_ypos" id="Moblie_ypos-${x}">ypos = ${ypos[x]}</div>
+    <div class="Moblie_electron_configuration" id="Moblie_electron_configuration-${x}">electron configuration =
+        ${electron_configuration[x]}</div>
+    <div class="Moblie_electron_configuration_semantic" id="Moblie_electron_configuration_semantic-${x}">electron configuration
+        semantic = ${electron_configuration_semantic[x]}</div>
+    <div class="Moblie_electron_affinity" id="Moblie_electron_affinity-${x}">electron affinity = ${electron_affinity[x]}</div>
+    <div class="Moblie_electronegativity_pauling" id="Moblie_electronegativity_pauling-${x}">electronegativity pauling =
+        ${electronegativity_pauling[x]}</div>
+    <div class="Moblie_ionization_energies" id="Moblie_ionization_energies-${x}">ionizationenergies = ${ionization_energies[x] }</div>
+</div>`
    
        }
          onclickdisplaycontent_qurryselector();
@@ -2909,12 +2956,20 @@ width: 8vh;
           })
           
             function onclickONBtntable(params) { 
-              togglemenu();
-                 this["elements" + params].click(); 
+              if (!IsWidth_550px) {
+                togglemenu();
+                this["elements" + params].click(); 
+              }
+              else{
+                togglemenu();
+                
+                Moblie_elementsAll[params -1].click(); 
+              }
             }
             $(".defaultTable, .hoverTable").click(function () {
             $(this).parent(".buttonTable").toggleClass("active");
           });
+          
           orientatinalBTn.addEventListener('click' , ()=>{
             window.screen.orientation.lock('landscape-primary')
           })
