@@ -1,80 +1,2571 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style> 
-     
-     body{
-         background-color: black;
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1 maximum-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <meta name="author" content="Yadnyesh sunil  borole">
+  <meta name="description" content="Hello i am a Web Developer and  I am in 10th">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet" />
+  <meta name="keywords" content="Yadnyesh sunil borole">
+  <meta name="keywords" content="https://ysblogs-homepage.herokuapp.com/PeriodicTable">
+ <meta name="keywords" content="Yadnyesh  borole">
+  <meta name="keywords" content="Yadnyesh ">
+  <meta name="keywords" content="periodictable ">
+  <meta name="keywords" content="check">
+  <title>YSBlogs-Periodic table</title>
+</head>
+<style>
+  :root {
+ 
+    --alkali-color: #ecbe59;
+    --alkali-earth-color: #dee955;
+    --transition-metal-color: #fd8572;
+    --post-transition-metal-color: #4cddf3;
+    --metalloid-color: #fff;
+    --other-nonmetal-color: #52ee61;
+    --noble-metals-color: #759fff;
+    --unknown-color: #ccc;
+    --lanthrathide_and_anthrathide-color: #c686cc; 
+    --All-element-common-box_shadow: 0.15vw -0.15vw 0.18vw 0vw currentColor,
+      -0.22vw 0.25vw 0.18vw 0vw currentColor;
+    --All-element-common-text-shadow: 0.08vw 0.03vw 0.2vw currentColor, 0.04vw 0.03vw 0.2vw currentColor;
+    --SidebarLineargradient-color:: linear-gradient(90deg, #000000cf, #fffbfb17);
+  }
 
-     }
-     *{
-         color: rgb(255, 255, 255);
-         margin: 0;
-         padding: 0; }
+  html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  } 
+  ::selection {
+    background-color: rgb(214, 195, 27);
+    color: black;
+    text-shadow: none;
+  } 
+  * {
+    margin: 0;
+    padding: 0;
+    transition: all 800ms linear;
+   }
 
-
-    header {  
-    position: fixed;
+  body { 
+    max-width: 100vw;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: "Mali", "Courgette", cursive;
+    background: repeat   , url("space.jpg") rgb(31, 29, 29)  ;  
+    filter: drop-shadow(-0.78vw 1.0vw 0.8vw black) contrast(1.18);
+   }
+  body.activeBody_DisableSrolling{
+    overflow: hidden;
+  } 
+  header {
+ position: fixed;
     top: 0;
     left: 0;
-    width: 92%;
+    width: 95vw;
+    height: 8vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     transition: all 0.6s linear;
-    padding: 40px 100px;
+    padding: 1vw 2vw ; 
+ background: linear-gradient( 90deg,rgba(221, 255, 255, 0.253) ,  rgba(0, 0, 0, 0.596));
+ border-radius:  0  0 6.8vw 6.8vw ;
+ border: 0;
+ border-bottom: 0.16vw #c4d134;
+ border-style: dashed;
 
   } 
+  header.activeteSearch{
+    justify-content: flex-start;
+    height: 4.5vw;
+    border-radius:  0  0 5.2vw 5.2vw ;
+    border-color: #dd7777f8;
+    z-index: 18;
+      }
+   header.activeteSearch ul     {
+     right: -200vw;
+     position: absolute;
+     opacity: 0;
+   }
   header .logo {
-    position: relative;
-    font-weight: 700;
+     font-weight: 700;
     color: white;
     font-size: 1.6vw;
     text-transform: uppercase;
-    letter-spacing: 2px;
-
+    letter-spacing: 0.104vw; 
   } 
- header ul {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  header ul li {
-    list-style: none;
-     position: relative;
-  }   
-
- header  ul   li a  {
-    position: relative;
-    margin: 0   15px;
-    text-decoration: none;
-    color:white;
-    letter-spacing: 2px;
-    font-weight: 500;
-    transition: all linear 600ms;    
-    font-size: 1.4vw;
-
-  }   
-
+  header #search{
+    width: 24vw;    
+    height: 3vw;
+    padding: 1vw;
+    border-radius: 0.6vw;
+    font-size: 0.9vw;
+    margin: 0 1vw;
+    /* transition-delay: 200ms; */
+    background: transparent;
+} 
+header .suggestionsMainCLASS {
+  width: 88vw;
+  position: absolute;
+  height : 86vh;
+  background: #000;
+  /* top: 6.5vw; */
+  left: 8vw;
+  appearance: auto;
+ box-sizing: border-box;
+ background: radial-gradient(#00000033, black);
+  color: white;
+opacity: 0;
+border: 0.06vw solid white;
+border-radius: 3vw 0 3vw 0;
+  overflow-y: scroll;
+  top: -100vw;
+  transition: all 1200ms linear , top 0ms linear;
+ }
+header.activeteSearch .suggestionsMainCLASS{
+  display: block;
+  opacity: 1; 
+  top: 7vw;
+}
  
-    </style>
-</head>
-<body>
-    <header >
-        <div class="logo">logo</div>
-        <ul> 
-       <!-- <img id="imglogo" src="/logo" alt="" /> -->
-       <li ><a href="/">Home </a></li>
-       <li ><a href="/Contrat">Contrat us </a> </li>
-       <li ><a href="#">About</a></li>
-       <li ><a href="/">Webpages</a></li> 
-        </ul> 
-     </header>
-     <section class="banner" ></section>
-</body>
+.table{
+  width: 100%;
+   font-size: 1.2vw;
+   border-collapse: collapse;
+  }
+.table thead{ 
+   padding: 0.2vw;
+   filter: drop-shadow(-0.78vw 1vw 0.8vw black) contrast(1.18);
+   
+}
+.table thead tr th {
+  font-weight: 780;
+  font-size: 1.25vw;
+  color: #fff;
+  letter-spacing: 0.1vw;
+  opacity: 1;
+  border: 0.06vw solid white;
+   vertical-align: top;
+  padding: 0.4vw;
+  width: 15vw;
+  position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+      z-index: 2;
+      box-shadow: inset 0 0   #ff08e8;
+      transition: 300ms linear all;
+      cursor: pointer;
+      
+}
+.table thead tr th:hover {
+  color: #3a3a30;
+  filter: sepia(1);
+ }
+.table thead tr th:nth-child(1) {
+border-radius: 3vw 0 0 0;
+border-top: none;
+border-left: none;
+background: linear-gradient(to right, #1098ceef , #10A4A2ef  );
+}
+.table thead tr th:nth-child(2){
+  background: linear-gradient(to right, #10A4A2ef  , #12b4b2ef  );  
+}
+.table thead tr th:nth-child(3){
+  background: linear-gradient(to right, #12b4b2ef  , #49a6f3ef   );  
+}
+.table thead tr th:nth-child(4){
+  background: linear-gradient(to right, #49a6f3ef  , #1f6fa5ef  );  
+}
+.table thead tr th:nth-child(5){
+  background: linear-gradient(to right, #1f6fa5ef  , #2a46c0ef   );  
+}
+.table thead tr th:nth-child(6){
+  background: linear-gradient(to right, #2a46c0ef  , #243dacef   );  
+}
+.table tbody {
+  /* position: relative; */
+  top: 2vw;
+}
+.table tbody tr td {
+  font-weight: normal;
+  color: #fff;
+   opacity: 1;
+   /* filter: drop-shadow(-0.78vw 1vw 0.8vw black) contrast(1.18); */
+  border: 0.06vw solid white;
+   padding: 0.4vw;
+  text-align: center;
+  font-size: 1.2vw;
+  box-shadow:    
+                     inset 0 0 0.8vw #ff08e8; 
+ }
+ 
+.btnTable {
+  border: 2px solid rgb(255, 255, 255);
+  z-index: 1;
+   font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+   font-size: 1.2vw;
+  width: 8vw;
+  position: relative;
+  color: white;
+  }
+.btnTable:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+.btnTable:hover {
+  color: rgb(0, 0, 0);
+ }
+.btnTable:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btnTable:active {
+  top: 2px;
+}
+
+header #search.activeteSearch{
+  width: 100%;
+  height: 106%;
+  color: white;
+  background-color: #0000;
+  z-index: 12;
+}
+  header ul {
+     display: flex;
+    justify-content: center;
+    right: 12vw;
+  align-items: center;
+    } 
+  header ul .header_A{
+     font-weight: 700;
+    color: white;
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    letter-spacing: 0.104vw;
+    text-decoration: none;
+    margin: 0vw 0.8vw;
+    padding: 1vw;
+    -webkit-box-reflect: below 0vw linear-gradient( #00000000 , #00000036);
+  }
+  
+  header ul .header_A:hover{
+    color: black;
+    border-radius: 0.2vw;
+    background-color: #fbff00;
+    box-shadow: 0vw 0vw 0.52vw #fbff00, 
+                        0vw 0vw 1.04vw #fbff00 , 
+                        0vw 0vw 1.04vw #fbff00 , 
+                        0vw 0vw 2.08vw #fbff00, 
+                        0vw 0vw 2.08vw #fbff00, 
+                        0vw 0vw 4.16vw #fbff00,
+                        0vw 0vw 4.16vw #fbff00,
+                         0vw 0vw 8.3vw #fbff00;
+  }
+
+  #periodictable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh;
+    margin-top: 35vh;
+    transition-property: all;
+    transition-duration: 600ms;
+    align-items: center;
+  } 
+  #seleectormetaldiv {
+    display: flex; 
+    justify-content: center;
+    z-index: 4;
+    position: sticky;
+    left: 7.6vw;
+     top: 9vw; 
+    padding: 3vh;
+    border-radius: 6vh;
+    transition-duration: 600ms;
+    transition-property: auto;
+     width: auto;
+  }
+  #selectormetals {
+    transition-duration: 600ms;
+    transition-property: auto;
+    background-color: #1f1e1e;
+    width: fit-content;
+    display: flex;
+    border-radius: 6vh;
+    padding: 3vh;
+   }
+  #selectormetals p {
+    background: #1f1e1e;
+    animation-name: elementsanimation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin: 0vh 0.6vw;
+    text-transform: capitalize;
+    font-size: 0.85vw;
+    padding: 0.4vh 0.8vh;
+    cursor: pointer;
+    text-shadow: var(--All-element-common-text-shadow);
+    transition-duration: 0.45s;
+    transition-timing-function: ease;
+   }
+   #selectormetals p.selector_active{
+    transform: scale(1.55) matrix(1,  0.1, -0.1, 1.3, 0, 0);
+    z-index: 18;
+   }
+  .elements {
+    display: grid;
+    grid-gap: 0.8vw;
+    transition: all 1s ,  margin-top 0s;
+     width: 94vw;
+    margin: auto;
+    padding: 2.44vw;
+    margin-top: 22vh;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+}
+.ACTIVATE_elementsGRID_ID{
+  margin-top :0.3vw ;
+
+}
+  .elemetsall {
+    border-top-left-radius: 0.35vw;
+    border-bottom-right-radius: .35vw;
+    background: linear-gradient(343deg, #000000a5, #384436a5);   
+   color: white;
+    height: 5vw;
+    width: 4.3vw;
+    cursor: pointer;
+    border: currentColor 0.04vw solid;
+    transition: all 220ms ease-out; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7vw;
+    word-wrap: break-word;
+     animation: 6s linear infinite;
+    text-shadow: var(--All-element-common-text-shadow);
+    box-shadow: var(--All-element-common-box_shadow); 
+  }  
+ .activated_elements_onclick{
+    transform: scale(3.0);
+    z-index: 8;
+    animation-name: elementsanimation;
+  } 
+  .activeted {
+    filter: brightness(0.2) blur(0.18vh);
+  }
+  .activeteBLured {
+    filter:   blur(0.38vw);
+  }
+  #otherseries {
+    display: grid;
+    margin: 2vw 0 0 12.6vw ;
+    grid-gap: 5.8vw 0vh;
+}  
+  #lanthrathideseries {
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto;
+    display: grid;
+    grid-gap: 0.85vw;
+  }
+
+  .lanthrathideseries_elements ,  .anthrathideseires_elements {
+    color: var(--lanthrathide_and_anthrathide-color);
+  }
+
+  #anthrathideseires {
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto;
+    display: grid;
+    margin: -8.6vh 0 28.6vh 0;
+    grid-gap: 0.85vw;
+  } 
+  .alkali-metals-selector {
+    color: var(--alkali-color);
+ box-shadow: var(--All-element-common-box_shadow); 
+  }
+
+  .akiline-earth-metals-selector {
+    color: #dee955;
+ box-shadow: var(--All-element-common-box_shadow); 
+  }
+
+  .transition-metal-selector {
+    color: #fd8572;
+ box-shadow: var(--All-element-common-box_shadow); 
+  }
+
+  .post-transition-metal-selector {
+    color: #4cddf3;
+ box-shadow: var(--All-element-common-box_shadow); 
+  }
+
+  .metalloid-selector {
+    color: #fff;
+ box-shadow: var(--All-element-common-box_shadow); 
+  }
+
+  .other-nonmetal-selector {
+    color: #52ee61;
+ box-shadow: var(--All-element-common-box_shadow); 
+  }
+
+  .noble-gasses-selector {
+    color: #759fff;
+ box-shadow: var(--All-element-common-box_shadow); 
+  }
+
+  .unknown-selector {
+    color: #ccc;
+ box-shadow: var(--All-element-common-box_shadow); 
+  }
+
+  .lanthrathideseries-selector {
+    color: #c686cc;
+ box-shadow: var(--All-element-common-box_shadow); 
+  }
+
+  .anthrathideseires-selector {
+    color: #c686cc;
+ box-shadow: var(--All-element-common-box_shadow); 
+  }
+  #selectormetals p:hover {
+    transform: scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);
+    z-index: 18;
+  }
+  #Elements_short_name {
+    font-size: 1.4vw;
+  }
+
+  #Elements_full_name {
+    word-break: break-all;
+    text-align: center;
+    justify-content: baseline;
+    margin-top: 0.1vw;
+    font-size: 0.6vw;
+  }
+  #Atomic_number {
+    align-self: flex-start;
+  }
+  #atomic_mass {
+    word-wrap: break-word;
+  }
+  /* for elements belogin to it's type */
+  .alkali-metals {
+    color: var(--alkali-color);
+  }
+  .akiline-earth-metals {
+    color: var(--alkali-earth-color);
+  }
+  .transition-metal {
+    color: var(--transition-metal-color);
+}
+  .post-transition-metal {
+    color: var(--post-transition-metal-color);
+  }
+  .metalloid {
+    color: var(--metalloid-color);
+  }
+  .other-nonmetal {
+    color: var(--other-nonmetal-color);
+  }
+  .noble-metals {
+    color: var(--noble-metals-color);
+  }
+  .unknown {
+    color: var(--unknown-color);
+  }
+
+  /* group 1*/
+#elements-1 {grid-column: 1;grid-row: 1; }
+#elements-3 {grid-column: 1;grid-row: 2;}
+#elements-11 {grid-column: 1;grid-row: 3;}
+#elements-19 {grid-column: 1;grid-row: 4;}
+#elements-37 {grid-column: 1;grid-row: 5;}
+#elements-55 {grid-column: 1;grid-row: 6;}
+#elements-87 {grid-column: 1;grid-row: 7;}
+
+/* group 2 */
+#elements-4 {grid-column: 2;grid-row: 2;}
+#elements-12 {grid-column: 2;grid-row: 3;}
+#elements-20 {grid-column: 2; grid-row: 4;}
+#elements-38 {grid-column: 2;grid-row: 5;}
+#elements-56 {grid-column: 2;grid-row: 6;}
+#elements-88 {grid-column: 2;grid-row: 7;}
+
+/* group 3 */
+#elements-21 {grid-column: 3;grid-row: 4;}
+#elements-39 {grid-column: 3;grid-row: 5;}
+
+/* group 4 */
+#elements-22 {grid-column: 4;grid-row: 4}
+#elements-40 {grid-column: 4;grid-row: 5;}
+#elements-72 {grid-column: 4;grid-row: 6;}
+#elements-104 {grid-column: 4;grid-row: 7;}
+
+/* group 5 */
+#elements-23 {grid-column: 5;grid-row: 4;}
+#elements-41 { grid-column: 5;grid-row: 5;}
+#elements-73 {grid-column: 5; grid-row: 6;}
+#elements-105 {grid-column: 5; grid-row: 7;}
+
+/* group 6 */
+#elements-24 {grid-column: 6;grid-row: 4;}
+#elements-42 {grid-column: 6;grid-row: 5;}
+#elements-74 {grid-column: 6;grid-row: 6;}
+#elements-106 {grid-column: 6;grid-row: 7;}
+
+/* group 7 */
+#elements-25 {grid-column: 7;grid-row: 4;}
+#elements-43 {grid-column: 7;grid-row: 5;}
+#elements-75 { grid-column: 7;grid-row: 6;}
+#elements-107 {grid-column: 7;grid-row: 7; }
+
+/* group 8 */
+#elements-26 { grid-column: 8;grid-row: 4;}
+#elements-44 {  grid-column: 8; grid-row: 5; }
+#elements-76 { grid-column: 8; grid-row: 6;}
+#elements-108 { grid-column: 8;grid-row: 7;}
+
+/* group 9 */
+#elements-27 {grid-column: 9;grid-row: 4;}
+#elements-45 { grid-column: 9;grid-row: 5; }
+#elements-77 { grid-column: 9; grid-row: 6; }
+#elements-109 {grid-column: 9;grid-row: 7;}
+
+/* group 10 */
+#elements-28 { grid-column: 10;grid-row: 4;}
+#elements-46 {  grid-column: 10;grid-row: 5; }
+#elements-78 {  grid-column: 10; grid-row: 6;}
+#elements-110 {grid-column: 10; grid-row: 7;}
+
+/* group 11 */
+#elements-29 {grid-column: 11;grid-row: 4; }
+#elements-47 { grid-column: 11; grid-row: 5;}
+#elements-79 {  grid-column: 11; grid-row: 6; }
+#elements-111 {grid-column: 11; grid-row: 7;  }
+
+/* group 12*/
+#elements-30 { grid-column: 12; grid-row: 4;}
+#elements-48 { grid-column: 12;grid-row: 5;}
+#elements-80 {grid-column: 12; grid-row: 6;}
+#elements-112 {grid-column: 12; grid-row: 7;}
+
+/* group 13 */
+#elements-5 {  grid-column: 13; grid-row: 2;}
+#elements-13 {grid-column: 13;grid-row: 3;}
+#elements-31 {grid-column: 13;grid-row: 4;}
+#elements-49 {grid-column: 13;grid-row: 5; }
+#elements-81 {grid-column: 13; grid-row: 6; }
+#elements-113 { grid-column: 13;grid-row: 7; }
+
+/* group 14 */
+#elements-6 { grid-column: 14;grid-row: 2; }
+#elements-14 {grid-column: 14;  grid-row: 3; }
+#elements-32 {grid-column: 14; grid-row: 4;}
+
+#elements-50 {grid-column: 14;grid-row: 5;}
+#elements-82 {grid-column: 14;grid-row: 6; }
+#elements-114 {grid-column: 14; grid-row: 7;}
+
+  /* group 15 */
+  #elements-7 {grid-column: 15;grid-row: 2;}
+  #elements-15 {grid-column: 15;grid-row: 3;}
+  #elements-33 {grid-column: 15;grid-row: 4;}
+  #elements-51 {grid-column: 15;grid-row: 5;}
+  #elements-83 {grid-column: 15;grid-row: 6;}
+  #elements-115 {grid-column: 15;grid-row: 7;}
+
+  /* group 16 */
+  #elements-8 {grid-column: 16;grid-row: 2;}
+  #elements-16 {grid-column: 16;grid-row: 3;}
+  #elements-34 {grid-column: 16;grid-row: 4;}
+  #elements-52 {grid-column: 16;grid-row: 5;}
+  #elements-84 {grid-column: 16;grid-row: 6;}
+  #elements-116 {grid-column: 16;grid-row: 7;}
+
+  /* group 17 */
+  #elements-9 {grid-column: 17;grid-row: 2;}
+  #elements-17 {grid-column: 17;grid-row: 3;}
+  #elements-35 {grid-column: 17;grid-row: 4; }
+  #elements-53 {grid-column: 17;grid-row: 5;}
+  #elements-85 {grid-column: 17;grid-row: 6;}
+  #elements-117 {grid-column: 17;grid-row: 7;}
+
+  /* group 18 */
+  #elements-2 {grid-column: 18;grid-row: 1;}
+  #elements-10 {grid-column: 18;grid-row: 2;}
+  #elements-18 {grid-column: 18;grid-row: 3;}
+  #elements-36 {grid-column: 18;grid-row: 4;}
+  #elements-54 {grid-column: 18;grid-row: 5;}
+  #elements-86 {grid-column: 18;grid-row: 6;}
+  #elements-118 {grid-column: 18;grid-row: 7;} 
+
+  @keyframes elementsanimation {
+    0% {
+      box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
+        -0.22vw 0.25vw 0.2vw 0vw currentcolor;
+      text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
+    }
+
+    16.6666666666667% {
+      box-shadow: 0vw -0vw 0.2vw 0vw currentcolor,
+        -0vw 0vw 0.2vw 0vw currentcolor;
+      text-shadow: none;
+    }
+
+    33.3333333333334% {
+      box-shadow: 0vw -0vw 0.2vw 0vw currentcolor,
+        -0vw 0vw 0.2vw 0vw currentcolor;
+      text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
+    }
+
+    50.0000000000001% {
+      box-shadow: 0vw -0vw 0.2vw 0vw currentcolor,
+        -0vw 0vw 0.2vw 0vw currentcolor;
+      text-shadow: none;
+    }
+
+    66.6666666666668% {
+      box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
+        -0.22vw 0.25vw 0.2vw 0vw currentcolor;
+      text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
+    }
+
+    83.3333333333335% {
+      box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
+        -0.22vw 0.25vw 0.2vw 0vw currentcolor;
+      text-shadow: none;
+    }
+
+    100% {
+      box-shadow: 0.15vw -0.15vw 0.2vw 0vw currentcolor,
+        -0.22vw 0.25vw 0.2vw 0vw currentcolor;
+      text-shadow: 0.08vw 0.03vw 0.3vw, 0.04vw 0.03vw 0.3vw;
+    }
+  }
+
+  #cutoption {
+    position: sticky;
+    top: 3vh;
+    width: 95.5vw;
+    left: 2vw;
+    justify-content: center;
+    display: flex;
+    transition-property: all;
+    transition-duration: 1000ms;
+    z-index: 14;
+    justify-content: space-between;
+    filter: invert(1);
+  }
+
+  #cutoption img {
+    display: none;
+    position: sticky;
+    width: 4vw;
+    height: 4vw;
+    z-index: 12;
+    border-radius: 0.45vw;
+    padding: 1.2vh;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.739); 
+    box-shadow: -0.156vw -0.104vw 0vw 0vw #000000, 0.052vw 0.104vw 0vw 0vw #000000, -0.156vw -0.104vw 0.208vw 0.26vw #ffffff, 0.052vw 0.104vw 0.208vw 0.26vw #ffffff, 0.052vw 0.104vw 1.04vw 1.04vw #838080;  }
+
+  .allonclickdisplaycontent {
+    display: none;
+    transform: translate(13.8vw, -8vh);
+    grid-gap: 0.6vh 0vw;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.2vh;
+    text-shadow: none;
+    text-shadow: 0.052vw 0.052vw 0vw black, 0.052vw 0vw 0vw black, 0vw 0.052vw 0vw black, -0.052vw 0.052vw 0vw black, 0.104vw 0.104vw 0.052vw black, 0.052vw -0.052vw 0.052vw black, 0vw 0.104vw 0.052vw black, -0.104vw 0.104vw 0.052vw black;  }
+
+  .summary {
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.2vh solid rgb(255, 255, 255);
+    border-radius: 2.4vh;
+    padding-bottom: 0.5vw;
+    margin-top: -1vw;
+  }
+
+  .appearance {
+    max-width: 13.6vw;
+  }
+
+  .discovered_by {
+    max-width: 13.6vw;
+  } 
+
+  .ionization_energies {
+    margin-bottom: 5vh;
+    max-width: 18vw;
+    word-wrap: break-word;
+  }
+  
+   /* extra bacground .elements */ 
+   @keyframes roatationanima { 
+         to{
+              background-position: 3840px;
+         }
+     }
+ 
+#background-container{
+   position: fixed;
+  right: 0;
+  z-index: -4;
+  height: 280vh;
+  width: 100vw;
+} 
+
+/* ---- particles.js container ---- */
+#particles-js{
+   width: 100%;
+  height: 100%;
+  position: fixed;
+}
+  
+ .DISPLAYNone{  
+  display: none; 
+}
+#particles-js.toggleNone{
+  display: block;
+} 
+
+ .toggle{
+    position: fixed;
+    top: 1.5vw;
+    right: 3.5vw;
+    width: 4vw;
+    height: 4vw;
+    background: rgb(255, 255, 255) url(/menu.png) center no-repeat;
+    background-size: 3vw;
+    filter: invert(1);
+     border-radius: 0.3vw;
+    cursor: pointer;
+    z-index: 6;
+    transition: all 300ms linear ;
+
+  }
+ .toggle.activatedMenuClass ,.toggle.activeteSearch { 
+     background: rgb(255, 255, 255) url(/close.png) center no-repeat;
+    background-size: 3vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 25;  
+  }  
+ .sidebar , .sidebar2{
+  position: absolute;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: #470101e6 url(sidebar-2bg.jpg) ; 
+  display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 900ms linear , opacity 1400ms   linear   ;
+    z-index: 24;
+    height:  0vh;
+    width:  0vw;
+     border-radius: 0.4vw;
+    right: -200vw;
+    border: 0.625vw solid white;
+    opacity: 0;
+    top: 100vh;
+    background-size: cover;
+  }
+ 
+ .sidebar2{ 
+    right:  200vw;
+    background: #470101e6 url(sidebar-1bg.jpg);  
+top: 0vh;
+background-size: cover;
+ }
+ .sidebar.activatedMenuClass{
+top: 0vh;
+   right:  0vw;
+   width: 50vw;
+   height: 100vh;
+   border: none;
+   opacity: 1;
+    }
+ .sidebar2.activatedMenuClass{
+   right:  50vw;
+   width: 50vw;
+   height: 100vh;
+   border: none;
+   opacity: 1;
+  }
+#earth-img{ 
+  position: absolute;
+    top: 8vh;
+    right: 6vw;
+    transform: translate(-50% , -50%);
+    width: 34vw;
+    height: 34vw;
+    border-radius: 50%;
+    background: url(earth.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0 1.04vw #0319f4, 0 0 6.25vw #03a9f4;
+    transform: rotate( 334deg);
+    animation: roatationanima linear infinite  154s; 
+    z-index: 3;
+    display: none;
+ 
+} 
+ @keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+   }
+}
+
+.planetaMian
+{    position: absolute;
+  display: none;
+    transform: rotate( 338deg);
+    top: -2vh;
+    right: 10vw; 
+  
+}
+.planetaMian.toggleNone{
+  display: block;
+}
+.planet ,  .sunmain{
+    width:26vw;
+    height:26vw;
+    position:absolute;
+    border-radius:50%;
+    overflow:hidden;
+    top: 3.9vw;
+    right: 12vw;
+    margin:-7.8vw;
+    animation: rotatebac 600s infinite linear;  
+    box-shadow: inset 0 0 1.04vw #0319f4, 0 0 6.25vw #03a9f4;
+    transform: rotate( 334deg);
+  }
+  .planet .mask ,  .sunmain .Sunmask{
+    width:100%;
+    height:100%;
+    position: absolute;
+    box-shadow:inset -0.52vw -0.52vw 2.08vw #0319f4, inset 0.52vw 0.52vw 1.56vw -0.52vw #03a9f4;
+    border-radius:50%;
+  } 
+  .planet .background ,  .sunmain .sunbackground{
+    animation: translateBackground 160s infinite linear;  
+    background:url(earth.jpg) repeat-x  ;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    position:absolute;
+    border-radius:50%;
+  }
+  .planet .clouds{
+    background:url(http://artem.anmedio.ru/dev/planet/clouds.png) repeat-x;
+    width:100%;
+    height:100%;
+    position:absolute;
+    border-radius:50%;
+    animation: translateBackground 120s infinite linear;
+    opacity: 0.4;
+  }
+  .planet .wrap,  .sunmain .sunwrap{
+    width:100%;
+    height:100%;
+    position:absolute;
+    border-radius:50%;
+    animation: rotatePlanet 600s infinite linear;  
+  }
+@keyframes translateBackground{
+  0%{
+    background-position-x:0;
+  }
+  100%{
+    background-position-x:-600px;
+  }
+}
+@keyframes rotatePlanet{
+  0%{
+    transform:rotateZ(0deg);
+  }
+  100%{
+    transform:rotateZ(-360deg);
+  }}
+  @keyframes rotatebac{
+  0%{
+    transform:rotateZ(0deg);
+  }
+  100%{
+    transform:rotateZ(360deg);
+  }
+}
+  .sunmain{
+    display: none;
+    width:45vw;
+    height:45vw;
+    top: 0vw;
+    left: -17vw;
+    margin:-7.8vw;
+    animation: rotatebac 50s infinite linear;  
+    box-shadow: inset 0 0 1.04vw #dcf403, 0 0 6.25vw #f4c803;
+  }
+  .sunmain.toggleNone{
+  display: block;
+}
+  .sunmain .Sunmask{ 
+    box-shadow:inset -0.52vw -0.52vw 2.08vw #dcf403, inset 0.52vw 0.52vw 1.56vw -0.52vw #f4c803;
+  } 
+  .sunmain .sunbackground{
+    animation: translateBackground 26.66s infinite linear;  
+    background:url(sun.jpg) repeat-x  ;
+  }
+ 
+  .sunmain .sunwrap{
+    animation: rotatePlanet 50s infinite linear;  
+  }
+
+  .onclickbackgorund{ 
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 6;
+    right: -100vw;
+    transition: all linear 1s;
+    transition-delay: 50ms;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+.onclickbackgorund span{
+  background: linear-gradient(90deg , rgba(144, 78, 230, 0.404), rgba(235, 8, 8, 0.657));
+position: relative;
+right: -100vw;
+transition: all linear 800ms;  
+border  : 0.06vw solid rgb(255, 255, 255);
+height: 0vw;
+width: 0vw;
+}
+.onclickbackgorund span:nth-child(2){transition-delay : 400ms ;}  
+.onclickbackgorund span:nth-child(3){transition-delay: 800ms ;}  
+.onclickbackgorund span:nth-child(4){transition-delay:1200ms ;}  
+.onclickbackgorund span:nth-child(5){transition-delay:1600ms ;}  
+.onclickbackgorund span:nth-child(6){transition-delay:2000ms ;}  
+.onclickbackgorund span:nth-child(7){transition-delay:2400ms ;}  
+.onclickbackgorund span:nth-child(8){transition-delay:2800ms ;}  
+.onclickbackgorund span:nth-child(9){transition-delay:3200ms ;}  
+.onclickbackgorund span:nth-child(10){transition-delay:3600ms ;}  
+.onclickbackgorund span:nth-child(11){transition-delay: 4000ms ;}  
+.onclickbackgorund span:nth-child(12){transition-delay:4400ms ;}  
+ 
+ .onclickbackgorund.activated_span{
+right: 0vw; 
+width: 100vw;
+}     
+.onclickbackgorund.activated_span span{
+ width: 100vw;
+ height: 22vw;
+right: 0vw;
+border  : 0.0vw solid rgb(255, 255, 255);
+}   
+.btncontaniner{
+  display: flex;
+  justify-self: unset;
+  color: #000;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  right: 6vw;
+  }
+.btncontaniner.sidebarcontanier{
+  flex-direction: column;
+    display: flex;
+    position: absolute;
+    height: 104vh;
+    justify-content: center;
+    left: 12vw;
+  }
+  .btncontaniner.sidebarcontanier.Customization-modes{
+    height: 90vh;
+    width: 22vw;
+    justify-content: flex-start;
+    top: 4vh;
+    background: #0f0f0f96;
+    border-radius: 1.06vw;
+    padding: 1vw;
+     box-shadow: 0vw 0vw 1.5vw 0vw rgb(0, 0, 0);
+    left: -150vw;
+  }
+  .btncontaniner.sidebarcontanier.Customization-modes.activatedMenuClass{
+    left: 16vw;
+    opacity: 0.95;
+  }
+
+  .btncontaniner.sidebarcontanier.Customization-modes a{
+    margin: 2vw 0;
+  }
+.BlankForSidebar1, .BlankForSidebar2{ 
+  position: relative;
+     top: -1.5vh;
+    width: 50vw;
+    height: 104vh;
+    background: linear-gradient( 270deg, #000000be, #fffbfb1a);
+z-index: -1;
+transition: all 700ms linear;
+}
+.BlankForSidebar1{
+  background: linear-gradient( 90deg, #000000be, #fffbfb1a);
+  box-shadow: inset 0.104vw 0vw 1.56vw 0vw #1c1f22, inset -1.04vw 0vw 1.56vw 0.46vw #1c1f22;
+ 
+}
+.BlankForSidebar.activatedBlankForSidebarClass{position: absolute;}
+
+.AllMainCustomize{
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+ 
+.MainCustomizeFlex{
+  display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 19.5vw;
+    height: 4.5vw;
+    box-shadow: 0vw 0vw 1vw 0.2vw #4ccf47;
+    margin: 1.2vw 0;
+    padding: 0.6vw 1vw;
+    border-radius: 0.8vw;
+}
+.MainCustomizeFlex p{
+  font-weight: 780;
+    color: #ffffff;
+    font-size:2vw;
+    text-transform: uppercase;
+    letter-spacing: 0.104vw;
+    text-shadow: 0vw 0vw 0.52vw #00b3ff, 0vw 0vw 1.04vw #00b3ff,0vw 0vw 2.08vw #00b3ff, 0vw 0vw 3.125vw #00b3ff, 0vw 0vw 4.16vw #00b3ff, 0vw 0vw 6.25vw #00b3ff   ;
+
+}
+.btncontaniner.sidebarcontanier .sidebarbtns , .btncontaniner.sidebarcontanier .directbtnFALSE{
+    margin: 0.52vw 2.08vw;
+  }
+.btncontaniner .sidebarbtns ,.btncontaniner .directbtnFALSE {
+  font-size: 1.18vw;
+  position: relative;
+  display: inline-block;
+  padding: 0.78vw 1.56vw ;
+  border: 0.104vw solid #0f0;
+  margin:  0 2.08vw;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.104vw ;
+  color: white;
+  transition: 0.5s;
+  -webkit-box-reflect: below 0vw linear-gradient( #00000000 , #00000036);
+}
+.btncontaniner .sidebarbtns:hover{
+  color: black;
+  box-shadow: 0vw 0vw 0.52vw #0f0,0vw  0vw 1.04vw #0f0,0vw  0vw 2.08vw #0f0,0vw  0vw 4.16vw #0f0,0vw  0vw 8.3vw #0f0  ;
+
+}
+ .btncontaniner .sidebarbtns span , .btncontaniner .directbtnFALSE span {
+  position:relative ;
+  z-index: 12;
+}
+.btncontaniner .sidebarbtns:nth-child(2) ,  .btncontaniner .directbtnFALSE:nth-child(2) ,  header ul .header_A:nth-child(2){filter: hue-rotate(80deg);}
+.btncontaniner .sidebarbtns:nth-child(3) ,  .btncontaniner .directbtnFALSE:nth-child(3) ,  header ul .header_A:nth-child(3){filter: hue-rotate(180deg);}  
+.btncontaniner .sidebarbtns:nth-child(4) ,  .btncontaniner .directbtnFALSE:nth-child(4),   header ul .header_A:nth-child(4){filter: hue-rotate(35deg);}  
+.btncontaniner .sidebarbtns:nth-child(5) ,  .btncontaniner .directbtnFALSE:nth-child(5){filter: hue-rotate(80deg);}  
+.btncontaniner .sidebarbtns:nth-child(6) ,  .btncontaniner .directbtnFALSE:nth-child(6){filter: hue-rotate(180deg);}  
+.btncontaniner .sidebarbtns:nth-child(7) ,  .btncontaniner .directbtnFALSE:nth-child(7){filter: hue-rotate(35deg);}  
+.btncontaniner .sidebarbtns:nth-child(8) ,  .btncontaniner .directbtnFALSE:nth-child(8){filter: hue-rotate(60deg);}  
+.btncontaniner .sidebarbtns:nth-child(9) ,  .btncontaniner .directbtnFALSE:nth-child(9){filter: hue-rotate(180deg);}  
+
+.btncontaniner .sidebarbtns::before ,.btncontaniner .directbtnFALSE::before{
+  content: "";
+  position: absolute;
+left: -1.04vw ;
+top: 1.406vw;
+ transform: translateY(-50%);
+width: 1.04vw;
+height: 0.104vw;
+background-color: #0f0;
+box-shadow: 0.26vw -0.416vw 0 #0f0,0.26vw  0.416vw 0 #0f0  ;
+  transition: width 0.5s, left 0.5s , height 0.5s , box-shadow 0.5s;
+  transition-delay:  1s , 0.5s , 0s , 0s ;
+}
+.btncontaniner .sidebarbtns:hover::before{
+  width: 62%;
+  height: 110%;
+  left: -0.104vw;
+  box-shadow: 0.26vw  0vw 0 #0f0,0.26vw  0vw 0 #0f0  ;
+ transition-delay:  0s , 0s , 0.5s , 1s ;
+}
+ 
+.btncontaniner .sidebarbtns::after ,.btncontaniner .directbtnFALSE::after{ 
+  content: "";
+  position: absolute;
+right: -1.04vw ;
+top: 1.406vw;
+ transform: translateY(-50%);
+width: 1.04vw;
+height: 0.104vw;
+background-color: #0f0;
+box-shadow: -0.26vw -0.416vw 0 #0f0, -0.26vw  0.416vw 0 #0f0  ;
+  transition: width 0.5s, right 0.5s , height 0.5s , box-shadow 0.5s;
+  transition-delay:  1s , 0.5s , 0s , 0s ;
+}
+.btncontaniner .sidebarbtns:hover::after{
+  width: 62%;
+  height: 110%;
+  right: -0.104vw;
+  box-shadow: -0.26vw  0vw 0 #0f0,-0.26vw  0vw 0 #0f0  ;
+ transition-delay:  0s , 0s , 0.5s , 1s ;
+}
+   .boxheading {
+    width: 17vw;
+    height: 6vw;
+    overflow: hidden;
+    display: flex;
+    padding: 2vw;
+    filter: hue-rotate(46deg);
+}
+ #Customization{
+  position: relative;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 2vw;
+    text-transform: uppercase;
+    letter-spacing: 0.104vw;
+    text-shadow: 0vw 0vw 0.52vw #00b3ff, 0vw 0vw 1.04vw #00b3ff,0vw 0vw 2.08vw #00b3ff, 0vw 0vw 3.125vw #00b3ff, 0vw 0vw 4.16vw #00b3ff, 0vw 0vw 6.25vw #00b3ff   ;
+ }
+ .lightbar{
+  position: absolute;
+  top: 1.5vw;
+  left: 0;
+  width: 0.52vw ;
+  height: 6vw;
+  border-radius: 0.52vw;
+  color: #b5ff00;    
+  z-index: 2;
+  box-shadow: 0vw 0vw 0.52vw currentColor, 0vw 0vw 1.04vw currentColor,0vw 0vw 2.08vw currentColor, 0vw 0vw 3.125vw currentColor, 0vw 0vw 4.16vw currentColor, 0vw 0vw 5.2vw currentColor, 0vw 0vw 6.25vw currentColor, 0vw 0vw 7.29vw currentColor, 0vw 0vw 8.3vw currentColor,0vw 0vw 9.375vw currentColor, 0vw 0vw 10.4vw currentColor, 0vw 0vw 11.45vw currentColor, 0vw 0vw 12.5vw currentColor, 0vw 0vw 13.54vw currentColor, 0vw 0vw 14.58vw currentColor, 0vw 0vw 15.625vw currentColor   ;
+background-color: white;
+animation: aniamatetext 5s linear infinite;
+ }
+ .toplayer{
+   display: none;
+   position: absolute;
+   top: 2vw;
+  left: 0;
+  width: 18vw ;
+  height: 6vw;
+  border-radius: 0.52vw;
+background-color: #0f0f0f;
+  color: white;
+  z-index: 2;
+animation: aniamatetoplayer 10s linear infinite;
+
+ }
+
+ @keyframes aniamatetext {
+   0%,5%  {transform: scaleY(0)  translateX(3vw);}
+   10%     {transform: scaleY(1)  translateX(3vw);} 
+   90%    {transform: scaleY(1)  translateX(20vw);}
+   95% , 100%   {transform: scaleY(0)  translateX(20vw);}
+ }
+ @keyframes aniamatetoplayer {
+  2.5%     {transform: translateX(0);}
+   5%       {transform: translateX(0);} 
+   45%     {transform: translateX(18vw);}
+   47.5% , 50%        {transform: translateX(18vw);}
+  50.001% , 52.5%   {transform: translateX(-18vw);}
+   55%     {transform: translateX(-18vw);} 
+   95%     {transform: translateX(0vw);}
+   97.5% , 100%       {transform: translateX(0vw);}
+ }
+.submainbtncontanier{
+  flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: -2vw;
+    justify-content: center;
+    padding: 2vw;
+}
+#Customization_selector.activatedMenuClass::after , .ModesOPtim.activatedMenuClass::after{
+  width: 62%;
+  height: 110%;
+  right: -0.104vw;
+  box-shadow: -0.26vw  0vw 0 #0f0, -0.26vw  0vw 0 #0f0  ;
+ transition-delay:  0s , 0s , 0.5s , 1s ;
+}
+ #Customization_selector.activatedMenuClass::before ,  .ModesOPtim.activatedMenuClass::before{
+  width: 62%;
+  height: 110%;
+  left: -0.104vw;
+  box-shadow: 0.26vw  0vw 0 #0f0,0.26vw  0vw 0 #0f0  ;
+ transition-delay:  0s , 0s , 0.5s , 1s ;
+}
+#Customization_selector.activatedMenuClass , .ModesOPtim.activatedMenuClass {
+  color: black;
+  box-shadow: 0vw 0vw 0.52vw #0f0,0vw  0vw 1.04vw #0f0,0vw  0vw 2.08vw #0f0,0vw  0vw 4.16vw #0f0,0vw  0vw 8.3vw #0f0  ;
+}
+ 
+.switch{
+  position: relative;
+    width: 4.427vw;
+    height: 4.58vw;
+    border: 0.156vw solid #0000;
+    background: linear-gradient(#eee ,#ccc , #eee);
+    border-radius: 0.52vw;
+    display: flex;
+    justify-content:  center ;
+    align-items: center;
+    box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
+    flex-direction: column;
+}
+ 
+   
+  .switch .ON_OFF_METER::after{ 
+    content: "OFF";
+    color: #fff;
+    letter-spacing: 0.104vw;
+    position: absolute;
+    font-size: 1.45vw;
+    top: 72%;
+    left: -82%;
+    z-index: 5;
+    text-shadow: 0vw 0vw 0.52vw #ff0000, 0vw 0vw 1.04vw #ff0000, 0vw 0vw 2.08vw #ff0000, 0vw 0vw 3.125vw #ff0000, 0vw 0vw 4.16vw #ff0000, 0vw 0vw 6.25vw #ff0000;
+   }
+  .switch .circleONOFF{
+    position: absolute;
+    width: 0.4vw;
+    height: 0.4vw;
+    background: currentColor;
+    border-radius: 50%;
+    border: 0.2vw solid black;
+    left: -60%;
+    top: 40%;
+    color: red;
+    box-shadow: 0vw 0vw 1.2vw 0.4vw currentColor; 
+  }
+   .switch .btn{
+    position: relative;
+    width: 1.3vw;
+    height: 2.08vw;
+    background: linear-gradient(#777 ,#fff ,#777);
+    border-radius: 0.3125vw ;
+    border: 0.104vw solid #0000;
+    cursor: pointer;
+    box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
+}
+.switch .btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(#fff , #fff);
+    border-radius: 0.208vw;
+    box-shadow: -0.052vw -0.052vw 0.104vw 0.156vw black;
+}
+#switch1.on ,   #switch2.on , #switch3.on{box-shadow:  -0.104vw   0.104vw 0.104vw 0.104vw black;  }
+#switch1.on  .btn::before ,  #switch2.on  .btn::before ,  #switch3.on  .btn::before{top: 15%;box-shadow: -0.052vw 0.052vw 0.104vw 0.104vw black;}
+#switch1.on   .btn ,  #switch2.on  .btn ,  #switch3.on  .btn  { box-shadow: -0.052vw 0.052vw 0.104vw 0.104vw black;}
+#switch1.on .ON_OFF_METER::after , #switch2.on .ON_OFF_METER::after , #switch3.on .ON_OFF_METER::after{ content: "ON";text-shadow: 0vw 0vw 0.52vw #ffff00, 0vw 0vw 1.04vw #ffff00, 0vw 0vw 2.08vw #ffff00, 0vw 0vw 3.125vw #ffff00, 0vw 0vw 4.16vw #ffff00, 0vw 0vw 6.25vw #ffff00;}
+#switch1.on .circleONOFF ,#switch2.on .circleONOFF ,#switch3.on .circleONOFF { color: yellow; }
+ 
+.table tbody tr:hover{
+background: #ffffffb5;
+box-shadow: var(--All-element-common-box-shadow);
+text-shadow: 0.016vw 0.06vw 0.2vw black, 0.08vw 0.06vw 0.2vw black, -0.024vw -0.012vw 0.2vw black, -0.016vw -0.012vw 0.2vw black, 0.032vw 0.018vw 0.2vw black, 0.024vw 0.018vw 0.2vw black, -0.032vw -0.018vw 0.2vw black, -0.024vw -0.018vw 0.2vw black ;
+ filter: drop-shadow(-0.78vw 1vw 0.8vw black) contrast(1.18);
+ 
+} 
+.table tbody tr:hover td{
+box-shadow:   inset 0 0 1vw  0.2vw #ff08e8; 
+}
+ </style>
+
+<body id="body">
+  <noscript>You need to enable JavaScript to run this app.</noscript> 
+    <audio id="click_sound" src="sounds/click_sound.mp3"></audio>
+    <audio id="btnClick" src="/btnClick.mp3"></audio>
+  <div class="onclickbackgorund" id="onclickbackgroundID"> 
+     <span></span><span></span><span></span<span></span><span></span><span></span<span></span><span></span>    
+    </div>
+
+   <!-- extra bacground elements -->
+   <div id="particles-js"     ></div> 
+   <div id="background-container">
+     <!-- <div class="sunMain" > -->
+      <div class="sunmain"> 
+        <div class="sunwrap">
+          <div class="sunbackground"></div>
+          <div class="sunclouds"></div>   
+         </div>
+         <div class="Sunmask"></div> 
+    </div>
+     <div class="planetaMian">
+       <div class="planet"> 
+         <div class="wrap">
+           <div class="background"></div>
+           <div class="clouds"></div>   
+          </div>
+          <div class="mask"></div>
+        </div>
+      </div>
+    <div id="earth-img"></div>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div> </div >
+     
+    <header  id="header">
+      <div class="logo">logo</div>
+      <input type="search" name="" autocomplete="off" id="search" placeholder="search elements" onclick="addsearch();">  
+      <div class="suggestionsMainCLASS">
+          <table class="table  sortable ">
+            <thead>
+              <tr>
+                <th id="table-AtomicNo">Atomic No.</th>
+                <th id="table-AtomicMass">Atomic Mass</th>
+                <th id="table-ElementName">Element Name</th>
+                <th id="table-Gruop">Gruop</th>
+                <th id="table-Period">Period</th>
+                <th id="table-ForMore">For More</th>
+              </tr>
+            </thead>
+            <tbody class="tablebody">
+          
+            </tbody>
+             
+          </table>
+       </div>
+       <ul> 
+     <div class="btncontaniner">
+       <a class="header_A"href="#"><span>Home</span></a>
+       <a class="header_A"href="/Contrat"><span>Contrat us</span></a>
+       <a class="header_A"href="#"><span>About us</span></a>
+       <a class="header_A"href="/"><span>Webpages</span></a>
+      </div>
+      </ul> 
+    </header>
+    
+    <div class="toggle" onclick="togglemenu();"></div>
+  <div id="cutoption">
+    <img class="cutoptionimgClass" id="cutoptionimg" src="/close.png" alt="" /><img  class="cutoptionimgClass"  id="cutoptionimg2" src="/close.png" alt="" />
+  </div>
+  
+  <div class="sidebar ">
+    <div class="BlankForSidebar1 BlankForSidebar  "></div>
+     <div class="btncontaniner sidebarcontanier">
+    <a  class="sidebarbtns  " id="directBTN_1"href="/"><span>Home</span></a>
+    <a  class="sidebarbtns  " id="directBTN_2"href="/Contrat"><span>Contrat us</span></a>
+    <a  class="sidebarbtns  " id="directBTN_3"href="#"><span>About us</span></a>
+    <a  class="sidebarbtns  " id="directBTN_4"href="/"><span>Webpages</span></a>    
+     <a class="sidebarbtns  " id="directBTN_5"href="mathapp"><span>Android work</span></a>
+     <a class="sidebarbtns  " id="directBTN_6"href="/weatherapp"><span> WebApp  </span></a> 
+     <a class="sidebarbtns "href="#" id="Customization_selector"><span> customization Setting</span></a>
+    <a class="sidebarbtns  "  id="directBTN_7"href="pavbhajiblog"><span>Blog</span></a>
+    </div>
+  </div>
+   <div class="sidebar2">
+      <div class="BlankForSidebar2 BlankForSidebar"></div>
+    <div class="btncontaniner sidebarcontanier Customization-modes">
+      <div class="boxheading">
+        <div class="lightbar"></div>
+        <div class="toplayer"></div>
+        <p id="Customization">Customization modes</p>
+      </div>
+        <div class="submainbtncontanier">
+          <div class="  AllMainCustomize">
+            <div class="sunMainCustomizeFlex MainCustomizeFlex">
+              <p id="sunCustomize" class="submainheading">Sun</p>   
+               <div class="switch"id="switch1" >
+                 <div class="btn btn1" onclick="onClickonSwitch('btn1');">
+                </div>
+                <span class="circleONOFF"></span>
+                <p class="ON_OFF_METER"  id="ON_OFF_METER_1"></p>
+                     </div></div>
+            <div class="earthMainCustomizeFlex MainCustomizeFlex">
+              <p id="earthCustomize" class="submainheading">Earth</p>    
+              <div class="switch" id="switch2">
+                  <div class="btn btn2" onclick="onClickonSwitch('btn2');">
+                  </div>
+                  <span class="circleONOFF"></span>
+                  <p class="ON_OFF_METER" id="ON_OFF_METER_2"></p>
+          </div></div>
+          <div class="ParticleJSMainCustomizeFlex MainCustomizeFlex">
+            <p id="ParticleJSCustomize" class="submainheading"> Particle</p>    
+            <div class="switch" id="switch3">
+                <div class="btn btn2" onclick="onClickonSwitch('btn3');">
+                </div>
+                <span class="circleONOFF"></span>
+                <p class="ON_OFF_METER" id="ON_OFF_METER_3"></p>
+        </div></div>
+          </div> 
+ 
+        </div>
+   </div>
+  </div>
+
+  <div id="periodictable">
+    <div id="seleectormetaldiv"> 
+    <div id="selectormetals">
+      <p class="paraforselctormetal , alkali-metals-selector" id="alkali-metals-selector-id">alkali metals</p> 
+      <p class="paraforselctormetal , akiline-earth-metals-selector" id="akiline-earth-metals-selector-id">akiline earths metals </p>
+      <p class="paraforselctormetal , transition-metal-selector" id="transition-metal-selector-id">transition-metal </p>
+      <p class="paraforselctormetal , lanthrathideseries-selector" id="lanthrathideseries-selector-id">lanthrathide</p>
+      <p class="paraforselctormetal , anthrathideseires-selector" id="anthrathideseires-selector-id">anthrathide</p>
+      <p class="paraforselctormetal , post-transition-metal-selector" id="post-transition-metal-selector-id">post-transition-metal </p>
+      <p class="paraforselctormetal , metalloid-selector" id="metalloid-selector-id">metalloid </p>
+      <p class="paraforselctormetal , other-nonmetal-selector" id="other-nonmetal-selector-id">other-nonmetal </p>
+      <p class="paraforselctormetal , noble-gasses-selector" id="noble-gasses-selector-id">noble gasses</p>
+      <p class="paraforselctormetal , unknown-selector" id="unknown-selector-id">unknown</p>
+    </div></div>
+    <div class="elements   " id="element">
+       <!-- alkali metals -->
+       <div class="your-element" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , alkali-metals" id="elements-1"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , alkali-metals" id="elements-3"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , alkali-metals" id="elements-11"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , alkali-metals" id="elements-19"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , alkali-metals" id="elements-37"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , alkali-metals" id="elements-55"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , alkali-metals" id="elements-87"></div>
+
+      <!-- alkaline earths metals          -->
+      <div onclick="clicksoundfun()" class="elemetsall , akiline-earth-metals" id="elements-4"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , akiline-earth-metals" id="elements-12"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , akiline-earth-metals" id="elements-20"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , akiline-earth-metals" id="elements-38"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , akiline-earth-metals" id="elements-56"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , akiline-earth-metals" id="elements-88"></div>
+
+      <!--transition metals     -->
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-21"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-22"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-23"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-24"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-25"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-26"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-27"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-28"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-29"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-30"></div>
+
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-39"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-40"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-41"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-42"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-43"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-44"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-45"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-46"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-47"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-48"></div>
+
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-72"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-73"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-74"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-75"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-76"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-77"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-78"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-79"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-80"></div>
+
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-104"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-105"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-106"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-107"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-108"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , transition-metal" id="elements-112"></div>
+
+      <!-- post-transition-metal -->
+      <div onclick="clicksoundfun()" class="elemetsall , post-transition-metal" id="elements-13"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , post-transition-metal" id="elements-31"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , post-transition-metal" id="elements-49"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , post-transition-metal" id="elements-50"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , post-transition-metal" id="elements-81"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , post-transition-metal" id="elements-82"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , post-transition-metal" id="elements-83"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , post-transition-metal" id="elements-84"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , post-transition-metal" id="elements-114"></div>
+
+      <!-- metalloid -->
+      <div onclick="clicksoundfun()" class="elemetsall , metalloid" id="elements-5"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , metalloid" id="elements-14"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , metalloid" id="elements-32"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , metalloid" id="elements-33"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , metalloid" id="elements-51"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , metalloid" id="elements-52"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , metalloid" id="elements-85"></div>
+
+      <!-- other-nonmetal -->
+
+      <div onclick="clicksoundfun()" class="elemetsall , other-nonmetal" id="elements-6"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , other-nonmetal" id="elements-7"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , other-nonmetal" id="elements-8"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , other-nonmetal" id="elements-9"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , other-nonmetal" id="elements-15"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , other-nonmetal" id="elements-16"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , other-nonmetal" id="elements-17"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , other-nonmetal" id="elements-34"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , other-nonmetal" id="elements-35"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , other-nonmetal" id="elements-53"></div>
+
+      <!-- noble metals -->
+      <div onclick="clicksoundfun()" class="elemetsall , noble-metals" id="elements-2"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , noble-metals" id="elements-10"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , noble-metals" id="elements-18"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , noble-metals" id="elements-36"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , noble-metals" id="elements-54"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , noble-metals" id="elements-86"></div>
+
+      <!-- unknown -->
+      <div onclick="clicksoundfun()" class="elemetsall , unknown" id="elements-109"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , unknown" id="elements-110"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , unknown" id="elements-111"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , unknown" id="elements-113"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , unknown" id="elements-115"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , unknown" id="elements-116"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , unknown" id="elements-117"></div>
+      <div onclick="clicksoundfun()" class="elemetsall , unknown" id="elements-118"></div>
+    </div>
+
+    <div class="class" id="otherseries">
+      <div id="lanthrathideseries">
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-57"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-58"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-59"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-60"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-61"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-62"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-63"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-64"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-65"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-66"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-67"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-68"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-69"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-70"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , lanthrathideseries_elements" id="elements-71"></div>
+      </div>
+
+      <div id="anthrathideseires">
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-89"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-90"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-91"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-92"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-93"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-94"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-95"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-96"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-97"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-98"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-99"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-100"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-101"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-102"></div>
+        <div onclick="clicksoundfun()" class="elemetsall , anthrathideseires_elements" id="elements-103"></div>
+      </div>
+    </div>
+  </div>
+  <script  src="/vanilla-tilt.js"></script>
+  <script src="/particles.js"></script>
+  <script src="/partricleapp.js"></script>
+  <script>
+      window.scrollTo(0, 0);
+      setTimeout(() => {
+      window.scrollTo(0, 0);
+      }, 900);
+
+      //  querySelector for alll elements
+      for (let i = 1; i <= 118; i++) {
+        this["elements" + i] = document.querySelector(`#elements-${i}`);
+      }
+        //  querySelector  for alll onclickcontent elements
+        function onclickdisplaycontent_qurryselector( ) {
+          for (let i = 1; i <= 118; i++) {
+            this["onclickdisplaycontent" + i] = document.querySelector(`#onclickdisplaycontent-${i}`);
+          } 
+        } 
+        function summery_qurryselector( ) {
+          for (let i = 1; i <= 118; i++) {
+            this["summary" + i] = document.querySelector(`#summary-${i}`);
+          } 
+        } 
+        function ionization_energies_qurryselector( ) {
+          for (let i = 1; i <= 118; i++) {
+            this["ionization_energies" + i] = document.querySelector(`#ionization_energies-${i}`);
+          } 
+        } 
+       const clicksound =document.querySelector("#click_sound")
+      const Btnclick =  document.querySelector("#btnClick") 
+      const onclickbackgorund = document.querySelector(".onclickbackgorund")
+      const cutoptionmain = document.getElementById("cutoptionimg");
+      const cutoptionmain2 = document.getElementById("cutoptionimg2");
+      const elementsGRID_Class = document.querySelector(".elements")
+      const elementsGRID_ID = document.querySelector("#element")
+      const elemetsall = document.querySelector(".elemetsall");
+      const paraforselctormetal = document.querySelectorAll(".paraforselctormetal");
+      const selectors = document.querySelector("#selectormetals");
+      const alkalimetalsselectorid = document.querySelector(" #alkali-metals-selector-id ");
+      const akilineearthmetalselectorid = document.querySelector( " #akiline-earth-metals-selector-id ");
+      const transitionmetalselectorid = document.querySelector("#transition-metal-selector-id  ");
+      const lanthrathideseriesselectorid = document.querySelector( "#lanthrathideseries-selector-id  ");
+      const anthrathideseiresselectorid = document.querySelector( "#anthrathideseires-selector-id  " );
+      const posttransitionmetalselectorid = document.querySelector( "#post-transition-metal-selector-id ");
+      const metalloidselectorid = document.querySelector(" #metalloid-selector-id " );
+      const othernonmetalselectorid = document.querySelector(" #other-nonmetal-selector-id " );
+      const noblegassesselectorid = document.querySelector( " #noble-gasses-selector-id ");
+      const unknownselectorid = document.querySelector(" #unknown-selector-id ")
+      const cutoptionimg1 = document.querySelector("#cutoptionimg")
+      const cutoptionimg2 = document.querySelector("#cutoptionimg2")
+      const MenuToggle = document.querySelector(".toggle")
+      const sidebar = document.querySelector(".sidebar")
+      const sidebar2 = document.querySelector(".sidebar2")
+      const bodyTag = document.querySelector("body")
+      const BlankForSidebar1 = document.querySelector(".BlankForSidebar")
+      const header = document.querySelector("#header")
+      const search = document.querySelector("#search")
+      const backgroundcontainer = document.querySelector("#background-container")
+      const periodictable = document.querySelector("#periodictable")
+      const particlesJS = document.querySelector("#particles-js")
+      const btncontaninerSidebarcontanierOptimaizations_modes = document.querySelector(".btncontaniner.sidebarcontanier.Customization-modes ")
+      const Customization_selector = document.querySelector("#Customization_selector"); 
+      const switch1 =  document.querySelector("#switch1")
+      const switch2 =  document.querySelector("#switch2")
+      const table =  document.querySelector(".table")
+      const tablebody =  document.querySelector(".tablebody")
+      const tableAtomicNo =  document.querySelector("#table-AtomicNo")
+      const tableAtomicMass =  document.querySelector("#table-AtomicMass")
+      const tableElementName =  document.querySelector("#table-ElementName")
+      const tableGruop =  document.querySelector("#table-Gruop")
+      const tablePeriod =  document.querySelector("#table-Period")
+      const tableForMore =  document.querySelector("#table-ForMore")
+      const sunmain =  document.querySelector(".sunmain")
+      const planetaMian =  document.querySelector(".planetaMian")
+ 
+      let selrectormetalsbool = undefined ;
+      let elementsclickchecker = false
+       
+
+      // Computed Style
+      const cutoptionmain1_querySelector_style = getComputedStyle(cutoptionimg1);
+      const cutoptionmain2_querySelector_style = getComputedStyle(cutoptionimg2);
+
+
+      // function  for add activated class on selectors"
+       function ADD_activatedclassFOR_selectors(classname) {
+           alkalimetalsselectorid.classList.add(classname);
+          akilineearthmetalselectorid.classList.add(classname);
+          transitionmetalselectorid.classList.add(classname);
+          lanthrathideseriesselectorid.classList.add(classname);
+          anthrathideseiresselectorid.classList.add(classname);
+          posttransitionmetalselectorid.classList.add(classname);
+          metalloidselectorid.classList.add(classname);
+          othernonmetalselectorid.classList.add(classname);
+          noblegassesselectorid.classList.add(classname);
+          unknownselectorid.classList.add(classname);
+        }
+      // function  for remove activated class on selectors"
+      function remove_activatedclassFOR_selectors(classname) {
+        alkalimetalsselectorid.classList.remove(classname);
+          akilineearthmetalselectorid.classList.remove(classname);
+          transitionmetalselectorid.classList.remove(classname);
+          lanthrathideseriesselectorid.classList.remove(classname);
+          anthrathideseiresselectorid.classList.remove(classname);
+          posttransitionmetalselectorid.classList.remove(classname);
+          metalloidselectorid.classList.remove(classname);
+          othernonmetalselectorid.classList.remove(classname);
+          noblegassesselectorid.classList.remove(classname);
+          unknownselectorid.classList.remove(classname);
+        }
+      // function for "for loop for add activated class on elements"
+      function ADD_activatedclassFOR_ALL_elements(classname) {
+        for(let as = 1 ; as <=118 ; as++  ){
+         document .getElementById(`elements-${as}`).classList.add(classname);
+        }}
+
+      // function for "for loop for removing activated class"
+      function removeactivatedclassFOR_all_elements(classname) {
+        for (let as = 1; as <= 118;  as++  ) {
+        this["elements"+as].classList.remove(classname);
+      }}
+      // function for "for loop for removing activated_elements_onclick   class"
+      function remove_activated_elements_onclickCLASS_ALL_118elements( ) {
+        for (let as = 1; as <= 118;  as++  ) {
+          this["elements"+as].classList.remove("activated_elements_onclick")
+          this["elements"+as].classList.remove("LeftAndRightSideElementsOnclick")
+          document.getElementById(`onclickdisplaycontent-${as}`).style.display ="none";
+       }}
+      // function for remove inline style form all 118 elements
+      function removeInlineSTYLE_OF_118_elements() {
+        for (let as = 1; as <= 118;  as++  ) {
+          this["elements"+as].removeAttribute('style')            
+        } }
+       // function for common click  on Selectors
+      function commonONCLICK_Selectors(params) {
+        selrectormetalsbool= true
+        cutoptionimg1.click();
+        cutoptionimg1.style.display = "flex";
+        cutoptionimg2.style.display = "flex";
+      removeactivatedclassFOR_all_elements('activeted');
+      if (elements2.classList.contains("activeted")){
+        removeactivatedclassFOR_all_elements('activeted');
+        clicksound.play(); 
+      }
+      else{
+        ADD_activatedclassFOR_ALL_elements('activeted');
+        elementsGRID_ID.classList.add("ACTIVATE_elementsGRID_ID")
+               if (params == "alkalimetalsselectorid") {
+                alkalimetalsselectorid.classList.add("selector_active")
+                 alkalimetals_remove_activatedCLASSform_elements();
+             }
+             if (params == "akilineearthmetalselectorid") {
+              alkali_earth_metals_remove_activatedCLASSform_elements();
+             }
+             if (params == "transitionmetalselectorid") {
+              transitionMETALS_remove_activatedCLASSform_elements();
+             }
+             if (params == "lanthrathideseriesselectorid") {
+              lanthrathideseries_remove_activatedCLASSform_elements();
+             }
+             if (params == "anthrathideseiresselectorid") {
+              anthrathideseires_remove_activatedCLASSform_elements();
+             }
+             if (params == "posttransitionmetalselectorid") {
+              post_transition_metals_remove_activatedCLASSform_elements();
+             }
+             if (params == "metalloidselectorid") {
+              metalloid_remove_activatedCLASSform_elements();
+             }
+             if (params == "othernonmetalselectorid") {
+              other_non_metals_remove_activatedCLASSform_elements();
+             }
+             if (params == "noblegassesselectorid") {
+              noble_metals_remove_activatedCLASSform_elements();
+             }
+             if (params == "unknownselectorid") {
+              unknownmetals_remove_activatedCLASSform_elements();
+             }
+         } 
+      }
+      // function for remove activate class from alkali metals
+      function alkalimetals_remove_activatedCLASSform_elements( ) {
+        elements1.classList.remove("activeted");
+        elements3.classList.remove("activeted");
+        elements11.classList.remove("activeted");
+        elements19.classList.remove("activeted");
+        elements37.classList.remove("activeted");
+        elements55.classList.remove("activeted");
+        elements87.classList.remove("activeted");
+      }
+
+    // function for remove activate class from akiline earth  metals
+      function alkali_earth_metals_remove_activatedCLASSform_elements( ) {
+        elements4.classList.remove("activeted");
+        elements12.classList.remove("activeted");
+        elements20.classList.remove("activeted");
+        elements38.classList.remove("activeted");
+        elements56.classList.remove("activeted");
+        elements88.classList.remove("activeted");
+      }
+      // function for remove activate class from transition metals
+      function transitionMETALS_remove_activatedCLASSform_elements( ) {
+        elements21.classList.remove("activeted");
+        elements22.classList.remove("activeted");
+        elements23.classList.remove("activeted");
+        elements24.classList.remove("activeted");
+        elements25.classList.remove("activeted");
+        elements26.classList.remove("activeted");
+        elements26.classList.remove("activeted");
+        elements27.classList.remove("activeted");
+        elements28.classList.remove("activeted");
+        elements29.classList.remove("activeted");
+        elements30.classList.remove("activeted");
+
+        elements39.classList.remove("activeted");
+        elements40.classList.remove("activeted");
+        elements41.classList.remove("activeted");
+        elements42.classList.remove("activeted");
+        elements43.classList.remove("activeted");
+        elements44.classList.remove("activeted");
+        elements45.classList.remove("activeted");
+        elements46.classList.remove("activeted");
+        elements47.classList.remove("activeted");
+        elements48.classList.remove("activeted");
+
+        elements72.classList.remove("activeted");
+        elements73.classList.remove("activeted");
+        elements74.classList.remove("activeted");
+        elements75.classList.remove("activeted");
+        elements76.classList.remove("activeted");
+        elements77.classList.remove("activeted");
+        elements78.classList.remove("activeted");
+        elements79.classList.remove("activeted");
+        elements80.classList.remove("activeted");
+
+        elements104.classList.remove("activeted");
+        elements105.classList.remove("activeted");
+        elements106.classList.remove("activeted");
+        elements107.classList.remove("activeted");
+        elements108.classList.remove("activeted");
+
+        elements112.classList.remove("activeted");
+      }
+
+      // function for remove activate class from lanthrathideseries metals
+      function lanthrathideseries_remove_activatedCLASSform_elements( ) {
+        elements57.classList.remove("activeted");
+        elements58.classList.remove("activeted");
+        elements59.classList.remove("activeted");
+        elements60.classList.remove("activeted");
+        elements61.classList.remove("activeted");
+        elements62.classList.remove("activeted");
+        elements63.classList.remove("activeted");
+        elements64.classList.remove("activeted");
+        elements65.classList.remove("activeted");
+        elements66.classList.remove("activeted");
+        elements67.classList.remove("activeted");
+        elements68.classList.remove("activeted");
+        elements69.classList.remove("activeted");
+        elements70.classList.remove("activeted");
+        elements71.classList.remove("activeted");
+      }
+         // function for remove activate class from anthrathideseires metals
+      function anthrathideseires_remove_activatedCLASSform_elements( ) {
+        elements89.classList.remove("activeted");
+        elements90.classList.remove("activeted");
+        elements91.classList.remove("activeted");
+        elements92.classList.remove("activeted");
+        elements93.classList.remove("activeted");
+        elements94.classList.remove("activeted");
+        elements95.classList.remove("activeted");
+        elements96.classList.remove("activeted");
+        elements97.classList.remove("activeted");
+        elements98.classList.remove("activeted");
+        elements99.classList.remove("activeted");
+        elements100.classList.remove("activeted");
+        elements101.classList.remove("activeted");
+        elements102.classList.remove("activeted");
+        elements103.classList.remove("activeted");
+      }
+
+      // function for remove activate class from post transition  metals
+         function post_transition_metals_remove_activatedCLASSform_elements( ) {
+        elements13.classList.remove("activeted");
+        elements31.classList.remove("activeted");
+        elements49.classList.remove("activeted");
+        elements50.classList.remove("activeted");
+        elements81.classList.remove("activeted");
+        elements82.classList.remove("activeted");
+        elements83.classList.remove("activeted");
+        elements84.classList.remove("activeted");
+        elements114.classList.remove("activeted");
+      }
+         // function for remove activate class from metalloid metals
+      function metalloid_remove_activatedCLASSform_elements( ) {
+        elements5.classList.remove("activeted");
+        elements14.classList.remove("activeted");
+        elements32.classList.remove("activeted");
+        elements33.classList.remove("activeted");
+        elements51.classList.remove("activeted");
+        elements52.classList.remove("activeted");
+        elements85.classList.remove("activeted");
+      }
+
+      // function for remove activate class from other non metals
+      function other_non_metals_remove_activatedCLASSform_elements( ) {
+        elements6.classList.remove("activeted");
+        elements7.classList.remove("activeted");
+        elements8.classList.remove("activeted");
+        elements9.classList.remove("activeted");
+        elements15.classList.remove("activeted");
+        elements16.classList.remove("activeted");
+        elements17.classList.remove("activeted");
+        elements34.classList.remove("activeted");
+        elements35.classList.remove("activeted");
+        elements53.classList.remove("activeted");
+      }
+
+      // function for remove activate class from noble gasses  metals
+      function noble_metals_remove_activatedCLASSform_elements( ) {
+        elements2.classList.remove("activeted");
+        elements10.classList.remove("activeted");
+        elements18.classList.remove("activeted");
+        elements36.classList.remove("activeted");
+        elements54.classList.remove("activeted");
+        elements86.classList.remove("activeted");
+      }
+      
+      // function for remove activate class from unknown metals
+      function unknownmetals_remove_activatedCLASSform_elements( ) {
+        elements109.classList.remove("activeted");
+        elements110.classList.remove("activeted");
+        elements111.classList.remove("activeted");
+        elements113.classList.remove("activeted");
+        elements115.classList.remove("activeted");
+        elements116.classList.remove("activeted");
+        elements117.classList.remove("activeted");
+        elements118.classList.remove("activeted");
+      }
+      // function for zIndex-1 to all selectors on click elements
+      function selector_zIndex_1() {
+        alkalimetalsselectorid.style.zIndex = "1";
+          akilineearthmetalselectorid.style.zIndex = "1";
+          transitionmetalselectorid.style.zIndex = "1";
+          lanthrathideseriesselectorid.style.zIndex = "1";
+          anthrathideseiresselectorid.style.zIndex = "1";
+          posttransitionmetalselectorid.style.zIndex = "1";
+          metalloidselectorid.style.zIndex = "1";
+          othernonmetalselectorid.style.zIndex = "1";
+          noblegassesselectorid.style.zIndex = "1";
+          unknownselectorid.style.zIndex = "1";
+      }
+      // function for onclick on common content 118 elements
+        function Common_FOR_all_118Elements(params) {
+          if (!elementsclickchecker &&  searchBool == false ) { 
+              cutoptionimg1.click();
+               elementsclickchecker = true;
+               selector_zIndex_1();
+           ADD_activatedclassFOR_ALL_elements('activeted');
+              particlesJS.classList.add("activeteBLured")
+              backgroundcontainer.classList.add("activeteBLured")
+              header.classList.add("activeteBLured")
+              header.removeAttribute('style')            
+              selectors.classList.add("activeted")
+              onclickbackgorund.classList.add("activated_span")
+            setTimeout(() => {
+            this["elements"+params].classList.add("activated_elements_onclick")
+            this["elements"+params].classList.remove("activeted")
+          document.getElementById( `onclickdisplaycontent-${params}`).style.display = "flex";
+            cutoptionimg1.style.display="flex"
+            cutoptionimg2.style.display="flex"
+               }, 300);
+          clicksound.play();
+        }}
+      // function for cutoption 
+      function cutoptionfunction( ) {
+        elementsclickchecker = false;
+        alkalimetalsselectorid.classList.remove("selector_active")
+        cutoptionmain2.style.display = "none";
+        cutoptionmain.style.display = "none";
+        backgroundcontainer.style.filter="none"
+        header.style.filter="none"
+         elementsGRID_ID.classList.remove("ACTIVATE_elementsGRID_ID")
+        particlesJS.removeAttribute("style");
+        onclickbackgorund.classList.remove("activated_span")
+        selectors.classList.remove("activeted")
+         clicksound.play();
+         removeInlineSTYLE_OF_118_elements();
+         removeactivatedclassFOR_all_elements('activeted');
+         remove_activatedclassFOR_selectors();
+         remove_activated_elements_onclickCLASS_ALL_118elements();
+      }
+      function scrollFunction() {
+      setInterval(() => {
+        if ( document.body.scrollTop > 50  ) {
+          selectors.style.boxShadow = "rgb(215 215 40) 0.156vw 0.104vw 0.208vw 0vw";
+          selectors.style.borderRight = ".18vw solid  rgba(215 215 40)";
+          selectors.style.borderBottom = ".18vw solid  rgba(215 215 40)";
+        } else {
+          selectors.style.boxShadow = "none";
+          selectors.style.border = "none";
+        }
+      }, 500);
+    }
+      async function all() {
+      const name = [],atomic_mass = [],symbol = [],number = [],appearance = [],boil = [],category = [],color = [],density = [],discovered_by = [],melt = [],molar_heat = [],named_by = [],period = [],phase = [],source = [],spectral_img = [],summary = [],xpos = [],ypos = [],shells = [],electron_configuration = [],electron_configuration_semantic = [],electron_affinity = [],electronegativity_pauling = [],ionization_energies = [];
+      await fetch("./data.json")
+        .then(function (respon) {
+          return respon.json();
+        })
+        .then(function (data) {
+          for (let s = 0; s <= 118;) {
+            name[s] = data.elements[s].name;atomic_mass[s] = data.elements[s].atomic_mass;symbol[s] = data.elements[s].symbol;appearance[s] = data.elements[s].appearance;boil[s] = data.elements[s].boil;category[s] = data.elements[s].category;color[s] = data.elements[s].color;density[s] = data.elements[s].density;discovered_by[s] = data.elements[s].discovered_by;melt[s] = data.elements[s].melt;molar_heat[s] = data.elements[s].molar_heat;named_by[s] = data.elements[s].named_by;period[s] = data.elements[s].period;phase[s] = data.elements[s].phase;source[s] = data.elements[s].source;spectral_img[s] = data.elements[s].spectral_img;summary[s] = data.elements[s].summary;xpos[s] = data.elements[s].xpos;ypos[s] = data.elements[s].ypos;shells[s] = data.elements[s].shells;electron_configuration[s] =data.elements[s].electron_configuration;electron_configuration_semantic[s] =data.elements[s].electron_configuration_semantic;electron_affinity[s] = data.elements[s].electron_affinity;electronegativity_pauling[s] =data.elements[s].electronegativity_pauling;ionization_energies[s] = data.elements[s].ionization_energies;
+            s++;
+          }
+        });
+        let atomicmassfix = []
+        let atomicmassfix2 = []
+      // some extra feautres in it link if present or not
+      for (let asss = 0; asss <= 118; asss++) {
+        if (spectral_img[asss] == null) {
+          spectral_img[asss] = "not avalable";
+        }
+        atomic_mass[asss] = atomic_mass[asss].toFixed(2);
+        atomic_mass[asss] = parseFloat(atomic_mass[asss])         
+         }
+
+       for (let x = 0; x <  118; x++) {
+         this['elements' + [x+1]].innerHTML += `<p id="Atomic_number" >${[x+1]}</p>  
+         <p id="Elements_short_name" >${symbol[x]}</p> 
+         <p id="Elements_full_name">${name[x]}</p> 
+         <p id="atomic_mass">${atomic_mass[x]}</p> <div class="allonclickdisplaycontent"id="onclickdisplaycontent-${x}"> <div class ="summary"id="summary-${x}">summary = ${summary[x]}</div>  <div class ="appearance"id="appearance{x}" >appearance = ${appearance[x]}</div> <div class ="boil" id="boil-${x}" >boiling point = ${boil[x] }   <sup>o</sup> C</div> <div class ="category"id="category-${x}"> category = ${category[x]}</div> <div class="color" id="color-${x}">color = ${color[x]}</div><div class ="density"id="density-${x}" >density = ${density[x]}</div> <div class = "discovered_by"id="discovered_by-${x}" >Discovered by = ${discovered_by[x]}</div>  <div class ="melt"id="melt-${x}">melting point = ${melt[x]}</div><div class ="molar_heat" id="molar_heat-${x}">molar heat = ${molar_heat[x]}</div> <div class = "named_by"id="named_by-${x}" >named by =  ${named_by[x]}</div> <div class  ="period"id="period-${x}">period = ${period[x]}</div> <div class  ="phase" id="phase-${x}">phase= ${phase[x]}</div><div class ="source" id="source-${x}}" >For more information = <a href="${source[x] }" target="_blank" rel="noopener noreferrer">${source[x] }</a></div> <div class ="spectral_img"id="spectral_img-${x}" >spectral img =  <a href=" ${spectral_img[x]}" target="_blank" rel="noopener noreferrer"> ${spectral_img[x] }</a> </div><div class ="phase"id="phase-${x}">phase = ${phase[x]}</div><div class="xpos"id="xpos-${x}" >xpos = ${xpos[x]}</div><div class ="ypos"id="ypos-${x}" >ypos = ${ypos[x]}</div> <div class="electron_configuration"id="electron_configuration-${x}" >electron configuration = ${electron_configuration[x]}</div> <div class ="electron_configuration_semantic"id="electron_configuration_semantic-${x}" >electron configuration semantic = ${electron_configuration_semantic[x]}</div><div class="electron_affinity"id="electron_affinity-${x}">electron affinity = ${electron_affinity[x]}</div><div class="electronegativity_pauling"id="electronegativity_pauling-${x}" >electronegativity pauling = ${electronegativity_pauling[x]}</div>      <div class="ionization_energies"id="ionization_energies-${x}" >ionizationenergies  = ${ionization_energies[x] }</div>   </div> `;
+         tablebody.innerHTML +=` <tr>
+                <td>${[x+1]}</td>
+                <td>${atomic_mass[x]}</td>
+                <td>${name[x]}</td>
+                <td>1</td>
+                <td>${period[x]}</td>
+                <td  class="btnTable" >click</td>
+                </tr>` 
+       }
+   
+        onclickdisplaycontent_qurryselector();
+        summery_qurryselector();
+        ionization_energies_qurryselector();
+      }
+    all(); 
+
+
+    function clicksoundfun() {
+       if (searchBool == false  && elementsclickchecker == false) {
+           clicksound.play();
+           }}  
+         window.onscroll = function () { scrollFunction();  };
+    alkalimetalsselectorid.addEventListener("click", () => {
+      window.scrollTo(6, 275);
+      commonONCLICK_Selectors("alkalimetalsselectorid");
+    });
+
+    akilineearthmetalselectorid.addEventListener("click", () => {
+      window.scrollTo(6, 300);
+      commonONCLICK_Selectors("akilineearthmetalselectorid");
+    });
+
+    transitionmetalselectorid.addEventListener("click", () => {
+      window.scrollTo(6, 320);
+      commonONCLICK_Selectors("transitionmetalselectorid");
+    });
+
+    lanthrathideseriesselectorid.addEventListener("click", () => {
+      window.scrollTo(0, 520);
+      commonONCLICK_Selectors("lanthrathideseriesselectorid");
+    });
+
+    anthrathideseiresselectorid.addEventListener("click", () => {
+        window.scrollTo(0, 580);
+        commonONCLICK_Selectors("anthrathideseiresselectorid");
+    });
+
+    posttransitionmetalselectorid.addEventListener("click", () => {
+       window.scrollTo(0, 300);
+       commonONCLICK_Selectors("posttransitionmetalselectorid");
+    });
+
+    metalloidselectorid.addEventListener("click", () => {
+      window.scrollTo(6, 170);
+      commonONCLICK_Selectors("metalloidselectorid");
+    });
+
+    othernonmetalselectorid.addEventListener("click", () => {
+      window.scrollTo(0, 120);
+      commonONCLICK_Selectors("othernonmetalselectorid");
+    });
+
+    noblegassesselectorid.addEventListener("click", () => {
+      window.scrollTo(0, 200);
+      commonONCLICK_Selectors("noblegassesselectorid");
+    });
+
+    unknownselectorid.addEventListener("click", () => {
+      window.scrollTo(0, 400);
+      commonONCLICK_Selectors("unknownselectorid");
+    });
+
+    for (let ass = 1; ass <= 118; ass++) {
+      this['elements'+ass].addEventListener("click", () => {
+        Common_FOR_all_118Elements(ass);
+        });  
+       }     
+ 
+    cutoptionmain.addEventListener("click", () => {  
+      cutoptionfunction();
+    });
+
+    cutoptionmain2.addEventListener("click", () => {
+      cutoptionfunction();
+    });
+ 
+    for (let ass = 1; ass <=118; ass++) { 
+        this['elements'+ass].addEventListener("mouseenter" ,()=>{
+           if (searchBool == false &&  elementsclickchecker == false &&  cutoptionmain1_querySelector_style.display == "none" ) {
+            this['elements'+ass].style.transform = `scale(1.7)  skew( ${Math.random() * 12 }deg , ${Math.random() * -12 }deg )`;  // for more effect skew(8deg , -8deg)
+            this['elements'+ass].animationName="elementsanimation";   
+            this['elements'+ass].style.zIndex="3";   
+ 
+            } }) }
+
+    for (let ass = 1; ass <=118; ass++) {
+        this['elements'+ass].addEventListener("mouseleave" ,()=>{
+           if ( searchBool == false &&  elementsclickchecker == false &&  cutoptionmain1_querySelector_style.display == "none"   ) {
+               this["elements"+ass].removeAttribute('style')     
+            } }) }
+
+    elements1.addEventListener("click", () => { 
+      if (searchBool == false) {
+     setTimeout(() => {
+      elements1.style.transform = "scale(3.0) translate(3vw  ,0vw";
+    }, 601);  scrollTo(0, 60); }
+ 
+    });
+
+    elements3.addEventListener("click", () => {
+      if (searchBool == false) {
+     setTimeout(() => {
+      elements3.style.transform = "scale(3.0) translate(3vw  ,0vw";
+    }, 601);  scrollTo(0, 40); }
+    });
+    elements11.addEventListener("click", () => {
+      if (searchBool == false) {
+      setTimeout(() => {
+        elements11.style.transform = "scale(3.0) translate(3vw  ,0vw";
+    }, 601);       scrollTo(0, 50); }
+    });
+    elements19.addEventListener("click", () => {
+      if (searchBool == false) {
+       setTimeout(() => {
+        elements19.style.transform = "scale(3.0) translate(3vw  ,0vw";
+    }, 601);   }     scrollTo(0, 70);
+    }); 
+    elements37.addEventListener("click", () => {
+      if (searchBool == false) {
+       setTimeout(() => {
+        elements37.style.transform = "scale(3.0) translate(3vw  ,0vw";
+      }, 601); }       scrollTo(0, 180);
+    });
+    elements55.addEventListener("click", () => {
+      scrollTo(0, 240);
+      if (searchBool == false) {
+       setTimeout(() => {
+        elements55.style.transform = "scale(3.0) translate(3vw  ,0vw";
+      }, 601); }    
+    });
+    elements87.addEventListener("click", () => {
+      scrollTo(0, 400);
+      if (searchBool == false) {
+       setTimeout(() => {
+        elements87.style.transform = "scale(3.0) translate(3vw  ,0vw";
+      }, 601); }    
+       });
+       
+    // for all left side elements
+    elements2.addEventListener("click", () => {
+      if (searchBool == false) {
+       setTimeout(() => {
+        elements2.style.transform = "scale(3.0) translate(-3vw  ,0vw";
+      }, 601); }    scrollTo(0, 60);
+    });
+    
+    elements10.addEventListener("click", () => {
+      if (searchBool == false) {
+     setTimeout(() => {
+      elements10.style.transform = "scale(3.0) translate(-3vw  ,0vw";
+    }, 601);  
+      scrollTo(0, 40);
+}    });
+
+    elements18.addEventListener("click", () => {
+      if (searchBool == false) {
+     setTimeout(() => {
+      elements18.style.transform = "scale(3.0) translate(-3vw  ,0vw";
+    }, 601);  
+      scrollTo(0, 50);
+}    });
+
+    elements36.addEventListener("click", () => {
+      if (searchBool == false) {
+     setTimeout(() => {
+      elements36.style.transform = "scale(3.0) translate(-3vw  ,0vw";
+    }, 601);  
+      scrollTo(0, 180);}
+    });
+    elements54.addEventListener("click", () => {
+      if (searchBool == false) {
+     setTimeout(() => {
+      elements54.style.transform = "scale(3.0) translate(-3vw  ,0vw";
+    }, 601);  
+      scrollTo(0, 240);}
+    });
+    elements86.addEventListener("click", () => {
+      if (searchBool == false) {
+     setTimeout(() => {
+      elements86.style.transform = "scale(3.0) translate(-3vw  ,0vw";
+    }, 601);  
+      scrollTo(0, 400);}
+    });
+    elements118.addEventListener("click", () => {
+      if (searchBool == false) {
+     setTimeout(() => {
+      elements118.style.transform = "scale(3.0) translate(-3vw  ,0vw";
+    }, 601);  
+      scrollTo(0, 400);}
+    });
+    elements71.addEventListener("click", () => {
+      if (searchBool == false) {
+     setTimeout(() => {
+      elements71.style.transform = "scale(3.0) translate(-3vw  ,0vw";
+    }, 601);  
+      scrollTo(0, 400);}
+    });
+    elements103.addEventListener("click", () => {
+      if (searchBool == false) {
+     setTimeout(() => {
+        elements103.style.transform = "scale(3.0) translate(-3vw  ,0vw";
+    }, 601);  
+      scrollTo(0, 400);}
+    });
+ 
+    group1_2_3_4_lan_antr =[1 ,3 ,4 ,11 ,19 , 37 , 55 , 87 ,4 ,12, 20 , 38 , 56 , 88 , 21 , 39 ,22 , 40 , 72 , 104 , 57 , 89]
+    group5_lan_antr_TO_group12 =[23 , 41 , 73 , 105 , 58 , 90]
+    group13_lan_antr_TO_group17 =[5 , 13 , 31 , 49 , 81 , 113,66, 98]
+    group18_lan_antr=[2 , 10 , 18 , 36 , 54 , 86, 118, 71, 103]
+ 
+     group1_2_3_4_lan_antr.forEach(num => {
+        this['elements'+num].addEventListener("click", () => {
+           this[`onclickdisplaycontent`+ num].style.width = "22vw";
+         });  }); 
+  
+     group5_lan_antr_TO_group12.forEach(num => {
+        this['elements'+num].addEventListener("click", () => {
+           this[`onclickdisplaycontent`+ num].style.width = "21.6vw";
+              this[`onclickdisplaycontent`+ num].style.transform = "translate(13.5vw, -4.2vw) ";
+         });  }); 
+     group5_lan_antr_TO_group12.forEach(num  => {
+       // gruop 6
+        this['elements'+[num + 1]].addEventListener("click", () => {
+            this[`onclickdisplaycontent`+ [num + 1]].style.width = "19.6vw";
+              this[`onclickdisplaycontent`+ [num + 1]].style.transform = "translate(12.65vw, -12.2vw) ";
+              this[`summary`+ [num+1]].style.transform = "translateX(-13vw) ";
+              this[`summary`+ [num + 1]].style.width = "30vw ";
+         });  }); 
+     group5_lan_antr_TO_group12.forEach(num  => {
+       // gruop 7
+        this['elements'+[num + 2]].addEventListener("click", () => {
+          this[`onclickdisplaycontent`+ [num + 2]].style.width = "18.2vw";
+              this[`onclickdisplaycontent`+ [num + 2]].style.transform = "translate(11.65vw, -12.2vw) ";
+              this[`summary`+ [num + 2]].style.transform = "translateX(-14vw) ";
+              this[`summary`+ [num + 2]].style.width = "30vw ";
+            });  });  
+     group5_lan_antr_TO_group12.forEach(num  => {
+              // gruop 8
+               this['elements'+[num + 3]].addEventListener("click", () => {
+                   this[`onclickdisplaycontent`+ [num +3]].style.width = "16.5vw";
+                     this[`onclickdisplaycontent`+ [num+3]].style.transform = "translate(10.8vw, -9.6vw) ";
+                     this[`summary`+ [num + 3]].style.transform = "translateX(-14vw) ";
+                     this[`summary`+ [num +3]].style.width = "30vw ";
+                     this[`ionization_energies`+ [num +3]].style.width = "16vw ";
+                });  });  
+     group5_lan_antr_TO_group12.forEach(num  => {
+      // gruop 9
+      this['elements'+[num + 4]].addEventListener("click", () => {
+          this[`onclickdisplaycontent`+ [num + 4]].style.width = "14vw";
+            this[`onclickdisplaycontent`+ [num + 4]].style.transform = "translate(9.7vw, -9.6vw) ";
+            this[`summary`+ [num + 4]].style.transform = "translateX(-17vw) ";
+            this[`summary`+ [num + 4]].style.width = "30vw ";
+            this[`ionization_energies`+ [num +4]].style.width = "14vw ";
+       });  });  
+      group5_lan_antr_TO_group12.forEach(num  => {
+      // gruop 10
+      this['elements'+[num + 5]].addEventListener("click", () => {
+          this[`onclickdisplaycontent`+ [num + 5]].style.width = "14vw";
+          this[`onclickdisplaycontent`+ [num + 5]].style.position = "absolute";
+          this[`onclickdisplaycontent`+ [num + 5]].style.right = "18vw";
+             this[`summary`+ [num + 5]].style.width = "30vw ";
+            this[`ionization_energies`+ [num +5]].style.width = "14vw ";
+       });  });  
+     group5_lan_antr_TO_group12.forEach(num  => {
+      // gruop 11
+      this['elements'+[num + 6]].addEventListener("click", () => {
+          this[`onclickdisplaycontent`+ [num + 6]].style.width = "14vw";
+          this[`onclickdisplaycontent`+ [num + 6]].style.position = "absolute";
+          this[`onclickdisplaycontent`+ [num + 6]].style.right = "19vw";
+             this[`summary`+ [num + 6]].style.width = "30vw ";
+            this[`ionization_energies`+ [num +6]].style.width = "14vw ";
+       });  });  
+     group5_lan_antr_TO_group12.forEach(num  => {
+      // gruop 12
+      this['elements'+[num + 7]].addEventListener("click", () => {
+          this[`onclickdisplaycontent`+ [num + 7]].style.width = "14vw";
+          this[`onclickdisplaycontent`+ [num + 7]].style.position = "absolute";
+          this[`onclickdisplaycontent`+ [num + 7]].style.right = "21vw";
+             this[`summary`+ [num + 7]].style.width = "30vw ";
+            this[`ionization_energies`+ [num +7]].style.width = "14vw ";
+       });  }); 
+      group13_lan_antr_TO_group17.forEach(num  => {
+      // gruop 13
+      this['elements'+[num]].addEventListener("click", () => {
+          this[`onclickdisplaycontent`+ [num]].style.width = "14vw";
+          this[`onclickdisplaycontent`+ [num]].style.position = "absolute";
+          this[`onclickdisplaycontent`+ [num]].style.right = "23vw";
+          this[`onclickdisplaycontent`+ [num]].style.top = "1.3vw";
+             this[`summary`+ [num]].style.width = "30vw ";
+            this[`ionization_energies`+ [num]].style.width = "14vw ";
+       });  }); 
+     group13_lan_antr_TO_group17.forEach(num  => {
+      // gruop 14
+      this['elements'+[num + 1]].addEventListener("click", () => {
+          this[`onclickdisplaycontent`+ [num + 1]].style.width = "14vw";
+          this[`onclickdisplaycontent`+ [num + 1]].style.position = "absolute";
+          this[`onclickdisplaycontent`+ [num + 1]].style.right = "25vw";
+          this[`onclickdisplaycontent`+ [num + 1]].style.top = "1.3vw";
+             this[`summary`+ [num + 1]].style.width = "30vw ";
+            this[`ionization_energies`+ [num + 1]].style.width = "14vw ";
+       });  }); 
+     group13_lan_antr_TO_group17.forEach(num  => {
+      // gruop 15
+      this['elements'+[num + 2]].addEventListener("click", () => {
+          this[`onclickdisplaycontent`+ [num + 2]].style.width = "14vw";
+          this[`onclickdisplaycontent`+ [num + 2]].style.position = "absolute";
+          this[`onclickdisplaycontent`+ [num + 2]].style.right = "27vw";
+          this[`onclickdisplaycontent`+ [num + 2]].style.top = "1.3vw";
+             this[`summary`+ [num + 2]].style.width = "30vw ";
+            this[`ionization_energies`+ [num + 2]].style.width = "14vw ";
+       });  }); 
+     group13_lan_antr_TO_group17.forEach(num  => {
+      // gruop 16
+      this['elements'+[num + 3]].addEventListener("click", () => {
+          this[`onclickdisplaycontent`+ [num + 3]].style.width = "14vw";
+          this[`onclickdisplaycontent`+ [num + 3]].style.position = "absolute";
+          this[`onclickdisplaycontent`+ [num + 3]].style.right = "29vw";
+          this[`onclickdisplaycontent`+ [num + 3]].style.top = "1.3vw";
+             this[`summary`+ [num + 3]].style.width = "30vw ";
+            this[`ionization_energies`+ [num + 3]].style.width = "14vw ";
+       });  }); 
+     group13_lan_antr_TO_group17.forEach(num  => {
+      // gruop 17
+      this['elements'+[num + 4]].addEventListener("click", () => {
+          this[`onclickdisplaycontent`+ [num + 4]].style.width = "14vw";   
+          this[`onclickdisplaycontent`+ [num + 4]].style.position = "absolute";
+          this[`onclickdisplaycontent`+ [num + 4]].style.right = "31vw";
+          this[`onclickdisplaycontent`+ [num + 4]].style.top = "1.3vw";
+             this[`summary`+ [num + 4]].style.width = "30vw ";
+            this[`ionization_energies`+ [num + 4]].style.width = "14vw ";
+       });  }); 
+     group18_lan_antr.forEach(num  => {
+      // gruop 17
+      this['elements'+[num]].addEventListener("click", () => {
+          this[`onclickdisplaycontent`+ [num]].style.width = "14vw";   
+          this[`onclickdisplaycontent`+ [num]].style.position = "absolute";
+          this[`onclickdisplaycontent`+ [num]].style.right = "28vw";
+          this[`onclickdisplaycontent`+ [num]].style.top = "1.3vw";
+             this[`summary`+ [num]].style.width = "30vw ";
+            this[`ionization_energies`+ [num]].style.width = "14vw ";
+       });  }); 
+    // setting the importent content after click on element for extra content and in it jqurry is used
+  
+       alert(" if Your are serving this website on mobile device ,then Please Rotate Your Screen for Better Experience ")
+ 
+    //for settung up  error
+      if(!elementsclickchecker && cutoptionmain1_querySelector_style.display == "none"){
+       for (let intt  = 1; intt  <=118; intt++) {
+         document.getElementById(`elements-${intt}`).style.transform="none";
+        } 
+      }
+ 
+    function togglemenu(){
+      if (!search.classList.contains("activeteSearch")) {
+        
+       let ToggleMenuBOOL = true
+         MenuToggle.classList.toggle("activatedMenuClass")
+      sidebar.classList.toggle("activatedMenuClass")
+       sidebar2.classList.toggle("activatedMenuClass")
+        BlankForSidebar1.classList.toggle("activatedBlankForSidebarClass")
+       bodyTag.classList.toggle("activeBody_DisableSrolling")
+       window.scrollTo(0,0);  
+  
+       header.classList.toggle("activeteBLured")
+       backgroundcontainer.classList.toggle("activeteBLured")
+       periodictable.classList.toggle("activeteBLured")
+      }
+      else{
+        searchBool = false
+        header.classList.remove("activeteSearch")
+        search.classList.remove("activeteSearch")
+         MenuToggle.classList.remove("activeteSearch")
+        //  removeactivatedclassFOR_all_elements('activeteBLured');
+         removeactivatedclassFOR_all_elements('activeted');
+         remove_activatedclassFOR_selectors('activeted');
+          let searchvalue  =  search.value
+        search.value =""
+        search.ariaPlaceholder = "search elements"
+      }
+    }
+      let searchBool = false ;
+      function addsearch(){
+        searchBool = true
+         header.classList.add("activeteSearch")
+        search.classList.add("activeteSearch")
+         MenuToggle.classList.add("activeteSearch")
+         backgroundcontainer.classList.add("activeteSearch")
+          ADD_activatedclassFOR_selectors('activeted');
+        // ADD_activatedclassFOR_ALL_elements('activeteBLured');
+        ADD_activatedclassFOR_ALL_elements('activeted');
+
+      }
+    
+
+      Customization_selector.addEventListener("click", () => { 
+        btncontaninerSidebarcontanierOptimaizations_modes.classList.toggle("activatedMenuClass")
+         Customization_selector.classList.toggle("activatedMenuClass")
+         for (let a =1; a <=7 ; a++) {
+           document.querySelector(`#directBTN_${a}`).classList.toggle("sidebarbtns")
+           document.querySelector(`#directBTN_${a}`).classList.toggle("directbtnFALSE")
+         }
+        });
+
+    
+   for (let asdsdsd  = 0; asdsdsd  <=7; asdsdsd ++) {
+   VanillaTilt.init(document.querySelector(`#A_for_Button-${asdsdsd} `), {
+ 		max: 25,
+    scale : 1.5 ,
+		speed: 300,
+    transition : true,
+    glare : true,
+    "max-glare":  1,
+    dealy:1 ,
+	}); }
+
+    setTimeout(() => {
+      if (window.scrollX >0) {
+          window.scrollTo(0,0)
+      }
+     }, 1200);
+
+      setTimeout(() => {
+        particlesJS.classList.add("DISPLAYNone")
+      }, 550);
+
+         function  onClickonSwitch(params ) { 
+           Btnclick.play(); 
+           if (params =='btn1') {
+             switch1.classList.toggle("on")
+            sunmain.classList.toggle("toggleNone")
+           }
+          else if (params == 'btn2') {
+             switch2.classList.toggle("on")
+            planetaMian.classList.toggle("toggleNone")
+           }
+           else if (params == 'btn3') {
+             switch3.classList.toggle("on")
+            particlesJS.classList.toggle("DISPLAYNone")
+            particlesJS.classList.toggle("toggleNone")
+           }
+         }
+
+         function sortTableByColumn(table, column, asc = true) {
+    const dirModifier = asc ? 1 : -1;
+    const tBody = table.tBodies[0];
+    const rows = Array.from(tBody.querySelectorAll("tr"));
+          
+    // Sort each row
+    const sortedRows = rows.sort((a, b) => {
+        const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+        const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+
+        return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
+    });
+
+    // Remove all existing TRs from the table
+    while (tBody.firstChild) {
+        tBody.removeChild(tBody.firstChild);
+    }
+
+    // Re-add the newly sorted rows
+    tBody.append(...sortedRows);
+
+    // Remember how the column is currently sorted
+    table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc"));
+    table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc);
+    table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc);
+ } 
+
+ function sortTable() {
+ let   rows, switching, i, x, y, shouldSwitch;
+   switching = true;
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      //check if the two rows should switch place:
+      if (Number(x.innerHTML) > Number(y.innerHTML)) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch = true;
+        break;
+      }
+    }
+ 
+          if (shouldSwitch) {
+       /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      // rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+ 
+        switching = true;
+    }
+  }
+}
+
+document.querySelectorAll(".table  th").forEach(headerCell => {
+    headerCell.addEventListener("click", () => {
+        const tableElement = headerCell.parentElement.parentElement.parentElement;
+        const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
+        const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+
+           if (headerIndex == 2 || headerIndex == 4) {
+             sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
+            }
+            else{
+              sortTable();
+            }
+     });
+});
+ 
+ 
+  </script>
+
+ </body>
+
 </html>
