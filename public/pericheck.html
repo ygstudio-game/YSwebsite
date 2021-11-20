@@ -539,9 +539,7 @@ header .btncontaniner_header_A.activeteSearch{
   grid-gap: 0.8vw;
   transition: all 1s ,  margin-top 0s;
    width: 94vw;
-  margin: auto;
-  padding: 2.44vw;
-  margin-top: 18vw;
+    margin-top: 5vw;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
   grid-template-rows: auto auto auto auto auto auto auto;
 }
@@ -601,7 +599,7 @@ margin-top :0.3vw ;
 #otherseries {
   display: grid;
   margin: 2vw 0 0 9.6vw ;
-  grid-gap: 5.8vw 0vh;
+  grid-gap: 1.2vw 0vh;
 }  
 #lanthrathideseries {
   grid-template-columns: auto auto auto  auto auto auto auto auto auto auto auto auto auto auto auto auto;
@@ -618,8 +616,7 @@ margin-top :0.3vw ;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
   grid-template-rows: auto;
   display: grid;
-  margin: -8.6vh 0 28.6vh 0;
-  grid-gap: 0.85vw;
+   grid-gap: 0.85vw;
 } 
 .alkali-metals-selector {
   color: var(--alkali-color);
@@ -1414,11 +1411,11 @@ height: 6vw;
 border-radius: 0.52vw;
 color: #b5ff00;    
 z-index: 2;
-/* box-shadow: 0vw 0vw 0.52vw currentColor, 0vw 0vw 1.04vw currentColor,0vw 0vw 2.08vw currentColor, 0vw 0vw 3.125vw currentColor, 0vw 0vw 4.16vw currentColor, 0vw 0vw 5.2vw currentColor, 0vw 0vw 6.25vw currentColor, 0vw 0vw 7.29vw currentColor, 0vw 0vw 8.3vw currentColor,0vw 0vw 9.375vw currentColor, 0vw 0vw 10.4vw currentColor, 0vw 0vw 11.45vw currentColor, 0vw 0vw 12.5vw currentColor, 0vw 0vw 13.54vw currentColor, 0vw 0vw 14.58vw currentColor, 0vw 0vw 15.625vw currentColor   ; */
+box-shadow: 0vw 0vw 0.52vw currentColor, 0vw 0vw 1.04vw currentColor,0vw 0vw 2.08vw currentColor, 0vw 0vw 3.125vw currentColor, 0vw 0vw 4.16vw currentColor, 0vw 0vw 5.2vw currentColor, 0vw 0vw 6.25vw currentColor, 0vw 0vw 7.29vw currentColor, 0vw 0vw 8.3vw currentColor,0vw 0vw 9.375vw currentColor, 0vw 0vw 10.4vw currentColor, 0vw 0vw 11.45vw currentColor, 0vw 0vw 12.5vw currentColor, 0vw 0vw 13.54vw currentColor, 0vw 0vw 14.58vw currentColor, 0vw 0vw 15.625vw currentColor   ;
 background-color: white;
 animation: aniamatetext 5s linear infinite;
 }
-.lightbar::after {
+/* .lightbar::after {
     position: absolute;
     content: "";
     width: inherit;
@@ -1426,7 +1423,7 @@ animation: aniamatetext 5s linear infinite;
     background: currentColor;
     filter: blur(0.4 vw );
     transform: scale3d(4, 2, 1);
-}
+} */
 .toplayer{
  display: none;
  position: absolute;
@@ -1653,6 +1650,10 @@ position: relative;
     background: #2925259a;
     box-shadow: var(--All-element-common-box_shadow);
     margin-bottom: 60vh;
+    overflow: scroll;
+   }
+   .Moblie_divTableHead , .MoblieTableTBody{
+     width: inherit;
    }
    .Moblie_divTableTheadTR{
      background: rgb(49, 43, 39)  ;
@@ -1663,8 +1664,8 @@ position: relative;
     grid-template-rows: auto auto; 
     align-items: center;
     justify-items: center;
+    width: max-content;
 
-    
   }
  
   .Moblie_elementsAll .MoblieDivTableParts.inner {
@@ -1677,18 +1678,20 @@ position: relative;
      height: 0;
      padding: 0;
      border: none;
+     justify-self: flex-start;
      } 
      .inner.activatedToggleForDivTable{
       height: auto !important;
       width:  auto !important;
       border: 0.04vh white solid !important;
-     padding: 0.5vh  !important;
-     padding : 1vh  !important;
-     }
+      padding : 2vh  !important;
+      width: -webkit-fill-available !important;
+      width: -moz-available !important;
+      }
     .inner div {
     margin: 0.6vh 0 ;
-    max-width: 92.5vw;
-    word-break: break-all;
+    max-width: 88vw;
+    word-break: break-word;
     } 
    
 
@@ -1704,22 +1707,22 @@ position: relative;
  width: 3.5vh;
 }
 .Moblie_divTableTheadTR div:nth-child(2) ,.Moblie_elementsAll .MoblieDivTableParts:nth-child(2){
- width: 5.5vh;
+ width: 6.5vh;
 }
  
 .Moblie_divTableTheadTR div:nth-child(3) ,.Moblie_elementsAll .MoblieDivTableParts:nth-child(3){
- width: 7vh;
+ width: 8vh;
  }
  
 .Moblie_divTableTheadTR div:nth-child(4) , 
 .Moblie_elementsAll .MoblieDivTableParts:nth-child(4){
- width: 14vh;
+ width: 16vh;
 }
  
 .Moblie_divTableTheadTR div:nth-child(5),.Moblie_elementsAll .MoblieDivTableParts:nth-child(5),
 .Moblie_divTableTheadTR div:nth-child(6),.Moblie_elementsAll .MoblieDivTableParts:nth-child(6)
 {
- width: 6vh;
+ width: 7vh;
 }
  
  
