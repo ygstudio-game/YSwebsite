@@ -108,15 +108,16 @@ $(document).ready(function (){
   --unknown-color: #ccc;
   --lanthrathide_and_anthrathide-color: #c686cc; 
   --All-element-common-box_shadow: 0.15vw -0.15vw 0.18vw 0vw currentColor,
-    -0.22vw 0.25vw 0.18vw 0vw currentColor;
---Low_Blurs-All-element-common-box_shadow: 0.15vw -0.15vw 0.1vw 0vw currentColor,
-    -0.22vw 0.25vw 0.1vw 0vw currentColor;
+  -0.22vw 0.25vw 0.18vw 0vw currentColor;
+  --Low_Blurs-All-element-common-box_shadow: 0.15vw -0.15vw 0.1vw 0vw currentColor,
+  -0.22vw 0.25vw 0.1vw 0vw currentColor;
   --All-element-common-text-shadow: 0.08vw 0.03vw 0.2vw currentColor, 0.04vw 0.03vw 0.2vw currentColor;
   --SidebarLineargradient-color: linear-gradient(90deg, #000000cf, #fffbfb17 );
 }
 .On_click_Element_Cursor{ cursor: url(https://cur.cursors-4u.net/cursors/cur-8/cur740.ani), url(https://cur.cursors-4u.net/cursors/cur-8/cur740.png), auto !important;}
- html{
+html{
   scroll-behavior: smooth;
+  overflow-x: hidden; 
  } 
 ::selection {
   background-color: rgb(214, 195, 27);
@@ -134,7 +135,6 @@ body {
      cursor: url(https://cur.cursors-4u.net/cursors/cur-8/cur740.ani), url(https://cur.cursors-4u.net/cursors/cur-8/cur740.png), auto;
   background: repeat   , url("space.jpg") rgb(31, 29, 29)  ;  
    filter: contrast(1.28);
-  overflow-x: hidden; 
   }
   body.add_Drop-shadow_Filters{filter: drop-shadow(-0.78vw 1.0vw 0.8vw black) contrast(1.28); }
 
@@ -822,7 +822,7 @@ display: block !important;
 .toggle{
   position: fixed;
   top: 1.5vw;
-  right: 3.5vw;
+  right: 5vw;
   width: 4vw;
   height: 4vw;
   background: rgb(255, 255, 255) url(/menu.png) center no-repeat;
@@ -1666,25 +1666,20 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
   height: 6vh;
   border-radius: 50%;
 }
+.Speakbuttons button.activebutton{
+  filter: invert(1);
+  width: 8vh;
+  height: 8vh;
+ }
 .play {
     background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play.svg);
-}
-.play.played {
-    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play1.svg);
-}
-
+} 
 .pause {
     background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause.svg);
-}
-.pause.paused {
-    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause1.svg);
-}
+} 
 .stop {
     background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop.svg);
-}
-.stop.stopped {
-    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop1.svg);
-}
+} 
     </style>  
 </head>
 
@@ -2263,6 +2258,7 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
 
      
       
+     let Speakbuttons   ; 
      let stopEle   ; 
      let pauseEle  ; 
      let playEle   ;   
@@ -2299,11 +2295,17 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
         Moblie_elementsAll  =   document.querySelectorAll('.Moblie_elementsAll ') 
         MoblieinnerTD =   document.querySelectorAll(' .inner')
         Moblie_clickable_Item  = document.querySelectorAll('.Moblie_clickable_Item ')
-
+         
+        Speakbuttons_buttons  = document.querySelectorAll('.Speakbuttons button');
           playEle  = document.querySelectorAll('.play');
        pauseEle   = document.querySelectorAll('.pause');
        stopEle    = document.querySelectorAll('.stop');
           ONClickListenerON_Moblie_elements();
+        }
+        function removeAll_Speakbuttons_buttons_activebutton_class(){
+          Speakbuttons_buttons.forEach(element => {
+            element.classList.remove("activebutton")
+          });
         }
 
         // for Moblie Element click :- For Whole Element
@@ -2329,12 +2331,16 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
                 remove_Clicked_Moblie_Element_class_Moblie_elements(number);
                 element.parentElement.classList.toggle('Clicked_Moblie_Element_class')
                MoblieinnerTD[number].classList.toggle("activatedToggleForDivTable")
+
+               speechSynthesis.cancel();
+                speak('');
               })
             }) 
 
             
             playEle.forEach(elementName => {
              elementName.addEventListener('click' , ()=>{
+              removeAll_Speakbuttons_buttons_activebutton_class();
              let elementinfo  = elementName.parentElement.nextElementSibling; 
              if (!speechSynthesis.paused) {
                 speechSynthesis.cancel();
@@ -2343,12 +2349,13 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
              else{
               speechSynthesis.resume();  
              }
-             elementName.classList.toggle('played')
+             elementName.classList.toggle('activebutton')
            }) });
 
            pauseEle.forEach(elementName => {
              elementName.addEventListener('click' , ()=>{
-               elementName.classList.toggle('paused')
+               removeAll_Speakbuttons_buttons_activebutton_class();
+               elementName.classList.toggle('activebutton')
               if (speechSynthesis.speaking) {
               speechSynthesis.pause();  
              } 
@@ -2356,7 +2363,8 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
 
            stopEle.forEach(elementName => {
              elementName.addEventListener('click' , ()=>{
-              elementName.classList.toggle('stopped')
+               removeAll_Speakbuttons_buttons_activebutton_class();
+              elementName.classList.toggle('activebutton')
                speechSynthesis.cancel();
                 speak('');
             }) });
@@ -2972,7 +2980,7 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
               speech.text = message;
               speech.volume = 1;
               speech.pitch = 1.3;
-              speech.rate = 0.8; 
+              speech.rate = 1; 
               window.speechSynthesis.speak(speech); 
            } 
           </script>
