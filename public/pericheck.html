@@ -1549,6 +1549,8 @@ font-size: 2.8vh;
   .table tbody tr td{
     font-size: 1.8vh;
  width: max-content !important;
+ box-shadow:    
+                   inset 0 0 0.8vh #ff08e8; 
 
   }
  
@@ -1663,13 +1665,13 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
   height: 8vh;
  }
 .play {
-    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play.svg);
+    background-image: url(/play.svg);
 } 
 .pause {
-    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause.svg);
+    background-image: url(pause.svg);
 } 
 .stop {
-    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop.svg);
+    background-image: url(stop.svg);
 } 
     </style>  
 </head>
@@ -2970,14 +2972,13 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
               speech.rate = 1; 
               window.speechSynthesis.speak(speech); 
            } 
-           
-          //  setTimeout(() => {
-          //    let viewheight = window.innerHeight
-          //    let viewwidth = window.innerWidth
-          //    let viewport = document.querySelector("meta[name=viewport]");
-          //    viewport.setAttribute("content" , "height=" + viewheight + "px , width=" + viewwidth +"px , initial-scale =1.0");
-          //  }, 600);
-          </script>
+           if (IsWidth_550px) { 
+             setTimeout(() => { 
+               let viewport = document.querySelector("meta[name=viewport]");
+               viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0");
+              }, 600);
+            }
+              </script>
 
  </body>
 </html>

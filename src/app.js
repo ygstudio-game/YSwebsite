@@ -75,6 +75,14 @@ res.sendFile(path.join(__dirname , "../public/bg/uparrow.png"))
 app.get('/downarrow' , (req , res) =>{
   res.sendFile(path.join(__dirname , "../public/bg/downarrow.png"))
   })
+
+  // svgs
+  app.get('/play.svg', (req , res) =>{res.sendFile(path.join(__dirname,'../public/bg/svgs/play.svg') )
+})
+app.get('/pause.svg', (req , res) =>{res.sendFile(path.join(__dirname,'../public/bg/svgs/pause.svg') )
+})
+app.get('/stop.svg', (req , res) =>{res.sendFile(path.join(__dirname,'../public/bg/svgs/stop.svg') )
+})
   //setting animated weather icon
 
       //for Clouds
