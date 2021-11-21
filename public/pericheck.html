@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width  ,  height=device-height, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <meta name="author" content="Yadnyesh sunil  borole">
   <meta name="description" content="Hello i am a Web Developer and  I am in 10th">
@@ -135,6 +135,8 @@ body {
      cursor: url(https://cur.cursors-4u.net/cursors/cur-8/cur740.ani), url(https://cur.cursors-4u.net/cursors/cur-8/cur740.png), auto;
   background: repeat   , url("space.jpg") rgb(31, 29, 29)  ;  
    filter: contrast(1.28);
+   max-width: 100vw;
+   overflow-x: hidden;
   }
   body.add_Drop-shadow_Filters{filter: drop-shadow(-0.78vw 1.0vw 0.8vw black) contrast(1.28); }
 
@@ -491,24 +493,14 @@ margin-top :0.3vw ;
   margin: 2vw 0 0 9.6vw ;
   grid-gap: 1.2vw 0vh;
 }  
-#lanthrathideseries {
+#lanthrathideseries ,#anthrathideseires {
   grid-template-columns: auto auto auto  auto auto auto auto auto auto auto auto auto auto auto auto auto;
   grid-template-rows: auto;
   display: grid;
   grid-gap: 0.85vw;
 }
 
-.lanthrathideseries_elements ,  .anthrathideseires_elements {
-  color: var(--lanthrathide_and_anthrathide-color);
-}
-
-#anthrathideseires {
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-  grid-template-rows: auto;
-  display: grid;
-   grid-gap: 0.85vw;
-} 
-
+.lanthrathideseries_elements ,  .anthrathideseires_elements { color: var(--lanthrathide_and_anthrathide-color); }   
 .alkali-metals-selector ,  .akiline-earth-metals-selector ,  .transition-metal-selector , .post-transition-metal-selector ,   .metalloid-selector , .other-nonmetal-selector ,   .noble-gasses-selector ,   .unknown-selector ,  .lanthrathideseries-selector ,  .anthrathideseires-selector   { box-shadow: var(--All-element-common-box_shadow); }
 
 .alkali-metals-selector  , .alkali-metals{color: var(--alkali-color); } 
@@ -1129,8 +1121,7 @@ font-weight: 780;
   text-transform: uppercase;
   letter-spacing: 0.104vw;
   text-shadow: 0vw 0vw 0.52vw #00b3ff, 0vw 0vw 1.04vw #00b3ff,0vw 0vw 2.08vw #00b3ff, 0vw 0vw 3.125vw #00b3ff, 0vw 0vw 4.16vw #00b3ff, 0vw 0vw 6.25vw #00b3ff   ;
-  width: 12vw;
-
+  width: 12vw; 
 }
 .btncontaniner.sidebarcontanier .sidebarbtns , .btncontaniner.sidebarcontanier .directbtnFALSE{
   margin: 0.52vw 2.08vw;
@@ -1556,25 +1547,25 @@ font-size: 2.8vh;
     width:max-content !important ;
   }
   .table tbody tr td{
-    font-size: 1.4vh;
+    font-size: 1.8vh;
  width: max-content !important;
 
   }
  
   .table thead tr th:nth-child(1),  .table thead tr th:nth-child(1) input  ,.table thead tr th:nth-child(3) ,  .table thead tr th:nth-child(3) input  {
-width: 6.6vh !important;
+width: 6.8vh !important;
 } 
 
 .table thead tr th:nth-child(2) ,  .table thead tr th:nth-child(2) input ,.table thead tr th:nth-child(6) ,  .table thead tr th:nth-child(6) input,.table thead tr th:nth-child(7)   ,  .table thead tr th:nth-child(7) input {
-width: 8.4vh !important;
+width: 9.8vh !important;
 } 
 
 .table thead tr th:nth-child(4) , .table thead tr th:nth-child(4)  input  {
-width: 13.8vh !important; 
+width: 14.6vh !important; 
 }
 
 table thead tr th:nth-child(5)   {
-width: 22vh !important;
+width: 30vh !important;
 }  
 table thead tr th:nth-child(5) input {
 width: 15vh !important;
@@ -1583,8 +1574,8 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
  width: 5.4vh !important;
 }   
 .table tbody tr td:nth-child(8){ 
- width: 10vh !important;
- height: 2vh !important;
+ width: 12vh !important;
+ height: inherit !important;
  } 
 .table thead tr  th input ,.table thead tr th {
   font-size: 1.2vh;
@@ -1831,9 +1822,8 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
             <div class="MoblieElementNameTheads">Element Name</div> 
             <div class="MoblieGruopTheads">Gruop</div>
             <div class="MoblieperiodTheads">Period</div> 
-          </div></div>
-
- 
+          </div></div> 
+          
           <div class="MoblieTableTBody">  
             <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll other-nonmetal" id="moblie_elements-1"></div>
 <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-metals" id="moblie_elements-2"></div>
@@ -1953,12 +1943,8 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
    <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  unknown" id="moblie_elements-116"></div>
    <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  unknown" id="moblie_elements-117"></div>
    <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  unknown" id="moblie_elements-118"></div>
+ </div> </div>
 
-   
-  
-   
-          </div>
-    </div>
            <div id="periodictable">
     <div id="seleectormetaldiv"> 
     <div id="selectormetals">
@@ -2330,8 +2316,9 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
                 remove_activated_Inner_Moblie_elements_(number);
                 remove_Clicked_Moblie_Element_class_Moblie_elements(number);
                 element.parentElement.classList.toggle('Clicked_Moblie_Element_class')
-               MoblieinnerTD[number].classList.toggle("activatedToggleForDivTable")
-
+                MoblieinnerTD[number].classList.toggle("activatedToggleForDivTable")
+                
+                removeAll_Speakbuttons_buttons_activebutton_class();
                speechSynthesis.cancel();
                 speak('');
               })
@@ -2977,12 +2964,19 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
           })  
            const  speak = (message)=>{
               let speech =  new SpeechSynthesisUtterance(); 
-              speech.text = message;
+               speech.text = message;
               speech.volume = 1;
-              speech.pitch = 1.3;
+              speech.pitch = 1;
               speech.rate = 1; 
               window.speechSynthesis.speak(speech); 
            } 
+           
+          //  setTimeout(() => {
+          //    let viewheight = window.innerHeight
+          //    let viewwidth = window.innerWidth
+          //    let viewport = document.querySelector("meta[name=viewport]");
+          //    viewport.setAttribute("content" , "height=" + viewheight + "px , width=" + viewwidth +"px , initial-scale =1.0");
+          //  }, 600);
           </script>
 
  </body>
