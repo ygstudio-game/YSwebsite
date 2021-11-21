@@ -112,6 +112,9 @@ app.get('/downarrow' , (req , res) =>{
 app.get('/data.json', (req , res) =>{
   res.sendFile(path.join(__dirname,'../public/data/data.json') )
 })
+app.get('/MoreData.json', (req , res) =>{
+  res.sendFile(path.join(__dirname,'../public/data/MoreData.json') )
+})
 
   // for perodic tables background 
   app.get('/particles.js', (req , res) =>{
