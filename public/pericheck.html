@@ -2254,7 +2254,7 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
       let  MoblieinnerTD  ;
       let  Moblie_clickable_Item  ;
         let IsRotate = (window.screen.orientation.angle  === 90) ?  true  : false;
-        let IsWidth_550px = (window.screen.width  <= 550  ) ?  true  : false;
+        let IsWidth_550px  ; 
          
          
      async function get_dataTables_filter () {   let dataTables_filter =  await document.querySelector(".dataTables_filter");
@@ -2952,6 +2952,7 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
           })
           
             function onclickONBtntable(params) { 
+                IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
               if (!IsWidth_550px) {
                 togglemenu();
                 this["elements" + params].click(); 
@@ -2972,12 +2973,29 @@ table thead tr th:nth-child(8) ,table thead tr th:nth-child(8)  input {
               speech.rate = 1; 
               window.speechSynthesis.speak(speech); 
            } 
-           if (IsWidth_550px) { 
-             setTimeout(() => { 
-               let viewport = document.querySelector("meta[name=viewport]");
-               viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0");
-              }, 600);
+              
+           function fix_ViewPort_Size( ) { 
+            IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
+             if (IsWidth_550px) { 
+               setTimeout(() => { 
+                 let viewport = document.querySelector("meta[name=viewport]");
+                 if (viewport.getAttribute('content')  !== `height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0`) { 
+                   viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0");
+                  }
+                  }, 600);
+              }
+              else{
+                setTimeout(() => {  
+                  let viewport = document.querySelector("meta[name=viewport]");
+                  viewport.setAttribute("content" , "width=device-width" , "height= device-height" , "initial-scale =1.0");
+                }, 600); 
+              }
+              console.clear();
             }
+            setInterval(() => {
+                 fix_ViewPort_Size();
+             }, 500);
+            
               </script>
 
  </body>
