@@ -2990,7 +2990,7 @@ table thead tr th:nth-child(8)  {
           let viewport = document.querySelector("meta[name=viewport]");
              if (IsWidth_550px && !IsRotate  && (orientationType == 'portrait-primary' || orientationType =="portrait-secondary")    ) { 
                setTimeout(() => { 
-                 if (viewport.getAttribute('content')  !== `height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0 ` !==  `height=${initial_height}px , width=${initial_width}px , initial-scale =1.0 `) { 
+                 if ( (viewport.getAttribute('content')  !== `height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0 `) (`height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0 `!==  `height=${initial_height}px , width=${initial_width}px , initial-scale =1.0 ` ) ) { 
                    viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0");
                   }
                   }, 600);
