@@ -2259,9 +2259,10 @@ table thead tr th:nth-child(8)  {
       let  MoblieinnerTD  ;
       let  Moblie_clickable_Item  ;
         let IsRotate  ;
+        let orientationType  ;   
          let IsWidth_550px  ; 
-         let initial_width = window.innerWidth
-         let initial_height = window.innerHeight
+         const initial_width = window.innerWidth
+         const initial_height = window.innerHeight
  
          
          
@@ -2985,15 +2986,16 @@ table thead tr th:nth-child(8)  {
            function fix_ViewPort_Size( ) { 
             IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
           IsRotate = (window.screen.orientation.angle  === 90) ?  true  : false;
+          orientationType  = window.screen.orientation.type; 
           let viewport = document.querySelector("meta[name=viewport]");
-             if (IsWidth_550px && !IsRotate  ) { 
+             if (IsWidth_550px && !IsRotate  && (orientationType == 'portrait-primary' || orientationType =="portrait-secondary")    ) { 
                setTimeout(() => { 
-                 if (viewport.getAttribute('content')  !== `height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0 ` ===  `height=${initial_height}px , width=${initial_width}px , initial-scale =1.0 `) { 
+                 if (viewport.getAttribute('content')  !== `height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0 ` !==  `height=${initial_height}px , width=${initial_width}px , initial-scale =1.0 `) { 
                    viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0");
                   }
                   }, 600);
               }
-             else if ( !IsWidth_550px &&  IsRotate  ) { 
+             else if ( !IsWidth_550px &&  IsRotate && (orientationType == 'landscape-primary' || orientationType == "landscape-secondary") ) { 
                 setTimeout(() => {  
                    viewport.setAttribute("content" , "width=device-width" , "height= device-height" , "initial-scale =1.0");
                 }, 600); 
