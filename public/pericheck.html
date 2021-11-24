@@ -2261,6 +2261,8 @@ table thead tr th:nth-child(8)  {
         let IsRotate  ;
          let IsWidth_550px  ; 
          let initial_width = window.innerWidth
+         let initial_height = window.innerHeight
+ 
          
          
      async function get_dataTables_filter () {   let dataTables_filter =  await document.querySelector(".dataTables_filter");
@@ -2984,27 +2986,31 @@ table thead tr th:nth-child(8)  {
             IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
           IsRotate = (window.screen.orientation.angle  === 90) ?  true  : false;
           let viewport = document.querySelector("meta[name=viewport]");
-             if (IsWidth_550px && !IsRotate && initial_width == window.innerWidth) { 
+             if (IsWidth_550px && !IsRotate  ) { 
                setTimeout(() => { 
-                 if (viewport.getAttribute('content')  !== `height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0`) { 
+                 if (viewport.getAttribute('content')  !== `height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0 ` ===  `height=${initial_height}px , width=${initial_width}px , initial-scale =1.0 `) { 
                    viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0");
                   }
                   }, 600);
               }
-              else{
+             else if ( !IsWidth_550px &&  IsRotate  ) { 
                 setTimeout(() => {  
                    viewport.setAttribute("content" , "width=device-width" , "height= device-height" , "initial-scale =1.0");
                 }, 600); 
               }
+              // console.clear();
               }
-            // setInterval(() => {
-            //      fix_ViewPort_Size();
-            //  }, 500);
-            let viewport = document.querySelector("meta[name=viewport]");
-            viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0");
+            setInterval(() => {
+                 fix_ViewPort_Size();
+             }, 500);
+              
 
-               console.clear();
-             
+
+
+
+
+
+
                </script>
 
  </body>
