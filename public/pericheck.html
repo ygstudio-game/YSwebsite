@@ -3007,8 +3007,10 @@ table thead tr th:nth-child(8)  {
           //    }, 500);
               
           function fixONCLiCKsearchVirwePort( ) {
-              if (IsWidth_550px && !IsRotate  && (orientationType == 'portrait-primary' || orientationType =="portrait-secondary")) { 
+           IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
+              if (IsWidth_550px ) { 
              viewport.setAttribute("content" , "height=" + initial_height + "px , width=" + initial_width +"px , initial-scale =1.0"); 
+             console.log(34)
             }
           }
         
