@@ -27,11 +27,8 @@ $(document).ready(function (){
   $('#myTable thead tr')
         .clone(true)
         .addClass('filters')
-        .appendTo('#myTable thead');
-
-        
-
-    var table = $('#myTable').DataTable({
+        .appendTo('#myTable thead'); 
+    let table = $('#myTable').DataTable({
         pageLength: 118 , 
         "aoColumnDefs": [ 
          { "bSearchable": false, "aTargets": [ 7] }
@@ -879,9 +876,7 @@ position: absolute;
   width: 34vw;
   height: 34vw;
   border-radius: 50%;
-  background: url(earth.jpg);
-  background-size: cover;
-  background-repeat: repeat-x;
+  background: url(earth.jpg) cover repeat-x;
   box-shadow: inset 0 0 1.04vw #0319f4, 0 0 6.25vw #03a9f4;
   transform: rotate( 334deg);
   animation: roatationanima linear infinite  154s; 
@@ -2261,9 +2256,11 @@ table thead tr th:nth-child(8)  {
         let IsRotate  ;
         let orientationType  ;   
          let IsWidth_550px  ; 
+     
+         let viewport =  document.querySelector("meta[name=viewport]");    
          const initial_width = window.innerWidth
          const initial_height = window.innerHeight
- 
+
          
          
      async function get_dataTables_filter () {   let dataTables_filter =  await document.querySelector(".dataTables_filter");
@@ -2902,6 +2899,8 @@ table thead tr th:nth-child(8)  {
           let searchvalue  =  search.value
         search.value =null
         search.ariaPlaceholder = "search elements"
+        viewport.setAttribute("content" , "width=device-width" , "height= device-height" , "initial-scale =1.0");
+
       }
     }
       let searchBool = false ;
@@ -2914,7 +2913,7 @@ table thead tr th:nth-child(8)  {
          btncontaniner_header_A.classList.add("activeteSearch")
           ADD_activatedclassFOR_selectors('activeted');
          ADD_activatedclassFOR_ALL_elements('activeted');
-
+         fixONCLiCKsearchVirwePort();
       }
      
       Customization_selector.addEventListener("click", () => { 
@@ -2982,37 +2981,37 @@ table thead tr th:nth-child(8)  {
               speech.rate = 1; 
               window.speechSynthesis.speak(speech); 
            } 
+               
+          //  function fix_ViewPort_Size( ) { 
+          //   IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
+          // IsRotate = (window.screen.orientation.angle  === 90) ?  true  : false;
+          //  let viewport =  document.querySelector("meta[name=viewport]");
+          // orientationType  = window.screen.orientation.type; 
+          //    if (IsWidth_550px && !IsRotate  && (orientationType == 'portrait-primary' || orientationType =="portrait-secondary")    ) { 
+          //      setTimeout(() => { 
+          //        if ( viewport.getAttribute("content")  !== `height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0 ` && (window.innerHeight == initial_height && window.innerWidth == initial_width))
+          //       {
+          //          viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0");
+          //         }
+          //         }, 600);
+          //     }
+          //    else if ( !IsWidth_550px &&  IsRotate && (orientationType == 'landscape-primary' || orientationType == "landscape-secondary") ) { 
+          //       setTimeout(() => {  
+          //          viewport.setAttribute("content" , "width=device-width" , "height= device-height" , "initial-scale =1.0");
+          //       }, 600); 
+          //     }
+          //     // console.clear();
+          //     }
+          //   setInterval(() => {
+          //        fix_ViewPort_Size();
+          //    }, 500);
               
-           function fix_ViewPort_Size( ) { 
-            IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
-          IsRotate = (window.screen.orientation.angle  === 90) ?  true  : false;
-          orientationType  = window.screen.orientation.type; 
-          let viewport = document.querySelector("meta[name=viewport]");
-             if (IsWidth_550px && !IsRotate  && (orientationType == 'portrait-primary' || orientationType =="portrait-secondary")    ) { 
-               setTimeout(() => { 
-                 if ( (viewport.getAttribute('content')  !== `height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0 `) (`height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0 `!==  `height=${initial_height}px , width=${initial_width}px , initial-scale =1.0 ` ) ) { 
-                   viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0");
-                  }
-                  }, 600);
-              }
-             else if ( !IsWidth_550px &&  IsRotate && (orientationType == 'landscape-primary' || orientationType == "landscape-secondary") ) { 
-                setTimeout(() => {  
-                   viewport.setAttribute("content" , "width=device-width" , "height= device-height" , "initial-scale =1.0");
-                }, 600); 
-              }
-              // console.clear();
-              }
-            setInterval(() => {
-                 fix_ViewPort_Size();
-             }, 500);
-              
-
-
-
-
-
-
-
+          function fixONCLiCKsearchVirwePort( ) {
+              if (IsWidth_550px && !IsRotate  && (orientationType == 'portrait-primary' || orientationType =="portrait-secondary")) { 
+             viewport.setAttribute("content" , "height=" + initial_height + "px , width=" + initial_width +"px , initial-scale =1.0"); 
+            }
+          }
+        
                </script>
 
  </body>
