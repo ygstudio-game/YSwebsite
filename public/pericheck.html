@@ -221,8 +221,8 @@ border: 0.06vw solid white;
  vertical-align: top;
 padding: 0.4vw;
 width: 15vw;
-position: -webkit-sticky;
- position: sticky;
+top: 0; 
+position: sticky;
   z-index: 12;
  box-shadow: inset 0 0   #ff08e8;
  transition: 300ms linear all;
@@ -230,15 +230,21 @@ position: -webkit-sticky;
 background: transparent;   
 text-shadow:  -0.012vw -0.06vw 0.2vw black, -0.08vw -0.06vw 0.2vw black, 0.016vw 0.09vw 0.2vw black ;
 }
+table thead tr:nth-child(2) {
+    position: sticky;
+    top: 5vh !important;
+    background: #000000;
+}
+
 .table thead tr th:hover  {
 color: #3a3a30;
 filter: sepia(1);
 text-shadow:  -0.012vw -0.06vw 0.2vw #fff, -0.08vw -0.06vw 0.2vw #fff, 0.016vw 0.09vw 0.2vw #fff ;
 }
 .table thead tr th:nth-child(1)  {
-border-radius: 3vw 0 0 0;
+/* border-radius: 3vw 0 0 0;
 border-top: none;
-border-left: none;
+border-left: none; */
 } 
 .table thead tr th:nth-child(1),  .table thead tr th:nth-child(1) input  ,.table thead tr th:nth-child(3) ,  .table thead tr th:nth-child(3) input  {
 width: 6vw !important;
@@ -317,6 +323,7 @@ top: -0.16vw;
    font-size: 1.2vw;
    position: relative;
   color: white;
+  background: #000000;
   }
 .btnTable:after {
   position: absolute;
@@ -331,6 +338,12 @@ top: -0.16vw;
 .btnTable:hover {
   color: rgb(0, 0, 0);
  }
+
+ .onHOverBTntable_TR{
+   position: relative;
+   background: #ffffffe5 !important;
+ }
+ 
 .btnTable:hover:after {
   left: auto;
   right: 0;
@@ -811,7 +824,7 @@ display: block !important;
 .toggle{
   position: fixed;
   top: 1.5vw;
-  right: 5vw;
+  right: 3.5vw;
   width: 4vw;
   height: 4vw;
   background: rgb(255, 255, 255) url(/menu.png) center no-repeat;
@@ -2221,7 +2234,7 @@ table thead tr th:nth-child(8)  {
       const tableGruop =  document.querySelector("#table-Gruop")
       const tablePeriod =  document.querySelector("#table-Period")
       const tableForMore =  document.querySelector("#table-ForMore")
-      const tableclickoptions =  document.querySelectorAll(".table tbody  tr td:nth-child(8) .btnTable")
+      const tableclickoptions =  document.querySelectorAll(".table tbody  tr td:nth-child(8).btnTable")
       const sunmain =  document.querySelector(".sunmain")
       const planetaMian =  document.querySelector(".planetaMian")
          // all elements type class
@@ -2899,8 +2912,7 @@ table thead tr th:nth-child(8)  {
           let searchvalue  =  search.value
         search.value =null
         search.ariaPlaceholder = "search elements"
-        viewport.setAttribute("content" , "width=device-width" , "height= device-height" , "initial-scale =1.0");
-
+        viewport.setAttribute("content" , "width=device-width" , "height= device-height" , "initial-scale =1.0"); 
       }
     }
       let searchBool = false ;
@@ -2965,9 +2977,9 @@ table thead tr th:nth-child(8)  {
                 togglemenu();
                 this["elements" + params].click(); 
               }
-              else{
+             else if(IsWidth_550px){
                 togglemenu();
-                  Moblie_elementsAll[params -1 ].firstElementChild.click(); 
+                Moblie_elementsAll[params -1 ].firstElementChild.click(); 
                }
             } 
           orientatinalBTn.addEventListener('click' , ()=>{
@@ -2981,7 +2993,14 @@ table thead tr th:nth-child(8)  {
               speech.rate = 1; 
               window.speechSynthesis.speak(speech); 
            } 
-               
+           tableclickoptions.forEach(elementdd => {
+              elementdd.addEventListener('mouseenter',()=>{
+            elementdd.parentElement.classList.add("onHOverBTntable_TR")   }) 
+            elementdd.addEventListener('mouseleave',()=>{
+            elementdd.parentElement.classList.remove("onHOverBTntable_TR")   })
+           });
+          
+       
           //  function fix_ViewPort_Size( ) { 
           //   IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
           // IsRotate = (window.screen.orientation.angle  === 90) ?  true  : false;
@@ -3010,9 +3029,9 @@ table thead tr th:nth-child(8)  {
            IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
               if (IsWidth_550px ) { 
              viewport.setAttribute("content" , "height=" + initial_height + "px , width=" + initial_width +"px , initial-scale =1.0"); 
-             console.log(34)
-            }
+             }
           }
+           
         
                </script>
 
