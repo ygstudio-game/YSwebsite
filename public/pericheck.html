@@ -101,7 +101,7 @@ $(document).ready(function (){
   --post-transition-metal-color: #4cddf3;
   --metalloid-color: #fff;
   --other-nonmetal-color: #52ee61;
-  --noble-metals-color: #759fff;
+  --noble-gasses-color: #759fff;
   --unknown-color: #ccc;
   --lanthrathide_and_anthrathide-color: #c686cc; 
   --All-element-common-box_shadow: 0.15vw -0.15vw 0.18vw 0vw currentColor,
@@ -513,17 +513,16 @@ margin-top :0.3vw ;
 .alkali-metals-selector ,  .akiline-earth-metals-selector ,  .transition-metal-selector , .post-transition-metal-selector ,   .metalloid-selector , .other-nonmetal-selector ,   .noble-gasses-selector ,   .unknown-selector ,  .lanthrathideseries-selector ,  .anthrathideseires-selector   { box-shadow: var(--All-element-common-box_shadow); }
 
 .alkali-metals-selector  , .alkali-metals{color: var(--alkali-color); } 
-.akiline-earth-metals-selector , .akiline-earth-metals {color: #dee955; } 
-.transition-metal-selector , .transition-metal{color: #fd8572; } 
-.post-transition-metal-selector , .post-transition-metal{color: #4cddf3; } 
-.metalloid-selector , .metalloid {color: #fff; } 
-.other-nonmetal-selector , .other-nonmetal {color: #52ee61; } 
-.noble-gasses-selector , .noble-gasses{color: #759fff; } 
-.unknown-selector , .unknown {color: #ccc; } 
-.lanthrathideseries-selector , .lanthrathideseries {color: #c686cc; } 
-.anthrathideseires-selector , .anthrathideseires {color: #c686cc; }
-
-#selectormetals p:hover {
+.akiline-earth-metals-selector , .akiline-earth-metals {color: var(--alkali-earth-color); } 
+.transition-metal-selector , .transition-metal{color: var(--transition-metal-color); } 
+.post-transition-metal-selector , .post-transition-metal{color: var(--post-transition-metal-color); } 
+.metalloid-selector , .metalloid {color: var(--metalloid-color); } 
+.other-nonmetal-selector , .other-nonmetal {color: var(--other-nonmetal-color); } 
+.noble-gasses-selector , .noble-gasses{color: var(--noble-gasses-color); } 
+.unknown-selector , .unknown {color: var(--unknown-color); } 
+.lanthrathideseries-selector , .lanthrathideseries {color: var(--lanthrathide_and_anthrathide-color); } 
+.anthrathideseires-selector , .anthrathideseires {color: var(--lanthrathide_and_anthrathide-color); }
+ #selectormetals p:hover {
   transform: scale(1.55) matrix(1, -0.1, 0.1, 1.3, 0, 0);
   z-index: 18;
 }
@@ -1855,7 +1854,7 @@ table thead tr:nth-child(2) th {
           
           <div class="MoblieTableTBody">  
             <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll other-nonmetal" id="moblie_elements-1"></div>
-<div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-metals" id="moblie_elements-2"></div>
+<div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-gasses" id="moblie_elements-2"></div>
 <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll alkali-metals" id="moblie_elements-3"></div>
 <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  akiline-earth-metals" id="moblie_elements-4"></div>
 <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  metalloid" id="moblie_elements-5"></div>
@@ -1863,7 +1862,7 @@ table thead tr:nth-child(2) th {
 <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  other-nonmetal" id="moblie_elements-7"></div>
 <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  other-nonmetal" id="moblie_elements-8"></div>
 <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  other-nonmetal" id="moblie_elements-9"></div>
-<div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-metals" id="moblie_elements-10"></div> 
+<div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-gasses" id="moblie_elements-10"></div> 
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll alkali-metals" id="moblie_elements-11"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  akiline-earth-metals" id="moblie_elements-12"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  post-transition-metal" id="moblie_elements-13"></div>
@@ -1871,7 +1870,7 @@ table thead tr:nth-child(2) th {
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  other-nonmetal" id="moblie_elements-15"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  other-nonmetal" id="moblie_elements-16"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  other-nonmetal" id="moblie_elements-17"></div>
- <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-metals" id="moblie_elements-18"></div>
+ <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-gasses" id="moblie_elements-18"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll alkali-metals" id="moblie_elements-19"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  akiline-earth-metals" id="moblie_elements-20"></div> 
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  transition-metal" id="moblie_elements-21"></div>
@@ -1889,7 +1888,7 @@ table thead tr:nth-child(2) th {
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  metalloid" id="moblie_elements-33"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  other-nonmetal" id="moblie_elements-34"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  other-nonmetal" id="moblie_elements-35"></div>
- <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-metals" id="moblie_elements-36"></div>
+ <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-gasses" id="moblie_elements-36"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll alkali-metals" id="moblie_elements-37"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  akiline-earth-metals" id="moblie_elements-38"></div> 
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  transition-metal" id="moblie_elements-39"></div>
@@ -1907,7 +1906,7 @@ table thead tr:nth-child(2) th {
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  metalloid" id="moblie_elements-51"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  metalloid" id="moblie_elements-52"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  other-nonmetal" id="moblie_elements-53"></div> 
-  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-metals" id="moblie_elements-54"></div>
+  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-gasses" id="moblie_elements-54"></div>
   <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll alkali-metals" id="moblie_elements-55"></div>
   <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  akiline-earth-metals" id="moblie_elements-56"></div>
   <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  lanthrathideseries_elements" id="moblie_elements-57"></div>
@@ -1939,7 +1938,7 @@ table thead tr:nth-child(2) th {
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  post-transition-metal" id="moblie_elements-83"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  post-transition-metal" id="moblie_elements-84"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  metalloid" id="moblie_elements-85"></div>
- <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-metals" id="moblie_elements-86"></div>
+ <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  noble-gasses" id="moblie_elements-86"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll alkali-metals" id="moblie_elements-87"></div>
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  akiline-earth-metals" id="moblie_elements-88"></div> 
  <div onclick="clicksoundfun()" class = "MoblieDivTableParts  Moblie_elementsAll  anthrathideseires_elements" id="moblie_elements-89"></div>
@@ -2086,12 +2085,12 @@ table thead tr:nth-child(2) th {
       <div onclick="clicksoundfun()" class="elementsAll , other-nonmetal" id="elements-53"></div>
 
       <!-- noble metals -->
-      <div onclick="clicksoundfun()" class="elementsAll , noble-metals right_Side_elements" id="elements-2"></div>
-      <div onclick="clicksoundfun()" class="elementsAll , noble-metals right_Side_elements" id="elements-10"></div>
-      <div onclick="clicksoundfun()" class="elementsAll , noble-metals right_Side_elements" id="elements-18"></div>
-      <div onclick="clicksoundfun()" class="elementsAll , noble-metals right_Side_elements" id="elements-36"></div>
-      <div onclick="clicksoundfun()" class="elementsAll , noble-metals right_Side_elements" id="elements-54"></div>
-      <div onclick="clicksoundfun()" class="elementsAll , noble-metals right_Side_elements" id="elements-86"></div>
+      <div onclick="clicksoundfun()" class="elementsAll , noble-gasses right_Side_elements" id="elements-2"></div>
+      <div onclick="clicksoundfun()" class="elementsAll , noble-gasses right_Side_elements" id="elements-10"></div>
+      <div onclick="clicksoundfun()" class="elementsAll , noble-gasses right_Side_elements" id="elements-18"></div>
+      <div onclick="clicksoundfun()" class="elementsAll , noble-gasses right_Side_elements" id="elements-36"></div>
+      <div onclick="clicksoundfun()" class="elementsAll , noble-gasses right_Side_elements" id="elements-54"></div>
+      <div onclick="clicksoundfun()" class="elementsAll , noble-gasses right_Side_elements" id="elements-86"></div>
 
       <!-- unknown -->
       <div onclick="clicksoundfun()" class="elementsAll , unknown" id="elements-109"></div>
@@ -2260,7 +2259,7 @@ table thead tr:nth-child(2) th {
       const post_transition_metal =  document.querySelectorAll(".post-transition-metal")
       const metalloid =  document.querySelectorAll(".metalloid")
       const other_nonmetal =  document.querySelectorAll(".other-nonmetal")
-      const noble_metals =  document.querySelectorAll(".noble-metals")
+      const noble_metals =  document.querySelectorAll(".noble-gasses")
       const unknown =  document.querySelectorAll(".unknown")
      const  orientatinalBTn = document.querySelector('.orientatinalBTn')
      const  ForMoblieElements = document.querySelector('.ForMoblieElements')
@@ -3055,6 +3054,10 @@ table thead tr:nth-child(2) th {
                 console.log("atEvent_Inner_width :-" + window.innerHeight)
                 console.log("atEvent_Inner_height :-" + window.innerWidth)
                 viewport.setAttribute("content" , "height=" + window.innerWidth + "px , width=device-width" +", initial-scale =1.0"); 
+                
+                console.log("atEvent_Inner_width :-" + window.innerHeight)
+                console.log("atEvent_Inner_height :-" + window.innerWidth)
+
               })
                </script>
 
