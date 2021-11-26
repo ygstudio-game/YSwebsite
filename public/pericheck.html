@@ -3046,12 +3046,15 @@ table thead tr:nth-child(2) th {
              viewport.setAttribute("content" , "height=" + initial_height + "px , width=" + initial_width +"px , initial-scale =1.0"); 
              }
           }
- 
-             viewport.setAttribute("content" , "height=" + initial_height + "px , width=" + initial_width +"px , initial-scale =1.0"); 
+          console.log("initial_width :-" + initial_width)
+          console.log("initial_height :-" + initial_height)
+             viewport.setAttribute("content" , "height=" + initial_height + "px , width=device-width" +  ", initial-scale =1.0"); 
          
-
+              
               addEventListener('orientationchange' , (event)=>{
-                viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0"); 
+                console.log("atEvent_Inner_width :-" + window.innerHeight)
+                console.log("atEvent_Inner_height :-" + window.innerWidth)
+                viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=device-width" +", initial-scale =1.0"); 
               })
                </script>
 
