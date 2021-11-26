@@ -3051,12 +3051,23 @@ table thead tr:nth-child(2) th {
          
               
               addEventListener('orientationchange' , (event)=>{
-                console.log("atEvent_Inner_width :-" + window.innerHeight)
-                console.log("atEvent_Inner_height :-" + window.innerWidth)
-                viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=device-width" +", initial-scale =1.0"); 
+                IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
+                // console.log(IsWidth_550px)
+                // console.log("atEvent_Inner_width :-" + window.innerHeight)
+                // let iheight = window.innerHeight
+                // console.log(iheight)
+                // console.log("atEvent_Inner_height :-" + window.innerWidth)
+                if (IsWidth_550px) {
+                  viewport.setAttribute("content" , "height=" + iheight + "px , width=device-width" +", initial-scale =1.0"); 
+                }
+                else if(!IsWidth_550px){
+                  viewport.setAttribute("content" ,  " width=device-width" +", initial-scale =1.0"); 
+
+                }
                 
-                console.log("atEvent_Inner_width :-" + window.innerHeight)
-                console.log("atEvent_Inner_height :-" + window.innerWidth)
+                // console.log(iheight)
+                // console.log("atEvent_Inner_width :-" + window.innerHeight)
+                // console.log("atEvent_Inner_height :-" + window.innerWidth)
 
               })
                </script>
