@@ -230,9 +230,9 @@ position: sticky;
 background: transparent;   
 text-shadow:  -0.012vw -0.06vw 0.2vw black, -0.08vw -0.06vw 0.2vw black, 0.016vw 0.09vw 0.2vw black ;
 }
-table thead tr:nth-child(2) {
+table thead tr:nth-child(2) th {
     position: sticky;
-    top: 3.6vh !important;
+    top: 5vh !important;
     background: #000000;
 }
 
@@ -322,9 +322,8 @@ top: -0.16vw;
   transition: all 0.22s ease;
    font-size: 1.2vw;
    position: relative;
-  color: white;
-  background: #000000;
-  }
+  color: #ffffff;
+   }
 .btnTable:after {
   position: absolute;
   content: "";
@@ -1591,10 +1590,19 @@ table thead tr th:nth-child(8)  {
  width: -webkit-fill-available !important;
  height: inherit !important;
  } 
-.table thead tr  th input ,.table thead tr th {
+ .table thead tr th {
   font-size: 2.4vh; 
   height: inherit;
 } 
+.table thead tr  th input  {
+  font-size: 2vh; 
+  height: inherit;
+} 
+table thead tr:nth-child(2) th {
+    position: sticky;
+    top: 3.8vh !important;
+    background: #000000;
+}
 .elementsAll  {
   border-top-left-radius: 0.35vh;
   border-bottom-right-radius: .35vh;
@@ -2918,7 +2926,7 @@ table thead tr th:nth-child(8)  {
           let searchvalue  =  search.value
         search.value =null
         search.ariaPlaceholder = "search elements"
-        viewport.setAttribute("content" , "width=device-width"  , "initial-scale =1.0"); 
+        // viewport.setAttribute("content" , "width=device-width"  , "initial-scale =1.0"); 
       }
     }
       let searchBool = false ;
@@ -2931,7 +2939,7 @@ table thead tr th:nth-child(8)  {
          btncontaniner_header_A.classList.add("activeteSearch")
           ADD_activatedclassFOR_selectors('activeted');
          ADD_activatedclassFOR_ALL_elements('activeted');
-         fixONCLiCKsearchVirwePort();
+        //  fixONCLiCKsearchVirwePort();
       }
      
       Customization_selector.addEventListener("click", () => { 
@@ -3038,8 +3046,13 @@ table thead tr th:nth-child(8)  {
              viewport.setAttribute("content" , "height=" + initial_height + "px , width=" + initial_width +"px , initial-scale =1.0"); 
              }
           }
-           
-        
+ 
+             viewport.setAttribute("content" , "height=" + initial_height + "px , width=" + initial_width +"px , initial-scale =1.0"); 
+         
+
+              addEventListener('orientationchange' , (event)=>{
+                viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0"); 
+              })
                </script>
 
  </body>
