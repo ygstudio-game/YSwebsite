@@ -10,12 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet" />
-  <meta name="keywords" content="Yadnyesh sunil borole">
-  <meta name="keywords" content="https://ysblogs-homepage.herokuapp.com/PeriodicTable">
-  <meta name="keywords" content="Yadnyesh  borole">
-  <meta name="keywords" content="Yadnyesh ">
-  <meta name="keywords" content="periodictable ">
-  <meta name="keywords" content="check">
+  <meta name="keywords" content="Yadnyesh sunil borole"> 
   <title>YSBlogs-Periodic table</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton&display=swap">
 
@@ -81,17 +76,12 @@ $(document).ready(function (){
                                 .setSelectionRange(cursorPosition, cursorPosition);
                         });
                 });
-        },
-       
+        }, 
     });
     $('#search').keyup(function(){
           table.search($(this).val()).draw();
-        })
-
-}); 
- 
- 
-  </script>
+        }) 
+});   </script>
      <style>
           
 :root {
@@ -240,12 +230,7 @@ table thead tr:nth-child(2) th {
 color: #3a3a30;
 filter: sepia(1);
 text-shadow:  -0.012vw -0.06vw 0.2vw #fff, -0.08vw -0.06vw 0.2vw #fff, 0.016vw 0.09vw 0.2vw #fff ;
-}
-.table thead tr th:nth-child(1)  {
-/* border-radius: 3vw 0 0 0;
-border-top: none;
-border-left: none; */
-} 
+}  
 .table thead tr th:nth-child(1),  .table thead tr th:nth-child(1) input  ,.table thead tr th:nth-child(3) ,  .table thead tr th:nth-child(3) input  {
 width: 6vw !important;
 } 
@@ -267,7 +252,6 @@ width: 16vw !important;
 .table tbody tr {
 transition: all 250ms linear  ;
  cursor: url(https://cdn.custom-cursor.com/db/5457/32/dark-purple-color-pointer.png) , pointer ;
-
 }
 .table tbody tr td {
  opacity: 1;
@@ -275,8 +259,7 @@ transition: all 250ms linear  ;
  padding: 0.4vw;
 text-align: center;
 font-size: 1.2vw;
-box-shadow:    
-                   inset 0 0 0.8vw #ff08e8; 
+box-shadow:   inset 0 0 0.8vw #ff08e8; 
  
 }
 .table tbody tr td:nth-child(8){
@@ -303,7 +286,6 @@ background-color: rgba(0, 0, 0, 0.534);
    text-align: center;
    width: 1.8vw;
    height: 1.8vw;
-
   }
   .table thead th .inputOnscroll{
     font-weight: 780;
@@ -311,9 +293,7 @@ font-size: 1.25vw;
 color: rgb(255, 255, 255);
 letter-spacing: 0.1vw;
 position: relative;
-top: -0.16vw;
-
-  } 
+   } 
   .btnTable {
   border: 0.12vw solid rgb(255, 255, 255);
   z-index: 1;
@@ -337,7 +317,6 @@ top: -0.16vw;
 .btnTable:hover {
   color: rgb(0, 0, 0);
  }
-
  .onHOverBTntable_TR{
    position: relative;
    background: #ffffffe5 !important;
@@ -351,7 +330,6 @@ top: -0.16vw;
 .btnTable:active {
   top: 2px;
 }
- 
 header #search.activeteSearch{
 width: 100%;
 height:60%;
@@ -365,7 +343,6 @@ header ul {
   right: 12vw;
  align-items: center;
   } 
-
 header .btncontaniner_header_A .header_A , .orientatinalBTn {
    font-weight: 700;
   color: white;
@@ -378,9 +355,6 @@ header .btncontaniner_header_A .header_A , .orientatinalBTn {
   -webkit-box-reflect: below 0vw linear-gradient( #00000000 , #00000036);
   transition: all 600ms linear , top 600ms 500ms linear;
 }
- 
-
-
 header .btncontaniner_header_A .header_A:hover ,  .orientatinalBTn:hover {
   color: black;
   border-radius: 0.2vw;
@@ -392,7 +366,6 @@ header .btncontaniner_header_A.activeteSearch{
   right: -100vw;
   top: -100vh;
 }
-
 #periodictable {
   display: flex;
   flex-direction: column;
@@ -426,7 +399,6 @@ header .btncontaniner_header_A.activeteSearch{
   box-shadow: rgb(215 215 40) 0.156vw 0.104vw 0.208vw 0vw ;
   border-right:  .18vw solid  rgba(215 215 40)  ;
   border-bottom: .18vw solid  rgba(215 215 40) ;
-
  }
 #selectormetals p {
   background: #1f1e1e;
@@ -453,7 +425,6 @@ header .btncontaniner_header_A.activeteSearch{
 .ACTIVATE_elementsGRID_ID{
 margin-top :0.3vw ; 
 }
-
 .elementsAll  {
   border-top-left-radius: 0.35vw;
   border-bottom-right-radius: .35vw;
@@ -2261,6 +2232,7 @@ table thead tr:nth-child(2) th {
       const other_nonmetal =  document.querySelectorAll(".other-nonmetal")
       const noble_metals =  document.querySelectorAll(".noble-gasses")
       const unknown =  document.querySelectorAll(".unknown")
+      
      const  orientatinalBTn = document.querySelector('.orientatinalBTn')
      const  ForMoblieElements = document.querySelector('.ForMoblieElements')
      const  MoblieTableTBody  = document.querySelector('.MoblieTableTBody ')
@@ -2272,30 +2244,17 @@ table thead tr:nth-child(2) th {
 
      
       
-     let Speakbuttons   ; 
-     let stopEle   ; 
-     let pauseEle  ; 
-     let playEle   ;   
-      let Moblie_elementsAll   ;
-      let  MoblieinnerTD  ;
-      let  Moblie_clickable_Item  ;
-        let IsRotate  ;
-        let orientationType  ;   
-         let IsWidth_550px  ; 
+     let Speakbuttons , playEle , stopEle , pauseEle , Moblie_elementsAll , MoblieinnerTD ,Moblie_clickable_Item , IsRotate , orientationType ,IsWidth_550px ;  
      
          let viewport =  document.querySelector("meta[name=viewport]");    
-         const initial_width = window.innerWidth
-         const initial_height = window.innerHeight
-
+         const initial_width = window.innerWidth;
+         const initial_height = window.innerHeight ;
          
-         
-     async function get_dataTables_filter () {   let dataTables_filter =  await document.querySelector(".dataTables_filter");
- 
+     async function get_dataTables_filter () {   let dataTables_filter =  await document.querySelector(".dataTables_filter"); 
     }
 
       let selrectormetalsbool = undefined ;
-      let elementsclickchecker = false
-       
+      let elementsclickchecker = false 
        
       let allgruopsnumbers =["1","18","1","2","13","14","15","16","17","18","1","2","13","14","15","16","17","18","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","1","2","101","101","101","101","101","101","101","101","101","101","101","101","101","101","101","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","1","2","102","102","102","102","102","102","102","102","102","102","102","102","102","102","102","4","5","6","7","8","9" , "10" , "11" , "12" , "13" , "14" , "15" ,"16" ,"17" , "18" ]
 
@@ -2599,15 +2558,9 @@ table thead tr:nth-child(2) th {
        let  endselector ;
       // function for cutoption 
       function cutoptionfunction(silent  ) {
-        if (silent !== 'silent') {
-          clicksound.play(); 
-        }
-        if (silent == 'silent') {
-          selrectormetalsbool =  false
-          }
-          if (silent == undefined) {
-            selrectormetalsbool =  false
-          }
+        if (silent !== 'silent') {clicksound.play();   }
+       else if (silent == 'silent') {selrectormetalsbool =  false  }
+      else if (silent == undefined) {selrectormetalsbool =  false  }
           elementsclickchecker = false;
         alkalimetalsselectorid.classList.remove("selector_active")
         cutoptionmain2.style.display = "none";
@@ -2674,16 +2627,13 @@ table thead tr:nth-child(2) th {
          <p class="Elements_full_name">${name[x]}</p> 
          <p class="atomic_mass">${atomic_mass[x]}</p> <div class="allonclickdisplaycontent"id="onclickdisplaycontent-${x+1}"> <div class ="summary"id="summary-${x}">summary = ${summary[x]} </div>  <div class ="appearance"id="appearance{x}" >appearance = ${appearance[x]}</div> <div class ="boil" id="boil-${x}" >boiling point = ${boil[x] }   <sup>o</sup> C</div> <div class ="category"id="category-${x}"> category = ${category[x]}</div> <div class="color" id="color-${x}">color = ${color[x]}</div><div class ="density"id="density-${x}" >density = ${density[x]}</div> <div class = "discovered_by"id="discovered_by-${x}" >Discovered by = ${discovered_by[x]}</div>  <div class ="melt"id="melt-${x}">melting point = ${melt[x]}</div><div class ="molar_heat" id="molar_heat-${x}">molar heat = ${molar_heat[x]}</div> <div class = "named_by"id="named_by-${x}" >named by =  ${named_by[x]}</div> <div class  ="period"id="period-${x}">period = ${period[x]}</div> <div class  ="phase" id="phase-${x}">phase= ${phase[x]}</div><div class ="source" id="source-${x}}" >For more information = <a href="${source[x] }" target="_blank" rel="noopener noreferrer">${source[x] }</a></div> <div class ="spectral_img"id="spectral_img-${x}" >spectral img =  <a href=" ${spectral_img[x]}" target="_blank" rel="noopener noreferrer"> ${spectral_img[x] }</a> </div><div class ="phase"id="phase-${x}">phase = ${phase[x]}</div><div class="xpos"id="xpos-${x}" >xpos = ${xpos[x]}</div><div class ="ypos"id="ypos-${x}" >ypos = ${ypos[x]}</div> <div class="electron_configuration"id="electron_configuration-${x}" >electron configuration = ${electron_configuration[x]}</div> <div class ="electron_configuration_semantic"id="electron_configuration_semantic-${x}" >electron configuration semantic = ${electron_configuration_semantic[x]}</div><div class="electron_affinity"id="electron_affinity-${x}">electron affinity = ${electron_affinity[x]}</div><div class="electronegativity_pauling"id="electronegativity_pauling-${x}" >electronegativity pauling = ${electronegativity_pauling[x]}</div>      <div class="ionization_energies"id="ionization_energies-${x}" >ionizationenergies  = ${ionization_energies[x] }</div>   </div> `;
 
-         this['Moblie_elements' + [x+1]].innerHTML +=  ` 
-        <div class="MoblieDivTableParts Moblie_clickable_Item MoblieAtomicNumber">${x+1}</div> <div class="MoblieDivTableParts Moblie_clickable_Item MoblieSymbol">${symbol[x]}</div> <div class="MoblieDivTableParts Moblie_clickable_Item MoblieAtomicmass">${atomic_mass[x]}</div> <div class="MoblieDivTableParts Moblie_clickable_Item MoblieElementName">${name[x]}</div> <div class="MoblieDivTableParts Moblie_clickable_Item MoblieGruop">${allgruopsnumbers[x]}</div> <div class="MoblieDivTableParts Moblie_clickable_Item Moblieperiod">${period[x]}</div> <div class="MoblieDivTableParts inner "> <div class="elementsAll alkali-metals>"> <p class="Moblie_Atomic_number" >${[x+1]}</p> <p class="Moblie_Elements_short_name" >${symbol[x]} </p> <p class="Moblie_Elements_full_name">${name[x]}</p> <p class="Moblie_atomic_mass">${atomic_mass[x]}</p> </div> <div class="Speakbuttons"> <button class = 'play'></button> &nbsp; <button class = 'pause'></button> &nbsp; <button class = 'stop'></button> </div> <div class="Moblie_allonclickdisplaycontent" id="Moblie_onclickdisplaycontent-${x+1}"> <div class="Moblie_summary" id="Moblie_summary-${x}">summary = ${summary[x]} \n ${moreSummery[x]}</div> <div class="Moblie_appearance" id="Moblie_appearance{x}">appearance = ${appearance[x]}</div> <div class="Moblie_boil" id="Moblie_boil-${x}">boiling point = ${boil[x] } <sup>o</sup> C</div> <div class="Moblie_category" id="Moblie_category-${x}"> category = ${category[x]}</div> <div class="Moblie_color" id="Moblie_color-${x}">color = ${color[x]}</div> <div class="Moblie_density" id="Moblie_density-${x}">density = ${density[x]}</div> <div class="Moblie_discovered_by" id="Moblie_discovered_by-${x}">Discovered by = ${discovered_by[x]}</div> <div class="Moblie_melt" id="Moblie_melt-${x}">melting point = ${melt[x]}</div> <div class="Moblie_molar_heat" id="Moblie_molar_heat-${x}">molar heat = ${molar_heat[x]}</div> <div class="Moblie_named_by" id="Moblie_named_by-${x}">named by = ${named_by[x]}</div> <div class="Moblie_period" id="Moblie_period-${x}">period = ${period[x]}</div> <div class="Moblie_phase" id="Moblie_phase-${x}">phase= ${phase[x]}</div> <div class="Moblie_source" id="Moblie_source-${x}}">For more information = <a href="${source[x] }" target="_blank" rel="noopener noreferrer">${source[x] }</a></div> <div class="Moblie_spectral_img" id="Moblie_spectral_img-${x}">spectral img = <a href=" ${spectral_img[x]}" target="_blank" rel="noopener noreferrer"> ${spectral_img[x] }</a> </div> <div class="Moblie_phase" id="Moblie_phase-${x}">phase = ${phase[x]}</div> <div class="Moblie_xpos" id="Moblie_xpos-${x}">xpos = ${xpos[x]}</div> <div class="Moblie_ypos" id="Moblie_ypos-${x}">ypos = ${ypos[x]}</div> <div class="Moblie_electron_configuration" id="Moblie_electron_configuration-${x}">electron configuration = ${electron_configuration[x]}</div> <div class="Moblie_electron_configuration_semantic" id="Moblie_electron_configuration_semantic-${x}">electron configuration semantic = ${electron_configuration_semantic[x]}</div> <div class="Moblie_electron_affinity" id="Moblie_electron_affinity-${x}">electron affinity = ${electron_affinity[x]}</div> <div class="Moblie_electronegativity_pauling" id="Moblie_electronegativity_pauling-${x}">electronegativity pauling = ${electronegativity_pauling[x]}</div> <div class="Moblie_ionization_energies" id="Moblie_ionization_energies-${x}">ionizationenergies = ${ionization_energies[x] }</div>
- `  
+         this['Moblie_elements' + [x+1]].innerHTML +=  `<div class="MoblieDivTableParts Moblie_clickable_Item MoblieAtomicNumber">${x+1}</div> <div class="MoblieDivTableParts Moblie_clickable_Item MoblieSymbol">${symbol[x]}</div> <div class="MoblieDivTableParts Moblie_clickable_Item MoblieAtomicmass">${atomic_mass[x]}</div> <div class="MoblieDivTableParts Moblie_clickable_Item MoblieElementName">${name[x]}</div> <div class="MoblieDivTableParts Moblie_clickable_Item MoblieGruop">${allgruopsnumbers[x]}</div> <div class="MoblieDivTableParts Moblie_clickable_Item Moblieperiod">${period[x]}</div> <div class="MoblieDivTableParts inner "> <div class="elementsAll alkali-metals>"> <p class="Moblie_Atomic_number" >${[x+1]}</p> <p class="Moblie_Elements_short_name" >${symbol[x]} </p> <p class="Moblie_Elements_full_name">${name[x]}</p> <p class="Moblie_atomic_mass">${atomic_mass[x]}</p> </div> <div class="Speakbuttons"> <button class = 'play'></button> &nbsp; <button class = 'pause'></button> &nbsp; <button class = 'stop'></button> </div> <div class="Moblie_allonclickdisplaycontent" id="Moblie_onclickdisplaycontent-${x+1}"> <div class="Moblie_summary" id="Moblie_summary-${x}">summary = ${summary[x]} \n ${moreSummery[x]}</div> <div class="Moblie_appearance" id="Moblie_appearance{x}">appearance = ${appearance[x]}</div> <div class="Moblie_boil" id="Moblie_boil-${x}">boiling point = ${boil[x] } <sup>o</sup> C</div> <div class="Moblie_category" id="Moblie_category-${x}"> category = ${category[x]}</div> <div class="Moblie_color" id="Moblie_color-${x}">color = ${color[x]}</div> <div class="Moblie_density" id="Moblie_density-${x}">density = ${density[x]}</div> <div class="Moblie_discovered_by" id="Moblie_discovered_by-${x}">Discovered by = ${discovered_by[x]}</div> <div class="Moblie_melt" id="Moblie_melt-${x}">melting point = ${melt[x]}</div> <div class="Moblie_molar_heat" id="Moblie_molar_heat-${x}">molar heat = ${molar_heat[x]}</div> <div class="Moblie_named_by" id="Moblie_named_by-${x}">named by = ${named_by[x]}</div> <div class="Moblie_period" id="Moblie_period-${x}">period = ${period[x]}</div> <div class="Moblie_phase" id="Moblie_phase-${x}">phase= ${phase[x]}</div> <div class="Moblie_source" id="Moblie_source-${x}}">For more information = <a href="${source[x] }" target="_blank" rel="noopener noreferrer">${source[x] }</a></div> <div class="Moblie_spectral_img" id="Moblie_spectral_img-${x}">spectral img = <a href=" ${spectral_img[x]}" target="_blank" rel="noopener noreferrer"> ${spectral_img[x] }</a> </div> <div class="Moblie_phase" id="Moblie_phase-${x}">phase = ${phase[x]}</div> <div class="Moblie_xpos" id="Moblie_xpos-${x}">xpos = ${xpos[x]}</div> <div class="Moblie_ypos" id="Moblie_ypos-${x}">ypos = ${ypos[x]}</div> <div class="Moblie_electron_configuration" id="Moblie_electron_configuration-${x}">electron configuration = ${electron_configuration[x]}</div> <div class="Moblie_electron_configuration_semantic" id="Moblie_electron_configuration_semantic-${x}">electron configuration semantic = ${electron_configuration_semantic[x]}</div> <div class="Moblie_electron_affinity" id="Moblie_electron_affinity-${x}">electron affinity = ${electron_affinity[x]}</div> <div class="Moblie_electronegativity_pauling" id="Moblie_electronegativity_pauling-${x}">electronegativity pauling = ${electronegativity_pauling[x]}</div> <div class="Moblie_ionization_energies" id="Moblie_ionization_energies-${x}">ionizationenergies = ${ionization_energies[x] }</div> `  
        }
          onclickdisplaycontent_qurryselector();
         summery_qurryselector();
         ionization_energies_qurryselector();
         remove_activated_elements_onclickCLASS_ALL_118elements();
         setting_qurry_FOR_MoblieElements();
-            
       }
     all();  
         function atomicmasfix( ) {   
@@ -2720,8 +2670,7 @@ table thead tr:nth-child(2) th {
  
        cutoptionmain.addEventListener("click", () => {  
       cutoptionfunction();
-    });
-
+    }); 
     cutoptionmain2.addEventListener("click", () => {
       cutoptionfunction();
     });
@@ -2925,8 +2874,7 @@ table thead tr:nth-child(2) th {
           let searchvalue  =  search.value
         search.value =null
         search.ariaPlaceholder = "search elements"
-        // viewport.setAttribute("content" , "width=device-width"  , "initial-scale =1.0"); 
-      }
+       }
     }
       let searchBool = false ;
       function addsearch(){
@@ -2938,8 +2886,7 @@ table thead tr:nth-child(2) th {
          btncontaniner_header_A.classList.add("activeteSearch")
           ADD_activatedclassFOR_selectors('activeted');
          ADD_activatedclassFOR_ALL_elements('activeted');
-        //  fixONCLiCKsearchVirwePort();
-      }
+       }
      
       Customization_selector.addEventListener("click", () => { 
         btncontaninerSidebarcontanierOptimaizations_modes.classList.toggle("activatedMenuClass")
@@ -2981,8 +2928,7 @@ table thead tr:nth-child(2) th {
                ALLInputth.forEach(element => {
               element.firstElementChild.classList.remove("inputOnscroll")
             });
-          }
-          })
+          }   })
           
             function onclickONBtntable(params) { 
                 IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
@@ -3012,63 +2958,18 @@ table thead tr:nth-child(2) th {
             elementdd.addEventListener('mouseleave',()=>{
             elementdd.parentElement.classList.remove("onHOverBTntable_TR")   })
            });
+           
+            viewport.setAttribute("content" , "height=" + initial_height + "px , width=device-width" +  ", initial-scale =1.0"); 
           
-       
-          //  function fix_ViewPort_Size( ) { 
-          //   IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
-          // IsRotate = (window.screen.orientation.angle  === 90) ?  true  : false;
-          //  let viewport =  document.querySelector("meta[name=viewport]");
-          // orientationType  = window.screen.orientation.type; 
-          //    if (IsWidth_550px && !IsRotate  && (orientationType == 'portrait-primary' || orientationType =="portrait-secondary")    ) { 
-          //      setTimeout(() => { 
-          //        if ( viewport.getAttribute("content")  !== `height=${window.innerHeight}px , width=${window.innerWidth}px , initial-scale =1.0 ` && (window.innerHeight == initial_height && window.innerWidth == initial_width))
-          //       {
-          //          viewport.setAttribute("content" , "height=" + window.innerHeight + "px , width=" + window.innerWidth +"px , initial-scale =1.0");
-          //         }
-          //         }, 600);
-          //     }
-          //    else if ( !IsWidth_550px &&  IsRotate && (orientationType == 'landscape-primary' || orientationType == "landscape-secondary") ) { 
-          //       setTimeout(() => {  
-          //          viewport.setAttribute("content" , "width=device-width" , "height= device-height" , "initial-scale =1.0");
-          //       }, 600); 
-          //     }
-          //     // console.clear();
-          //     }
-          //   setInterval(() => {
-          //        fix_ViewPort_Size();
-          //    }, 500);
-          // let
-              
-          function fixONCLiCKsearchVirwePort( ) {
-           IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
-              if (IsWidth_550px ) { 
-             viewport.setAttribute("content" , "height=" + initial_height + "px , width=" + initial_width +"px , initial-scale =1.0"); 
-             }
-          }
-          console.log("initial_width :-" + initial_width)
-          console.log("initial_height :-" + initial_height)
-             viewport.setAttribute("content" , "height=" + initial_height + "px , width=device-width" +  ", initial-scale =1.0"); 
-         
-              
               addEventListener('orientationchange' , (event)=>{
-                IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false; 
-                // console.log(IsWidth_550px)
-                // console.log("atEvent_Inner_width :-" + window.innerHeight)
-                // let iheight = window.innerHeight
-                // console.log(iheight)
-                // console.log("atEvent_Inner_height :-" + window.innerWidth)
+                IsWidth_550px  = (window.screen.width  <= 550  ) ?  true  : false;   
                 if (IsWidth_550px) {
                   viewport.setAttribute("content" , "height=" + initial_height + "px , width=device-width" +", initial-scale =1.0"); 
                 }
                 else if(!IsWidth_550px){
                   viewport.setAttribute("content" ,  " width=device-width" +", initial-scale =1.0"); 
-
-                }
-                
-                // console.log(iheight)
-                // console.log("atEvent_Inner_width :-" + window.innerHeight)
-                // console.log("atEvent_Inner_height :-" + window.innerWidth)
-
+                  elementsclickchecker = (elementsclickchecker) ? false : false
+                } 
               })
                </script>
 
