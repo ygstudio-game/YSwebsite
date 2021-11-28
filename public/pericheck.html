@@ -1120,7 +1120,6 @@ transition: 0.5s;
 }
 a{
   cursor: url(https://cdn.custom-cursor.com/db/5457/32/dark-purple-color-pointer.png) , pointer !important;
-
 }
 .btncontaniner .sidebarbtns:hover{
 color: black;
@@ -2559,10 +2558,10 @@ table thead tr:nth-child(2) th {
       // function for cutoption 
       function cutoptionfunction(silent  ) {
         if (silent !== 'silent') {clicksound.play();   }
-       else if (silent == 'silent') {selrectormetalsbool =  false  }
-      else if (silent == undefined) {selrectormetalsbool =  false  }
+         if (silent == 'silent') {selrectormetalsbool =  false  }
+        if (silent == undefined) {selrectormetalsbool =  false  }
           elementsclickchecker = false;
-        alkalimetalsselectorid.classList.remove("selector_active")
+         alkalimetalsselectorid.classList.remove("selector_active")
         cutoptionmain2.style.display = "none";
         cutoptionmain.style.display = "none";
         backgroundcontainer.style.filter="none"
@@ -2971,6 +2970,13 @@ table thead tr:nth-child(2) th {
                   elementsclickchecker = (elementsclickchecker) ? false : false
                 } 
               })
+             
+               onbeforeunload = ()=>{
+               speechSynthesis.cancel();
+                              speak(''); 
+               }
+        
+              
                </script>
 
  </body>
