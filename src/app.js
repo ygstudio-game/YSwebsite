@@ -26,18 +26,11 @@ app.get('/Contrat', (req , res) =>{
     res.sendFile(path.join(__dirname,'../public/weatherawebapp.html') )
   })
   app.get('/PeriodicTable', (req , res) =>{
-    res.sendFile(path.join(__dirname,'../public/periodic.html') )
+    res.sendFile(path.join(__dirname,'../public/PeriodicTable.html') )
   })
 
-  app.get('/Periodiccheck', (req , res) =>{
-    res.sendFile(path.join(__dirname,'../public/pericheck.html') )
-  })
  
-  // temps
-  app.get('/earthtirl', (req , res) =>{
-    res.sendFile(path.join(__dirname,'../public/earthtirl.html') )
-  })
-
+ 
 
 
 

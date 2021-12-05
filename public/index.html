@@ -18,6 +18,9 @@
                 color: black;
 
             }
+            *{
+                transition: all 600ms linear;
+            }
 
             html {
                 scroll-behavior: smooth;
@@ -187,23 +190,7 @@
 
             }
 
-            #para_card_1 {
-                transition-property: all;
-                transition-duration: 720ms;
-
-            }
-
-            #para_card_2 {
-                transition-property: all;
-                transition-duration: 600ms;
-
-            }
-
-            #para_card_3 {
-                transition-property: all;
-                transition-duration: 600ms;
-
-            }
+      
 
             #imglogo {
                 width: 8vh;
@@ -379,25 +366,13 @@
                 color: black;
 
             }
-
-            #para_card_1 {
+            #main_webpages .card p{
+                
                 transition-property: all;
-                transition-duration: 720ms;
-
+                transition-duration: 650ms;
             }
-
-            #para_card_2 {
-                transition-property: all;
-                transition-duration: 600ms;
-
-            }
-            #para_card_3 {
-                transition-property: all;
-                transition-duration: 600ms;
-
-            }
-
-
+      
+ 
             #imglogo {
                 width: 6vh;
                 height: 6vh;
@@ -408,6 +383,7 @@
             }
 
         }
+        
     </style>
 
 </head>
@@ -424,26 +400,36 @@
         </nav>
         <input type="text" value=" " name="search" id="search" placeholder="search">
     </header>
+
+ 
+     
+
+ 
+
+
     <div id="main_webpages" onmouseenter="mainwebin()" onmouseleave="mainwebout()" style="opacity: 0.85;">
-        <div class="card " id="card1" onmouseleave="leave1()" onmouseenter="onclicked1()"><a id="card_a_1"
-                href="/weatherapp" target="_blank" rel="noopener noreferrer" style="color: white;">Weather App </a>
+        <div class="card " id="card1" onmouseleave="leave1()" onmouseenter="onclicked1()"><a id="card_a_1" href="/PeriodicTable"
+            style="color: white;">Periodic Table </a> 
 
-            <p id="para_card_1" style="font-size: 16px;">Click Above to Go On Weather App
-                <br><br>
-                It is Very Useful Web Application
-                <br><br>
-                It's Show Accurate Temperature of any city in world
-            </p>
+                <p id="para_card_1" style="font-size: 15px;">
+                    Click Above to Visit my periodic table website
+                    <br> <br>
+                    In This website you can find all info about 118 element 
+                    <br>
+                    if you are a student you should visit this website
+                </p>
         </div>
-        <div class="card " id="card2" onmouseleave="leave2()" onmouseenter="onclicked2()"><a id="card_a_2"
-                href="/mathapp" target="_blank" rel="noopener noreferrer" style="color: white;">Math App </a>
-
-            <p id="para_card_2" style="font-size: 16px;">Click Above to know more or download my Math app
-                <br><br>
-                In This App You can do opration and complicated opration
-            </p>
+        <div class="card " id="card2" onmouseleave="leave2()" onmouseenter="onclicked2()"> <a id="card_a_2"
+            href="/weatherapp" target="_blank" rel="noopener noreferrer" style="color: white;">Weather App </a>
+                <p id="para_card_2" style="font-size: 16px;">Click Above to Go On Weather App
+                    <br><br>
+                    It is Very Useful Web Application
+                    <br><br>
+                    It's Show Accurate Temperature of any city in world
+                </p>
         </div>
 
+ 
 
 
         <div class="card" id="card3" onmouseleave="leave3()" onmouseenter="onclicked3()"><a id="card_a_3"
@@ -457,12 +443,15 @@
                 This is my First Blog you should check out It
             </p>
         </div>
-        <div class="card" id="card4" onmouseleave="leave4()" onmouseenter="onclicked4()"><a id="card_a_4" href="#"
-                style="color: white;">Coming
-                soon </a>
+        <div class="card" id="card4" onmouseleave="leave4()" onmouseenter="onclicked4()"> <a id="card_a_4"
+                href="/mathapp" target="_blank" rel="noopener noreferrer" style="color: white;">Math App </a>
 
+            <p id="para_card_4" style="font-size: 16px;">Click Above to know more or download my Math app
+                <br><br>
+                In This App You can do opration and complicated opration
+            </p>
         </div>
-        <div class="card" id="card5" onmouseleave="leave5()" onmouseenter="onclicked5()"><a id="card_a_5" href="#"
+        <div class="card" id="card5" onmouseleave="leave5()" onmouseenter="onclicked4()"><a id="card_a_5" href="#"
                 style="color: white;">Coming
                 soon</a></div>
 
@@ -473,52 +462,14 @@
     </footer>
 
     <script>
+ 
 
-
-
-
-
-
-        const mediaQuery1 = window.matchMedia('(min-width: 790px)')
-        if (mediaQuery1.matches) {
-
-            function onclicked1() {
-                document.getElementById('card_a_1').style.color = "black"
-                document.getElementById('para_card_1').style.fontSize = "2.5vh"
-            }
-            function onclicked2() {
-                document.getElementById('card_a_2').style.color = "black"
-                document.getElementById('para_card_2').style.fontSize = "2.45vh"
-            }
-            function onclicked3() {
-                document.getElementById('card_a_3').style.color = "black"
-                document.getElementById('para_card_3').style.fontSize = "2.45vh"
-            }
-            function onclicked4() { document.getElementById('card_a_4').style.color = "black" }
-            function onclicked5() { document.getElementById('card_a_5').style.color = "black" }
-
-
-            function leave1() {
-                document.getElementById('card_a_1').style.color = "white"
-                document.getElementById('para_card_1').style.fontSize = "15px"
-            }
-            function leave2() {
-                document.getElementById('card_a_2').style.color = "white"
-                document.getElementById('para_card_2').style.fontSize = "15px "
-            }
-            function leave3() {
-                document.getElementById('card_a_3').style.color = "white"
-                document.getElementById('para_card_3').style.fontSize = "15px "
-            }
-            function leave4() { document.getElementById('card_a_4').style.color = "white" }
-            function leave5() { document.getElementById('card_a_5').style.color = "white" }
-
-
-            function mainwebin() { document.getElementById('main_webpages').style.opacity = "100%" }
+ function mainwebin() { document.getElementById('main_webpages').style.opacity = "100%" }
             function mainwebout() { document.getElementById('main_webpages').style.opacity = "85%" }
 
-            window.onscroll = function () { scrollFunction() };
-
+        const mediaQuery1 = window.matchMedia('(min-width: 790px)')
+        if (mediaQuery1.matches) {   
+            window.onscroll = function () { scrollFunction() }; 
             function scrollFunction() {
                 if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                     document.getElementById("header").style.backgroundColor = "black";
@@ -539,37 +490,30 @@
                     document.getElementById("link3").style.color = "black"
                     document.getElementById("link4").style.color = "black"
 
-                }
+                } 
 
-
-
-
-            }
-
-
-
+            } 
 
         }
 
-        const mediaQuery2 = window.matchMedia('(max-width: 780px)')
-        if (mediaQuery2.matches) {
-            function onclicked1() {
+              function onclicked1() {
                 document.getElementById('card_a_1').style.color = "black"
-                document.getElementById('para_card_1').style.fontSize = "2.5vh"
+                document.getElementById('para_card_1').style.fontSize = "2.25vh"
                 document.getElementsByClassName('main_webpages').style.color = 'black'
             }
             function onclicked2() {
                 document.getElementById('card_a_2').style.color = "black"
-                document.getElementById('para_card_2').style.fontSize = "2.45vh"
+                document.getElementById('para_card_2').style.fontSize = "2.25vh"
                 document.getElementsByClassName('main_webpages').style.color = 'black'
             }
             function onclicked3() {
                 document.getElementById('card_a_3').style.color = "black"
-                document.getElementById('para_card_3').style.fontSize = "2.45vh"
+                document.getElementById('para_card_3').style.fontSize = "2.25vh"
                 document.getElementsByClassName('main_webpages').style.color = 'black'
             }
             function onclicked4() {
                 document.getElementById('card_a_4').style.color = "black"
+                document.getElementById('para_card_4').style.fontSize = "2.25vh"
                 document.getElementsByClassName('main_webpages').style.color = 'black'
             }
             function onclicked5() {
@@ -580,40 +524,33 @@
 
             function leave1() {
                 document.getElementById('card_a_1').style.color = "white"
-                document.getElementById('para_card_1').style.fontSize = "16px"
+                document.getElementById('para_card_1').style.fontSize = "inherit"
                 document.getElementsByClassName('main_webpages').style.color = 'white'
 
             }
             function leave2() {
                 document.getElementById('card_a_2').style.color = "white"
-                document.getElementById('para_card_2').style.fontSize = "15px "
+                document.getElementById('para_card_2').style.fontSize = "inherit "
                 document.getElementById('para_card_2').style.fonts
                 document.getElementsByClassName('main_webpages').style.color = 'white'
 
             }
             function leave3() {
                 document.getElementById('card_a_3').style.color = "white"
-                document.getElementById('para_card_3').style.fontSize = "15px "
+                document.getElementById('para_card_3').style.fontSize = "inherit "
                 document.getElementsByClassName('main_webpages').style.color = 'white'
             }
             function leave4() {
-                document.getElementById('card_a_4').style.color = "white"
-                document.getElementsByClassName('main_webpages').style.color = 'white'
+                document.getElementById('card_a_4').style.color = "white" 
+                 document.getElementById('para_card_4').style.fontSize = "inherit "
+                document.getElementsByClassName('main_webpages').style.color = 'inherit'
             }
             function leave5() {
                 document.getElementById('card_a_5').style.color = "white"
                 document.getElementsByClassName('main_webpages').style.color = 'white'
             }
 
-
-            function mainwebin() { document.getElementById('main_webpages').style.opacity = "100%" }
-            function mainwebout() { document.getElementById('main_webpages').style.opacity = "85%" }
-
-        }
-        else {
-            console.log("below 790")
-        }
-
+ 
 
     </script>
 
