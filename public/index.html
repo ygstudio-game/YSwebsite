@@ -16,10 +16,9 @@
         @media only screen and (min-width: 768px) {
         ::placeholder{
                 color: black;
-
             }
             *{
-                transition: all 600ms linear;
+                transition: all 350ms linear;
             }
 
             html {
@@ -33,19 +32,17 @@
 
             body {
                 font-family: cursive;
-
-                background-image: linear-gradient(to bottom right, rgb(250, 158, 250), rgba(255, 255, 0, 0.73)
-                );
+                background: radial-gradient(  rgb(73 255 0) , rgb(227 117 227 / 86%) );
                 min-height: 100vh;
+                transition: all 350ms linear;
 
             }
 
             header {
                 margin-left: 2vw;
-
                 border-radius: 2.2vh;
                 font-size: 3vh;
-                box-shadow: -3px 2px 64px 8px #ffffff17;
+                box-shadow: -3px 2px 2.5vw 8px #ffffffe5;
                 margin-bottom: 8vh;
                 position: fixed;
                 width: 96vw;
@@ -99,6 +96,14 @@
                 margin-right: .7vw;
                 color: black;
             }
+            header.onScroll_Header_changes_class{ 
+                    background: black;
+                    box-shadow: 0.14vw 0.14vw black;
+                    border: 0.1vw solid white;
+            }
+            header.onScroll_Header_changes_class a{ 
+                    color: white;
+            }
 
             #main_webpages {
                 transition-property: all;
@@ -107,17 +112,21 @@
                 justify-content: space-around;
                 flex-direction: row;
                 flex-wrap: wrap;
-                opacity: 85%;
+                opacity: 45%;
                 margin: auto;
                 margin-top: 15vh;
                 width: 80vw;
                 height: 80vh;
                 border-radius: 2vh;
-                background-image: linear-gradient(to bottom right, rgba(255, 255, 0, 0.73), rgb(250, 158, 250));
+                background: linear-gradient(to bottom right, rgba(255, 255, 0, 0.73), rgb(250, 158, 250)) ;
                 align-items: center;
-                box-shadow: inset 2px 11px 80px 2px rgb(250 158 250), inset -20px -17px 60px 20px rgb(255 255 0 / 73%), 15px 20px 160px 4px rgb(255 255 0 / 73%);
-            }
-
+                border: #000000 solid 0.35vw;
+                padding: 0.6vw;
+               }
+               #main_webpages:hover {
+                   opacity: 100%;
+               }
+ 
             #main_webpages .card {
                 padding-top: .6vh;
                 display: inline-block;
@@ -128,31 +137,39 @@
                 text-align: center;
                 background-color: rgb(46, 165, 42);
                 opacity: 65%;
-                transition-property: all;
-                transition-delay: 0ms;
-                transition-duration: 500ms;
+                transition: all ease-in-out 350ms;
+                font-size: 5.4vh;
 
             }
 
-            #main_webpages #card4 {
+            #main_webpages #card4 , #main_webpages #card5 {
                 width: 32vw;
                 height: 32vh;
 
-            }
-
-            #main_webpages #card5 {
-                width: 32vw;
-                height: 32vh;
-            }
-
+            } 
             #main_webpages .card a {
                 text-decoration: none;
                 text-align: center;
-                font-size: 5.4vh;
-                color: white;
+                font-size: inherit;
+                color: white; 
+            }
+            #main_webpages .card p{
+                font-size: 0.9vw; 
+            }
+            #main_webpages .card:hover {
+                opacity: 100;
+                background-color: rgb(238, 238, 238);
+                box-shadow: -10px 8px 26px 1px black;
+                color: black; 
+            }
+            #main_webpages .card:hover >a{
+                 color: #000000;
 
             }
-
+            #main_webpages .card:hover >p{
+                 font-size: 1.1vw;
+                 
+            }
             footer {
                 margin-top: 16vh;
                 margin-left: 2vw;
@@ -162,13 +179,12 @@
                 align-items: center;
                 justify-content: center;
                 background-color: #0000007a;
-                box-shadow: -4px 2px 6px 1px black,
-                                     inset -6vw 1vw 5vw 0px #e6d9d9fc; 
+                box-shadow: -4px 2px 6px 1px black,    inset -6vw 1vw 4.5vw 0px #e6d9d9fc; 
                 border-radius: 2.2vh;
-                margin-bottom: 6vh;
-
+                margin-bottom: 6vh; 
 
             }
+ 
 
             footer #para_footer {
                 font-size: 7.8vh;
@@ -179,18 +195,7 @@
                 -webkit-text-fill-color: transparent;
                 text-shadow: -5px -1px 2px rgb(0 0 0);
             }
-
-    
-
-            #main_webpages .card:hover {
-                opacity: 100;
-                background-color: rgb(238, 238, 238);
-                box-shadow: -10px 8px 26px 1px black;
-                color: black;
-
-            }
-
-      
+  
 
             #imglogo {
                 width: 8vh;
@@ -215,7 +220,7 @@
 
             body {
                 font-family: cursive;
-
+                transition: all 300ms ease-in-out;
                 background-image: linear-gradient(to bottom right, rgb(250, 158, 250), rgba(255, 255, 0, 0.73));
                 min-height: 100vh;
 
@@ -329,10 +334,17 @@
             }
 
             #main_webpages .card p {
-                font-size: 15px;
+                font-size: 1.26vh; 
 
             }
+            #main_webpages .card:hover >a{
+                 color: #000000;
 
+            }
+            #main_webpages .card:hover >p{
+                 font-size: 2vh;
+                 
+            }
             footer {
                 margin: auto;
                 margin-top: 8vh;
@@ -342,7 +354,7 @@
                 align-items: center;
                 justify-content: center;
                 background-color: #0000006b;
-                box-shadow: -4px 2px 6px 1px black, inset -6vw 1vw 5vw 0px white;
+                box-shadow: -4px 2px 6px 1px black, inset -6vw 1vw 4vw 0px white;
                 border-radius: 2.2vh;
                 margin-bottom: 6vh;
             }
@@ -398,7 +410,7 @@
             <li class="lili_a" id="li_3a"> <a id="link3" href="#">About</a> </li>
             <li class="lili_a" id="li_4a"> <a id="link4" href="#">Webpages</a> </li>
         </nav>
-        <input type="text" value=" " name="search" id="search" placeholder="search">
+        <input type="text" value="" name="search" id="search" placeholder="search">
     </header>
 
  
@@ -407,11 +419,11 @@
  
 
 
-    <div id="main_webpages" onmouseenter="mainwebin()" onmouseleave="mainwebout()" style="opacity: 0.85;">
-        <div class="card " id="card1" onmouseleave="leave1()" onmouseenter="onclicked1()"><a id="card_a_1" href="/PeriodicTable"
-            style="color: white;">Periodic Table </a> 
+    <div id="main_webpages"    >
+        <div class="card " id="card1"><a id="card_a_1" href="/PeriodicTable"
+            >Periodic Table </a> 
 
-                <p id="para_card_1" style="font-size: 15px;">
+                <p id="para_card_1" >
                     Click Above to Visit my periodic table website
                     <br> <br>
                     In This website you can find all info about 118 element 
@@ -419,23 +431,20 @@
                     if you are a student you should visit this website
                 </p>
         </div>
-        <div class="card " id="card2" onmouseleave="leave2()" onmouseenter="onclicked2()"> <a id="card_a_2"
-            href="/weatherapp" target="_blank" rel="noopener noreferrer" style="color: white;">Weather App </a>
-                <p id="para_card_2" style="font-size: 16px;">Click Above to Go On Weather App
+        <div class="card " id="card2"  > <a id="card_a_2"
+            href="/weatherapp" target="_blank" rel="noopener noreferrer" >Weather App </a>
+                <p id="para_card_2" >Click Above to Go On Weather App
                     <br><br>
                     It is Very Useful Web Application
                     <br><br>
                     It's Show Accurate Temperature of any city in world
                 </p>
         </div>
+  
+        <div class="card" id="card3"  ><a id="card_a_3"
+                href="/pavbhajiblog " target="_blank" rel="noopener noreferrer" >Blogs</a>
 
- 
-
-
-        <div class="card" id="card3" onmouseleave="leave3()" onmouseenter="onclicked3()"><a id="card_a_3"
-                href="/pavbhajiblog " target="_blank" rel="noopener noreferrer" style="color: white;">Blogs</a>
-
-            <p id="para_card_3" style="font-size: 15px;">
+            <p id="para_card_3" >
                 Click Above to know more about my pav bhaji blog
                 <br> <br>
                 In This Blog Share recipe
@@ -443,16 +452,16 @@
                 This is my First Blog you should check out It
             </p>
         </div>
-        <div class="card" id="card4" onmouseleave="leave4()" onmouseenter="onclicked4()"> <a id="card_a_4"
-                href="/mathapp" target="_blank" rel="noopener noreferrer" style="color: white;">Math App </a>
+        <div class="card" id="card4"  > <a id="card_a_4"
+                href="/mathapp" target="_blank" rel="noopener noreferrer"  >Math App </a>
 
-            <p id="para_card_4" style="font-size: 16px;">Click Above to know more or download my Math app
+            <p id="para_card_4" >Click Above to know more or download my Math app
                 <br><br>
                 In This App You can do opration and complicated opration
             </p>
         </div>
-        <div class="card" id="card5" onmouseleave="leave5()" onmouseenter="onclicked4()"><a id="card_a_5" href="#"
-                style="color: white;">Coming
+        <div class="card" id="card5"  ><a id="card_a_5" href="#"
+                 >Coming
                 soon</a></div>
 
     </div>
@@ -462,96 +471,23 @@
     </footer>
 
     <script>
- 
-
- function mainwebin() { document.getElementById('main_webpages').style.opacity = "100%" }
-            function mainwebout() { document.getElementById('main_webpages').style.opacity = "85%" }
-
+    
+        const body =document.querySelector("body");
+        const header =document.querySelector("header");
+        const footer =document.querySelector("footer"); 
         const mediaQuery1 = window.matchMedia('(min-width: 790px)')
         if (mediaQuery1.matches) {   
             window.onscroll = function () { scrollFunction() }; 
             function scrollFunction() {
                 if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                    document.getElementById("header").style.backgroundColor = "black";
-                    document.getElementById("header").style.boxShadow = "2px 2px black";
-                    document.getElementById("header").style.border = ".3px solid white";
-                    document.getElementById("link1").style.color = "white"
-                    document.getElementById("link2").style.color = "white"
-                    document.getElementById("link3").style.color = "white"
-                    document.getElementById("link4").style.color = "white"
+                        header.classList.add("onScroll_Header_changes_class")
 
+                } else { 
+                    header.classList.remove("onScroll_Header_changes_class")
 
-                } else {
-                    document.getElementById("header").style.backgroundColor = "transparent";
-                    document.getElementById("header").style.boxShadow = "none";
-                    document.getElementById("header").style.border = " none";
-                    document.getElementById("link1").style.color = "black"
-                    document.getElementById("link2").style.color = "black"
-                    document.getElementById("link3").style.color = "black"
-                    document.getElementById("link4").style.color = "black"
-
-                } 
-
-            } 
-
-        }
-
-              function onclicked1() {
-                document.getElementById('card_a_1').style.color = "black"
-                document.getElementById('para_card_1').style.fontSize = "2.25vh"
-                document.getElementsByClassName('main_webpages').style.color = 'black'
-            }
-            function onclicked2() {
-                document.getElementById('card_a_2').style.color = "black"
-                document.getElementById('para_card_2').style.fontSize = "2.25vh"
-                document.getElementsByClassName('main_webpages').style.color = 'black'
-            }
-            function onclicked3() {
-                document.getElementById('card_a_3').style.color = "black"
-                document.getElementById('para_card_3').style.fontSize = "2.25vh"
-                document.getElementsByClassName('main_webpages').style.color = 'black'
-            }
-            function onclicked4() {
-                document.getElementById('card_a_4').style.color = "black"
-                document.getElementById('para_card_4').style.fontSize = "2.25vh"
-                document.getElementsByClassName('main_webpages').style.color = 'black'
-            }
-            function onclicked5() {
-                document.getElementById('card_a_5').style.color = "black"
-                document.getElementsByClassName('main_webpages').style.color = 'black'
-            }
-
-
-            function leave1() {
-                document.getElementById('card_a_1').style.color = "white"
-                document.getElementById('para_card_1').style.fontSize = "inherit"
-                document.getElementsByClassName('main_webpages').style.color = 'white'
-
-            }
-            function leave2() {
-                document.getElementById('card_a_2').style.color = "white"
-                document.getElementById('para_card_2').style.fontSize = "inherit "
-                document.getElementById('para_card_2').style.fonts
-                document.getElementsByClassName('main_webpages').style.color = 'white'
-
-            }
-            function leave3() {
-                document.getElementById('card_a_3').style.color = "white"
-                document.getElementById('para_card_3').style.fontSize = "inherit "
-                document.getElementsByClassName('main_webpages').style.color = 'white'
-            }
-            function leave4() {
-                document.getElementById('card_a_4').style.color = "white" 
-                 document.getElementById('para_card_4').style.fontSize = "inherit "
-                document.getElementsByClassName('main_webpages').style.color = 'inherit'
-            }
-            function leave5() {
-                document.getElementById('card_a_5').style.color = "white"
-                document.getElementsByClassName('main_webpages').style.color = 'white'
-            }
-
- 
-
+                }  
+            }  
+        } 
     </script>
 
 
